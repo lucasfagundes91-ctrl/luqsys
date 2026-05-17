@@ -181,7 +181,7 @@ export function MontadorCombo() {
                   Selecione os sistemas que você quer
                 </p>
                 <p className="text-xs text-neutral-500">
-                  +5% off por sistema adicional · pegando os 11 = <strong className="text-gold">50% off</strong>
+                  +5% off por sistema adicional · até <strong className="text-gold">50% off</strong> pegando todos
                 </p>
               </div>
               <span className="rounded-full border border-neutral-800 px-4 py-2 text-xs text-neutral-500">

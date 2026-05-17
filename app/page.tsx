@@ -388,8 +388,8 @@ export default function Home() {
           crescendo conforme você adiciona.
         </p>
         <p className="mt-2 text-center text-xs text-gold-dim">
-          ✦ +5% off por sistema adicional · pegando os 11 ={" "}
-          <strong className="text-gold">50% off</strong> · ComparaBot vem grátis junto
+          ✦ +5% off por sistema adicional · até{" "}
+          <strong className="text-gold">50% off</strong> pegando todos · ComparaBot vem grátis junto
         </p>
 
         <div className="mt-10">
