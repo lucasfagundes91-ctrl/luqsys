@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { ContactInfo } from "./ContactInfo";
 
 export type Plano = {
   nome: string;
@@ -395,6 +396,8 @@ export function ProductLayout({
           </div>
         </section>
       )}
+
+      <ContactInfo />
 
       <footer className="border-t border-neutral-900 px-6 py-10 text-center text-sm text-neutral-500">
         <p>

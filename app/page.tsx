@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MontadorCombo } from "./_components/MontadorCombo";
+import { ContactInfo } from "./_components/ContactInfo";
 
 type Produto = {
   slug: string;
@@ -443,6 +444,8 @@ export default function Home() {
           </a>
         </div>
       </section>
+
+      <ContactInfo />
 
       <footer className="border-t border-neutral-900 px-6 py-10 text-center text-sm text-neutral-500">
         <p>© {new Date().getFullYear()} Luqsys. Todos os direitos reservados.</p>

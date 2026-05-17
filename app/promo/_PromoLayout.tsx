@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { buildWhatsappLink, type PromoData } from "./_data";
+import { ContactInfo } from "../_components/ContactInfo";
 
 export function PromoLayout({ promo }: { promo: PromoData }) {
   const waLink = buildWhatsappLink(promo);
@@ -140,6 +141,8 @@ export function PromoLayout({ promo }: { promo: PromoData }) {
           Falar no WhatsApp →
         </a>
       </section>
+
+      <ContactInfo />
 
       <footer className="border-t border-neutral-900 px-6 py-8 text-center text-xs text-neutral-500">
         <p>
