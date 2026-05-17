@@ -3,6 +3,11 @@ import { NextRequest, NextResponse } from "next/server";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+// Sistemas com path de webhook diferente do padrão `/webhook/asaas`.
+const PATH_OVERRIDE: Record<string, string> = {
+  pontopro: "/api/webhooks/asaas",
+};
+
 // Mapeia keyword na description do pagamento → slug do sistema.
 // Ordem importa: keywords mais específicas primeiro.
 const SISTEMA_MAP: Array<[string, string]> = [
@@ -85,7 +90,8 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const upstreamUrl = `https://${slug}.luqsys.com.br/webhook/asaas`;
+  const path = PATH_OVERRIDE[slug] || "/webhook/asaas";
+  const upstreamUrl = `https://${slug}.luqsys.com.br${path}`;
   let upstreamStatus = 0;
   let upstreamBody: any = null;
   try {
