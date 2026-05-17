@@ -12,6 +12,7 @@ type Produto = {
   badge?: string;
   appUrl?: string;
   semTrial?: boolean;
+  emBreve?: boolean;
 };
 
 function trialHref(p: Produto) {
@@ -45,6 +46,7 @@ const trilhas: Trilha[] = [
         icone: "🛒",
         tagline: "PDV + ERP completo pra loja física",
         preco: "R$ 199",
+        emBreve: true,
       },
       {
         slug: "farmpro",
@@ -105,6 +107,7 @@ const trilhas: Trilha[] = [
         icone: "📊",
         tagline: "Software + acompanhamento contábil humano",
         preco: "R$ 199",
+        emBreve: true,
       },
     ],
   },
@@ -152,6 +155,7 @@ const trilhas: Trilha[] = [
         icone: "🎫",
         tagline: "Buscador de passagens em milhas (Smiles, TudoAzul)",
         preco: "R$ 49",
+        emBreve: true,
       },
     ],
   },
@@ -255,12 +259,9 @@ export default function Home() {
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {trilha.produtos.map((p) => (
-                  <div
-                    key={p.slug}
-                    className="group flex flex-col rounded-2xl border border-neutral-900 bg-bg-card p-6 transition hover:border-gold-dim hover:shadow-gold"
-                  >
-                    <Link href={`/${p.slug}`} className="flex flex-1 flex-col">
+                {trilha.produtos.map((p) => {
+                  const cardInner = (
+                    <>
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex items-center gap-3">
                           <span className="text-2xl">{p.icone}</span>
@@ -268,9 +269,15 @@ export default function Home() {
                             {p.nome}
                           </h4>
                         </div>
-                        {p.badge && (
-                          <span className="rounded-full border border-gold-dim/60 bg-gold-dark/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-gold">
-                            {p.badge}
+                        {(p.emBreve || p.badge) && (
+                          <span
+                            className={
+                              p.emBreve
+                                ? "rounded-full border border-neutral-700 bg-neutral-900 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-neutral-400"
+                                : "rounded-full border border-gold-dim/60 bg-gold-dark/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-gold"
+                            }
+                          >
+                            {p.emBreve ? "em breve" : p.badge}
                           </span>
                         )}
                       </div>
@@ -293,43 +300,76 @@ export default function Home() {
                             </span>
                           )}
                         </div>
-                        <span className="text-xs font-semibold text-neutral-500 transition group-hover:text-gold">
-                          detalhes →
-                        </span>
+                        {!p.emBreve && (
+                          <span className="text-xs font-semibold text-neutral-500 transition group-hover:text-gold">
+                            detalhes →
+                          </span>
+                        )}
                       </div>
-                    </Link>
-                    {!p.semTrial && (
-                      <div className="mt-5 grid grid-cols-2 gap-2 border-t border-neutral-900 pt-4">
-                        <a
-                          href={demoHref(p)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="rounded-full border border-gold-dim/60 px-3 py-2 text-center text-xs font-semibold text-gold transition hover:border-gold"
-                        >
-                          Ver demo
-                        </a>
-                        <a
-                          href={trialHref(p)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
-                        >
-                          Testar 3 dias
-                        </a>
-                      </div>
-                    )}
-                    {p.semTrial && (
-                      <div className="mt-5 border-t border-neutral-900 pt-4">
-                        <Link
-                          href={`/${p.slug}`}
-                          className="block rounded-full border border-gold-dim/60 px-3 py-2 text-center text-xs font-semibold text-gold transition hover:border-gold"
-                        >
-                          Como funciona →
+                    </>
+                  );
+
+                  return (
+                    <div
+                      key={p.slug}
+                      className={
+                        p.emBreve
+                          ? "group flex flex-col rounded-2xl border border-neutral-900 bg-bg-card p-6 opacity-75"
+                          : "group flex flex-col rounded-2xl border border-neutral-900 bg-bg-card p-6 transition hover:border-gold-dim hover:shadow-gold"
+                      }
+                    >
+                      {p.emBreve ? (
+                        <div className="flex flex-1 flex-col">{cardInner}</div>
+                      ) : (
+                        <Link href={`/${p.slug}`} className="flex flex-1 flex-col">
+                          {cardInner}
                         </Link>
-                      </div>
-                    )}
-                  </div>
-                ))}
+                      )}
+                      {p.emBreve ? (
+                        <div className="mt-5 border-t border-neutral-900 pt-4">
+                          <a
+                            href={`https://wa.me/5545991077788?text=${encodeURIComponent(
+                              `Oi Lucas, me avise quando o ${p.nome} lançar`,
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block rounded-full border border-neutral-700 px-3 py-2 text-center text-xs font-semibold text-neutral-400 transition hover:border-gold-dim hover:text-gold"
+                          >
+                            Me avise quando lançar →
+                          </a>
+                        </div>
+                      ) : !p.semTrial ? (
+                        <div className="mt-5 grid grid-cols-2 gap-2 border-t border-neutral-900 pt-4">
+                          <a
+                            href={demoHref(p)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded-full border border-gold-dim/60 px-3 py-2 text-center text-xs font-semibold text-gold transition hover:border-gold"
+                          >
+                            Ver demo
+                          </a>
+                          <a
+                            href={trialHref(p)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
+                          >
+                            Testar 3 dias
+                          </a>
+                        </div>
+                      ) : (
+                        <div className="mt-5 border-t border-neutral-900 pt-4">
+                          <Link
+                            href={`/${p.slug}`}
+                            className="block rounded-full border border-gold-dim/60 px-3 py-2 text-center text-xs font-semibold text-gold transition hover:border-gold"
+                          >
+                            Como funciona →
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ))}

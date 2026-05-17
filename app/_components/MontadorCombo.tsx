@@ -8,20 +8,21 @@ type Sistema = {
   icone: string;
   tagline: string;
   preco: number;
+  emBreve?: boolean;
 };
 
 const SISTEMAS: Sistema[] = [
-  { slug: "pdvpro", nome: "PDV Pro", icone: "🛒", tagline: "Varejo / loja física", preco: 199 },
+  { slug: "pdvpro", nome: "PDV Pro", icone: "🛒", tagline: "Varejo / loja física", preco: 199, emBreve: true },
   { slug: "farmpro", nome: "FarmPro", icone: "🌾", tagline: "Gestão rural", preco: 119 },
   { slug: "obrapro", nome: "ObraPro", icone: "🏗️", tagline: "Obras por etapa", preco: 119 },
   { slug: "solarpro", nome: "SolarPro", icone: "☀️", tagline: "Empresa solar", preco: 89 },
   { slug: "aluguelpro", nome: "AluguelPro", icone: "🏠", tagline: "Imóveis e aluguéis", preco: 99 },
   { slug: "frotapro", nome: "FrotaPro", icone: "🚚", tagline: "Frota PME", preco: 49 },
   { slug: "pontopro", nome: "PontoPro", icone: "⏱️", tagline: "Ponto eletrônico", preco: 49 },
-  { slug: "contabilidadepro", nome: "ContabilidadePro", icone: "📊", tagline: "Software + contador", preco: 199 },
+  { slug: "contabilidadepro", nome: "ContabilidadePro", icone: "📊", tagline: "Software + contador", preco: 199, emBreve: true },
   { slug: "bankpro", nome: "BankPro", icone: "🏦", tagline: "Finanças pessoais", preco: 49 },
   { slug: "viagempro", nome: "ViagemPro", icone: "🧳", tagline: "Planejador de viagens", preco: 49 },
-  { slug: "milhaspro", nome: "MilhasPro", icone: "🎫", tagline: "Passagens em milhas", preco: 49 },
+  { slug: "milhaspro", nome: "MilhasPro", icone: "🎫", tagline: "Passagens em milhas", preco: 49, emBreve: true },
 ];
 
 const FAIXAS = [
@@ -99,16 +100,21 @@ export function MontadorCombo() {
             <button
               key={s.slug}
               type="button"
-              onClick={() => toggle(s.slug)}
+              onClick={() => !s.emBreve && toggle(s.slug)}
+              disabled={s.emBreve}
               className={`group flex items-start gap-3 rounded-2xl border p-4 text-left transition ${
-                on
+                s.emBreve
+                  ? "cursor-not-allowed border-neutral-900 bg-bg-card opacity-60"
+                  : on
                   ? "border-gold bg-gold-dark/20 shadow-gold"
                   : "border-neutral-900 bg-bg-card hover:border-gold-dim"
               }`}
             >
               <div
                 className={`mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border text-sm font-bold ${
-                  on
+                  s.emBreve
+                    ? "border-neutral-800 text-transparent"
+                    : on
                     ? "border-gold bg-gold text-bg"
                     : "border-neutral-700 text-transparent"
                 }`}
@@ -122,6 +128,11 @@ export function MontadorCombo() {
                   <span className={`font-bold ${on ? "text-gold" : "text-white"}`}>
                     {s.nome}
                   </span>
+                  {s.emBreve && (
+                    <span className="rounded-full border border-neutral-700 bg-neutral-900 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-neutral-400">
+                      em breve
+                    </span>
+                  )}
                 </div>
                 <p className="mt-1 text-xs text-neutral-400">{s.tagline}</p>
                 <p className="mt-2 text-sm font-semibold text-neutral-200">
