@@ -18,8 +18,13 @@ export const metadata: Metadata = {
   description:
     "Soluções práticas de gestão para pequenas e médias empresas. Bots, automações e sistemas que economizam tempo e dinheiro.",
   icons: {
-    icon: "/luqsys-logo.png",
-    apple: "/luqsys-logo.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/luqsys-icon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/luqsys-icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/luqsys-icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Luqsys — Sistemas de Gestão Empresarial",
