@@ -100,6 +100,7 @@ const trilhas: Trilha[] = [
         icone: "⏱️",
         tagline: "Ponto eletrônico REP-P (Portaria 671/2021)",
         preco: "R$ 49 até 20 func",
+        emBreve: true,
       },
       {
         slug: "contabilidadepro",
