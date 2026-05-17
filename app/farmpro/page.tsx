@@ -21,8 +21,8 @@ export default function FarmProPage() {
         </>
       }
       ctaPrimaria={{
-        label: "Falar com vendas",
-        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20FarmPro",
+        label: "Testar 3 dias grátis",
+        href: "https://farmpro.luqsys.com.br/cadastro?trial=1",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
