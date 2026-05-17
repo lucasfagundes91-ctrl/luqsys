@@ -225,7 +225,7 @@ export default function ComparaBot() {
                 Grátis pra clientes Luqsys
               </h3>
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-neutral-300 sm:text-base">
-                Assinando <strong className="text-gold">qualquer outro sistema da Luqsys</strong> (BankPro, PDV Pro, FarmPro, ObraPro, PontoPro e outros), o <strong className="text-white">ComparaBot Pro vem incluso sem custo extra</strong> — comparações ilimitadas no WhatsApp.
+                Assinando <strong className="text-gold">qualquer outro sistema da Luqsys</strong> (BankPro, PDV Pro, FarmPro, ObrasPro, PontoPro e outros), o <strong className="text-white">ComparaBot Pro vem incluso sem custo extra</strong> — comparações ilimitadas no WhatsApp.
               </p>
             </div>
             <Link

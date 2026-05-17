@@ -20,6 +20,11 @@ const nextConfig = {
         destination: 'https://assinatura.luquisys.com.br/assinatura/:path*',
         permanent: false,
       },
+      {
+        source: '/obrapro',
+        destination: '/obraspro',
+        permanent: true,
+      },
     ];
   },
 };

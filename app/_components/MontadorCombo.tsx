@@ -14,7 +14,7 @@ type Sistema = {
 const SISTEMAS: Sistema[] = [
   { slug: "pdvpro", nome: "PDV Pro", icone: "🛒", tagline: "Varejo / loja física", preco: 199, emBreve: true },
   { slug: "farmpro", nome: "FarmPro", icone: "🌾", tagline: "Gestão rural", preco: 119 },
-  { slug: "obrapro", nome: "ObraPro", icone: "🏗️", tagline: "Obras por etapa", preco: 119 },
+  { slug: "obraspro", nome: "ObrasPro", icone: "🏗️", tagline: "Obras por etapa", preco: 119 },
   { slug: "solarpro", nome: "SolarPro", icone: "☀️", tagline: "Empresa solar", preco: 89 },
   { slug: "aluguelpro", nome: "AluguelPro", icone: "🏠", tagline: "Imóveis e aluguéis", preco: 99 },
   { slug: "frotapro", nome: "FrotaPro", icone: "🚚", tagline: "Frota PME", preco: 49 },

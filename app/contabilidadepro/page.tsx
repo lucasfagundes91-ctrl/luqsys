@@ -30,7 +30,7 @@ export default function ContabilidadeProPage() {
           n: "1",
           titulo: "Conexão com seus sistemas",
           texto:
-            "PDV Pro, FarmPro, ObraPro mandam dados direto. Nada de digitar duas vezes. Notas e lançamentos vêm prontos.",
+            "PDV Pro, FarmPro, ObrasPro mandam dados direto. Nada de digitar duas vezes. Notas e lançamentos vêm prontos.",
         },
         {
           n: "2",

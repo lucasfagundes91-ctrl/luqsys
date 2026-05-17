@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { ProductLayout } from "../_components/ProductLayout";
 
 export const metadata: Metadata = {
-  title: "ObraPro — Controle financeiro de obras",
+  title: "ObrasPro — Controle financeiro de obras",
   description:
     "Multi-obra com etapas, investidores, gastos com OCR e relatórios por etapa. Pra construtora pequena e média que quer parar de furar orçamento.",
 };
 
-export default function ObraProPage() {
+export default function ObrasProPage() {
   return (
     <ProductLayout
       icone="🏗️"
-      nome="ObraPro"
+      nome="ObrasPro"
       tagline="Sua obra dentro do orçamento"
       descricao={
         <>
@@ -22,7 +22,7 @@ export default function ObraProPage() {
       }
       ctaPrimaria={{
         label: "Falar com vendas",
-        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20ObraPro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20ObrasPro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[

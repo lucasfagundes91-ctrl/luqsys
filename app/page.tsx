@@ -56,8 +56,8 @@ const trilhas: Trilha[] = [
         preco: "R$ 119",
       },
       {
-        slug: "obrapro",
-        nome: "ObraPro",
+        slug: "obraspro",
+        nome: "ObrasPro",
         icone: "🏗️",
         tagline: "Controle financeiro de obras por etapa",
         preco: "R$ 119",
