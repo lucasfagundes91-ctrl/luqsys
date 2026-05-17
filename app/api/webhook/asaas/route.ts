@@ -54,7 +54,16 @@ export async function POST(req: NextRequest) {
   const body = await req.json().catch(() => ({}));
   const event = body?.event || "";
 
-  if (!["PAYMENT_CONFIRMED", "PAYMENT_RECEIVED"].includes(event)) {
+  const EVENTOS_REPASSAR = [
+    "PAYMENT_CONFIRMED",
+    "PAYMENT_RECEIVED",
+    "PAYMENT_OVERDUE",
+    "PAYMENT_DELETED",
+    "SUBSCRIPTION_DELETED",
+    "PAYMENT_REFUNDED",
+    "PAYMENT_CHARGEBACK_REQUESTED",
+  ];
+  if (!EVENTOS_REPASSAR.includes(event)) {
     return NextResponse.json({ ok: true, ignored: event });
   }
 
