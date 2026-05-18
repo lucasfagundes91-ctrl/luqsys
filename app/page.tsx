@@ -86,6 +86,15 @@ const trilhas: Trilha[] = [
         preco: "R$ 49",
         badge: "novo",
       },
+      {
+        slug: "adspro",
+        nome: "AdsPro",
+        icone: "📣",
+        tagline: "Crie anúncios no Meta (Facebook + Instagram) com IA — ou deixa que a gente faz",
+        preco: "R$ 199",
+        badge: "ou gestão R$ 499",
+        appUrl: "https://adspro.luqsys.com.br",
+      },
     ],
   },
   {
