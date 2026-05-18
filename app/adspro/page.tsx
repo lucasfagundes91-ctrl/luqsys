@@ -26,13 +26,14 @@ export default function AdsProPage() {
           dentro do seu Business Manager. Você escolhe quanto quer se envolver.
         </>
       }
-      ctaPrimaria={{
+      ctaPrimaria={{ label: "Ver planos", href: "#planos" }}
+      ctaSecundaria={{
         label: "Falar no WhatsApp",
         href: ctaWhats(
           "Oi Lucas, quero saber mais sobre o AdsPro pra anunciar no Meta",
         ),
       }}
-      ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
+      assinarUrl="https://www.asaas.com/c/25b3hf60gwxxa8b9"
       rodapeHero="✦ Sem fidelidade · cancele quando quiser · verba de mídia paga direto pra Meta"
       passos={[
         {
@@ -80,10 +81,8 @@ export default function AdsProPage() {
             "Suporte por e-mail",
             "Verba de mídia paga direto pra Meta",
           ],
-          ctaLabel: "Quero o Self-Service",
-          ctaHref: ctaWhats(
-            "Oi Lucas, quero o AdsPro Self-Service (R$ 199/mês) pra criar os anúncios eu mesmo",
-          ),
+          ctaLabel: "Assinar Self-Service",
+          ctaHref: "https://www.asaas.com/c/yrchtoia1s2ed5lt",
         },
         {
           nome: "Gestão Completa",
@@ -97,10 +96,8 @@ export default function AdsProPage() {
             "Suporte prioritário no WhatsApp",
             "Verba de mídia paga direto pra Meta (não inclusa)",
           ],
-          ctaLabel: "Quero a Gestão Completa",
-          ctaHref: ctaWhats(
-            "Oi Lucas, quero o AdsPro Gestão Completa (R$ 499/mês) — vocês fazem os anúncios pra mim",
-          ),
+          ctaLabel: "Assinar Gestão Completa",
+          ctaHref: "https://www.asaas.com/c/25b3hf60gwxxa8b9",
           destaque: true,
         },
       ]}
