@@ -95,6 +95,15 @@ const trilhas: Trilha[] = [
         badge: "ou gestão R$ 499",
         appUrl: "https://adspro.luqsys.com.br",
       },
+      {
+        slug: "agendapro",
+        nome: "AgendaPro",
+        icone: "📅",
+        tagline: "Auto-agendamento online pro seu negócio (arena, barbearia, lavagem, salão...)",
+        preco: "R$ 99",
+        badge: "novo",
+        appUrl: "https://agendapro.luqsys.com.br",
+      },
     ],
   },
   {
