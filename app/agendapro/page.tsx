@@ -75,15 +75,15 @@ export default function AgendaProPage() {
             "Identidade visual personalizada",
             "Suporte por WhatsApp",
           ],
-          ctaLabel: "Começar grátis",
-          ctaHref: "https://agendapro.luqsys.com.br/cadastro",
+          ctaLabel: "Assinar Pro",
+          ctaHref: "https://www.asaas.com/c/7pi900esfhsvb5rl",
           destaque: true,
         },
       ]}
       ctaFinalTitulo="Seu cliente já tá te procurando — facilita a vida dele"
       ctaFinalTexto="WhatsApp lotado de pergunta 'que horas tem'? Manda o link. Em 3 cliques ele reserva."
       appUrl="https://agendapro.luqsys.com.br"
-      assinarUrl="https://agendapro.luqsys.com.br/cadastro"
+      assinarUrl="https://www.asaas.com/c/7pi900esfhsvb5rl"
     />
   );
 }
