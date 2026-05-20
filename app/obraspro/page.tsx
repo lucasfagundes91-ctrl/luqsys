@@ -106,7 +106,7 @@ export default function ObrasProPage() {
       ]}
       ctaFinalTitulo="Pare de furar o orçamento"
       ctaFinalTexto="Combine com ComparaBot pra cotar material antes de comprar."
-    appUrl="https://obrapro.luqsys.com.br"
+    appUrl="https://obraspro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/gj85zr3wdfwp28vp"
     />
   );

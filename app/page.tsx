@@ -46,7 +46,6 @@ const trilhas: Trilha[] = [
         icone: "🛒",
         tagline: "PDV + ERP completo pra loja física",
         preco: "R$ 199",
-        emBreve: true,
       },
       {
         slug: "farmpro",
@@ -94,6 +93,7 @@ const trilhas: Trilha[] = [
         preco: "R$ 199",
         badge: "ou gestão R$ 499",
         appUrl: "https://adspro.luqsys.com.br",
+        semTrial: true,
       },
       {
         slug: "agendapro",
@@ -118,7 +118,6 @@ const trilhas: Trilha[] = [
         icone: "⏱️",
         tagline: "Ponto eletrônico REP-P (Portaria 671/2021)",
         preco: "R$ 49 até 20 func",
-        emBreve: true,
       },
       {
         slug: "contabilidadepro",
@@ -126,7 +125,6 @@ const trilhas: Trilha[] = [
         icone: "📊",
         tagline: "Software + acompanhamento contábil humano",
         preco: "R$ 199",
-        emBreve: true,
       },
     ],
   },
@@ -174,7 +172,6 @@ const trilhas: Trilha[] = [
         icone: "🎫",
         tagline: "Buscador de passagens em milhas (Smiles, TudoAzul)",
         preco: "R$ 49",
-        emBreve: true,
       },
     ],
   },
@@ -225,7 +222,7 @@ export default function Home() {
           SISTEMAS DE GESTÃO EMPRESARIAL
         </p>
         <p className="mx-auto mt-8 max-w-2xl text-lg text-neutral-300 sm:text-xl">
-          12 sistemas práticos pra rodar seu negócio, organizar suas finanças e
+          14 sistemas práticos pra rodar seu negócio, organizar suas finanças e
           planejar suas viagens. Feitos pra usar no dia a dia, não pra ficar em
           apresentação.
         </p>
@@ -431,7 +428,7 @@ export default function Home() {
               </h2>
               <p className="mt-4 text-base text-neutral-300 sm:text-lg">
                 Eu desenvolvo <strong className="text-white">sistema personalizado</strong>{" "}
-                pra sua operação — do zero ou adaptando um dos meus 12 que já
+                pra sua operação — do zero ou adaptando um dos meus 14 que já
                 rodam. Mesmo padrão Luqsys: Flask + PostgreSQL, deploy próprio,
                 código seu.
               </p>

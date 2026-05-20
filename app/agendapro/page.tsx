@@ -21,11 +21,6 @@ export default function AgendaProPage() {
           encher.
         </>
       }
-      ctaPrimaria={{
-        label: "Começar grátis (3 dias)",
-        href: "https://agendapro.luqsys.com.br/cadastro",
-      }}
-      ctaSecundaria={{ label: "Ver demo ao vivo", href: "https://agendapro.luqsys.com.br/a/demo" }}
       passos={[
         {
           n: "1",
