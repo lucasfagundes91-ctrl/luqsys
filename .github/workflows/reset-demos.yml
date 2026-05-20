@@ -1,0 +1,41 @@
+name: Reset demos diário
+
+# Reseta as contas/empresas demo dos sistemas Luqsys uma vez por dia.
+# Cada app expõe POST /api/cron/reset-demo protegido por segredo (fail-closed).
+
+on:
+  schedule:
+    - cron: '0 7 * * *'   # 07:00 UTC = 04:00 BRT
+  workflow_dispatch: {}
+
+jobs:
+  reset:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resetar demos
+        env:
+          CRON: ${{ secrets.LUQSYS_CRON_SECRET }}
+        run: |
+          falhas=0
+          for host in \
+            bankpro.luqsys.com.br \
+            frotapro.luqsys.com.br \
+            contabilidadepro.luqsys.com.br \
+            obrapro.luqsys.com.br \
+            aluguelpro.luqsys.com.br \
+            agendapro.luqsys.com.br \
+            viagempro.luqsys.com.br \
+            milhaspro.luqsys.com.br \
+            solarpro.luqsys.com.br \
+            pontopro.luqsys.com.br ; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 40 -X POST \
+              "https://$host/api/cron/reset-demo" \
+              -H "X-Cron-Token: $CRON" -H "X-Cron-Secret: $CRON")
+            echo "$host -> $code"
+            if [ "$code" != "200" ]; then falhas=$((falhas + 1)); fi
+          done
+          echo "Total de falhas: $falhas"
+          if [ "$falhas" -gt 0 ]; then
+            echo "::error::$falhas reset(s) de demo falharam"
+            exit 1
+          fi
