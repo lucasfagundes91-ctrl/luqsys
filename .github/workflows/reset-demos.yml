@@ -34,6 +34,11 @@ jobs:
             echo "$host -> $code"
             if [ "$code" != "200" ]; then falhas=$((falhas + 1)); fi
           done
+          # FarmPro: demo é instância dedicada — reset via GET /admin/reset?token=
+          fp=$(curl -s -o /dev/null -w "%{http_code}" --max-time 40 \
+            "https://farmpro-demo.luqsys.com.br/admin/reset?token=$CRON")
+          echo "farmpro-demo.luqsys.com.br -> $fp"
+          if [ "$fp" != "200" ]; then falhas=$((falhas + 1)); fi
           echo "Total de falhas: $falhas"
           if [ "$falhas" -gt 0 ]; then
             echo "::error::$falhas reset(s) de demo falharam"
