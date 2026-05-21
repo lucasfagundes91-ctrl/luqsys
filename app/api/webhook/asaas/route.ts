@@ -15,6 +15,8 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["bankpro", "bankpro"],
   ["frotapro", "frotapro"],
   ["farmpro", "farmpro"],
+  ["silopro", "silopro"],
+  ["silo pro", "silopro"],
   ["pdv pro", "pdvpro"],
   ["pdvpro", "pdvpro"],
   ["milhaspro", "milhaspro"],
@@ -94,6 +96,10 @@ export async function POST(req: NextRequest) {
       { error: "ASAAS_SYSTEM_TOKENS inválido (não é JSON)" },
       { status: 500 }
     );
+  }
+  // Tokens podem vir em vars dedicadas por sistema (sem mexer no JSON).
+  if (process.env.ASAAS_TOKEN_SILOPRO) {
+    tokens.silopro = process.env.ASAAS_TOKEN_SILOPRO;
   }
 
   const systemToken = tokens[slug];

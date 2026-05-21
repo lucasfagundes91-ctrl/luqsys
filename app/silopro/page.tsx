@@ -72,14 +72,15 @@ export default function SiloProPage() {
             "Aviso no WhatsApp a cada carga",
             "Suporte por WhatsApp",
           ],
-          ctaLabel: "Testar 3 dias grátis",
-          ctaHref: "https://silopro.luqsys.com.br/cadastro",
+          ctaLabel: "Assinar SiloPro",
+          ctaHref: "https://www.asaas.com/c/t7ch28ki5aip1fpu",
           destaque: true,
         },
       ]}
       ctaFinalTitulo="Rastreabilidade total da sua colheita"
       ctaFinalTexto="Cada carga pesada, fotografada e registrada — do talhão ao silo."
       appUrl="https://silopro.luqsys.com.br"
+      assinarUrl="https://www.asaas.com/c/t7ch28ki5aip1fpu"
     />
   );
 }
