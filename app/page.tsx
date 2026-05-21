@@ -55,6 +55,15 @@ const trilhas: Trilha[] = [
         preco: "R$ 119",
       },
       {
+        slug: "silopro",
+        nome: "SiloPro",
+        icone: "⚖️",
+        tagline: "Pesagem de silo: cada caminhão de milho e soja em tempo real",
+        preco: "R$ 99",
+        badge: "novo",
+        appUrl: "https://silopro.luqsys.com.br",
+      },
+      {
         slug: "obraspro",
         nome: "ObrasPro",
         icone: "🏗️",
