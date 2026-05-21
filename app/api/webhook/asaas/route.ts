@@ -103,6 +103,9 @@ export async function POST(req: NextRequest) {
   if (process.env.ASAAS_TOKEN_SILOPRO) {
     tokens.silopro = process.env.ASAAS_TOKEN_SILOPRO;
   }
+  if (process.env.ASAAS_TOKEN_COMANDAPRO) {
+    tokens.comandapro = process.env.ASAAS_TOKEN_COMANDAPRO;
+  }
 
   const systemToken = tokens[slug];
   if (!systemToken) {
