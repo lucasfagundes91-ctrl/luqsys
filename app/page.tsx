@@ -113,6 +113,15 @@ const trilhas: Trilha[] = [
         badge: "novo",
         appUrl: "https://agendapro.luqsys.com.br",
       },
+      {
+        slug: "comandapro",
+        nome: "ComandaPro",
+        icone: "🍽️",
+        tagline: "Gestão pra restaurante e bar: comandas, cardápio, cozinha e NFC-e",
+        preco: "R$ 99",
+        badge: "novo",
+        appUrl: "https://comandapro.luqsys.com.br",
+      },
     ],
   },
   {

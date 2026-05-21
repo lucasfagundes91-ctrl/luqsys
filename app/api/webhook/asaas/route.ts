@@ -31,6 +31,8 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["ads pro", "adspro"],
   ["agendapro", "agendapro"],
   ["agenda pro", "agendapro"],
+  ["comandapro", "comandapro"],
+  ["comanda pro", "comandapro"],
 ];
 
 function detectSistema(payment: any): string | null {
