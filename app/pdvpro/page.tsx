@@ -15,10 +15,10 @@ export default function PDVProPage() {
       tagline="PDV + ERP completo pra loja física"
       descricao={
         <>
-          13 módulos cobrindo do <strong className="text-white">caixa</strong>{" "}
-          até a <strong className="text-white">contabilidade</strong>: PDV,
-          estoque, financeiro, NF-e, etiquetas, comissões e atendimento WhatsApp
-          por IA — tudo em um sistema.
+          Do <strong className="text-white">caixa</strong> à{" "}
+          <strong className="text-white">contabilidade</strong>: PDV, NFC-e,
+          estoque, financeiro com conciliação bancária, manifestação de NF-e,
+          comissões e atendimento WhatsApp por IA — tudo em um sistema só.
         </>
       }
       ctaPrimaria={{
@@ -48,68 +48,77 @@ export default function PDVProPage() {
       ]}
       features={[
         "PDV com crediário, troco e múltiplas formas de pagamento",
+        "NFC-e e NF-e via Focus NFe (Simples Nacional)",
+        "Caixa por usuário (cada vendedor abre o seu)",
         "Compras geram contas a pagar e atualizam estoque",
-        "Financeiro: contas a pagar, a receber, receitas, despesas",
-        "NF-e via Focus NFe (Simples Nacional)",
-        "Etiquetas com código de barras (JsBarcode)",
-        "Comissão por vendedor",
-        "Devolução total ou parcial",
-        "Atendimento WhatsApp com IA (Luluzinha) — incluso",
-        "Relatórios + export Excel",
-        "Dashboard com vendas, estoque baixo, top produtos",
+        "Manifestação automática de NF-e recebida",
+        "Financeiro: contas a pagar/receber, recorrentes, conciliação bancária OFX",
+        "Estoque + inventário (modo substituir/somar por item)",
+        "Promoções flexíveis (% ou R$, por item ou em massa)",
+        "Trocas, devoluções e vale-compras",
+        "Comissão por vendedor com sub-permissões granulares",
+        "Atendimento WhatsApp com IA (Luquizinha) — Profissional e Empresarial",
+        "Catálogo Excel/WhatsApp pra divulgar produtos",
+        "Etiquetas com código de barras",
+        "Dashboard com vendas, contas vencidas e estoque baixo",
       ]}
       planos={[
         {
-          nome: "Básico",
+          nome: "Essencial",
           publico: "Loja pequena começando",
-          precoLabel: "R$ 99",
+          precoLabel: "R$ 149",
           features: [
-            "PDV + Caixa + Estoque",
-            "1 usuário",
-            "Até 500 produtos",
-            "Sem NF-e",
-            "Sem WhatsApp IA",
+            "1 loja · até 500 NFC-e/mês",
+            "PDV + NFC-e/NF-e",
+            "Estoque + inventário",
+            "Financeiro básico (contas a pagar/receber)",
+            "Cadastros (produtos, clientes, fornecedores)",
+            "Promoções e catálogo Excel/WhatsApp",
             "Suporte por e-mail",
           ],
-          ctaLabel: "Assinar Básico",
-          ctaHref: "https://www.asaas.com/c/jhpczcfk1jp2k82s",
+          ctaLabel: "Assinar Essencial",
+          ctaHref:
+            "https://wa.me/5545991077788?text=Quero%20assinar%20o%20PDV%20Pro%20Essencial%20(R%24%20149%2Fm%C3%AAs)",
         },
         {
-          nome: "Pro",
-          publico: "A loja completa",
-          precoLabel: "R$ 199",
+          nome: "Profissional",
+          publico: "A loja completa do dia a dia",
+          precoLabel: "R$ 299",
           features: [
-            "13 módulos completos",
-            "Usuários ilimitados",
-            "Produtos e clientes ilimitados",
-            "NF-e ilimitada (token Focus NFe à parte)",
-            "Atendimento WhatsApp com IA (Luluzinha)",
-            "Suporte por e-mail e WhatsApp",
+            "1 loja · 2.000 NFC-e/mês",
+            "Tudo do Essencial",
+            "Manifestação NF-e (recebimento)",
+            "Conciliação bancária (OFX/CSV)",
+            "Lançamentos recorrentes (aluguel, luz, folha)",
+            "Atendimento WhatsApp com IA (Luquizinha)",
+            "Suporte WhatsApp em horário comercial",
           ],
-          ctaLabel: "Assinar Pro",
-          ctaHref: "https://www.asaas.com/c/l3c8v5dx1nh84z0k",
+          ctaLabel: "Assinar Profissional",
+          ctaHref:
+            "https://wa.me/5545991077788?text=Quero%20assinar%20o%20PDV%20Pro%20Profissional%20(R%24%20299%2Fm%C3%AAs)",
           destaque: true,
         },
         {
-          nome: "Empresa",
-          publico: "Rede com várias lojas",
-          precoLabel: "R$ 399",
+          nome: "Empresarial",
+          publico: "Multi-loja / atacado",
+          precoLabel: "R$ 499",
           features: [
-            "Tudo do Pro",
-            "Até 5 lojas/filiais",
+            "Até 3 lojas",
+            "NFC-e ilimitada (sem cobrança de excedente)",
+            "Tudo do Profissional",
             "Dashboard consolidado",
-            "API pra integrações",
+            "Suporte prioritário",
             "Onboarding dedicado",
-            "Suporte prioritário 24/7",
           ],
-          ctaLabel: "Assinar Empresa",
-          ctaHref: "https://www.asaas.com/c/0gfob8hswmye4emq",
+          ctaLabel: "Assinar Empresarial",
+          ctaHref:
+            "https://wa.me/5545991077788?text=Quero%20assinar%20o%20PDV%20Pro%20Empresarial%20(R%24%20499%2Fm%C3%AAs)",
         },
       ]}
       ctaFinalTitulo="A loja inteira em um sistema só"
       ctaFinalTexto="Combine com ContabilidadePro e PontoPro pra um varejo 100% no controle."
     appUrl="https://pdvpro.luqsys.com.br"
-    assinarUrl="https://www.asaas.com/c/l3c8v5dx1nh84z0k"
+    assinarUrl="https://wa.me/5545991077788?text=Quero%20assinar%20o%20PDV%20Pro"
     />
   );
 }
