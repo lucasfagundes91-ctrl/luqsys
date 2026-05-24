@@ -8,6 +8,11 @@ const PATH_OVERRIDE: Record<string, string> = {
   pontopro: "/api/webhooks/asaas",
 };
 
+// Sistemas que NÃO estão em `<slug>.luqsys.com.br` (ex.: marca própria).
+const DOMAIN_OVERRIDE: Record<string, string> = {
+  luquishop: "www.luquibrinquedos.com.br",
+};
+
 // Mapeia keyword na description do pagamento → slug do sistema.
 // Ordem importa: keywords mais específicas primeiro.
 const SISTEMA_MAP: Array<[string, string]> = [
@@ -33,6 +38,10 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["agenda pro", "agendapro"],
   ["comandapro", "comandapro"],
   ["comanda pro", "comandapro"],
+  // LuquiShop (loja online da Luqui Brinquedos) — descriptions:
+  //   "Luqui Brinquedos — Pedido #N" e "Clube Luqui — Plano X"
+  ["luqui brinquedos", "luquishop"],
+  ["clube luqui", "luquishop"],
 ];
 
 function detectSistema(payment: any): string | null {
@@ -106,6 +115,9 @@ export async function POST(req: NextRequest) {
   if (process.env.ASAAS_TOKEN_COMANDAPRO) {
     tokens.comandapro = process.env.ASAAS_TOKEN_COMANDAPRO;
   }
+  if (process.env.ASAAS_TOKEN_LUQUISHOP) {
+    tokens.luquishop = process.env.ASAAS_TOKEN_LUQUISHOP;
+  }
 
   const systemToken = tokens[slug];
   if (!systemToken) {
@@ -116,7 +128,8 @@ export async function POST(req: NextRequest) {
   }
 
   const path = PATH_OVERRIDE[slug] || "/webhook/asaas";
-  const upstreamUrl = `https://${slug}.luqsys.com.br${path}`;
+  const host = DOMAIN_OVERRIDE[slug] || `${slug}.luqsys.com.br`;
+  const upstreamUrl = `https://${host}${path}`;
   let upstreamStatus = 0;
   let upstreamBody: any = null;
   try {
