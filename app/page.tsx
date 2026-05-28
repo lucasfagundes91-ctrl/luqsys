@@ -48,6 +48,15 @@ const trilhas: Trilha[] = [
         preco: "R$ 199",
       },
       {
+        slug: "shoppro",
+        nome: "ShopPro",
+        icone: "🛍️",
+        tagline: "Site de e-commerce próprio integrado ao PDV — add-on do PDV Pro",
+        preco: "+R$ 199",
+        badge: "add-on PDV",
+        semTrial: true,
+      },
+      {
         slug: "farmpro",
         nome: "FarmPro",
         icone: "🌾",
