@@ -28,6 +28,8 @@ jobs:
             milhaspro.luqsys.com.br \
             solarpro.luqsys.com.br \
             pontopro.luqsys.com.br ; do
+            # pontopro.luqsys.com.br = HoraPro (rebrand INPI 2026-06-09).
+            # Quando subdomínio migrar pra horapro.luqsys.com.br, trocar aqui também.
             code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 40 -X POST \
               "https://$host/api/cron/reset-demo" \
               -H "X-Cron-Token: $CRON" -H "X-Cron-Secret: $CRON")
