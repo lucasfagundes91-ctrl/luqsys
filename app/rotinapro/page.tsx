@@ -71,8 +71,7 @@ export default function RotinaProPage() {
             "Suporte por e-mail e WhatsApp",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref:
-            "mailto:contato@luqsys.com.br?subject=Quero%20o%20RotinaPro%20Pro",
+          ctaHref: "https://www.asaas.com/c/fmai51owfhde8ckw",
           destaque: true,
         },
         {
@@ -96,7 +95,7 @@ export default function RotinaProPage() {
       ctaFinalTitulo="Pare de gerenciar checklist por planilha e grupo de WhatsApp"
       ctaFinalTexto="Cadastre 1 unidade e teste 3 dias grátis. Sem cartão."
       appUrl="https://rotinapro.luqsys.com.br"
-      assinarUrl="mailto:contato@luqsys.com.br?subject=Quero%20o%20RotinaPro"
+      assinarUrl="https://www.asaas.com/c/fmai51owfhde8ckw"
     />
   );
 }
