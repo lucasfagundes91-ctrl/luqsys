@@ -131,6 +131,15 @@ const trilhas: Trilha[] = [
         badge: "novo",
         appUrl: "https://comandapro.luqsys.com.br",
       },
+      {
+        slug: "rotinapro",
+        nome: "RotinaPro",
+        icone: "📋",
+        tagline: "Checklists e rotinas operacionais multi-unidade com IA que compara foto-padrão",
+        preco: "R$ 49",
+        badge: "novo",
+        appUrl: "https://rotinapro.luqsys.com.br",
+      },
     ],
   },
   {
