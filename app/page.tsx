@@ -215,6 +215,9 @@ const trilhas: Trilha[] = [
 
 
 export default function Home() {
+  const nSistemas = trilhas
+    .flatMap((t) => t.produtos)
+    .filter((p) => !p.semTrial && !p.emBreve).length;
   return (
     <main className="radial-bg">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
@@ -258,7 +261,7 @@ export default function Home() {
           SISTEMAS DE GESTÃO EMPRESARIAL
         </p>
         <p className="mx-auto mt-8 max-w-2xl text-lg text-neutral-300 sm:text-xl">
-          14 sistemas práticos pra rodar seu negócio, organizar suas finanças e
+          {nSistemas} sistemas práticos pra rodar seu negócio, organizar suas finanças e
           planejar suas viagens. Feitos pra usar no dia a dia, não pra ficar em
           apresentação.
         </p>
