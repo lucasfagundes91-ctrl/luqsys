@@ -89,6 +89,14 @@ const trilhas: Trilha[] = [
         precoDe: "R$ 119",
       },
       {
+        slug: "carregapro",
+        nome: "CarregaPro",
+        icone: "⚡",
+        tagline: "Gestão de eletroposto OCPP 1.6 — sem comissão de plataforma",
+        preco: "R$ 49",
+        badge: "novo",
+      },
+      {
         slug: "aluguelpro",
         nome: "AluguelPro",
         icone: "🏠",
@@ -177,15 +185,6 @@ const trilhas: Trilha[] = [
         tagline: "Gestão financeira pessoal com IA e WhatsApp",
         preco: "R$ 49",
         badge: "app + WhatsApp",
-      },
-      {
-        slug: "comparabot",
-        nome: "ComparaBot",
-        icone: "📑",
-        tagline: "Compare orçamentos no WhatsApp em segundos",
-        preco: "R$ 9",
-        badge: "grátis c/ outro plano",
-        semTrial: true,
       },
     ],
   },
@@ -283,7 +282,7 @@ export default function Home() {
 
         <p className="mt-6 text-xs text-neutral-500">
           ✦ <span className="text-gold">3 dias grátis</span> em qualquer sistema
-          · sem cartão de crédito · ComparaBot vem de bônus
+          · sem cartão de crédito · sem pegadinha
         </p>
       </section>
 
@@ -444,7 +443,7 @@ export default function Home() {
         </p>
         <p className="mt-2 text-center text-xs text-gold-dim">
           ✦ +5% off por sistema adicional · até{" "}
-          <strong className="text-gold">50% off</strong> pegando todos · ComparaBot vem grátis junto
+          <strong className="text-gold">50% off</strong> pegando todos
         </p>
 
         <div className="mt-10">

@@ -40,6 +40,8 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["comanda pro", "comandapro"],
   ["rotinapro", "rotinapro"],
   ["rotina pro", "rotinapro"],
+  ["carregapro", "carregapro"],
+  ["carrega pro", "carregapro"],
   // LuquiShop (loja online da Luqui Brinquedos) — descriptions:
   //   "Luqui Brinquedos — Pedido #N" e "Clube Luqui — Plano X"
   ["luqui brinquedos", "luquishop"],
