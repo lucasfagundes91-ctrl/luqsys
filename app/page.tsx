@@ -93,7 +93,7 @@ const trilhas: Trilha[] = [
         nome: "CarregaPro",
         icone: "⚡",
         tagline: "Gestão de eletroposto OCPP 1.6 — sem comissão de plataforma",
-        preco: "R$ 49",
+        preco: "R$ 99",
         badge: "novo",
       },
       {
@@ -108,7 +108,7 @@ const trilhas: Trilha[] = [
         nome: "FrotaPro",
         icone: "🚚",
         tagline: "Gestão de frota PME com IPVA, seguro e manutenção",
-        preco: "R$ 49",
+        preco: "R$ 99",
         badge: "novo",
       },
       {
@@ -144,7 +144,7 @@ const trilhas: Trilha[] = [
         nome: "RotinaPro",
         icone: "📋",
         tagline: "Checklists e rotinas operacionais multi-unidade com IA que compara foto-padrão",
-        preco: "R$ 49",
+        preco: "R$ 99",
         badge: "novo",
         appUrl: "https://rotinapro.luqsys.com.br",
       },
@@ -161,7 +161,7 @@ const trilhas: Trilha[] = [
         nome: "PontoPro",
         icone: "⏱️",
         tagline: "Ponto eletrônico REP-P (Portaria 671/2021)",
-        preco: "R$ 49 até 20 func",
+        preco: "R$ 99 até 20 func",
       },
       {
         slug: "contabilidadepro",
@@ -214,9 +214,7 @@ const trilhas: Trilha[] = [
 
 
 export default function Home() {
-  const nSistemas = trilhas
-    .flatMap((t) => t.produtos)
-    .filter((p) => !p.semTrial && !p.emBreve).length;
+  const nSistemas = trilhas.flatMap((t) => t.produtos).length;
   return (
     <main className="radial-bg">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
