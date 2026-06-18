@@ -92,7 +92,7 @@ const trilhas: Trilha[] = [
         slug: "carregapro",
         nome: "CarregaPro",
         icone: "⚡",
-        tagline: "Gestão de eletroposto OCPP 1.6 — sem comissão de plataforma",
+        tagline: "Gestão de eletroposto OCPP 1.6 J + 2.0.1 — sem comissão de plataforma",
         preco: "R$ 99",
         badge: "novo",
       },

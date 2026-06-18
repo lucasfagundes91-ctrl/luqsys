@@ -16,8 +16,9 @@ export default function CarregaProPage() {
       descricao={
         <>
           Pra quem opera <strong className="text-white">1 ou mais carregadores
-          veiculares</strong>: gerencia tudo via OCPP 1.6 J — sem precisar usar
-          a plataforma do fabricante e pagar R$ 0,30-0,50 por kWh em comissão.
+          veiculares</strong>: aceita <strong className="text-white">OCPP 1.6 J
+          e 2.0.1 nativos</strong> — sem precisar usar a plataforma do fabricante
+          e pagar R$ 0,30-0,50 por kWh em comissão.
         </>
       }
       ctaPrimaria={{
@@ -46,7 +47,7 @@ export default function CarregaProPage() {
         },
       ]}
       features={[
-        "OCPP 1.6 J nativo — aceita qualquer marca certificada",
+        "OCPP 1.6 J e 2.0.1 nativo — aceita qualquer marca certificada",
         "Tarifa dinâmica por horário, dia da semana e estação",
         "RFID com tipos: cliente, frota interna, VIP, fidelidade",
         "Cobrança Pix automática (Asaas) ao fim de cada carga",
