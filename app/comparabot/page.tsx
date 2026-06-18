@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const WHATSAPP_LINK =
   "https://wa.me/15559312876?text=" +
-  encodeURIComponent("Oi! Quero comparar orçamentos.");
+  encodeURIComponent("COMPARA — quero comparar orçamentos.");
 
 const steps = [
   {
