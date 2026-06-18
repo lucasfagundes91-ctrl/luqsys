@@ -18,7 +18,7 @@ import database as db
 
 claude = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
-RE_ATIVAR   = re.compile(r"\b(compar|or[çc]amento|or[çc]ar|mais barato|melhor pre[çc]o|cot[ao])\b", re.I)
+RE_ATIVAR   = re.compile(r"\b(compar\w*|or[çc]\w*|mais barato|melhor pre[çc]o|cot\w*)\b", re.I)
 RE_ANALISAR = re.compile(r"\b(anali[sz]\w*|compar\w*|decid\w*|finaliz\w*|qual (escolho|compro|levo)|ver (an[aá]lise|resultado))\b", re.I)
 RE_CANCELAR = re.compile(r"\b(cancel|sair|para(r)?|chega|encerr)\b", re.I)
 RE_NOVO     = re.compile(r"\b(novo|recomeç|de novo|outra vez|reinicia)\b", re.I)
