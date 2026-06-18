@@ -157,8 +157,8 @@ const trilhas: Trilha[] = [
     subtitulo: "Funcionários, ponto e contabilidade — sem dor de cabeça com a lei",
     produtos: [
       {
-        slug: "pontopro",
-        nome: "PontoPro",
+        slug: "horapro",
+        nome: "HoraPro",
         icone: "⏱️",
         tagline: "Ponto eletrônico REP-P (Portaria 671/2021)",
         preco: "R$ 99 até 20 func",

@@ -25,6 +25,11 @@ const nextConfig = {
         destination: '/obraspro',
         permanent: true,
       },
+      {
+        source: '/pontopro',
+        destination: '/horapro',
+        permanent: true,
+      },
     ];
   },
 };

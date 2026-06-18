@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import { ProductLayout } from "../_components/ProductLayout";
 
 export const metadata: Metadata = {
-  title: "PontoPro — Ponto eletrônico REP-P (Portaria 671)",
+  title: "HoraPro — Ponto eletrônico REP-P (Portaria 671)",
+  alternates: { canonical: "https://www.luqsys.com.br/horapro" },
   description:
     "Ponto eletrônico online em conformidade com a Portaria MTP 671/2021. Multi-tenant, selfie, GPS, AFD/AEJ, ATTR — pra PME brasileira.",
 };
 
-export default function PontoProPage() {
+export default function HoraProPage() {
   return (
     <ProductLayout
       icone="⏱️"
-      nome="PontoPro"
+      nome="HoraPro"
       tagline="Ponto eletrônico REP-P em conformidade total"
       descricao={
         <>
@@ -22,7 +23,7 @@ export default function PontoProPage() {
       }
       ctaPrimaria={{
         label: "Falar com vendas",
-        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20PontoPro",
+        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20HoraPro",
       }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
@@ -108,7 +109,7 @@ export default function PontoProPage() {
       rodapeHero="3 planos. Pro a partir de R$ 49 (até 20 func). Sem fidelidade."
       ctaFinalTitulo="Ponto eletrônico sem dor de cabeça"
       ctaFinalTexto="Fiscalização do trabalho não vai te pegar de surpresa."
-    appUrl="https://pontopro.luqsys.com.br"
+    appUrl="https://horapro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/a77msa0ndv1smwxn"
     />
   );

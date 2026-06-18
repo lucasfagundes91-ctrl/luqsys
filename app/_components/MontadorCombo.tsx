@@ -12,17 +12,20 @@ type Sistema = {
 };
 
 const SISTEMAS: Sistema[] = [
-  { slug: "pdvpro", nome: "PDV Pro", icone: "🛒", tagline: "Varejo / loja física", preco: 199, emBreve: true },
+  { slug: "pdvpro", nome: "PDV Pro", icone: "🛒", tagline: "Varejo / loja física", preco: 199 },
+  { slug: "shoppro", nome: "ShopPro", icone: "🛍️", tagline: "E-commerce (add-on PDV Pro)", preco: 199 },
   { slug: "farmpro", nome: "FarmPro", icone: "🌾", tagline: "Gestão rural", preco: 119 },
   { slug: "silopro", nome: "SiloPro", icone: "⚖️", tagline: "Pesagem de silo", preco: 99 },
   { slug: "obraspro", nome: "ObrasPro", icone: "🏗️", tagline: "Obras por etapa", preco: 119 },
   { slug: "solarpro", nome: "SolarPro", icone: "☀️", tagline: "Empresa solar", preco: 89 },
+  { slug: "carregapro", nome: "CarregaPro", icone: "⚡", tagline: "Eletroposto OCPP", preco: 99 },
   { slug: "aluguelpro", nome: "AluguelPro", icone: "🏠", tagline: "Imóveis e aluguéis", preco: 99 },
-  { slug: "frotapro", nome: "FrotaPro", icone: "🚚", tagline: "Frota PME", preco: 49 },
+  { slug: "frotapro", nome: "FrotaPro", icone: "🚚", tagline: "Frota PME", preco: 99 },
   { slug: "adspro", nome: "AdsPro", icone: "📣", tagline: "Anúncios no Meta com IA", preco: 199 },
   { slug: "agendapro", nome: "AgendaPro", icone: "📅", tagline: "Agendamento online", preco: 99 },
   { slug: "comandapro", nome: "ComandaPro", icone: "🍽️", tagline: "Restaurante e bar", preco: 99 },
-  { slug: "pontopro", nome: "PontoPro", icone: "⏱️", tagline: "Ponto eletrônico", preco: 49 },
+  { slug: "rotinapro", nome: "RotinaPro", icone: "📋", tagline: "Checklists multi-unidade", preco: 99 },
+  { slug: "horapro", nome: "HoraPro", icone: "⏱️", tagline: "Ponto eletrônico REP-P", preco: 99 },
   { slug: "contabilidadepro", nome: "ContabilidadePro", icone: "📊", tagline: "Software + contador", preco: 199, emBreve: true },
   { slug: "bankpro", nome: "BankPro", icone: "🏦", tagline: "Finanças pessoais", preco: 49 },
   { slug: "viagempro", nome: "ViagemPro", icone: "🧳", tagline: "Planejador de viagens", preco: 49 },
@@ -65,7 +68,6 @@ export function MontadorCombo() {
   const desconto = descontoFor(qtd);
   const total = Math.round(somaCheia * (1 - desconto));
   const economia = somaCheia - total;
-  const incluiComparaBot = qtd >= 1;
 
   const proximaFaixa = FAIXAS.find((f) => qtd < f.min);
 
@@ -85,7 +87,6 @@ export function MontadorCombo() {
   const mailtoBody = encodeURIComponent(
     `Pacote escolhido:\n` +
       escolhidos.map((s) => `• ${s.nome} (R$ ${s.preco}/mês)`).join("\n") +
-      (incluiComparaBot ? `\n• ComparaBot Pro (incluso grátis)` : "") +
       `\n\nSoma cheia: R$ ${somaCheia}/mês\n` +
       `Desconto: ${(desconto * 100).toFixed(0)}% (R$ ${economia}/mês)\n` +
       `TOTAL: R$ ${total}/mês\n\n` +
@@ -147,33 +148,6 @@ export function MontadorCombo() {
             </button>
           );
         })}
-
-        <div
-          className={`flex items-start gap-3 rounded-2xl border border-gold-dim/60 bg-gradient-to-br from-gold-dark/30 to-bg-card p-4 ${
-            qtd === 0 ? "opacity-60" : ""
-          }`}
-        >
-          <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-md border border-gold bg-gold text-bg text-sm font-bold">
-            ✓
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2">
-              <span className="text-xl">📑</span>
-              <span className="font-bold text-gold">ComparaBot</span>
-              <span className="rounded-full border border-gold-dim/60 bg-gold-dark/40 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-gold">
-                bônus
-              </span>
-            </div>
-            <p className="mt-1 text-xs text-neutral-400">Compare orçamentos no WhatsApp</p>
-            <p className="mt-2 text-sm font-semibold text-neutral-300">
-              {qtd === 0 ? (
-                <>R$ 9<span className="text-xs font-normal text-neutral-500">/mês</span></>
-              ) : (
-                <span className="text-emerald-400">Grátis no seu pacote ✓</span>
-              )}
-            </p>
-          </div>
-        </div>
       </div>
 
       <div className="sticky bottom-4 mt-8 z-30">
@@ -201,7 +175,6 @@ export function MontadorCombo() {
                   </span>
                   <span className="text-sm text-neutral-400">
                     {qtd} sistema{qtd > 1 ? "s" : ""}
-                    {incluiComparaBot ? " + ComparaBot grátis" : ""}
                   </span>
                 </div>
                 <div className="mt-1 flex items-baseline gap-2">
