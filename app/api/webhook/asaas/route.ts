@@ -6,6 +6,7 @@ export const dynamic = "force-dynamic";
 // Sistemas com path de webhook diferente do padrão `/webhook/asaas`.
 const PATH_OVERRIDE: Record<string, string> = {
   pontopro: "/api/webhooks/asaas",
+  horapro: "/api/webhooks/asaas",
 };
 
 // Sistemas que NÃO estão em `<slug>.luqsys.com.br` (ex.: marca própria).
@@ -26,6 +27,8 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["pdvpro", "pdvpro"],
   ["milhaspro", "milhaspro"],
   ["viagempro", "viagempro"],
+  ["horapro", "horapro"],
+  ["hora pro", "horapro"],
   ["pontopro", "pontopro"],
   ["solarpro", "solarpro"],
   ["aluguelpro", "aluguelpro"],

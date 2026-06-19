@@ -105,7 +105,7 @@ export default function ObrasProPage() {
         },
       ]}
       ctaFinalTitulo="Pare de furar o orçamento"
-      ctaFinalTexto="Combine com ComparaBot pra cotar material antes de comprar."
+      ctaFinalTexto="Combine com BankPro pra controlar o caixa da obra e com FrotaPro pra rastrear a caminhonete."
     appUrl="https://obraspro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/gj85zr3wdfwp28vp"
     />

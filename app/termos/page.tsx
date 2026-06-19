@@ -24,8 +24,8 @@ export default function TermosPage() {
             <h2 className="text-2xl font-semibold text-white">1. Aceitação</h2>
             <p className="mt-3">
               Ao usar qualquer produto Luqsys (BankPro, FarmPro, FrotaPro,
-              PDV Pro, AdsPro, AgendaPro, PontoPro, ViagemPro, MilhasPro,
-              ObrasPro, ComparaBot e demais), você concorda com estes termos.
+              PDV Pro, AdsPro, AgendaPro, HoraPro, ViagemPro, MilhasPro,
+              ObrasPro, CarregaPro e demais), você concorda com estes termos.
             </p>
           </section>
 

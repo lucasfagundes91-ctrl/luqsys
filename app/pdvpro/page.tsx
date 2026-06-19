@@ -116,7 +116,7 @@ export default function PDVProPage() {
         },
       ]}
       ctaFinalTitulo="A loja inteira em um sistema só"
-      ctaFinalTexto="Combine com ShopPro (site próprio +R$ 199), ContabilidadePro e PontoPro pra um varejo 100% no controle."
+      ctaFinalTexto="Combine com ShopPro (site próprio +R$ 199), ContabilidadePro e HoraPro pra um varejo 100% no controle."
     appUrl="https://pdvpro.luqsys.com.br"
     assinarUrl="https://wa.me/5545991077788?text=Quero%20assinar%20o%20PDV%20Pro"
     />

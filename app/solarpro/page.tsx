@@ -105,7 +105,7 @@ export default function SolarProPage() {
         },
       ]}
       ctaFinalTitulo="Seu negócio solar organizado"
-      ctaFinalTexto="Combine com PontoPro (instaladores) e ContabilidadePro pro fechamento."
+      ctaFinalTexto="Combine com HoraPro (instaladores) e ContabilidadePro pro fechamento."
     appUrl="https://solarpro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/wy6zkhm3k7otovzd"
     />
