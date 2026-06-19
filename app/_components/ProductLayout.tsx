@@ -28,7 +28,6 @@ export type ProductPageProps = {
   features: string[];
   featuresTitulo?: string;
   planos: Plano[];
-  bonusLuqsys?: boolean;
   ctaFinalTitulo?: string;
   ctaFinalTexto?: string;
   appUrl?: string;
@@ -50,7 +49,6 @@ export function ProductLayout({
   features,
   featuresTitulo = "O que ele faz",
   planos,
-  bonusLuqsys = true,
   ctaFinalTitulo,
   ctaFinalTexto,
   appUrl,
@@ -320,32 +318,6 @@ export function ProductLayout({
             </div>
           ))}
         </div>
-
-        {bonusLuqsys && (
-          <div className="mt-8 rounded-2xl border border-gold-dim bg-gradient-to-br from-gold-dark/40 to-bg-card p-6">
-            <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <div>
-                <span className="inline-block rounded-full border border-gold-dim/60 bg-gold-dark/30 px-3 py-1 text-xs font-bold tracking-wider text-gold">
-                  BÔNUS LUQSYS
-                </span>
-                <p className="mt-3 text-sm text-neutral-200 sm:text-base">
-                  Assinando o {nome},{" "}
-                  <strong className="text-white">
-                    você ganha o ComparaBot Pro
-                  </strong>{" "}
-                  (R$ 9/mês) <strong className="text-gold">de graça</strong>{" "}
-                  — comparações ilimitadas no WhatsApp.
-                </p>
-              </div>
-              <Link
-                href="/comparabot"
-                className="shrink-0 rounded-full border border-gold-dim px-5 py-2 text-sm font-semibold text-gold transition hover:border-gold"
-              >
-                Saiba mais →
-              </Link>
-            </div>
-          </div>
-        )}
       </section>
 
       {(ctaFinalTitulo || ctaPrimaria || trialHref) && (
