@@ -140,6 +140,15 @@ const trilhas: Trilha[] = [
         appUrl: "https://agendapro.luqsys.com.br",
       },
       {
+        slug: "sorripro",
+        nome: "SorriPro",
+        icone: "🦷",
+        tagline: "Clínica odontológica inteira: agenda, prontuário, odontograma e portal do paciente",
+        preco: "R$ 49",
+        badge: "novo",
+        appUrl: "https://sorripro.luqsys.com.br",
+      },
+      {
         slug: "comandapro",
         nome: "ComandaPro",
         icone: "🍽️",

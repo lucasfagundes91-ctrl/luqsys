@@ -45,8 +45,12 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["rotina pro", "rotinapro"],
   ["carregapro", "carregapro"],
   ["carrega pro", "carregapro"],
-  ["odontopro", "odontopro"],
-  ["odonto pro", "odontopro"],
+  ["sorripro", "sorripro"],
+  ["sorri pro", "sorripro"],
+  // Nome antigo do SorriPro (trocado em 20/07/2026 por conflito de marca).
+  // Cobrança criada antes da troca ainda chega com "odontopro" na description.
+  ["odontopro", "sorripro"],
+  ["odonto pro", "sorripro"],
   // LuquiShop (loja online da Luqui Brinquedos) — descriptions:
   //   "Luqui Brinquedos — Pedido #N" e "Clube Luqui — Plano X"
   ["luqui brinquedos", "luquishop"],

@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { ProductLayout } from "../_components/ProductLayout";
 
 export const metadata: Metadata = {
-  title: "OdontoPro — Gestão completa pra clínica odontológica",
+  title: "SorriPro — Gestão completa pra clínica odontológica",
   description:
     "Agenda multi-dentista, prontuário eletrônico com odontograma, plano de tratamento, financeiro, portal do paciente e site com marcação online. R$ 49/mês, 3 dias grátis.",
 };
 
-export default function OdontoProPage() {
+export default function SorriProPage() {
   return (
     <ProductLayout
       icone="🦷"
-      nome="OdontoPro"
+      nome="SorriPro"
       tagline="A clínica inteira num sistema só."
       descricao={
         <>
@@ -72,14 +72,14 @@ export default function OdontoProPage() {
             "Suporte por WhatsApp",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref: "https://wa.me/5545991077788?text=Quero%20assinar%20o%20OdontoPro",
+          ctaHref: "https://wa.me/5545991077788?text=Quero%20assinar%20o%20SorriPro",
           destaque: true,
         },
       ]}
       ctaFinalTitulo="Sua agenda não devia morar num caderno"
       ctaFinalTexto="Teste 3 dias de graça, sem cartão. Se não fizer sentido pra sua clínica, é só parar."
-      appUrl="https://odontopro.luqsys.com.br"
-      assinarUrl="https://wa.me/5545991077788?text=Quero%20assinar%20o%20OdontoPro"
+      appUrl="https://sorripro.luqsys.com.br"
+      assinarUrl="https://wa.me/5545991077788?text=Quero%20assinar%20o%20SorriPro"
     />
   );
 }
