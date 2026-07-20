@@ -97,6 +97,15 @@ const trilhas: Trilha[] = [
         badge: "novo",
       },
       {
+        slug: "botapro",
+        nome: "BotaPro",
+        icone: "🥾",
+        tagline: "ERP pra indústria de calçado: custo do par, grade e produção",
+        preco: "R$ 149",
+        badge: "novo",
+        appUrl: "https://botapro.luqsys.com.br",
+      },
+      {
         slug: "aluguelpro",
         nome: "AluguelPro",
         icone: "🏠",
