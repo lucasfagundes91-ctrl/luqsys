@@ -7,11 +7,15 @@ export const dynamic = "force-dynamic";
 const PATH_OVERRIDE: Record<string, string> = {
   pontopro: "/api/webhooks/asaas",
   horapro: "/api/webhooks/asaas",
+  euseivotar: "/api/webhook/asaas",
 };
 
 // Sistemas que NÃO estão em `<slug>.luqsys.com.br` (ex.: marca própria).
 const DOMAIN_OVERRIDE: Record<string, string> = {
   luquishop: "www.luquibrinquedos.com.br",
+  // EuSeiVotar ainda não tem domínio próprio (euseivotar.com.br a registrar);
+  // até lá aponta direto pro host do Railway.
+  euseivotar: "web-production-df6b4.up.railway.app",
 };
 
 // Mapeia keyword na description do pagamento → slug do sistema.
@@ -55,6 +59,9 @@ const SISTEMA_MAP: Array<[string, string]> = [
   //   "Luqui Brinquedos — Pedido #N" e "Clube Luqui — Plano X"
   ["luqui brinquedos", "luquishop"],
   ["clube luqui", "luquishop"],
+  // EuSeiVotar — produto B2C sazonal, acesso único (não assinatura)
+  ["euseivotar", "euseivotar"],
+  ["eu sei votar", "euseivotar"],
 ];
 
 function detectSistema(payment: any): string | null {
