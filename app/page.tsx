@@ -245,7 +245,7 @@ const trilhas: Trilha[] = [
         preco: "Grátis",
         gratis: true,
         badge: "eleição 2026",
-        externo: "https://euseivotar.com.br",
+        externo: "https://web-production-df6b4.up.railway.app",
       },
     ],
   },
