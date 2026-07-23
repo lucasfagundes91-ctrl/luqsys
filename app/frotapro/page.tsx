@@ -59,7 +59,7 @@ export default function FrotaProPage() {
         {
           nome: "Básico",
           publico: "Frota pequena (até 5 veículos)",
-          precoLabel: "R$ 29",
+          precoLabel: "R$ 69",
           features: [
             "Até 5 veículos",
             "1 usuário",
@@ -74,7 +74,7 @@ export default function FrotaProPage() {
         {
           nome: "Pro",
           publico: "Frota empresarial",
-          precoLabel: "R$ 49",
+          precoLabel: "R$ 129",
           features: [
             "Veículos ilimitados",
             "Usuários ilimitados",
@@ -91,7 +91,7 @@ export default function FrotaProPage() {
         {
           nome: "Empresa",
           publico: "Frota grande com várias filiais",
-          precoLabel: "R$ 99",
+          precoLabel: "R$ 199",
           features: [
             "Tudo do Pro",
             "Multi-empresa (CNPJs)",

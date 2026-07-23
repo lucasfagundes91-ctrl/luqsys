@@ -151,11 +151,11 @@ export const promos: Record<string, PromoData> = {
     },
     oferta: {
       descontoLabel: "2 meses grátis · anuidade no plano Pro",
-      precoOriginal: "R$ 49",
-      precoPromo: "R$ 41",
+      precoOriginal: "R$ 129",
+      precoPromo: "R$ 108",
       sufixoPreco: "/mês",
       detalhe:
-        "Equivalente a 2 meses grátis no plano anual (12x R$ 41 em vez de 12x R$ 49). Sem reajuste no primeiro ano.",
+        "Equivalente a 2 meses grátis no plano anual (12x R$ 108 em vez de 12x R$ 129). Sem reajuste no primeiro ano.",
     },
     bullets: [
       "Cadastro ilimitado de veículos no plano Pro",

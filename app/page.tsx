@@ -119,7 +119,7 @@ const trilhas: Trilha[] = [
         nome: "FrotaPro",
         icone: "🚚",
         tagline: "Gestão de frota PME com IPVA, seguro e manutenção",
-        preco: "R$ 99",
+        preco: "R$ 129",
         badge: "novo",
       },
       {
