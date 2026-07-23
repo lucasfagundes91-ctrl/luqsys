@@ -13,6 +13,8 @@ type Produto = {
   appUrl?: string;
   semTrial?: boolean;
   emBreve?: boolean;
+  externo?: string; // projeto aberto: card leva direto pro app, sem página interna
+  gratis?: boolean; // some o "/mês" e troca trial/demo por "Acessar grátis"
 };
 
 function trialHref(p: Produto) {
@@ -228,6 +230,25 @@ const trilhas: Trilha[] = [
       },
     ],
   },
+  {
+    id: "cidadania",
+    emoji: "🗳️",
+    titulo: "Projeto aberto",
+    subtitulo: "Ferramenta de utilidade pública — grátis, sem cadastro pra começar",
+    produtos: [
+      {
+        slug: "euseivotar",
+        nome: "EuSeiVotar?",
+        icone: "🗳️",
+        tagline:
+          "Responda votações reais do Congresso e descubra quem votou como você. Voto, patrimônio e ficha no TSE de cada político — com link pra fonte oficial.",
+        preco: "Grátis",
+        gratis: true,
+        badge: "eleição 2026",
+        externo: "https://euseivotar.com.br",
+      },
+    ],
+  },
 ];
 
 
@@ -364,7 +385,7 @@ export default function Home() {
                           <span className="text-xl font-black text-white">
                             {p.preco}
                           </span>
-                          {!p.preco.includes("/") && (
+                          {!p.gratis && !p.preco.includes("/") && (
                             <span className="text-sm font-medium text-neutral-500">
                               /mês
                             </span>
@@ -372,7 +393,7 @@ export default function Home() {
                         </div>
                         {!p.emBreve && (
                           <span className="text-xs font-semibold text-neutral-500 transition group-hover:text-gold">
-                            detalhes →
+                            {p.externo ? "abrir →" : "detalhes →"}
                           </span>
                         )}
                       </div>
@@ -390,6 +411,15 @@ export default function Home() {
                     >
                       {p.emBreve ? (
                         <div className="flex flex-1 flex-col">{cardInner}</div>
+                      ) : p.externo ? (
+                        <a
+                          href={p.externo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex flex-1 flex-col"
+                        >
+                          {cardInner}
+                        </a>
                       ) : (
                         <Link href={`/${p.slug}`} className="flex flex-1 flex-col">
                           {cardInner}
@@ -406,6 +436,17 @@ export default function Home() {
                             className="block rounded-full border border-neutral-700 px-3 py-2 text-center text-xs font-semibold text-neutral-400 transition hover:border-gold-dim hover:text-gold"
                           >
                             Me avise quando lançar →
+                          </a>
+                        </div>
+                      ) : p.externo ? (
+                        <div className="mt-5 border-t border-neutral-900 pt-4">
+                          <a
+                            href={p.externo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
+                          >
+                            Acessar grátis →
                           </a>
                         </div>
                       ) : !p.semTrial ? (
