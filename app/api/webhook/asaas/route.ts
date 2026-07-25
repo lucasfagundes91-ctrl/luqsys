@@ -62,6 +62,9 @@ const SISTEMA_MAP: Array<[string, string]> = [
   // EuSeiVotar — produto B2C sazonal, acesso único (não assinatura)
   ["euseivotar", "euseivotar"],
   ["eu sei votar", "euseivotar"],
+  // Virada — teste de transição de carreira, compra única (relatório)
+  // description: "Virada — Relatório completo de transição de carreira"
+  ["virada", "virada"],
 ];
 
 function detectSistema(payment: any): string | null {
