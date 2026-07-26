@@ -9,6 +9,7 @@ import os
 from fastapi import FastAPI, Request, Response
 from fastapi.responses import JSONResponse
 from twilio.rest import Client as TwilioClient
+from twilio.request_validator import RequestValidator
 
 import database as db
 import comparador_orcamentos as bot
@@ -17,6 +18,18 @@ app = FastAPI(title="ComparaBot — Luqsys")
 
 twilio       = TwilioClient(os.environ["TWILIO_ACCOUNT_SID"], os.environ["TWILIO_AUTH_TOKEN"])
 NUMERO_FROM  = os.environ["TWILIO_WHATSAPP_NUMBER"]
+_validador   = RequestValidator(os.environ["TWILIO_AUTH_TOKEN"])
+
+
+def _url_publica(request: Request) -> str:
+    """URL que a Twilio usou pra assinar. Atrás do proxy do Railway o request
+    chega como http:// enquanto a assinatura foi feita sobre https://, então o
+    esquema e o host vêm dos cabeçalhos X-Forwarded-*; usar request.url cru faz
+    toda assinatura falhar."""
+    proto = request.headers.get("x-forwarded-proto", request.url.scheme).split(",")[0].strip()
+    host  = request.headers.get("x-forwarded-host", request.headers.get("host", "")).split(",")[0].strip()
+    url = request.url.replace(scheme=proto, netloc=host) if host else request.url
+    return str(url)
 
 
 @app.on_event("startup")
@@ -33,6 +46,11 @@ def health():
 @app.post("/webhook/whatsapp")
 async def webhook(request: Request):
     form       = await request.form()
+    # Sem validar a assinatura, o campo From é forjável: qualquer um faz o bot
+    # responder por Twilio pra um número escolhido e queima a cota da Anthropic.
+    assinatura = request.headers.get("x-twilio-signature", "")
+    if not _validador.validate(_url_publica(request), dict(form), assinatura):
+        return JSONResponse(status_code=403, content={"error": "assinatura inválida"})
     phone      = form.get("From", "")
     body       = form.get("Body", "")
     num_media  = int(form.get("NumMedia", 0))

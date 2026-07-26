@@ -13,6 +13,7 @@ import base64
 import requests
 import anthropic
 from typing import Optional
+from urllib.parse import urlparse
 
 import database as db
 
@@ -43,8 +44,38 @@ def _reset(phone):
     db.deletar_sessao(phone)
 
 
+_HOSTS_MIDIA_TWILIO = ("api.twilio.com", "media.twiliocdn.com", "mcs.us1.twilio.com")
+
+
+def _host_de_midia_confiavel(url):
+    """True só para host de mídia da própria Twilio.
+
+    A URL vem do corpo do webhook (MediaUrl0). Como o GET leva as credenciais
+    da conta Twilio em Basic auth, uma URL forjada apontando pra um host
+    qualquer entregava ACCOUNT_SID e AUTH_TOKEN de bandeja. Casa o host exato ou
+    subdominio dele — 'api.twilio.com.atacante.com' não passa."""
+    try:
+        p = urlparse(url)
+    except Exception:
+        return False
+    if p.scheme != "https":
+        return False
+    host = (p.hostname or "").lower()
+    return any(host == h or host.endswith("." + h) for h in _HOSTS_MIDIA_TWILIO)
+
+
 def _baixar_midia(url):
-    r = requests.get(url, auth=(os.environ["TWILIO_ACCOUNT_SID"], os.environ["TWILIO_AUTH_TOKEN"]), timeout=20)
+    if not _host_de_midia_confiavel(url):
+        raise ValueError(f"MediaUrl fora dos hosts da Twilio: {url[:80]}")
+    r = requests.get(url, auth=(os.environ["TWILIO_ACCOUNT_SID"], os.environ["TWILIO_AUTH_TOKEN"]),
+                     timeout=20, allow_redirects=False)
+    # Twilio redireciona a mídia pro CDN; segue à mão pra reavaliar o host do
+    # destino e NÃO reenviar o Basic auth pra fora do domínio dela.
+    if r.is_redirect or r.status_code in (301, 302, 303, 307, 308):
+        destino = r.headers.get("Location", "")
+        if not _host_de_midia_confiavel(destino):
+            raise ValueError(f"redirect de midia pra host nao confiavel: {destino[:80]}")
+        r = requests.get(destino, timeout=20, allow_redirects=False)
     r.raise_for_status()
     mt = r.headers.get("Content-Type", "image/jpeg").split(";")[0]
     return r.content, mt
