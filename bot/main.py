@@ -6,6 +6,7 @@ Deploy: Railway (Python, porta via $PORT)
 """
 
 import os
+import secrets
 from fastapi import FastAPI, Request, Response
 from fastapi.responses import JSONResponse
 from twilio.rest import Client as TwilioClient
@@ -19,6 +20,10 @@ app = FastAPI(title="ComparaBot — Luqsys")
 twilio       = TwilioClient(os.environ["TWILIO_ACCOUNT_SID"], os.environ["TWILIO_AUTH_TOKEN"])
 NUMERO_FROM  = os.environ["TWILIO_WHATSAPP_NUMBER"]
 _validador   = RequestValidator(os.environ["TWILIO_AUTH_TOKEN"])
+# Segredo compartilhado com o WaRouter. Quando a mensagem chega roteada por ele,
+# a assinatura da Twilio cobre a URL DO ROUTER e nao bate aqui — o carimbo dele
+# e o que atesta a origem nesse caminho.
+WAROUTER_TOKEN = os.environ.get("WAROUTER_TOKEN", "")
 
 
 def _url_publica(request: Request) -> str:
@@ -49,7 +54,9 @@ async def webhook(request: Request):
     # Sem validar a assinatura, o campo From é forjável: qualquer um faz o bot
     # responder por Twilio pra um número escolhido e queima a cota da Anthropic.
     assinatura = request.headers.get("x-twilio-signature", "")
-    if not _validador.validate(_url_publica(request), dict(form), assinatura):
+    do_router = bool(WAROUTER_TOKEN) and secrets.compare_digest(
+        request.headers.get("x-warouter-token", ""), WAROUTER_TOKEN)
+    if not (do_router or _validador.validate(_url_publica(request), dict(form), assinatura)):
         return JSONResponse(status_code=403, content={"error": "assinatura inválida"})
     phone      = form.get("From", "")
     body       = form.get("Body", "")
