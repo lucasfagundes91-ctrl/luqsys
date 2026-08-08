@@ -599,7 +599,13 @@ export default function Home() {
       <ContactInfo />
 
       <footer className="border-t border-neutral-900 px-6 py-10 text-center text-sm text-neutral-500">
-        <p>© {new Date().getFullYear()} Luqsys. Todos os direitos reservados.</p>
+        <p>
+          Já é cliente?{" "}
+          <Link href="/instalar" className="text-gold transition hover:underline">
+            instale os apps no celular
+          </Link>
+        </p>
+        <p className="mt-4">© {new Date().getFullYear()} Luqsys. Todos os direitos reservados.</p>
         <p className="mt-1">luqsys.com.br</p>
       </footer>
     </main>
