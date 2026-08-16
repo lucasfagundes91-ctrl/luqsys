@@ -89,6 +89,9 @@ export default function ViagemProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/viagempro-0.jpg", legenda: "Suas viagens, com o roteiro pronto"},
+      ]}
       praQuem={[
         {icone:"🧳", titulo:"Quem viaja e odeia planejar", texto:"O roteiro pronto pra editar, em vez da folha em branco."},
         {icone:"👨‍👩‍👧", titulo:"Família com dias contados", texto:"Encaixar tudo sem descobrir na hora que o museu fecha na terça."},

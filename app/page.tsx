@@ -53,6 +53,9 @@ const trilhas: Trilha[] = [
         tagline: "PDV + ERP completo pra loja física",
         preco: "R$ 149",
         aPartirDe: true,
+        // a demo dele mora em outro deploy: o endereco principal e a producao
+        // de uma loja real, e o sistema roda uma loja por instalacao
+        demoUrl: "https://demo.pdvpro.luqsys.com.br/",
       },
       {
         slug: "shoppro",

@@ -15,15 +15,23 @@ export const metadata: Metadata = {
    páginas lado a lado. Então ela volta pro layout: mesma cor, mesmo conteúdo,
    e agora acompanha toda melhoria que os outros 20 receberem.
 
-   O que ela NÃO perde na volta: as CTAs honestas. O PDV Pro roda UMA LOJA POR
-   DEPLOY — não tem sandbox nem trial self-service. O /demo dele é agendamento
-   e o /cadastro?trial=1 não tem nem formulário. Por isso `semDemo` e as CTAs
-   apontando pro WhatsApp, em vez do "Ver demo / Testar 3 dias" dos outros. */
+   O trial continua sendo assistido: o PDV Pro roda UMA LOJA POR DEPLOY, então
+   /cadastro?trial=1 não tem formulário e as CTAs de contratação seguem indo
+   pro WhatsApp, em vez do "Testar 3 dias" self-service dos outros.
+
+   A demo, essa sim, deixou de ser agendamento: ganhou deploy próprio com banco
+   próprio em demo.pdvpro.luqsys.com.br — loja fictícia, caixa do dia aberto,
+   estoque e relatórios com número. Era o único sistema da casa sem nada pra
+   mostrar, logo o mais caro. Por isso `semDemo` saiu e entrou `demoUrl`: sem
+   apontar pro endereço novo, o layout montaria `appUrl + /demo` e mandaria o
+   visitante pra produção de um cliente real. */
 
 const ZAP = (texto: string) =>
   "https://wa.me/5545991077788?text=" + encodeURIComponent(texto);
 
-const DEMO = ZAP("Oi Lucas, quero ver o PDV Pro funcionando");
+/* Deploy separado, banco separado: loja fictícia que qualquer um pode abrir e
+   mexer. NÃO é o endereço principal — aquele é a produção de um cliente. */
+const DEMO_URL = "https://demo.pdvpro.luqsys.com.br/";
 
 export default function PDVProPage() {
   return (
@@ -40,10 +48,10 @@ export default function PDVProPage() {
           <strong className="text-white">o mesmo dado</strong>.
         </>
       }
-      ctaPrimaria={{ label: "Ver o sistema funcionando", href: DEMO }}
+      ctaPrimaria={{ label: "Abrir a demonstração", href: DEMO_URL }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
-      rodapeHero="✦ Demonstração ao vivo, 15 a 20 minutos · sem compromisso · sem cartão de crédito"
-      semDemo
+      rodapeHero="✦ Loja de exemplo, aberta agora · sem cadastro, sem cartão de crédito · dados fictícios"
+      demoUrl={DEMO_URL}
       problema={{
         titulo: "Loja não quebra por falta de venda. Quebra por falta de controle.",
         texto: (
@@ -259,11 +267,11 @@ export default function PDVProPage() {
         },
         {
           p: "Por que não tem teste grátis igual aos outros sistemas?",
-          r: "Porque o PDV Pro não é multi-inquilino: cada loja roda no seu próprio ambiente, com o seu banco e o seu certificado. Não dá pra abrir sozinho num clique. Em compensação a demonstração é ao vivo e a liberação é acompanhada — você não fica sozinho com um sistema fiscal na mão.",
+          r: "Porque o PDV Pro não é multi-inquilino: cada loja roda no seu próprio ambiente, com o seu banco e o seu certificado — não dá pra abrir sozinho num clique. Pra ver o sistema por dentro tem a demonstração aberta, com uma loja de exemplo cheia de produto, venda e relatório. Já a liberação da sua loja é acompanhada: você não fica sozinho com um sistema fiscal na mão.",
         },
       ]}
       ctaFinalTitulo="Veja rodando antes de decidir"
-      ctaFinalTexto="Chame no WhatsApp e a gente abre o sistema na sua frente: venda no caixa, nota emitindo, relatório fechando. Se não servir pra sua loja, a gente fala isso também."
+      ctaFinalTexto="Abra a demonstração e mexa à vontade: venda no caixa, estoque baixando, relatório fechando. Depois chame no WhatsApp — se não servir pra sua loja, a gente fala isso também."
     />
   );
 }
