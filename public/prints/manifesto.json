@@ -152,5 +152,15 @@
    "arquivo": "/prints/viagempro-0.jpg",
    "legenda": "Suas viagens, com o roteiro pronto"
   }
+ ],
+ "vigiapro": [
+  {
+   "arquivo": "/prints/vigiapro-0.jpg",
+   "legenda": "Histórico com a foto do momento"
+  },
+  {
+   "arquivo": "/prints/vigiapro-1.jpg",
+   "legenda": "Alarmes por objeto, zona e horário"
+  }
  ]
 }

@@ -76,6 +76,12 @@ export default function VigiaProPage() {
           </>
         ),
       }}
+      /* Telas da demo pública. As imagens dos eventos ali são desenhadas por
+         computador — nenhuma câmera de cliente aparece no site. */
+      prints={[
+        {arquivo: "/prints/vigiapro-0.jpg", legenda: "Histórico com a foto do momento"},
+        {arquivo: "/prints/vigiapro-1.jpg", legenda: "Alarmes por objeto, zona e horário"},
+      ]}
       blocos={[
         {
           icone: "👁️",
