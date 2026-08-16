@@ -113,6 +113,10 @@ export default function FarmProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/farmpro-0.jpg", legenda: "Painel e livro caixa"},
+        {arquivo: "/prints/farmpro-1.jpg", legenda: "Relatório por talhão e safra"},
+      ]}
       praQuem={[
         {icone:"🌾", titulo:"Produtor que entrega LCDPR", texto:"Quem já teve que remontar o ano inteiro em janeiro sabe o tamanho do problema."},
         {icone:"👨‍👩‍👦", titulo:"Família com mais de uma fazenda", texto:"Cada área com o seu resultado, e a soma quando você quiser olhar o todo."},

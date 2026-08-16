@@ -89,6 +89,10 @@ export default function ShopProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/shoppro-0.jpg", legenda: "A loja no ar, no seu domínio"},
+        {arquivo: "/prints/shoppro-1.jpg", legenda: "Vitrine com preço, Pix e carrinho"},
+      ]}
       praQuem={[
         {icone:"🏪", titulo:"Loja física que quer vender online", texto:"Sem manter dois catálogos e sem pagar comissão por venda."},
         {icone:"🎁", titulo:"Quem tem clube de pontos", texto:"O ponto ganho no balcão vale no site e vice-versa."},

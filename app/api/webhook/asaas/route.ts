@@ -43,6 +43,10 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["agenda pro", "agendapro"],
   ["comandapro", "comandapro"],
   ["comanda pro", "comandapro"],
+  // Uma das telas do caixa cria a cobrança como "Comanda #62", sem o "Pro".
+  ["comanda #", "comandapro"],
+  // Recarga de saldo do motorista: a marca do eletroposto é Lume.
+  ["recarga saldo lume", "carregapro"],
   ["rotinapro", "rotinapro"],
   ["rotina pro", "rotinapro"],
   ["carregapro", "carregapro"],
@@ -65,7 +69,26 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["virada", "virada"],
 ];
 
+// Prefixo do externalReference → sistema. Vem ANTES da description porque é
+// o sinal forte: quem gera a cobrança carimba a própria referência, enquanto
+// a description é texto livre. Foi o que faltava até 16/08/2026 — cobrança de
+// comanda ("Comanda #62") e recarga do Lume ("Recarga saldo Lume R$ 5,00")
+// não tinham o nome do sistema no texto e o router não sabia pra onde mandar.
+const REF_PREFIXO: Array<[string, string]> = [
+  ["cp-", "comandapro"], // comanda paga no PIX do caixa
+  ["recarga:", "carregapro"], // saldo do motorista no Lume
+  ["link-pag-", "pdvpro"], // link de pagamento/crediário da loja
+  ["pedido-", "luquishop"],
+  ["clube-", "luquishop"],
+];
+
 function detectSistema(payment: any): string | null {
+  const ref = String(payment?.externalReference || "").toLowerCase();
+  if (ref) {
+    for (const [prefixo, slug] of REF_PREFIXO) {
+      if (ref.startsWith(prefixo)) return slug;
+    }
+  }
   const desc = String(payment?.description || "").toLowerCase();
   for (const [keyword, slug] of SISTEMA_MAP) {
     if (desc.includes(keyword)) return slug;
