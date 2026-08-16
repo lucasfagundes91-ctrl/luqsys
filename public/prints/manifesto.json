@@ -41,6 +41,12 @@
    "legenda": "Pontos de recarga"
   }
  ],
+ "comandapro": [
+  {
+   "arquivo": "/prints/comandapro-0.jpg",
+   "legenda": "Salão com as comandas abertas"
+  }
+ ],
  "frotapro": [
   {
    "arquivo": "/prints/frotapro-0.jpg",

@@ -89,6 +89,9 @@ export default function ComandaProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/comandapro-0.jpg", legenda: "Salão com as comandas abertas"},
+      ]}
       praQuem={[
         {icone:"🍽️", titulo:"Restaurante e bar de salão", texto:"Onde a comanda de papel ainda decide a conta do cliente."},
         {icone:"🏐", titulo:"Arena e clube com bar", texto:"Consumo lançado na comanda de quem está jogando."},
@@ -141,7 +144,7 @@ export default function ComandaProPage() {
       ctaFinalTitulo="Seu restaurante no controle"
       ctaFinalTexto="Teste 3 dias grátis, sem cartão de crédito. Se gostar, são R$ 99/mês sem fidelidade."
       appUrl="https://comandapro.luqsys.com.br"
-      semDemo
+      demoUrl="https://demo.comandapro.luqsys.com.br/"
       assinarUrl="https://comandapro.luqsys.com.br/cadastro"
     />
   );

@@ -13,6 +13,7 @@ type Produto = {
   appUrl?: string;
   semTrial?: boolean;
   semDemo?: boolean; // sem sandbox publico: mostra so o trial, sem "Ver demo"
+  demoUrl?: string;  // demo em outro endereco (deploy separado)
   emBreve?: boolean;
   externo?: string; // projeto aberto: card leva direto pro app, sem página interna
   gratis?: boolean; // some o "/mês" e troca trial/demo por "Acessar grátis"
@@ -25,6 +26,7 @@ function trialHref(p: Produto) {
 }
 
 function demoHref(p: Produto) {
+  if (p.demoUrl) return p.demoUrl;
   const base = p.appUrl ?? `https://${p.slug}.luqsys.com.br`;
   return `${base}/demo`;
 }
@@ -190,8 +192,9 @@ const trilhas: Trilha[] = [
         preco: "R$ 99",
         badge: "novo",
         appUrl: "https://comandapro.luqsys.com.br",
-        // ainda nao tem sandbox de demonstracao: o /demo dele respondia 404
-        semDemo: true,
+        // a demo dele mora em outro deploy: o endereco principal e a producao
+        // de um cliente real, e o sistema roda uma casa por instalacao
+        demoUrl: "https://demo.comandapro.luqsys.com.br/",
       },
       {
         slug: "rotinapro",
