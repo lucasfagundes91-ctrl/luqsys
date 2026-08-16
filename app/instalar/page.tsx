@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 type App = {
-  slug: "icon" | "resumo" | "conferir";
+  slug: "icon" | "resumo" | "conferir" | "admin";
   nome: string;
   desc: string;
   caminho: string;
@@ -120,6 +120,20 @@ const grupos: Grupo[] = [
     ],
   },
   {
+    titulo: "Loja online",
+    sistemas: [
+      {
+        host: "luqui", nome: "Luqui Brinquedos", emoji: "🧸",
+        o_que: "Loja e gestão dos pedidos",
+        url: "https://www.luquibrinquedos.com.br",
+        apps: [
+          { slug: "icon", nome: "Loja", caminho: "/", desc: "Catálogo, carrinho e acompanhamento do pedido." },
+          { slug: "admin", nome: "Gestão", caminho: "/admin", desc: "Pedidos, produtos, clientes e campanhas." },
+        ],
+      },
+    ],
+  },
+  {
     titulo: "Viagens",
     sistemas: [
       {
@@ -132,8 +146,12 @@ const grupos: Grupo[] = [
     ],
   },
   {
-    titulo: "Projeto aberto",
+    titulo: "Produtos ao público",
     sistemas: [
+      {
+        host: "virada", nome: "Virada", emoji: "🔄",
+        o_que: "Teste de transição de carreira",
+      },
       {
         host: "euseivotar", nome: "EuSeiVotar?", emoji: "🗳️",
         o_que: "Votações do Congresso", semIcone: true,
