@@ -113,6 +113,11 @@ export default function FrotaProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/frotapro-0.jpg", legenda: "Painel da frota"},
+        {arquivo: "/prints/frotapro-1.jpg", legenda: "Custo por veículo"},
+        {arquivo: "/prints/frotapro-2.jpg", legenda: "Gastos por categoria"},
+      ]}
       praQuem={[
         {icone:"🚚", titulo:"Frota de PME", texto:"De 2 a 50 veículos, onde ninguém tem tempo de manter planilha."},
         {icone:"🏪", titulo:"Loja que revende veículo", texto:"Custo por carro e página pública pra vitrine."},

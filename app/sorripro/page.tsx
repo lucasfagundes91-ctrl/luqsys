@@ -84,6 +84,9 @@ export default function SorriProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/sorripro-1.jpg", legenda: "Tabela de procedimentos"},
+      ]}
       praQuem={[
         {icone:"🦷", titulo:"Clínica de um a cinco dentistas", texto:"Onde o prontuário ainda é papel e a agenda é caderno."},
         {icone:"🪑", titulo:"Quem divide cadeira", texto:"Agenda por cadeira, não só por profissional."},

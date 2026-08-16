@@ -90,6 +90,10 @@ export default function BotaProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/botapro-0.jpg", legenda: "Painel da fábrica"},
+        {arquivo: "/prints/botapro-1.jpg", legenda: "Estoque por grade"},
+      ]}
       praQuem={[
         {icone:"🏭", titulo:"Fábrica de calçado pequena", texto:"Quem produz e vende, e mistura insumo com produto pronto."},
         {icone:"📐", titulo:"Quem trabalha com grade", texto:"Numeração 34 a 44, cada uma com estoque próprio."},

@@ -89,6 +89,10 @@ export default function CarregaProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/carregapro-0.jpg", legenda: "Sessões de recarga"},
+        {arquivo: "/prints/carregapro-1.jpg", legenda: "Pontos de recarga"},
+      ]}
       praQuem={[
         {icone:"⛽", titulo:"Posto ou comércio com carregador", texto:"Quem instalou pra atrair cliente e descobriu a comissão por kWh."},
         {icone:"🏨", titulo:"Hotel, condomínio e estacionamento", texto:"Tarifa diferente por horário e RFID pra morador ou hóspede."},

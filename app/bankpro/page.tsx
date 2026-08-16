@@ -115,6 +115,9 @@ export default function BankProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/bankpro-0.jpg", legenda: "Painel das finanças"},
+      ]}
       praQuem={[
         {icone:"👤", titulo:"Quem mistura PF e PJ", texto:"O dinheiro da empresa e o da casa saindo da mesma conta — o clássico do pequeno empresário."},
         {icone:"👨‍👩‍👧", titulo:"Casal que divide contas", texto:"Cada um com o seu, e a visão da família quando interessa."},

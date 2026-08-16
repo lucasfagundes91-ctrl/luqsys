@@ -113,6 +113,9 @@ export default function SolarProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/solarpro-0.jpg", legenda: "Painel do integrador"},
+      ]}
       praQuem={[
         {icone:"⚡", titulo:"Integrador que instala e some", texto:"Vender o kit é fácil; o difícil é o pós, e é aí que o cliente cancela."},
         {icone:"🏘️", titulo:"Quem loca geração pra terceiro", texto:"Cobrança recorrente, repasse e demonstrativo automáticos."},

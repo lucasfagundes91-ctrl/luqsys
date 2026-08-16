@@ -100,6 +100,9 @@ export default function AluguelProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/aluguelpro-1.jpg", legenda: "Contratos e reajustes"},
+      ]}
       praQuem={[
         {icone:"🏢", titulo:"Imobiliária pequena", texto:"Quem administra dezenas de imóveis sem equipe de cobrança."},
         {icone:"🔑", titulo:"Proprietário com vários imóveis", texto:"Cobrar sozinho sem virar refém do dia 5."},

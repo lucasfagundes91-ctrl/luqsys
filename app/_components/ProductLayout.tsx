@@ -34,6 +34,14 @@ export type Pergunta = { p: string; r: string };
    parecer genérico — cada sistema tem o seu recorte. */
 export type Publico = { icone: string; titulo: string; texto: string };
 
+/* Tela real do sistema rodando. Nenhuma das 21 páginas mostrava o produto —
+   o visitante lia sobre frente de caixa, romaneio e odontograma sem ver
+   nenhum, e por isso todas continuavam com cara de página institucional
+   igual, mesmo com cor e texto próprios. Os prints saem das demos públicas
+   (nunca de instância de cliente) e passam por curadoria: tela com painel
+   zerado não entra, porque vende pior que print nenhum. */
+export type Print = { arquivo: string; legenda: string };
+
 export type ProductPageProps = {
   icone: string;
   nome: string;
@@ -50,6 +58,7 @@ export type ProductPageProps = {
      falar de funcionalidade. */
   problema?: { titulo: string; texto: ReactNode };
   blocos?: BlocoTema[];
+  prints?: Print[];
   praQuem?: Publico[];
   naoServe?: string[];
   faq?: Pergunta[];
@@ -85,6 +94,7 @@ export function ProductLayout({
   featuresTitulo = "O que ele faz",
   problema,
   blocos,
+  prints,
   praQuem,
   naoServe,
   faq,
@@ -326,6 +336,43 @@ export function ProductLayout({
           ))}
         </ul>
       </section>
+      )}
+
+      {prints && prints.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 py-12">
+          <h2 className="text-center text-3xl font-bold sm:text-4xl">
+            O sistema por dentro
+          </h2>
+          <p className="mt-3 text-center text-sm text-neutral-500">
+            Telas reais, tiradas da demonstração — não é mockup.
+          </p>
+          <div
+            className={
+              prints.length === 1
+                ? "mt-10 grid gap-5"
+                : "mt-10 grid gap-5 md:grid-cols-2"
+            }
+          >
+            {prints.map((im) => (
+              <figure
+                key={im.arquivo}
+                className="overflow-hidden rounded-2xl border border-neutral-900 bg-bg-card"
+              >
+                {/* sem next/image de propósito: são JPEG já otimizados e
+                    servidos estáticos; o componente só acrescentaria peso. */}
+                <img
+                  src={im.arquivo}
+                  alt={im.legenda}
+                  loading="lazy"
+                  className="w-full"
+                />
+                <figcaption className="acc-text border-t border-neutral-900 px-4 py-3 text-sm font-medium">
+                  {im.legenda}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
       )}
 
       <section id="planos" className="mx-auto max-w-5xl px-6 py-20">

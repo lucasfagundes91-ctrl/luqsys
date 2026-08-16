@@ -1,0 +1,70 @@
+{
+ "silopro": [
+  {
+   "arquivo": "/prints/silopro-0.jpg",
+   "legenda": "Estoque por silo"
+  },
+  {
+   "arquivo": "/prints/silopro-2.jpg",
+   "legenda": "Produtividade por talhão"
+  }
+ ],
+ "frotapro": [
+  {
+   "arquivo": "/prints/frotapro-0.jpg",
+   "legenda": "Painel da frota"
+  },
+  {
+   "arquivo": "/prints/frotapro-1.jpg",
+   "legenda": "Custo por veículo"
+  },
+  {
+   "arquivo": "/prints/frotapro-2.jpg",
+   "legenda": "Gastos por categoria"
+  }
+ ],
+ "bankpro": [
+  {
+   "arquivo": "/prints/bankpro-0.jpg",
+   "legenda": "Painel das finanças"
+  }
+ ],
+ "botapro": [
+  {
+   "arquivo": "/prints/botapro-0.jpg",
+   "legenda": "Painel da fábrica"
+  },
+  {
+   "arquivo": "/prints/botapro-1.jpg",
+   "legenda": "Estoque por grade"
+  }
+ ],
+ "carregapro": [
+  {
+   "arquivo": "/prints/carregapro-0.jpg",
+   "legenda": "Sessões de recarga"
+  },
+  {
+   "arquivo": "/prints/carregapro-1.jpg",
+   "legenda": "Pontos de recarga"
+  }
+ ],
+ "aluguelpro": [
+  {
+   "arquivo": "/prints/aluguelpro-1.jpg",
+   "legenda": "Contratos e reajustes"
+  }
+ ],
+ "solarpro": [
+  {
+   "arquivo": "/prints/solarpro-0.jpg",
+   "legenda": "Painel do integrador"
+  }
+ ],
+ "sorripro": [
+  {
+   "arquivo": "/prints/sorripro-1.jpg",
+   "legenda": "Tabela de procedimentos"
+  }
+ ]
+}

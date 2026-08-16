@@ -115,6 +115,10 @@ export default function SiloProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/silopro-0.jpg", legenda: "Estoque por silo"},
+        {arquivo: "/prints/silopro-2.jpg", legenda: "Produtividade por talhão"},
+      ]}
       praQuem={[
         {icone:"🚜", titulo:"Fazenda com silo próprio", texto:"Quem pesa a própria colheita e quer saber o que cada talhão rendeu."},
         {icone:"🏭", titulo:"Quem armazena pra terceiro", texto:"Cada dono de grão com o seu desconto e o seu romaneio."},
