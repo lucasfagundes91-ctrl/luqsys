@@ -113,6 +113,15 @@ export default function FarmProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🌾", titulo:"Produtor que entrega LCDPR", texto:"Quem já teve que remontar o ano inteiro em janeiro sabe o tamanho do problema."},
+        {icone:"👨‍👩‍👦", titulo:"Família com mais de uma fazenda", texto:"Cada área com o seu resultado, e a soma quando você quiser olhar o todo."},
+        {icone:"🧑‍🌾", titulo:"Quem tem empregado registrado", texto:"Folha rural e ponto no mesmo lugar do resto da fazenda."},
+      ]}
+      naoServe={[
+        "Você quer software de agricultura de precisão — mapa de produtividade e taxa variável não é aqui",
+        "Sua fazenda não tem nenhum lançamento a controlar e você só quer previsão do tempo",
+      ]}
       faq={[
         {
           p: "Preciso de internet boa na fazenda?",

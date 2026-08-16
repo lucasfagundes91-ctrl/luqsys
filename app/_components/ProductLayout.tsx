@@ -28,6 +28,12 @@ export type BlocoTema = {
 
 export type Pergunta = { p: string; r: string };
 
+/* "Pra quem é" e "pra quem não é". A segunda metade é a que constrói
+   confiança: dizer em que caso o sistema NÃO serve evita a venda errada, que
+   é a que gera cancelamento e reclamação. E é o conteúdo mais impossível de
+   parecer genérico — cada sistema tem o seu recorte. */
+export type Publico = { icone: string; titulo: string; texto: string };
+
 export type ProductPageProps = {
   icone: string;
   nome: string;
@@ -44,6 +50,8 @@ export type ProductPageProps = {
      falar de funcionalidade. */
   problema?: { titulo: string; texto: ReactNode };
   blocos?: BlocoTema[];
+  praQuem?: Publico[];
+  naoServe?: string[];
   faq?: Pergunta[];
   planos: Plano[];
   ctaFinalTitulo?: string;
@@ -77,6 +85,8 @@ export function ProductLayout({
   featuresTitulo = "O que ele faz",
   problema,
   blocos,
+  praQuem,
+  naoServe,
   faq,
   planos,
   ctaFinalTitulo,
@@ -394,6 +404,45 @@ export function ProductLayout({
           ))}
         </div>
       </section>
+
+      {praQuem && praQuem.length > 0 && (
+        <section className="mx-auto max-w-5xl px-6 py-12">
+          <h2 className="text-center text-3xl font-bold sm:text-4xl">
+            Feito pra quem
+          </h2>
+          <div className="mt-10 grid gap-5 sm:grid-cols-3">
+            {praQuem.map((q) => (
+              <div
+                key={q.titulo}
+                className="rounded-2xl border border-neutral-900 bg-bg-card p-6"
+              >
+                <span className="text-2xl">{q.icone}</span>
+                <h3 className="mt-3 font-bold text-white">{q.titulo}</h3>
+                <p className="mt-2 text-sm text-neutral-400">{q.texto}</p>
+              </div>
+            ))}
+          </div>
+          {naoServe && naoServe.length > 0 && (
+            <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-neutral-800 bg-bg-soft p-6">
+              <h3 className="text-sm font-bold uppercase tracking-wider text-neutral-400">
+                Não é pra você se
+              </h3>
+              <ul className="mt-3 space-y-2">
+                {naoServe.map((n) => (
+                  <li key={n} className="flex gap-2 text-sm text-neutral-400">
+                    <span className="mt-0.5 text-neutral-600">✗</span>
+                    <span>{n}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-xs text-neutral-500">
+                Preferimos dizer isso agora do que você descobrir depois de
+                assinar.
+              </p>
+            </div>
+          )}
+        </section>
+      )}
 
       {faq && faq.length > 0 && (
         <section className="mx-auto max-w-3xl px-6 py-10">

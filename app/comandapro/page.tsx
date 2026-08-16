@@ -89,6 +89,15 @@ export default function ComandaProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🍽️", titulo:"Restaurante e bar de salão", texto:"Onde a comanda de papel ainda decide a conta do cliente."},
+        {icone:"🏐", titulo:"Arena e clube com bar", texto:"Consumo lançado na comanda de quem está jogando."},
+        {icone:"🛵", titulo:"Quem faz delivery e iFood", texto:"Pedido de fora entrando na mesma cozinha, sem tela separada."},
+      ]}
+      naoServe={[
+        "Você é loja de varejo, não food service — nesse caso o sistema é o PDV Pro",
+        "Você quer marketplace de delivery próprio com app do cliente",
+      ]}
       faq={[
         {
           p: "Preciso de maquininha específica?",

@@ -84,6 +84,15 @@ export default function SorriProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🦷", titulo:"Clínica de um a cinco dentistas", texto:"Onde o prontuário ainda é papel e a agenda é caderno."},
+        {icone:"🪑", titulo:"Quem divide cadeira", texto:"Agenda por cadeira, não só por profissional."},
+        {icone:"🌐", titulo:"Clínica sem site", texto:"Site público dentro das regras de publicidade do CFO."},
+      ]}
+      naoServe={[
+        "Você precisa de integração com convênio e faturamento TISS",
+        "Sua clínica é médica, não odontológica: o odontograma é o coração do sistema",
+      ]}
       faq={[
         {
           p: "Tenho mais de um dentista na clínica. Cada um vê tudo?",

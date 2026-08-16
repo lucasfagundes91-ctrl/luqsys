@@ -113,6 +113,15 @@ export default function SolarProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"⚡", titulo:"Integrador que instala e some", texto:"Vender o kit é fácil; o difícil é o pós, e é aí que o cliente cancela."},
+        {icone:"🏘️", titulo:"Quem loca geração pra terceiro", texto:"Cobrança recorrente, repasse e demonstrativo automáticos."},
+        {icone:"📊", titulo:"Quem não sabe a própria margem", texto:"Lucro por usina calculado sobre o custo real, não sobre o repasse."},
+      ]}
+      naoServe={[
+        "Você só quer monitorar a geração do inversor — isso o app do fabricante já faz",
+        "Você não emite cobrança pra ninguém: metade do sistema ficaria parada",
+      ]}
       faq={[
         {
           p: "Funciona com a minha distribuidora?",

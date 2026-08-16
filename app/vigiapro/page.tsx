@@ -109,6 +109,15 @@ export default function VigiaProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🌾", titulo:"Fazenda com pátio e maquinário", texto:"Onde ninguém dorme perto do que precisa ser vigiado."},
+        {icone:"🏢", titulo:"Empresa fechada à noite", texto:"Movimento fora do horário é sempre notícia."},
+        {icone:"🏠", titulo:"Casa com câmera já instalada", texto:"Aproveita o que existe e só acrescenta o aviso."},
+      ]}
+      naoServe={[
+        "Você quer só gravar pra ver depois — o gravador que você já tem faz isso",
+        "Você não pode instalar um mini PC no local: a análise precisa acontecer lá dentro",
+      ]}
       faq={[
         {
           p: "Preciso trocar minhas câmeras?",

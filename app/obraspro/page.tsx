@@ -101,6 +101,15 @@ export default function ObrasProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🧱", titulo:"Construtor de poucas obras", texto:"Quem toca duas ou três ao mesmo tempo e mistura os caixas."},
+        {icone:"🤝", titulo:"Obra com investidor", texto:"Cada sócio vendo a parte dele sem te ligar todo mês."},
+        {icone:"🔨", titulo:"Quem reforma pra vender", texto:"Saber a margem antes de fechar o negócio, não depois."},
+      ]}
+      naoServe={[
+        "Você precisa de cronograma físico com Gantt e curva S — aqui o controle é financeiro por etapa",
+        "Você quer projeto e quantitativo: o ObrasPro entra depois, quando o dinheiro começa a sair",
+      ]}
       faq={[
         {
           p: "Serve pra reforma ou só pra construção do zero?",

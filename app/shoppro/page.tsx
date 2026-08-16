@@ -89,6 +89,15 @@ export default function ShopProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🏪", titulo:"Loja física que quer vender online", texto:"Sem manter dois catálogos e sem pagar comissão por venda."},
+        {icone:"🎁", titulo:"Quem tem clube de pontos", texto:"O ponto ganho no balcão vale no site e vice-versa."},
+        {icone:"📦", titulo:"Quem já envia pelos Correios", texto:"Frete calculado no checkout, sem tabela na mão."},
+      ]}
+      naoServe={[
+        "Você não usa o PDV Pro: o ShopPro é o site dele, não um e-commerce avulso",
+        "Você quer vender em marketplace: pra Mercado Livre a integração é no próprio PDV Pro",
+      ]}
       faq={[
         {
           p: "Preciso ter o PDV Pro?",

@@ -102,6 +102,15 @@ export default function HoraProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🏭", titulo:"Empresa que quer dormir tranquila", texto:"Registro que se sustenta se virar processo trabalhista."},
+        {icone:"📍", titulo:"Equipe que trabalha fora", texto:"Obra, fazenda, atendimento externo — bate de onde está."},
+        {icone:"💸", titulo:"Quem não quer relógio de parede", texto:"REP-P é software; o funcionário bate pelo próprio celular."},
+      ]}
+      naoServe={[
+        "Você quer só uma planilha de horas — isso não precisa de conformidade e sai de graça",
+        "Sua empresa exige relógio físico homologado por decisão interna: aqui o registro é pelo celular",
+      ]}
       faq={[
         {
           p: "Preciso comprar relógio de ponto?",

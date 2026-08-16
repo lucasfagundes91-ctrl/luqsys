@@ -100,6 +100,15 @@ export default function AluguelProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🏢", titulo:"Imobiliária pequena", texto:"Quem administra dezenas de imóveis sem equipe de cobrança."},
+        {icone:"🔑", titulo:"Proprietário com vários imóveis", texto:"Cobrar sozinho sem virar refém do dia 5."},
+        {icone:"📑", titulo:"Quem esquece o reajuste", texto:"IGP-M e IPCA aplicados na data, sem depender de memória."},
+      ]}
+      naoServe={[
+        "Você quer portal de anúncios pra captar inquilino — aqui começa depois do contrato assinado",
+        "Você administra temporada por diária: o ciclo do sistema é mensal",
+      ]}
       faq={[
         {
           p: "Administro imóvel dos outros e alguns meus. Dá pra separar?",

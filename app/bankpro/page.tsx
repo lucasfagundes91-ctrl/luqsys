@@ -115,6 +115,15 @@ export default function BankProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"👤", titulo:"Quem mistura PF e PJ", texto:"O dinheiro da empresa e o da casa saindo da mesma conta — o clássico do pequeno empresário."},
+        {icone:"👨‍👩‍👧", titulo:"Casal que divide contas", texto:"Cada um com o seu, e a visão da família quando interessa."},
+        {icone:"📈", titulo:"Quem investe e perde a conta", texto:"CDB aqui, ação ali, e nenhum lugar somando o patrimônio."},
+      ]}
+      naoServe={[
+        "Você quer contabilidade de empresa — nota, estoque e folha ficam em outro sistema da casa",
+        "Você espera que ele acesse seu banco sozinho: aqui a importação é por OFX, sem senha nenhuma",
+      ]}
       faq={[
         {
           p: "Preciso dar minha senha do banco?",

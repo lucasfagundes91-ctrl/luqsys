@@ -88,6 +88,15 @@ export default function ViagemProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🧳", titulo:"Quem viaja e odeia planejar", texto:"O roteiro pronto pra editar, em vez da folha em branco."},
+        {icone:"👨‍👩‍👧", titulo:"Família com dias contados", texto:"Encaixar tudo sem descobrir na hora que o museu fecha na terça."},
+        {icone:"💼", titulo:"Viagem de trabalho com folga", texto:"Compromisso fixo no meio do dia e o resto montado em volta."},
+      ]}
+      naoServe={[
+        "Você quer comprar passagem e reservar hotel aqui dentro — ele planeja, não vende",
+        "Você já tem o roteiro pronto e só quer guardar: um bloco de notas resolve",
+      ]}
       faq={[
         {
           p: "Ele compra a passagem ou reserva o hotel?",

@@ -113,6 +113,15 @@ export default function FrotaProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🚚", titulo:"Frota de PME", texto:"De 2 a 50 veículos, onde ninguém tem tempo de manter planilha."},
+        {icone:"🏪", titulo:"Loja que revende veículo", texto:"Custo por carro e página pública pra vitrine."},
+        {icone:"🚗", titulo:"Quem tem carro de coleção ou projeto", texto:"Categoria própria pra separar o que é hobby do que é trabalho."},
+      ]}
+      naoServe={[
+        "Você precisa de rastreamento por GPS em tempo real — isso é rastreador, não gestão de custo",
+        "Sua frota é de caminhão com jornada e CIOT: o FrotaPro cuida do custo, não da logística",
+      ]}
       faq={[
         {
           p: "Serve pra 2 carros ou só pra frota grande?",

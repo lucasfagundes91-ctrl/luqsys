@@ -115,6 +115,15 @@ export default function SiloProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🚜", titulo:"Fazenda com silo próprio", texto:"Quem pesa a própria colheita e quer saber o que cada talhão rendeu."},
+        {icone:"🏭", titulo:"Quem armazena pra terceiro", texto:"Cada dono de grão com o seu desconto e o seu romaneio."},
+        {icone:"📱", titulo:"Quem não fica no silo", texto:"Acompanhar a colheita do celular, de onde estiver."},
+      ]}
+      naoServe={[
+        "Você não tem balança com indicador — o sistema pode registrar na mão, mas perde o melhor dele",
+        "Você procura controle de secador e aeração; o SiloPro cuida da pesagem e do estoque, não da automação do silo",
+      ]}
       faq={[
         {
           p: "Serve pra minha balança?",

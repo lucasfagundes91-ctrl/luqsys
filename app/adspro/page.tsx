@@ -99,6 +99,15 @@ export default function AdsProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🏪", titulo:"Comércio local", texto:"Quem quer aparecer no raio de alguns quilômetros, não no Brasil inteiro."},
+        {icone:"💬", titulo:"Quem vende no WhatsApp", texto:"O anúncio que abre conversa, que é onde a venda fecha."},
+        {icone:"🚫", titulo:"Quem cansou de agência", texto:"Mensalidade alta pra pouca campanha e nenhum número claro."},
+      ]}
+      naoServe={[
+        "Você anuncia no Google, TikTok ou LinkedIn — aqui é Meta (Facebook e Instagram)",
+        "Você quer e-commerce com catálogo dinâmico e remarketing avançado",
+      ]}
       faq={[
         {
           p: "Preciso ter Gerenciador de Anúncios configurado?",

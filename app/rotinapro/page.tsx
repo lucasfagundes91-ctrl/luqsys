@@ -90,6 +90,15 @@ export default function RotinaProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🏬", titulo:"Rede com várias unidades", texto:"Onde comparar filial com filial é o que faz o padrão subir."},
+        {icone:"🧹", titulo:"Facilities e limpeza", texto:"Ronda com foto obrigatória, feita por quem está no campo."},
+        {icone:"🏗️", titulo:"Segurança e manutenção", texto:"Checklist periódico que precisa de evidência, não de assinatura."},
+      ]}
+      naoServe={[
+        "Você tem uma unidade só e o checklist cabe na sua cabeça",
+        "Você precisa de ordem de serviço com peça e mão de obra — isso é manutenção, não inspeção",
+      ]}
       faq={[
         {
           p: "Meu inspetor não é bom com sistema. Funciona?",

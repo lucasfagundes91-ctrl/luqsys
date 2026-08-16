@@ -101,6 +101,15 @@ export default function ContabilidadeProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🧾", titulo:"MEI e Simples que só recebe guia", texto:"Quem nunca conseguiu falar com o contador sem ser no vencimento."},
+        {icone:"🔗", titulo:"Quem já usa outro Luqsys", texto:"O dado da operação vira lançamento sem reenviar arquivo."},
+        {icone:"👨‍👩‍👧", titulo:"Sócio com IRPF pra entregar", texto:"PJ e PF na mesma casa, sem dois profissionais."},
+      ]}
+      naoServe={[
+        "Sua empresa é Lucro Real com operação complexa — fale com a gente antes, o pacote padrão é Simples",
+        "Você quer só o software e manter o seu contador: dá pra conversar, mas o pacote foi feito junto",
+      ]}
       faq={[
         {
           p: "Preciso trocar de contador pra usar?",

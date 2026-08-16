@@ -85,6 +85,15 @@ export default function AgendaProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🏐", titulo:"Arena e quadra", texto:"Horário fixo de mensalista convivendo com avulso, sem conflito."},
+        {icone:"💈", titulo:"Barbearia e salão", texto:"Vários profissionais, cada um com a própria agenda."},
+        {icone:"🚿", titulo:"Lavagem e serviço por hora", texto:"Recurso limitado (box, cadeira, máquina) que não pode dobrar."},
+      ]}
+      naoServe={[
+        "Você atende só por ordem de chegada, sem hora marcada",
+        "Você quer prontuário e ficha clínica junto: pra clínica odontológica o certo é o SorriPro",
+      ]}
       faq={[
         {
           p: "Meu cliente precisa baixar app?",

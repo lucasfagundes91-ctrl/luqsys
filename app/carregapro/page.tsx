@@ -89,6 +89,15 @@ export default function CarregaProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"⛽", titulo:"Posto ou comércio com carregador", texto:"Quem instalou pra atrair cliente e descobriu a comissão por kWh."},
+        {icone:"🏨", titulo:"Hotel, condomínio e estacionamento", texto:"Tarifa diferente por horário e RFID pra morador ou hóspede."},
+        {icone:"🚚", titulo:"Frota elétrica própria", texto:"Carga interna sem cobrança, com o consumo medido mesmo assim."},
+      ]}
+      naoServe={[
+        "Você tem um carregador só, em casa, pro seu carro — não precisa de sistema pra isso",
+        "Seu carregador não é OCPP: sem esse padrão não há como o sistema conversar com ele",
+      ]}
       faq={[
         {
           p: "Meu carregador é compatível?",

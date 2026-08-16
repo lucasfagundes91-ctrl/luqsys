@@ -90,6 +90,15 @@ export default function MilhasProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"✈️", titulo:"Quem junta milha e não usa", texto:"Milha parada vencendo porque nunca dá pra saber se a oferta é boa."},
+        {icone:"📊", titulo:"Quem transfere com bônus", texto:"Saber quanto vale o milheiro antes de aceitar a promoção."},
+        {icone:"🎯", titulo:"Quem tem uma rota na cabeça", texto:"Monitorar e ser avisado quando entrar no seu teto."},
+      ]}
+      naoServe={[
+        "Você quer emitir a passagem por aqui — a emissão continua no programa",
+        "Você voa só em companhia sem programa de milhas relevante no Brasil",
+      ]}
       faq={[
         {
           p: "Preciso dar login do meu programa de milhas?",

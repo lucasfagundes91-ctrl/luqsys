@@ -90,6 +90,15 @@ export default function BotaProPage() {
           ],
         },
       ]}
+      praQuem={[
+        {icone:"🏭", titulo:"Fábrica de calçado pequena", texto:"Quem produz e vende, e mistura insumo com produto pronto."},
+        {icone:"📐", titulo:"Quem trabalha com grade", texto:"Numeração 34 a 44, cada uma com estoque próprio."},
+        {icone:"🤝", titulo:"Quem vende atacado e varejo", texto:"Lojista e consumidor tirando do mesmo estoque."},
+      ]}
+      naoServe={[
+        "Você só revende calçado pronto — nesse caso o PDV Pro dá conta e sai mais barato",
+        "Sua produção é sob medida, par a par, sem grade nem ficha técnica repetida",
+      ]}
       faq={[
         {
           p: "Vendo pra lojista e no varejo. Preciso de dois sistemas?",
