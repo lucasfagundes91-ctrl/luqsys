@@ -508,7 +508,9 @@ export default function Home() {
                             rel="noopener noreferrer"
                             className="block rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
                           >
-                            Acessar grátis →
+                            {/* "grátis" só onde o produto todo é grátis: na
+                                Virada o teste é grátis, o relatório é pago. */}
+                            {p.gratis ? "Acessar grátis →" : "Começar →"}
                           </a>
                         </div>
                       ) : p.semDemo ? (
