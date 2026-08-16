@@ -146,6 +146,10 @@ export default function SiloProLanding() {
             "Aviso quando o PC do silo para de comunicar",
             "Cadastro de talhões, motoristas, clientes e silos",
           ],
+          print: {
+            arquivo: "/prints/silopro-3.jpg",
+            legenda: "Cada carga registrada, com placa, motorista e talhão",
+          },
         },
       ]}
       paraQuem={[
@@ -220,7 +224,10 @@ export default function SiloProLanding() {
           r: "Sim — dá pra exportar por período em Excel, e os relatórios saem em PDF pra imprimir ou mandar por WhatsApp.",
         },
       ]}
-      prints={[]}
+      prints={[
+        {arquivo: "/prints/silopro-3.jpg", legenda: "Pesagens da safra, carga a carga"},
+        {arquivo: "/prints/silopro-2.jpg", legenda: "Produtividade por talhão no fechamento"},
+      ]}
       fechamento={{
         titulo: "Sua colheita merece mais que um caderno",
         texto:
