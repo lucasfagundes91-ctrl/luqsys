@@ -178,6 +178,12 @@ export default function PDVProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/pdvpro-0.jpg", legenda: "Painel da loja: venda do dia, contas e estoque baixo"},
+        {arquivo: "/prints/pdvpro-1.jpg", legenda: "Produtos com custo, venda e estoque"},
+        {arquivo: "/prints/pdvpro-2.jpg", legenda: "Vendas com forma de pagamento e nota"},
+        {arquivo: "/prints/pdvpro-3.jpg", legenda: "Financeiro com contas a pagar e vencidos"},
+      ]}
       praQuem={[
         {
           icone: "🏪",

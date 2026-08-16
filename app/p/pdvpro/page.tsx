@@ -118,6 +118,10 @@ export default function PDVProLanding() {
             "Trocas, devoluções e vale-compras",
             "TEF Pay&Go integrado — a maquininha conversa com o PDV",
           ],
+          print: {
+            arquivo: "/prints/pdvpro-0.jpg",
+            legenda: "Painel da loja com venda do dia e contas",
+          },
         },
         {
           icone: "🧾",
@@ -146,6 +150,10 @@ export default function PDVProLanding() {
             "Etiquetas com código de barras (Argox e afins)",
             "Aviso de estoque baixo no painel",
           ],
+          print: {
+            arquivo: "/prints/pdvpro-1.jpg",
+            legenda: "Produtos com custo, venda e estoque",
+          },
         },
         {
           icone: "💰",
@@ -160,6 +168,10 @@ export default function PDVProLanding() {
             "DRE e relatórios de venda por período",
             "Painel com vendas do dia, vencidos e estoque baixo",
           ],
+          print: {
+            arquivo: "/prints/pdvpro-3.jpg",
+            legenda: "Contas a pagar, vencidos e conciliação",
+          },
         },
         {
           icone: "🤖",
@@ -291,7 +303,10 @@ export default function PDVProLanding() {
           r: "A gente, pelo WhatsApp. É o mesmo número que está nesta página — não tem central com protocolo. Nos planos Essencial o suporte é por e-mail; no Profissional e no Empresarial é WhatsApp, com prioridade no Empresarial.",
         },
       ]}
-      prints={[]}
+      prints={[
+        {arquivo: "/prints/pdvpro-2.jpg", legenda: "Vendas do período, com forma de pagamento e nota"},
+        {arquivo: "/prints/pdvpro-0.jpg", legenda: "Painel: venda do dia, contas vencidas e estoque baixo"},
+      ]}
       fechamento={{
         titulo: "Veja rodando antes de decidir",
         texto:
