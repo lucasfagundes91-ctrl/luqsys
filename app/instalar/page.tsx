@@ -132,7 +132,7 @@ const grupos: Grupo[] = [
       {
         host: "euseivotar", nome: "EuSeiVotar?", emoji: "🗳️",
         o_que: "Votações do Congresso", semIcone: true,
-        url: "https://web-production-df6b4.up.railway.app",
+        url: "https://euseivotar.com.br",
       },
     ],
   },

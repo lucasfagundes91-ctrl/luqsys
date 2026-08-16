@@ -13,9 +13,7 @@ const PATH_OVERRIDE: Record<string, string> = {
 // Sistemas que NÃO estão em `<slug>.luqsys.com.br` (ex.: marca própria).
 const DOMAIN_OVERRIDE: Record<string, string> = {
   luquishop: "www.luquibrinquedos.com.br",
-  // EuSeiVotar ainda não tem domínio próprio (euseivotar.com.br a registrar);
-  // até lá aponta direto pro host do Railway.
-  euseivotar: "web-production-df6b4.up.railway.app",
+  euseivotar: "euseivotar.com.br",
 };
 
 // Mapeia keyword na description do pagamento → slug do sistema.
