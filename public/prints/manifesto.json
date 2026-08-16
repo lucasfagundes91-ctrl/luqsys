@@ -1,117 +1,70 @@
 {
- "farmpro": [
+ "aluguelpro": [
   {
-   "arquivo": "/prints/farmpro-0.jpg",
-   "legenda": "Painel da fazenda",
-   "pontos": 4
-  }
- ],
- "silopro": [
-  {
-   "arquivo": "/prints/silopro-0.jpg",
-   "legenda": "Estoque por silo",
-   "pontos": 14
-  },
-  {
-   "arquivo": "/prints/silopro-1.jpg",
-   "legenda": "Resumo da safra",
-   "pontos": 8
-  },
-  {
-   "arquivo": "/prints/silopro-2.jpg",
-   "legenda": "Produtividade por talhão",
-   "pontos": 16
+   "arquivo": "/prints/aluguelpro-1.jpg",
+   "legenda": "Contratos e reajustes"
   }
  ],
  "bankpro": [
   {
    "arquivo": "/prints/bankpro-0.jpg",
-   "legenda": "Painel das finanças",
-   "pontos": 18
-  }
- ],
- "solarpro": [
-  {
-   "arquivo": "/prints/solarpro-0.jpg",
-   "legenda": "Painel do integrador",
-   "pontos": 33
-  },
-  {
-   "arquivo": "/prints/solarpro-2.jpg",
-   "legenda": "Faturas lidas por OCR",
-   "pontos": 33
-  }
- ],
- "frotapro": [
-  {
-   "arquivo": "/prints/frotapro-0.jpg",
-   "legenda": "Painel da frota",
-   "pontos": 18
-  },
-  {
-   "arquivo": "/prints/frotapro-1.jpg",
-   "legenda": "Custo por veículo",
-   "pontos": 32
-  },
-  {
-   "arquivo": "/prints/frotapro-2.jpg",
-   "legenda": "Gastos por categoria",
-   "pontos": 20
-  }
- ],
- "obraspro": [
-  {
-   "arquivo": "/prints/obraspro-0.jpg",
-   "legenda": "Obras em andamento",
-   "pontos": 12
-  },
-  {
-   "arquivo": "/prints/obraspro-1.jpg",
-   "legenda": "Previsto × realizado",
-   "pontos": 12
-  }
- ],
- "aluguelpro": [
-  {
-   "arquivo": "/prints/aluguelpro-0.jpg",
-   "legenda": "Painel dos imóveis",
-   "pontos": 13
-  },
-  {
-   "arquivo": "/prints/aluguelpro-1.jpg",
-   "legenda": "Contratos e reajustes",
-   "pontos": 14
-  }
- ],
- "sorripro": [
-  {
-   "arquivo": "/prints/sorripro-1.jpg",
-   "legenda": "Procedimentos",
-   "pontos": 46
-  }
- ],
- "carregapro": [
-  {
-   "arquivo": "/prints/carregapro-0.jpg",
-   "legenda": "Sessões de recarga",
-   "pontos": 16
-  },
-  {
-   "arquivo": "/prints/carregapro-1.jpg",
-   "legenda": "Pontos de recarga",
-   "pontos": 4
+   "legenda": "Painel das finanças"
   }
  ],
  "botapro": [
   {
    "arquivo": "/prints/botapro-0.jpg",
-   "legenda": "Painel da fábrica",
-   "pontos": 18
+   "legenda": "Painel da fábrica"
   },
   {
    "arquivo": "/prints/botapro-1.jpg",
-   "legenda": "Estoque por grade",
-   "pontos": 14
+   "legenda": "Estoque por grade"
+  }
+ ],
+ "carregapro": [
+  {
+   "arquivo": "/prints/carregapro-0.jpg",
+   "legenda": "Sessões de recarga"
+  },
+  {
+   "arquivo": "/prints/carregapro-1.jpg",
+   "legenda": "Pontos de recarga"
+  }
+ ],
+ "frotapro": [
+  {
+   "arquivo": "/prints/frotapro-0.jpg",
+   "legenda": "Painel da frota"
+  },
+  {
+   "arquivo": "/prints/frotapro-1.jpg",
+   "legenda": "Custo por veículo"
+  },
+  {
+   "arquivo": "/prints/frotapro-2.jpg",
+   "legenda": "Gastos por categoria"
+  }
+ ],
+ "silopro": [
+  {
+   "arquivo": "/prints/silopro-0.jpg",
+   "legenda": "Estoque por silo"
+  },
+  {
+   "arquivo": "/prints/silopro-2.jpg",
+   "legenda": "Produtividade por talhão"
+  }
+ ],
+ "solarpro": [
+  {
+   "arquivo": "/prints/solarpro-0.jpg",
+   "legenda": "Painel do integrador"
+  }
+ ],
+ "sorripro": [
+  {
+   "arquivo": "/prints/sorripro-1.jpg",
+   "legenda": "Tabela de procedimentos"
   }
  ]
 }
