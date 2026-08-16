@@ -45,6 +45,16 @@
    "legenda": "Gastos por categoria"
   }
  ],
+ "rotinapro": [
+  {
+   "arquivo": "/prints/rotinapro-0.jpg",
+   "legenda": "Ranking das unidades e conformidade"
+  },
+  {
+   "arquivo": "/prints/rotinapro-1.jpg",
+   "legenda": "Unidades cadastradas"
+  }
+ ],
  "silopro": [
   {
    "arquivo": "/prints/silopro-0.jpg",

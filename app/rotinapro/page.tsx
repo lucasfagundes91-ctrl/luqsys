@@ -90,6 +90,10 @@ export default function RotinaProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/rotinapro-0.jpg", legenda: "Ranking das unidades e conformidade"},
+        {arquivo: "/prints/rotinapro-1.jpg", legenda: "Unidades cadastradas"},
+      ]}
       praQuem={[
         {icone:"🏬", titulo:"Rede com várias unidades", texto:"Onde comparar filial com filial é o que faz o padrão subir."},
         {icone:"🧹", titulo:"Facilities e limpeza", texto:"Ronda com foto obrigatória, feita por quem está no campo."},
