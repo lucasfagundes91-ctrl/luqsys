@@ -47,6 +47,59 @@ export default function RotinaProPage() {
             "Ranking de unidades por conformidade, gráfico de evolução, alerta WhatsApp quando taxa cai do limite. Dono e responsável da unidade são notificados.",
         },
       ]}
+      problema={{
+        titulo: "Checklist que ninguém preenche não controla nada",
+        texto: (
+          <>
+            <p>
+              A planilha de conferência da unidade está sempre "quase em dia".
+              Quando você descobre que o freezer ficou aberto ou o banheiro
+              acabou sem papel, o cliente já foi embora.
+            </p>
+            <p>
+              No RotinaPro o inspetor preenche pelo WhatsApp, com foto
+              obrigatória onde importa — e você recebe alerta quando a
+              conformidade cai.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "✅",
+          titulo: "Checklist que se preenche mesmo",
+          texto:
+            "Pelo WhatsApp, sem conta e sem app. O inspetor responde na conversa e a foto vai junto.",
+          itens: [
+            "Inspetor preenche via WhatsApp, sem cadastro",
+            "Itens Sim/Não, nota 0-10, texto ou foto obrigatória",
+            "Modelos customizáveis com peso por item",
+            "Agendamento das rondas",
+          ],
+        },
+        {
+          icone: "📈",
+          titulo: "O que não conforma aparece",
+          texto:
+            "Nota por unidade, ranking automático e alerta quando a conformidade fica abaixo do limite que você definiu.",
+          itens: [
+            "KPI por unidade e ranking automático",
+            "Alerta no WhatsApp abaixo do limite",
+            "Banco de fotos pesquisável por unidade e período",
+            "Histórico pra comparar mês a mês",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Meu inspetor não é bom com sistema. Funciona?",
+          r: "É por isso que ele responde no WhatsApp, que é o que ele já usa. Não tem login, não tem app, não tem senha pra esquecer.",
+        },
+        {
+          p: "Serve pra quantas unidades?",
+          r: "De uma a dezenas. O ranking entre unidades é justamente onde o sistema fica mais útil — dá pra ver qual filial cuida e qual só assina o papel.",
+        },
+      ]}
       features={[
         "Modelos customizáveis com peso por item",
         "Tipos: Sim/Não, nota 0-10, texto, foto obrigatória",

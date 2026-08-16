@@ -46,6 +46,58 @@ export default function ViagemProPage() {
             "Chat contextual: 'qual o melhor caminho daqui pro hotel?', 'onde almoçar perto?'. Como um guia local no bolso.",
         },
       ]}
+      problema={{
+        titulo: "Planejar viagem virou abrir 14 abas",
+        texto: (
+          <>
+            <p>
+              Uma pro voo, uma pro hotel, três pra restaurante, uma pro mapa e
+              um bloco de notas com o roteiro que nunca fica pronto. No fim,
+              você viaja sem plano ou passa a viagem no celular.
+            </p>
+            <p>
+              O ViagemPro monta o roteiro dia a dia, compara como chegar e
+              sugere onde comer — e continua te respondendo durante a viagem.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "🗺️",
+          titulo: "Roteiro que já nasce pronto",
+          texto:
+            "Você diz pra onde e por quantos dias; ele devolve o dia a dia — e você edita o que quiser.",
+          itens: [
+            "Roteiro dia a dia gerado por IA",
+            "Edição manual de qualquer atividade",
+            "Modo 'descubra um destino'",
+            "Várias viagens salvas e compartilháveis",
+          ],
+        },
+        {
+          icone: "🚗",
+          titulo: "Como chegar e onde comer",
+          texto:
+            "Carro, avião ou ônibus comparados de verdade, e restaurante sugerido perto do que você vai fazer naquele dia.",
+          itens: [
+            "Comparador carro × avião × ônibus",
+            "Sugestão de restaurantes com favoritos",
+            "Assistente que responde durante a viagem",
+            "Roteiro no celular, offline-friendly",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Ele compra a passagem ou reserva o hotel?",
+          r: "Não. Ele planeja e compara — a compra você faz onde preferir. Pra passagem em milhas, quem ajuda é o MilhasPro, da mesma casa.",
+        },
+        {
+          p: "Dá pra usar em viagem de trabalho?",
+          r: "Dá. O roteiro aceita compromisso fixo no meio do dia e monta o resto em volta dele.",
+        },
+      ]}
       features={[
         "Roteiro dia a dia gerado por IA",
         "Comparador carro × avião × ônibus",

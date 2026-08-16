@@ -42,6 +42,58 @@ export default function SorriProPage() {
             "Seu site em /c/sua-clinica mostra os horários realmente vagos. O paciente escolhe, o cadastro é criado e a recepção recebe no WhatsApp. Ele ainda aprova o orçamento pelo portal.",
         },
       ]}
+      problema={{
+        titulo: "Prontuário no papel, agenda no caderno, cobrança na memória",
+        texto: (
+          <>
+            <p>
+              A ficha do paciente está numa pasta, o que foi feito na última
+              sessão está na cabeça de quem atendeu, e o tratamento aprovado
+              que ninguém cobrou virou prejuízo silencioso.
+            </p>
+            <p>
+              O SorriPro junta agenda, prontuário e financeiro — com
+              odontograma clicável e alerta de alergia antes de anestesiar.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "🦷",
+          titulo: "Prontuário que o dentista usa",
+          texto:
+            "Odontograma por dente e por face, evolução por sessão e os anexos junto — não um formulário genérico de clínica.",
+          itens: [
+            "Odontograma clicável em notação FDI (11–48)",
+            "Evolução clínica por sessão, dente e profissional",
+            "Anamnese com alerta de alergia antes de anestesiar",
+            "Radiografia, foto e atestado na própria ficha",
+          ],
+        },
+        {
+          icone: "🗓️",
+          titulo: "A cadeira não fica vazia",
+          texto:
+            "Agenda por dentista e por cadeira, com o ciclo real do atendimento — dá pra ver quem chegou e quem está na sala.",
+          itens: [
+            "Agenda visual por dentista, cadeira, dia e semana",
+            "Pendente → confirmado → sala de espera → atendido",
+            "Encaixe e remarcação sem perder histórico",
+            "Site público da clínica dentro das regras do CFO",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Tenho mais de um dentista na clínica. Cada um vê tudo?",
+          r: "Você decide. Dá pra separar agenda e comissão por profissional e limitar quem enxerga o prontuário de quem.",
+        },
+        {
+          p: "O site da clínica pode divulgar preço e antes/depois?",
+          r: "O CFO tem regra sobre isso, e o site que sai do SorriPro já respeita — divulga serviço e credencial sem cair na publicidade que a norma proíbe.",
+        },
+      ]}
       features={[
         "Agenda visual por dentista/cadeira, dia e semana",
         "Ciclo real do atendimento: pendente → confirmado → sala de espera → em atendimento → atendido",

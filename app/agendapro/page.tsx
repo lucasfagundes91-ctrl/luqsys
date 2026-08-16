@@ -42,6 +42,59 @@ export default function AgendaProPage() {
             "Cola o seu link único (ex: /a/sua-arena) no WhatsApp, Instagram ou bio. Cliente entra, escolhe e reserva sozinho. Você recebe notificação no WhatsApp.",
         },
       ]}
+      problema={{
+        titulo: "Agendar pelo WhatsApp é o seu segundo emprego",
+        texto: (
+          <>
+            <p>
+              "Tem horário sábado?" — e lá vai você olhar a agenda, responder,
+              anotar, lembrar de confirmar, e descobrir na hora que marcou dois
+              no mesmo horário.
+            </p>
+            <p>
+              O AgendaPro dá um link pro cliente reservar sozinho, vendo só os
+              horários que existem de verdade. Conflito o sistema não deixa
+              acontecer.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "🔗",
+          titulo: "O cliente marca sozinho",
+          texto:
+            "Um link público, sem login e sem app. Ele escolhe o horário que existe — e você para de ser o intermediário.",
+          itens: [
+            "Link público de auto-agendamento",
+            "Horários por dia da semana com slots configuráveis",
+            "Detecção automática de conflito",
+            "Bloqueios pontuais: feriado, manutenção, torneio",
+          ],
+        },
+        {
+          icone: "🎯",
+          titulo: "Do jeito do seu negócio",
+          texto:
+            "Quadra, barbearia, lavagem, clínica: cada um agenda diferente, e os presets já vêm montados.",
+          itens: [
+            "7 verticais com presets prontos",
+            "Recursos, serviços, profissionais e turmas",
+            "Horário exclusivo pra mensalista e VIP",
+            "Aulas em grupo com vaga limitada",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Meu cliente precisa baixar app?",
+          r: "Não. Ele abre o link, escolhe o horário e pronto — funciona no navegador do celular dele, sem cadastro nem instalação.",
+        },
+        {
+          p: "E quem prefere marcar pelo WhatsApp?",
+          r: "Continua marcando: você lança na agenda pelo painel e o horário some do link público na hora. Os dois caminhos usam a mesma agenda.",
+        },
+      ]}
       features={[
         "Link público de auto-agendamento (cliente reserva sem login)",
         "7 verticais com presets prontos (arena/barbearia/lavagem/etc)",

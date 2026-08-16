@@ -47,6 +47,58 @@ export default function CarregaProPage() {
             "Configura tarifa R$/kWh (com janela por horário e dias), cadastra RFIDs e cobra Pix dinâmico ao fim de cada carga.",
         },
       ]}
+      problema={{
+        titulo: "Você comprou o carregador. A plataforma leva a comissão.",
+        texto: (
+          <>
+            <p>
+              O carregador é seu, a energia você paga, o ponto é seu — e mesmo
+              assim some R$ 0,30 a R$ 0,50 por kWh na plataforma do fabricante.
+              Num eletroposto que roda, isso é o lucro inteiro.
+            </p>
+            <p>
+              O CarregaPro fala OCPP nativo com qualquer carregador certificado.
+              O Pix cai direto na sua conta ao fim de cada carga.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "🔌",
+          titulo: "Qualquer carregador certificado",
+          texto:
+            "OCPP 1.6 J e 2.0.1 nativos: não importa a marca, ele conversa. Você deixa de ficar preso ao software do fabricante.",
+          itens: [
+            "OCPP 1.6 J e 2.0.1 nativos",
+            "Telemetria ao vivo: kWh, kW, V, A, SoC e temperatura",
+            "Log OCPP completo pra auditoria",
+            "Vários pontos no mesmo painel",
+          ],
+        },
+        {
+          icone: "💰",
+          titulo: "O dinheiro é seu",
+          texto:
+            "Pix automático ao fim da carga, direto pra sua conta. Sem comissão por kWh pra ninguém.",
+          itens: [
+            "Cobrança Pix automática ao fim de cada carga",
+            "Tarifa por horário, dia da semana e estação",
+            "RFID por tipo: cliente, frota, VIP e fidelidade",
+            "Relatório de faturamento por ponto",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Meu carregador é compatível?",
+          r: "Se ele é certificado OCPP 1.6 J ou 2.0.1 — o que hoje é praticamente todo carregador vendido no Brasil — é compatível. Manda o modelo no WhatsApp que a gente confirma antes de você assinar.",
+        },
+        {
+          p: "Preciso cancelar a plataforma do fabricante?",
+          r: "Não precisa cancelar pra testar: dá pra apontar o carregador pro CarregaPro e ver funcionando. Depois você decide se continua pagando comissão.",
+        },
+      ]}
       features={[
         "OCPP 1.6 J e 2.0.1 nativo — aceita qualquer marca certificada",
         "Tarifa dinâmica por horário, dia da semana e estação",

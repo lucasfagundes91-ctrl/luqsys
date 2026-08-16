@@ -47,6 +47,58 @@ export default function ComandaProPage() {
             "O pedido cai na tela da cozinha. No fim, fecha a conta com taxa de serviço e emite a NFC-e.",
         },
       ]}
+      problema={{
+        titulo: "A conta da mesa 7 saiu errada de novo",
+        texto: (
+          <>
+            <p>
+              Comanda de papel, pedido gritado pra cozinha, item que ninguém
+              lançou e a divisão da conta feita na calculadora do celular. No
+              fim da noite, o caixa não fecha e ninguém sabe onde furou.
+            </p>
+            <p>
+              O ComandaPro leva o pedido do garçom direto pra cozinha e fecha a
+              conta com taxa e divisão calculadas — com NFC-e emitida na hora.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "📋",
+          titulo: "Uma comanda pra tudo",
+          texto:
+            "Mesa, balcão, delivery e iFood no mesmo lugar — o salão não precisa saber de onde veio o pedido.",
+          itens: [
+            "Comanda de mesa, balcão, delivery e iFood",
+            "Cardápio digital touch por categoria",
+            "Taxa de serviço e divisão de conta",
+            "Pedido pelo celular ou pela maquininha do garçom",
+          ],
+        },
+        {
+          icone: "👨‍🍳",
+          titulo: "A cozinha enxerga a fila",
+          texto:
+            "Tela de cozinha com o status de cada pedido: o que entrou, o que está saindo e o que está atrasado.",
+          itens: [
+            "Tela de cozinha (KDS) com status por pedido",
+            "Impressão por estação de preparo",
+            "Tempo de preparo por item",
+            "Caixa com abertura, fechamento e formas de pagamento",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Preciso de maquininha específica?",
+          r: "O garçom pode usar o celular dele. Se você já tem maquininha Android, o sistema roda nela também — a tela do PDA foi feita pensando nesse formato.",
+        },
+        {
+          p: "Emite cupom fiscal?",
+          r: "Emite NFC-e pela Focus NFe, com o seu certificado. O cupom sai na hora do fechamento da conta.",
+        },
+      ]}
       features={[
         "Comanda universal: mesa, balcão, delivery e iFood",
         "Cardápio digital touch, organizado por categoria",

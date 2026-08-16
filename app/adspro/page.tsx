@@ -56,6 +56,59 @@ export default function AdsProPage() {
             "Insights em tempo real (gasto, CTR, conversas, custo por mensagem). Relatório semanal com resumo executivo escrito por IA — pra você entender sem ser de marketing.",
         },
       ]}
+      problema={{
+        titulo: "Impulsionar não é anunciar",
+        texto: (
+          <>
+            <p>
+              Você aperta "impulsionar", o dinheiro sai, chega curtida — e
+              nenhuma conversa. Agência cobra mensalidade que não cabe, e o
+              Gerenciador de Anúncios é uma cabine de avião pra quem só quer
+              vender mais.
+            </p>
+            <p>
+              O AdsPro monta a campanha inteira num fluxo só, com o anúncio que
+              abre conversa no WhatsApp — e mostra quanto custou cada conversa.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "💬",
+          titulo: "Anúncio que vira conversa",
+          texto:
+            "Click-to-WhatsApp: quem clica cai direto no seu WhatsApp, que é onde a venda acontece de verdade.",
+          itens: [
+            "Click-to-WhatsApp (CTWA)",
+            "Messenger e tráfego pro site",
+            "Promover post existente ou subir criativo novo",
+            "Campanha, público e criativo num fluxo só",
+          ],
+        },
+        {
+          icone: "🎯",
+          titulo: "Pra quem está perto de você",
+          texto:
+            "Cidade, raio em quilômetros, idade e interesse — sem precisar entender a interface do Meta.",
+          itens: [
+            "Segmentação por cidade e raio em km",
+            "Idade e interesses",
+            "Sugestão de texto com IA em 3 ângulos",
+            "Insights: gasto, CTR, conversas e R$ por conversa",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Preciso ter Gerenciador de Anúncios configurado?",
+          r: "Você precisa da conta de anúncios e da página — a gente ajuda a conectar. Depois disso o dia a dia acontece dentro do AdsPro.",
+        },
+        {
+          p: "Qual a diferença pro plano de gestão?",
+          r: "No plano de R$ 199 você sobe as campanhas; no de R$ 499 a gente faz por você — criativo, texto, segmentação e acompanhamento.",
+        },
+      ]}
       features={[
         "Click-to-WhatsApp (CTWA): anúncio que abre conversa direto",
         "Mensageria pelo Messenger e tráfego pro site",

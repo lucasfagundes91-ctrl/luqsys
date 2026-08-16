@@ -55,6 +55,74 @@ export default function VigiaProPage() {
             "WhatsApp com o print do momento, e o painel guarda o histórico. Fazenda, empresa e casa num lugar só, cada local com seu telefone de destino.",
         },
       ]}
+      problema={{
+        titulo: "Câmera que só grava serve pra ver o prejuízo depois",
+        texto: (
+          <>
+            <p>
+              O portão ficou aberto às 2h e você descobriu de manhã. O gado
+              saiu pela cerca e alguém viu no dia seguinte. A gravação estava
+              lá — só não tinha ninguém olhando.
+            </p>
+            <p>
+              O VigiaPro assiste por você e chama no WhatsApp com a foto,
+              no momento em que acontece.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "👁️",
+          titulo: "Ele sabe o que está vendo",
+          texto:
+            "Pessoa, carro, moto, caminhão ou animal — e só na zona e no horário que interessam pra você.",
+          itens: [
+            "Detecta pessoa, veículo e animal",
+            "Zonas por câmera: o pátio avisa, a rua não",
+            "Regra por horário e dia da semana",
+            "Aviso com a foto do momento anexada",
+          ],
+        },
+        {
+          icone: "🏘️",
+          titulo: "Fazenda, empresa e casa juntas",
+          texto:
+            "Um painel só pra todos os locais, cada um com o seu telefone de destino e as suas regras.",
+          itens: [
+            "Vários locais no mesmo painel",
+            "Telefone de destino por local",
+            "Histórico de eventos com snapshot",
+            "Avisa quando uma câmera para de responder",
+          ],
+        },
+        {
+          icone: "🔒",
+          titulo: "Sem abrir a sua rede",
+          texto:
+            "O mini PC processa tudo dentro da sua rede e só fala pra fora por HTTPS. Nada de expor câmera na internet.",
+          itens: [
+            "Só HTTPS de saída — sem porta aberta no roteador",
+            "Vídeo não sai do local; só o evento sobe",
+            "Continua gravando local com a internet fora",
+            "Usa as câmeras que você já tem",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Preciso trocar minhas câmeras?",
+          r: "Na maioria dos casos não. Câmera IP que já está instalada costuma servir — o que entra novo é o mini PC que faz a análise no local.",
+        },
+        {
+          p: "Por que precisa de um computador na fazenda?",
+          r: "Porque vinte câmeras subindo vídeo pra nuvem dariam 40 a 80 Mbps de upload, e nenhuma internet rural aguenta isso. Analisando no local, só o evento sobe — e um evento é uma foto.",
+        },
+        {
+          p: "Vou receber alerta a noite inteira?",
+          r: "Só do que você pedir. A regra é por objeto, zona, horário e dia — carro na entrada às 3h avisa; folha balançando no vento, não.",
+        },
+      ]}
       featuresTitulo="O que ele faz"
       features={[
         "Detecta pessoa, carro, moto, caminhão e animal",

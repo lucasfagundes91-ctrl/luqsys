@@ -47,6 +47,59 @@ export default function BotaProPage() {
             "Ordem de produção baixa matéria-prima e dá entrada em produto acabado. A venda baixa o par, emite NF-e e manda o boleto pro lojista por e-mail e WhatsApp.",
         },
       ]}
+      problema={{
+        titulo: "Você sabe quanto custa o par que acabou de sair?",
+        texto: (
+          <>
+            <p>
+              Vaqueta, palmilha, solado, mão de obra e o refugo que ninguém
+              contabiliza. O preço acaba saindo do "mais ou menos o que o
+              concorrente cobra" — e a margem some no meio do mês.
+            </p>
+            <p>
+              O BotaPro tem ficha técnica com custo real do par e ordem de
+              produção que baixa insumo e dá entrada no acabado, grade por
+              grade.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "👞",
+          titulo: "Estoque em grade",
+          texto:
+            "Bota não é um produto: é uma grade. Cada numeração com o seu estoque e o seu código de barras.",
+          itens: [
+            "Grade de numeração com estoque próprio",
+            "Código de barras por numeração",
+            "Estoque em dois níveis: insumo e produto acabado",
+            "Histórico de cada movimento",
+          ],
+        },
+        {
+          icone: "🏭",
+          titulo: "Da vaqueta ao par pronto",
+          texto:
+            "A ordem de produção baixa o insumo, dá entrada no acabado e registra o refugo — o custo do par sai da realidade.",
+          itens: [
+            "Ficha técnica com custo real do par",
+            "Preço sugerido por markup",
+            "Ordem de produção com refugo registrado",
+            "Atacado e varejo no mesmo estoque",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Vendo pra lojista e no varejo. Preciso de dois sistemas?",
+          r: "Não. O mesmo estoque atende os dois, com preço de atacado e de varejo separados — o par que sai pra loja e o que sai pro consumidor saem da mesma grade.",
+        },
+        {
+          p: "Emite nota?",
+          r: "O boleto de venda sai pelo Asaas e vai por e-mail e WhatsApp. Pra emissão fiscal completa, o BotaPro conversa com o resto da casa.",
+        },
+      ]}
       features={[
         "Grade de numeração com estoque e código de barras por numeração",
         "Ficha técnica com custo real do par e preço sugerido por markup",

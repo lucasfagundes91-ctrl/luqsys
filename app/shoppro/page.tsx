@@ -47,6 +47,58 @@ export default function ShopProPage() {
             "Pedido cai no PDV Pro automático, baixa estoque, envia WhatsApp pro cliente, gera etiqueta de envio. Você opera tudo de um lugar só.",
         },
       ]}
+      problema={{
+        titulo: "Vender online sem duplicar o trabalho da loja",
+        texto: (
+          <>
+            <p>
+              Marketplace cobra comissão em cima de cada venda, e site próprio
+              costuma virar um segundo estoque pra manter — o produto que
+              acabou na loja continua à venda no site.
+            </p>
+            <p>
+              O ShopPro é o site da sua loja com o estoque do PDV Pro. Vendeu no
+              balcão, saiu do site. Sem comissão e sem segunda digitação.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "🛍️",
+          titulo: "Loja online de verdade",
+          texto:
+            "Carrinho, checkout, frete e cupom — o que o cliente espera de qualquer e-commerce, no seu domínio.",
+          itens: [
+            "Carrinho e checkout com endereço, frete e cupom",
+            "Pix com desconto e cartão em até 12x",
+            "Frete Melhor Envio ou retirada na loja",
+            "Login com Google ou e-mail",
+          ],
+        },
+        {
+          icone: "🔄",
+          titulo: "Mesmo estoque, mesma promoção",
+          texto:
+            "Nada de manter dois catálogos. O que muda no PDV muda no site, inclusive o clube de pontos.",
+          itens: [
+            "Estoque sincronizado com o PDV Pro",
+            "Promoções e cupons sincronizados",
+            "Clube de pontos que vale nos dois",
+            "Lista de aniversário pública",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Preciso ter o PDV Pro?",
+          r: "Precisa — o ShopPro é o site do PDV Pro, e é dele que vêm produto, preço e estoque. É isso que evita você manter dois catálogos.",
+        },
+        {
+          p: "A comissão é de quanto?",
+          r: "Nenhuma. Você paga a mensalidade e as taxas do meio de pagamento; não há percentual sobre a venda como nos marketplaces.",
+        },
+      ]}
       features={[
         "🛒 Carrinho + checkout com endereço, frete e cupom",
         "💳 Pagamento PIX (com desconto) e cartão via Asaas (até 12x)",

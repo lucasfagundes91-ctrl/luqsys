@@ -48,6 +48,58 @@ export default function MilhasProPage() {
             "Cada oferta vem com selo: Ótimo, Bom, Ok, Caro. Você não precisa entender cURL, milhas/R$ ou inglês.",
         },
       ]}
+      problema={{
+        titulo: "Milhas viraram um idioma que ninguém te ensinou",
+        texto: (
+          <>
+            <p>
+              CPM, milheiro, taxa de embarque, promoção de transferência
+              bonificada. Você junta milhas há anos e, na hora de usar, não sabe
+              dizer se aquela oferta é boa ou se está sendo passado pra trás.
+            </p>
+            <p>
+              O MilhasPro busca a disponibilidade real e dá um veredito em
+              português: vale ou não vale, e por quê.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "🔎",
+          titulo: "Disponibilidade de verdade",
+          texto:
+            "Dados reais de Smiles e TudoAzul — não é simulação nem tabela velha de blog.",
+          itens: [
+            "Consulta real de Smiles e TudoAzul",
+            "Veredito automático em cada oferta",
+            "Rotas monitoradas com teto de milhas",
+            "Alerta quando a passagem entra no seu teto",
+          ],
+        },
+        {
+          icone: "🧮",
+          titulo: "Em português, sem jargão",
+          texto:
+            "Quanto vale o seu milheiro, quanto sai a passagem em dinheiro e se compensa comprar milha pra fechar.",
+          itens: [
+            "Calculadora de valor do milheiro",
+            "Suas milhas com alerta de vencimento",
+            "Assistente que responde 'vale a pena?'",
+            "Feito pra celular, sem cadastro pra começar",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Preciso dar login do meu programa de milhas?",
+          r: "Não. A consulta de disponibilidade é feita sem a sua conta; suas milhas você informa se quiser o alerta de vencimento.",
+        },
+        {
+          p: "Ele emite a passagem?",
+          r: "Não emite — mostra onde tem, por quantas milhas e se o preço faz sentido. A emissão você faz no programa, como sempre fez.",
+        },
+      ]}
       features={[
         "Dados reais de Smiles e TudoAzul (sem demo)",
         "Veredito automático em cada oferta",
