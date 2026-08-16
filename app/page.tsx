@@ -268,7 +268,9 @@ const trilhas: Trilha[] = [
         preco: "Grátis",
         gratis: true,
         badge: "eleição 2026",
-        externo: "https://web-production-df6b4.up.railway.app",
+        // dominio proprio do projeto, nao a URL crua da Railway: aquela
+        // muda se o servico for recriado e nao tem cara de produto
+        externo: "https://euseivotar.com.br",
       },
     ],
   },
