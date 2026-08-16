@@ -47,6 +47,71 @@ export default function HoraProPage() {
             "Dashboard ao vivo. Espelho de Ponto mensal. AFD (Anexo II), AEJ (Anexo VI) e ATTR com assinatura PAdES ICP-Brasil.",
         },
       ]}
+      problema={{
+        titulo: "Ponto errado não é detalhe — é processo trabalhista",
+        texto: (
+          <>
+            <p>
+              Caderninho na portaria e planilha no fim do mês não valem como
+              prova. A Portaria 671 pede registro sequencial, íntegro e
+              exportável — e é isso que o juiz vai pedir pra ver.
+            </p>
+            <p>
+              O HoraPro é REP-P: cada batida ganha número sequencial, hash de
+              integridade e comprovante na hora. O AFD sai pronto quando
+              pedirem.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "⚖️",
+          titulo: "Conformidade de verdade",
+          texto:
+            "Não é ponto genérico com cara de conformidade: é o que a Portaria 671 exige, do NSR ao arquivo assinado.",
+          itens: [
+            "NSR sequencial criptográfico (Portaria 671)",
+            "Hash SHA256 de integridade em cada registro",
+            "AFD, AEJ e ATTR com ICP-Brasil",
+            "Comprovante em PDF na hora da batida",
+          ],
+        },
+        {
+          icone: "📍",
+          titulo: "Bate de onde trabalha",
+          texto:
+            "Selfie e GPS conforme a sua regra. O perímetro serve pra marcar onde foi a batida — não pra impedir o funcionário de bater.",
+          itens: [
+            "Selfie e GPS configuráveis por empresa",
+            "Perímetro por latitude, longitude e raio",
+            "Várias sedes na mesma empresa",
+            "Lembrete de saída pra quem esqueceu",
+          ],
+        },
+        {
+          icone: "🧮",
+          titulo: "O mês fecha sozinho",
+          texto:
+            "Banco de horas, ajustes e justificativas com trilha de quem alterou o quê — e a folha puxa daqui.",
+          itens: [
+            "Banco de horas",
+            "Ajustes e justificativas com histórico",
+            "Grade do mês por funcionário",
+            "Integração com a folha do FarmPro",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Preciso comprar relógio de ponto?",
+          r: "Não. O REP-P é software: o funcionário bate pelo próprio celular. Isso é o que a Portaria 671 permite desde 2021 — e é por isso que sai muito mais barato que relógio de parede.",
+        },
+        {
+          p: "E quem trabalha sem sinal de celular?",
+          r: "A batida fica registrada no aparelho e sobe quando o sinal volta, mantendo o horário real. O perímetro marca a localização, mas não trava o registro.",
+        },
+      ]}
       features={[
         "Multi-tenant: cada empresa isolada",
         "NSR sequencial criptográfico (Portaria 671)",

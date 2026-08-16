@@ -46,6 +46,70 @@ export default function AluguelProPage() {
             "Após recebido, calcula sua taxa, repassa pro proprietário e gera demonstrativo. Reajuste anual automático.",
         },
       ]}
+      problema={{
+        titulo: "Todo dia 5 a mesma maratona",
+        texto: (
+          <>
+            <p>
+              Gerar boleto de cada inquilino, conferir quem pagou, calcular a
+              taxa, repassar pro proprietário e mandar o demonstrativo. Multiplique
+              por quinze imóveis e o mês inteiro vira cobrança.
+            </p>
+            <p>
+              O AluguelPro faz esse ciclo sozinho — inclusive o reajuste anual,
+              que é onde mais se perde dinheiro por esquecimento.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "📄",
+          titulo: "Contrato que se lembra sozinho",
+          texto:
+            "Vencimento, índice e data de reajuste ficam no contrato. O sistema aplica na hora certa, sem você marcar no calendário.",
+          itens: [
+            "Contratos com vencimento e reajuste automático",
+            "Reajuste por IGP-M ou IPCA",
+            "Modelos de contrato prontos",
+            "Histórico de cada alteração",
+          ],
+        },
+        {
+          icone: "💳",
+          titulo: "Cobrança no automático",
+          texto:
+            "Boleto e Pix gerados e enviados todo mês, com baixa automática quando o inquilino paga.",
+          itens: [
+            "Cobrança recorrente por boleto e Pix",
+            "Baixa automática do pagamento",
+            "Antecipação com desconto",
+            "Histórico financeiro por imóvel",
+          ],
+        },
+        {
+          icone: "🏠",
+          titulo: "O proprietário fica sabendo",
+          texto:
+            "Repasse calculado com a sua taxa e demonstrativo em PDF — a conversa do dia 10 deixa de existir.",
+          itens: [
+            "Repasse automático ao proprietário",
+            "Taxa de administração configurável",
+            "Demonstrativo em PDF",
+            "Multi-proprietário e multi-imóvel",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Administro imóvel dos outros e alguns meus. Dá pra separar?",
+          r: "Dá. Cada imóvel tem o proprietário dele e a sua taxa; nos seus, a taxa é zero e o repasse é pra você mesmo. O demonstrativo sai certo nos dois casos.",
+        },
+        {
+          p: "E se o inquilino atrasar?",
+          r: "O sistema mostra quem está em atraso e continua cobrando. Multa e juros entram conforme o que estiver no contrato.",
+        },
+      ]}
       features={[
         "Contratos com vencimento e reajuste automático",
         "Cobrança recorrente (boleto/Pix)",

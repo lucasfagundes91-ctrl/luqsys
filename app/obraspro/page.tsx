@@ -46,6 +46,71 @@ export default function ObrasProPage() {
             "Fechamento por obra, por etapa, por investidor. Exporta PDF/Excel. Transparência total.",
         },
       ]}
+      problema={{
+        titulo: "A obra estourou o orçamento. Quando?",
+        texto: (
+          <>
+            <p>
+              Você descobre no fim, quando já não dá pra corrigir. As notas
+              estão numa pasta, o combinado com o investidor está no WhatsApp e
+              o previsto de cada etapa está numa planilha que ninguém atualiza
+              desde a fundação.
+            </p>
+            <p>
+              O ObrasPro compara previsto e realizado por etapa enquanto a obra
+              anda — e o investidor vê a parte dele sem precisar te ligar.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "🏗️",
+          titulo: "Obra por etapa",
+          texto:
+            "Fundação, estrutura, acabamento: cada etapa com o que foi orçado e o que já saiu do caixa.",
+          itens: [
+            "Várias obras ao mesmo tempo",
+            "Previsto × realizado por etapa",
+            "Categorias de gasto (material, mão de obra)",
+            "Alerta quando a etapa passa do orçado",
+          ],
+        },
+        {
+          icone: "📸",
+          titulo: "Nota entra pela foto",
+          texto:
+            "Compra de material vira lançamento sem digitação, com o documento anexado pra conferência depois.",
+          itens: [
+            "OCR de nota fiscal por foto",
+            "Anexo guardado no lançamento",
+            "Duplicata mesmo sem número de nota",
+            "Fornecedor e forma de pagamento",
+          ],
+        },
+        {
+          icone: "🤝",
+          titulo: "Investidor no jogo limpo",
+          texto:
+            "Cada sócio com o percentual dele, vendo o que entrou e o que saiu — sem você mandar planilha todo mês.",
+          itens: [
+            "Investidores com percentual de participação",
+            "Relatório por obra, etapa e investidor",
+            "Papéis: admin, editor e quem só olha",
+            "Exportação em PDF e Excel",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Serve pra reforma ou só pra construção do zero?",
+          r: "Serve pras duas. O que o sistema controla é etapa com orçamento — se a sua reforma tem etapas, ele organiza igual.",
+        },
+        {
+          p: "Meu investidor precisa de login?",
+          r: "Só se você quiser. Dá pra dar acesso somente-leitura pra ele acompanhar sozinho, ou mandar o relatório em PDF e manter o sistema só com a sua equipe.",
+        },
+      ]}
       features={[
         "Múltiplas obras simultâneas",
         "Etapas com orçamento previsto × realizado",

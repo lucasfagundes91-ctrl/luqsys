@@ -46,6 +46,71 @@ export default function ContabilidadeProPage() {
             "DAS, DCTFWeb, eSocial, IRPF/IRPJ — tudo pronto pra entregar. Lembretes de vencimento automáticos.",
         },
       ]}
+      problema={{
+        titulo: "Contador que só aparece quando o imposto vence",
+        texto: (
+          <>
+            <p>
+              Você manda os documentos, ele manda a guia, e no meio disso
+              ninguém explica nada. Quando chega uma notificação, começa a
+              caçada por um papel de dois anos atrás.
+            </p>
+            <p>
+              Aqui o contador vem junto com o software — e o software já está
+              conectado nos outros sistemas que você usa, então o dado não
+              precisa ser reenviado toda vez.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "🧑‍💼",
+          titulo: "Contador de verdade, no seu WhatsApp",
+          texto:
+            "Não é chat genérico: é um contador dedicado que conhece a sua empresa e responde no canal que você já usa.",
+          itens: [
+            "Contador dedicado por WhatsApp e e-mail",
+            "Resposta a dúvida do dia a dia",
+            "Acompanhamento do que vence no mês",
+            "PJ e PF (sócios e família) no mesmo lugar",
+          ],
+        },
+        {
+          icone: "📑",
+          titulo: "As obrigações em dia",
+          texto:
+            "DAS, DCTFWeb, eSocial e IRPF entregues no prazo, com lembrete antes de cada vencimento.",
+          itens: [
+            "DAS do Simples Nacional todo mês",
+            "DCTFWeb e eSocial",
+            "IRPF anual dos sócios e dependentes",
+            "Guias prontas e lembretes de vencimento",
+          ],
+        },
+        {
+          icone: "🔗",
+          titulo: "Conectado no que você já usa",
+          texto:
+            "Se a venda está no PDV Pro e a folha no HoraPro, o contador não precisa te pedir o mesmo arquivo todo mês.",
+          itens: [
+            "Integração nativa com os outros Luqsys",
+            "Lançamentos contábeis automatizados",
+            "XMLs e relatórios sem reenvio manual",
+            "Fechamento com o dado da operação",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Preciso trocar de contador pra usar?",
+          r: "Pra usar o pacote completo, sim — o contador vem junto. Se você quer só o software e manter o seu contador, dá pra conversar: os relatórios saem no formato que ele já usa.",
+        },
+        {
+          p: "Minha empresa não é Simples. Serve?",
+          r: "O pacote padrão é desenhado pro Simples Nacional, que é a maioria. Fora dele, fale com a gente antes pra confirmar se o seu regime está coberto.",
+        },
+      ]}
       features={[
         "PJ + PF (sócios e família)",
         "Integração nativa com outros Luqsys",

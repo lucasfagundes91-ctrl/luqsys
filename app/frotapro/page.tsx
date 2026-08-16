@@ -46,6 +46,83 @@ export default function FrotaProPage() {
             "Avisa antes de vencer IPVA, seguro, revisão. Dashboard por categoria mostra onde o dinheiro está indo.",
         },
       ]}
+      problema={{
+        titulo: "Frota não afunda de uma vez. Afunda R$ 300 por vez.",
+        texto: (
+          <>
+            <p>
+              O pneu que trocou não se sabe com quantos quilômetros. O IPVA que
+              venceu ninguém lembrou. A manutenção que foi feita duas vezes
+              porque não havia registro da primeira.
+            </p>
+            <p>
+              O FrotaPro guarda cada gasto amarrado ao quilômetro do dia e
+              avisa antes do vencimento. Você descobre qual veículo custa caro
+              antes de ele custar caro demais.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "⛽",
+          titulo: "Cada gasto no seu quilômetro",
+          texto:
+            "Abastecimento, pneu, revisão — tudo registrado com o KM daquele momento. É isso que revela o custo real por rodado.",
+          itens: [
+            "Gasto vinculado ao KM no momento do lançamento",
+            "OCR do comprovante por foto",
+            "Categorias: dia a dia, coleção, projeto",
+            "Histórico de manutenção por veículo",
+          ],
+        },
+        {
+          icone: "🔔",
+          titulo: "O que vence não te pega",
+          texto:
+            "IPVA, seguro, licenciamento e revisão avisam antes — por data ou por quilometragem.",
+          itens: [
+            "IPVA e seguro com vencimento automático",
+            "Lembretes recorrentes ou por data",
+            "Aviso antes, não depois da multa",
+            "Documentos guardados junto do veículo",
+          ],
+        },
+        {
+          icone: "👥",
+          titulo: "Motorista lança, gestor confere",
+          texto:
+            "Cada motorista registra o que gastou no veículo dele. Você vê a frota inteira sem ficar cobrando planilha.",
+          itens: [
+            "Multi-usuário com login próprio",
+            "Motorista vê só o que é dele",
+            "Painel do gestor com a frota toda",
+            "Página pública por loja, quando você revende",
+          ],
+        },
+        {
+          icone: "📊",
+          titulo: "Onde o dinheiro está indo",
+          texto:
+            "Gráfico por categoria e por veículo — o carro que parece barato às vezes é o mais caro do pátio.",
+          itens: [
+            "Dashboard com gráficos por categoria",
+            "Custo por veículo e por período",
+            "Comparativo entre veículos",
+            "Exportação dos lançamentos",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Serve pra 2 carros ou só pra frota grande?",
+          r: "Serve pros dois. Tem gente usando com o carro da família e o da empresa só pra saber quanto cada um custa — e tem quem use com dezenas de veículos e motoristas.",
+        },
+        {
+          p: "O motorista precisa saber mexer em sistema?",
+          r: "Ele fotografa o comprovante e pronto. O OCR lê o valor e ele confirma o quilômetro — leva menos tempo que mandar a foto no grupo do WhatsApp.",
+        },
+      ]}
       features={[
         "Categorias: dia a dia, coleção, projeto",
         "Gastos vinculados ao KM no momento",
