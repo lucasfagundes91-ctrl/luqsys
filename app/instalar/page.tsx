@@ -122,8 +122,13 @@ const grupos: Grupo[] = [
   {
     titulo: "Viagens",
     sistemas: [
-      { host: "viagempro", nome: "ViagemPro", emoji: "🧳", o_que: "Roteiro de viagem com IA" },
-      { host: "milhaspro", nome: "MilhasPro", emoji: "🎫", o_que: "Passagens em milhas" },
+      {
+        host: "viagempro", nome: "ViagemPro", emoji: "🧳",
+        // A busca em milhas virou parte do ViagemPro na fusão: milhaspro.luqsys
+        // e viagempro.luqsys servem o MESMO app. Dois cards instalariam o mesmo
+        // atalho duas vezes.
+        o_que: "Roteiro, passagem em milhas e hospedagem",
+      },
     ],
   },
   {
@@ -164,10 +169,6 @@ function Icone({ s, tam }: { s: Sistema; tam: number }) {
 }
 
 export default function InstalarPage() {
-  const completos = grupos
-    .flatMap((g) => g.sistemas)
-    .filter((s) => s.apps).length;
-
   return (
     <main className="radial-bg min-h-screen">
       <div className="mx-auto max-w-3xl px-5 pb-24 pt-14">
@@ -185,13 +186,12 @@ export default function InstalarPage() {
         </p>
 
         <div className="mt-6 rounded-xl border border-gold-dark/60 bg-gold/[0.06] p-4 text-sm text-white/70">
-          <strong className="text-gold">Como instalar.</strong>{" "}
-          No <strong className="text-white/90">iPhone</strong>, abra o app e use
-          Compartilhar → <em>Adicionar à Tela de Início</em>. No{" "}
+          <strong className="text-gold">Um toque, no iPhone.</strong>{" "}
+          O botão <strong className="text-white/90">Instalar</strong> abre a
+          página do sistema, de onde sai um perfil que põe o atalho na tela de
+          início — sem precisar do menu Compartilhar. No{" "}
           <strong className="text-white/90">Android</strong>, o Chrome oferece
-          instalar sozinho. Em {completos} sistemas dá pra pular tudo isso: eles
-          têm uma página própria que instala os atalhos de uma vez — procure o
-          botão <strong className="text-white/90">Instalar</strong> dourado.
+          instalar assim que o app abre.
         </div>
 
         {grupos.map((g) => (
@@ -218,19 +218,12 @@ export default function InstalarPage() {
                       <span className="flex-none rounded-lg border border-white/10 px-3 py-2 text-xs text-white/35">
                         indisponível
                       </span>
-                    ) : s.apps ? (
+                    ) : (
                       <a
                         href={`${base(s)}/instalar`}
                         className="flex-none rounded-lg bg-gold px-4 py-2.5 text-sm font-bold text-black transition-opacity hover:opacity-90"
                       >
                         Instalar
-                      </a>
-                    ) : (
-                      <a
-                        href={base(s)}
-                        className="flex-none rounded-lg border border-white/15 px-4 py-2.5 text-sm font-semibold text-white/80 transition-colors hover:border-gold hover:text-gold"
-                      >
-                        Abrir
                       </a>
                     )}
                   </div>
