@@ -102,6 +102,11 @@ export default function HoraProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/horapro-0.jpg", legenda: "Painel do dia"},
+        {arquivo: "/prints/horapro-1.jpg", legenda: "Banco de horas"},
+        {arquivo: "/prints/horapro-2.jpg", legenda: "Espelho de ponto do mês"},
+      ]}
       praQuem={[
         {icone:"🏭", titulo:"Empresa que quer dormir tranquila", texto:"Registro que se sustenta se virar processo trabalhista."},
         {icone:"📍", titulo:"Equipe que trabalha fora", texto:"Obra, fazenda, atendimento externo — bate de onde está."},

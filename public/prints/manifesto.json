@@ -1,4 +1,14 @@
 {
+ "agendapro": [
+  {
+   "arquivo": "/prints/agendapro-0.jpg",
+   "legenda": "Painel da agenda"
+  },
+  {
+   "arquivo": "/prints/agendapro-1.jpg",
+   "legenda": "Reservas do período"
+  }
+ ],
  "aluguelpro": [
   {
    "arquivo": "/prints/aluguelpro-1.jpg",
@@ -43,6 +53,20 @@
   {
    "arquivo": "/prints/frotapro-2.jpg",
    "legenda": "Gastos por categoria"
+  }
+ ],
+ "horapro": [
+  {
+   "arquivo": "/prints/horapro-0.jpg",
+   "legenda": "Painel do dia"
+  },
+  {
+   "arquivo": "/prints/horapro-1.jpg",
+   "legenda": "Banco de horas"
+  },
+  {
+   "arquivo": "/prints/horapro-2.jpg",
+   "legenda": "Espelho de ponto do mês"
   }
  ],
  "rotinapro": [

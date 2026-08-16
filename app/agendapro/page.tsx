@@ -85,6 +85,10 @@ export default function AgendaProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/agendapro-0.jpg", legenda: "Painel da agenda"},
+        {arquivo: "/prints/agendapro-1.jpg", legenda: "Reservas do período"},
+      ]}
       praQuem={[
         {icone:"🏐", titulo:"Arena e quadra", texto:"Horário fixo de mensalista convivendo com avulso, sem conflito."},
         {icone:"💈", titulo:"Barbearia e salão", texto:"Vários profissionais, cada um com a própria agenda."},
