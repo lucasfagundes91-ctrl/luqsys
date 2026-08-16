@@ -32,3 +32,41 @@ body {
     transparent 60%
   );
 }
+
+/* ─── Cor por produto ────────────────────────────────────────────────────
+   A casa é dourada, mas cada sistema forte ganha a própria cor: o PDV Pro
+   já é azul dentro do app (#1652C7) e chegava ao visitante com a mesma cara
+   dourada de todos os outros. As variáveis deixam o mesmo CSS servir pros
+   próximos — quem herda `.tema-produto` só troca --acc.
+   Piloto no PDV Pro (16/08/2026); se emplacar, os outros seguem o padrão. */
+.tema-produto {
+  --acc: #f5d342;
+  --acc-forte: #ffd84a;
+  --acc-fraco: #8b7320;
+  --acc-fundo: rgba(245, 211, 66, 0.12);
+}
+.tema-pdvpro {
+  --acc: #3b82f6;
+  --acc-forte: #60a5fa;
+  --acc-fraco: #1e40af;
+  --acc-fundo: rgba(59, 130, 246, 0.16);
+}
+
+.acc-text { color: var(--acc); }
+.acc-bg { background-color: var(--acc); }
+.acc-borda { border-color: var(--acc-fraco); }
+
+.acc-gradient-text {
+  background: linear-gradient(180deg, var(--acc-forte) 0%, var(--acc) 55%,
+                              var(--acc-fraco) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.acc-radial {
+  background-image: radial-gradient(
+    ellipse 80% 50% at 50% -10%, var(--acc-fundo), transparent 60%);
+}
+
+.acc-sombra { box-shadow: 0 0 40px -10px var(--acc-fundo); }
