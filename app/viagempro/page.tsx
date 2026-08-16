@@ -133,17 +133,18 @@ export default function ViagemProPage() {
             "Assistente IA durante a viagem",
             "Suporte por e-mail",
           ],
-          // Sem link do Asaas: os três planos antigos (19/49/89) tinham link
-          // próprio e nenhum vale R$ 99. Até existir a assinatura nova, o
-          // caminho é o teste — cobrar valor errado seria pior que esperar.
-          ctaLabel: "Testar 3 dias grátis",
-          ctaHref: "https://viagempro.luqsys.com.br/cadastro?trial=1",
+          // Assinatura única de R$ 99 criada no Asaas em 16/08/2026 — os seis
+          // links antigos (ViagemPro e MilhasPro, 19/49/89) foram desativados
+          // porque nenhum deles cobra o valor do produto fundido.
+          ctaLabel: "Assinar R$ 99/mês",
+          ctaHref: "https://www.asaas.com/c/3ie5r2bm9s1kugtp",
           destaque: true,
         },
       ]}
       ctaFinalTitulo="Sua próxima viagem planejada em minutos"
       ctaFinalTexto="Sem ficar 3 horas no Google Maps. A IA monta, você ajusta."
     appUrl="https://viagempro.luqsys.com.br"
+    assinarUrl="https://www.asaas.com/c/3ie5r2bm9s1kugtp"
     />
   );
 }
