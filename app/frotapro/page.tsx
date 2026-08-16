@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function FrotaProPage() {
   return (
     <ProductLayout
+      tema="frotapro"
       icone="🚚"
       nome="FrotaPro"
       tagline="Sua frota inteira no controle"

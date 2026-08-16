@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function FarmProPage() {
   return (
     <ProductLayout
+      tema="farmpro"
       icone="🌾"
       nome="FarmPro"
       tagline="A fazenda toda no controle"

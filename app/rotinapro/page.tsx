@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function RotinaProPage() {
   return (
     <ProductLayout
+      tema="rotinapro"
       icone="📋"
       nome="RotinaPro"
       tagline="Toda rotina operacional no controle"

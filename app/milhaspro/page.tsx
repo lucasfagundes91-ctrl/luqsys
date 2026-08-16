@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function MilhasProPage() {
   return (
     <ProductLayout
+      tema="milhaspro"
       icone="🎫"
       nome="MilhasPro"
       tagline="Passagens em milhas em português, sem jargão"

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function ObrasProPage() {
   return (
     <ProductLayout
+      tema="obraspro"
       icone="🏗️"
       nome="ObrasPro"
       tagline="Sua obra dentro do orçamento"

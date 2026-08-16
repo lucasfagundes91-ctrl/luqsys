@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function AluguelProPage() {
   return (
     <ProductLayout
+      tema="aluguelpro"
       icone="🏠"
       nome="AluguelPro"
       tagline="Sua administração de imóveis no controle"

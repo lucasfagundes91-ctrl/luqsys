@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function SiloProPage() {
   return (
     <ProductLayout
+      tema="silopro"
       icone="⚖️"
       nome="SiloPro"
       tagline="A balança do silo direto no seu celular"

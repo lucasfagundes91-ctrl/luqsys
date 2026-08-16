@@ -15,6 +15,19 @@ export type Plano = {
 
 export type Passo = { n: string; titulo: string; texto: string };
 
+/* Bloco temático: o mesmo que a lista de features conta, mas agrupado por
+   assunto e com uma frase que explica POR QUE aquilo importa. Lista corrida
+   de 14 checks é igual em todo sistema; bloco com assunto é o que dá cara
+   própria à página. Página que não define `blocos` continua na lista. */
+export type BlocoTema = {
+  icone: string;
+  titulo: string;
+  texto: string;
+  itens: string[];
+};
+
+export type Pergunta = { p: string; r: string };
+
 export type ProductPageProps = {
   icone: string;
   nome: string;
@@ -27,6 +40,11 @@ export type ProductPageProps = {
   passosTitulo?: string;
   features: string[];
   featuresTitulo?: string;
+  /* Caixa logo abaixo do herói: a dor do cliente em duas frases, antes de
+     falar de funcionalidade. */
+  problema?: { titulo: string; texto: ReactNode };
+  blocos?: BlocoTema[];
+  faq?: Pergunta[];
   planos: Plano[];
   ctaFinalTitulo?: string;
   ctaFinalTexto?: string;
@@ -36,6 +54,11 @@ export type ProductPageProps = {
      appUrl e oferece "Ver demo" mesmo onde a rota nao existe — o ComandaPro
      mandava o visitante pra um 404 no meio da decisao de compra. */
   semDemo?: boolean;
+  /* Slug do tema de cor (ex.: "farmpro" → .tema-farmpro no globals.css).
+     Sem ele a página fica dourada como a marca-mãe. Cada sistema tem a cor
+     que ele já usa por dentro do app — decisão de identidade que estava no
+     papel desde a marca e não tinha chegado ao site. */
+  tema?: string;
   trialUrl?: string;
   assinarUrl?: string;
 };
@@ -52,30 +75,34 @@ export function ProductLayout({
   passosTitulo = "Como funciona",
   features,
   featuresTitulo = "O que ele faz",
+  problema,
+  blocos,
+  faq,
   planos,
   ctaFinalTitulo,
   ctaFinalTexto,
   appUrl,
   demoUrl,
   semDemo,
+  tema,
   trialUrl,
   assinarUrl,
 }: ProductPageProps) {
   const demoHref = semDemo ? undefined : (demoUrl ?? (appUrl ? `${appUrl}/demo` : undefined));
   const trialHref = trialUrl ?? (appUrl ? `${appUrl}/cadastro?trial=1` : undefined);
   return (
-    <main className="radial-bg">
+    <main className={`tema-produto acc-radial${tema ? ` tema-${tema}` : ""}`}>
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
         <Link href="/" className="flex items-center gap-3">
           <img src="/luqsys-logo.png" alt="Luqsys" className="h-10 w-10 rounded-lg" />
-          <span className="text-sm font-semibold tracking-[0.2em] text-gold">
+          <span className="text-sm font-semibold tracking-[0.2em] acc-text">
             LUQSYS
           </span>
         </Link>
         <div className="flex items-center gap-2 sm:gap-3">
           <Link
             href="/"
-            className="hidden text-sm text-neutral-400 transition hover:text-gold lg:inline"
+            className="hidden text-sm text-neutral-400 transition hover:text-white lg:inline"
           >
             ← Voltar
           </Link>
@@ -84,7 +111,7 @@ export function ProductLayout({
               href={appUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden text-sm text-neutral-400 transition hover:text-gold sm:inline"
+              className="hidden text-sm text-neutral-400 transition hover:text-white sm:inline"
             >
               Entrar
             </a>
@@ -94,7 +121,7 @@ export function ProductLayout({
               href={demoHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-gold-dim px-3 py-2 text-xs font-semibold text-gold transition hover:border-gold sm:px-4 sm:text-sm"
+              className="rounded-full border acc-borda px-3 py-2 text-xs font-semibold acc-text transition hover:brightness-125 sm:px-4 sm:text-sm"
             >
               Ver demo
             </a>
@@ -104,7 +131,7 @@ export function ProductLayout({
               href={trialHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-gold px-3 py-2 text-xs font-semibold text-bg transition hover:bg-gold-bright sm:px-4 sm:text-sm"
+              className="rounded-full acc-bg px-3 py-2 text-xs font-semibold text-bg transition hover:brightness-110 sm:px-4 sm:text-sm"
             >
               Testar 3 dias
             </a>
@@ -114,7 +141,7 @@ export function ProductLayout({
                 href={appUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-gold px-5 py-2 text-sm font-semibold text-bg transition hover:bg-gold-bright sm:hidden"
+                className="rounded-full acc-bg px-5 py-2 text-sm font-semibold text-bg transition hover:brightness-110 sm:hidden"
               >
                 Entrar →
               </a>
@@ -124,12 +151,12 @@ export function ProductLayout({
       </nav>
 
       <section className="mx-auto max-w-4xl px-6 pb-16 pt-12 text-center sm:pt-20">
-        <span className="inline-block rounded-full border border-gold-dim/60 bg-gold-dark/30 px-3 py-1 text-xs font-medium tracking-wider text-gold">
+        <span className="inline-block rounded-full border acc-borda bg-transparent px-3 py-1 text-xs font-medium tracking-wider acc-text">
           UM SISTEMA LUQSYS
         </span>
         <div className="mt-6 text-5xl">{icone}</div>
         <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-6xl">
-          <span className="gold-gradient-text">{nome}</span>
+          <span className="acc-gradient-text">{nome}</span>
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-base font-medium text-neutral-200 sm:text-lg">
           {tagline}
@@ -144,7 +171,7 @@ export function ProductLayout({
               href={trialHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-gold px-7 py-3 text-sm font-semibold text-bg transition hover:bg-gold-bright"
+              className="rounded-full acc-bg px-7 py-3 text-sm font-semibold text-bg transition hover:brightness-110"
             >
               Testar 3 dias grátis →
             </a>
@@ -154,7 +181,7 @@ export function ProductLayout({
               href={demoHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-gold-dim px-7 py-3 text-sm font-semibold text-gold transition hover:border-gold"
+              className="rounded-full border acc-borda px-7 py-3 text-sm font-semibold acc-text transition hover:brightness-125"
             >
               Ver demo (sem cadastro)
             </a>
@@ -170,7 +197,7 @@ export function ProductLayout({
                   ? "noopener noreferrer"
                   : undefined
               }
-              className="rounded-full bg-gold px-7 py-3 text-sm font-semibold text-bg transition hover:bg-gold-bright"
+              className="rounded-full acc-bg px-7 py-3 text-sm font-semibold text-bg transition hover:brightness-110"
             >
               {ctaPrimaria.label}
             </a>
@@ -178,7 +205,7 @@ export function ProductLayout({
           {!demoHref && ctaSecundaria && (
             <a
               href={ctaSecundaria.href}
-              className="rounded-full border border-gold-dim px-7 py-3 text-sm font-semibold text-gold transition hover:border-gold"
+              className="rounded-full border acc-borda px-7 py-3 text-sm font-semibold acc-text transition hover:brightness-125"
             >
               {ctaSecundaria.label}
             </a>
@@ -199,13 +226,26 @@ export function ProductLayout({
               href={assinarUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-gold underline-offset-4 transition hover:text-gold-bright hover:underline"
+              className="font-semibold acc-text underline-offset-4 transition hover:brightness-125 hover:underline"
             >
               Assinar agora →
             </a>
           </p>
         )}
       </section>
+
+      {problema && (
+        <section className="mx-auto max-w-4xl px-6 pb-4">
+          <div className="acc-borda rounded-2xl border bg-bg-card/60 p-7 sm:p-9">
+            <h2 className="text-xl font-bold text-white sm:text-2xl">
+              {problema.titulo}
+            </h2>
+            <div className="mt-4 space-y-3 text-neutral-300">
+              {problema.texto}
+            </div>
+          </div>
+        </section>
+      )}
 
       {passos && passos.length > 0 && (
         <section className="mx-auto max-w-5xl px-6 py-16">
@@ -218,7 +258,7 @@ export function ProductLayout({
                 key={s.n}
                 className="rounded-2xl border border-neutral-900 bg-bg-card p-6"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold text-bg font-bold">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full acc-bg text-bg font-bold">
                   {s.n}
                 </div>
                 <h3 className="mt-4 text-lg font-bold">{s.titulo}</h3>
@@ -231,6 +271,35 @@ export function ProductLayout({
         </section>
       )}
 
+      {blocos && blocos.length > 0 ? (
+        <section className="mx-auto max-w-6xl px-6 py-16">
+          <h2 className="text-center text-3xl font-bold sm:text-4xl">
+            {featuresTitulo}
+          </h2>
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {blocos.map((b) => (
+              <div
+                key={b.titulo}
+                className="rounded-2xl border border-neutral-900 bg-bg-card p-6 transition hover:border-neutral-700"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">{b.icone}</span>
+                  <h3 className="acc-text text-lg font-bold">{b.titulo}</h3>
+                </div>
+                <p className="mt-3 text-sm text-neutral-400">{b.texto}</p>
+                <ul className="mt-4 space-y-2">
+                  {b.itens.map((i) => (
+                    <li key={i} className="flex gap-2 text-sm text-neutral-300">
+                      <span className="acc-text mt-0.5">✓</span>
+                      <span>{i}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : (
       <section className="mx-auto max-w-5xl px-6 py-16">
         <h2 className="text-center text-3xl font-bold sm:text-4xl">
           {featuresTitulo}
@@ -241,12 +310,13 @@ export function ProductLayout({
               key={f}
               className="flex items-start gap-3 rounded-xl border border-neutral-900 bg-bg-soft px-4 py-3 text-sm text-neutral-200"
             >
-              <span className="mt-0.5 text-gold">✓</span>
+              <span className="mt-0.5 acc-text">✓</span>
               <span>{f}</span>
             </li>
           ))}
         </ul>
       </section>
+      )}
 
       <section id="planos" className="mx-auto max-w-5xl px-6 py-20">
         <h2 className="text-center text-3xl font-bold sm:text-4xl">Planos</h2>
@@ -268,17 +338,17 @@ export function ProductLayout({
               key={p.nome}
               className={`relative rounded-2xl border p-8 ${
                 p.destaque
-                  ? "border-gold-dim bg-bg-card shadow-gold"
+                  ? "acc-borda bg-bg-card acc-sombra"
                   : "border-neutral-900 bg-bg-card"
               }`}
             >
               {p.destaque && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-3 py-1 text-xs font-bold text-bg">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full acc-bg px-3 py-1 text-xs font-bold text-bg">
                   MAIS POPULAR
                 </span>
               )}
               <h3
-                className={`text-xl font-bold ${p.destaque ? "text-gold" : ""}`}
+                className={`text-xl font-bold ${p.destaque ? "acc-text" : ""}`}
               >
                 {p.nome}
               </h3>
@@ -314,8 +384,8 @@ export function ProductLayout({
                 }
                 className={`mt-8 block rounded-full px-6 py-3 text-center text-sm font-semibold transition ${
                   p.destaque
-                    ? "bg-gold text-bg hover:bg-gold-bright"
-                    : "border border-gold-dim text-gold hover:border-gold"
+                    ? "acc-bg text-bg hover:brightness-110"
+                    : "border acc-borda acc-text hover:brightness-125"
                 }`}
               >
                 {p.ctaLabel}
@@ -324,6 +394,25 @@ export function ProductLayout({
           ))}
         </div>
       </section>
+
+      {faq && faq.length > 0 && (
+        <section className="mx-auto max-w-3xl px-6 py-10">
+          <h2 className="text-center text-3xl font-bold sm:text-4xl">
+            Perguntas que sempre fazem
+          </h2>
+          <div className="mt-10 space-y-4">
+            {faq.map((f) => (
+              <div
+                key={f.p}
+                className="rounded-2xl border border-neutral-900 bg-bg-card p-6"
+              >
+                <h3 className="font-bold text-white">{f.p}</h3>
+                <p className="mt-2 text-sm text-neutral-400">{f.r}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {(ctaFinalTitulo || ctaPrimaria || trialHref) && (
         <section className="mx-auto max-w-3xl px-6 py-20 text-center">
@@ -339,7 +428,7 @@ export function ProductLayout({
                 href={trialHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-full bg-gold px-8 py-4 text-base font-semibold text-bg transition hover:bg-gold-bright"
+                className="inline-block rounded-full acc-bg px-8 py-4 text-base font-semibold text-bg transition hover:brightness-110"
               >
                 Testar 3 dias grátis →
               </a>
@@ -349,7 +438,7 @@ export function ProductLayout({
                 href={demoHref}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-full border border-gold-dim px-8 py-4 text-base font-semibold text-gold transition hover:border-gold"
+                className="inline-block rounded-full border acc-borda px-8 py-4 text-base font-semibold acc-text transition hover:brightness-125"
               >
                 Ver demo
               </a>
@@ -365,7 +454,7 @@ export function ProductLayout({
                     ? "noopener noreferrer"
                     : undefined
                 }
-                className="inline-block rounded-full bg-gold px-8 py-4 text-base font-semibold text-bg transition hover:bg-gold-bright"
+                className="inline-block rounded-full acc-bg px-8 py-4 text-base font-semibold text-bg transition hover:brightness-110"
               >
                 {ctaPrimaria.label}
               </a>
@@ -378,7 +467,7 @@ export function ProductLayout({
 
       <footer className="border-t border-neutral-900 px-6 py-10 text-center text-sm text-neutral-500">
         <p>
-          <Link href="/" className="hover:text-gold">
+          <Link href="/" className="hover:text-white">
             Luqsys
           </Link>{" "}
           · {nome} · © {new Date().getFullYear()}

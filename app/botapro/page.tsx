@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function BotaProPage() {
   return (
     <ProductLayout
+      tema="botapro"
       icone="🥾"
       nome="BotaPro"
       tagline="Da vaqueta ao par vendido, no mesmo sistema"

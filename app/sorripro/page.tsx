@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function SorriProPage() {
   return (
     <ProductLayout
+      tema="sorripro"
       icone="🦷"
       nome="SorriPro"
       tagline="A clínica inteira num sistema só."

@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function BankProPage() {
   return (
     <ProductLayout
+      tema="bankpro"
       icone="🏦"
       nome="BankPro"
       tagline="Sua vida financeira no app e no WhatsApp"

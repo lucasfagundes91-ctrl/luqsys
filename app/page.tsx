@@ -16,6 +16,7 @@ type Produto = {
   emBreve?: boolean;
   externo?: string; // projeto aberto: card leva direto pro app, sem página interna
   gratis?: boolean; // some o "/mês" e troca trial/demo por "Acessar grátis"
+  aPartirDe?: boolean; // sistema com vários planos: o card mostra o de entrada
 };
 
 function trialHref(p: Produto) {
@@ -48,7 +49,8 @@ const trilhas: Trilha[] = [
         nome: "PDV Pro",
         icone: "🛒",
         tagline: "PDV + ERP completo pra loja física",
-        preco: "R$ 199",
+        preco: "R$ 149",
+        aPartirDe: true,
       },
       {
         slug: "shoppro",
@@ -65,6 +67,7 @@ const trilhas: Trilha[] = [
         icone: "🌾",
         tagline: "Gestão da fazenda: notas, livro caixa, folha, LCDPR",
         preco: "R$ 119",
+        aPartirDe: true,
       },
       {
         slug: "silopro",
@@ -81,6 +84,7 @@ const trilhas: Trilha[] = [
         icone: "🏗️",
         tagline: "Controle financeiro de obras por etapa",
         preco: "R$ 119",
+        aPartirDe: true,
         precoDe: "R$ 149",
       },
       {
@@ -89,6 +93,7 @@ const trilhas: Trilha[] = [
         icone: "☀️",
         tagline: "Gestão pra integrador de energia solar",
         preco: "R$ 89",
+        aPartirDe: true,
         precoDe: "R$ 119",
       },
       {
@@ -96,7 +101,8 @@ const trilhas: Trilha[] = [
         nome: "CarregaPro",
         icone: "⚡",
         tagline: "Gestão de eletroposto OCPP 1.6 J + 2.0.1 — sem comissão de plataforma",
-        preco: "R$ 99",
+        preco: "R$ 49",
+        aPartirDe: true,
         badge: "novo",
       },
       {
@@ -105,6 +111,7 @@ const trilhas: Trilha[] = [
         icone: "🥾",
         tagline: "ERP pra indústria de calçado: custo do par, grade e produção",
         preco: "R$ 149",
+        aPartirDe: true,
         badge: "novo",
         appUrl: "https://botapro.luqsys.com.br",
       },
@@ -124,6 +131,7 @@ const trilhas: Trilha[] = [
         icone: "🏠",
         tagline: "Administração de imóveis e aluguéis",
         preco: "R$ 99",
+        aPartirDe: true,
       },
       {
         slug: "frotapro",
@@ -131,6 +139,7 @@ const trilhas: Trilha[] = [
         icone: "🚚",
         tagline: "Gestão de frota PME com IPVA, seguro e manutenção",
         preco: "R$ 129",
+        aPartirDe: true,
         badge: "novo",
       },
       {
@@ -140,6 +149,7 @@ const trilhas: Trilha[] = [
         tagline:
           "Suas câmeras avisam no WhatsApp quando aparece gente, carro ou animal — com a foto do momento",
         preco: "R$ 99",
+        aPartirDe: true,
         badge: "com instalação",
         semTrial: true,
       },
@@ -149,6 +159,7 @@ const trilhas: Trilha[] = [
         icone: "📣",
         tagline: "Crie anúncios no Meta (Facebook + Instagram) com IA — ou deixa que a gente faz",
         preco: "R$ 199",
+        aPartirDe: true,
         badge: "ou gestão R$ 499",
         appUrl: "https://adspro.luqsys.com.br",
         semTrial: true,
@@ -187,7 +198,8 @@ const trilhas: Trilha[] = [
         nome: "RotinaPro",
         icone: "📋",
         tagline: "Checklists e rotinas operacionais multi-unidade com IA que compara foto-padrão",
-        preco: "R$ 99",
+        preco: "R$ 49",
+        aPartirDe: true,
         badge: "novo",
         appUrl: "https://rotinapro.luqsys.com.br",
       },
@@ -204,7 +216,8 @@ const trilhas: Trilha[] = [
         nome: "HoraPro",
         icone: "⏱️",
         tagline: "Ponto eletrônico REP-P (Portaria 671/2021)",
-        preco: "R$ 99 até 20 func",
+        preco: "R$ 29",
+        aPartirDe: true,
       },
       {
         slug: "contabilidadepro",
@@ -212,6 +225,7 @@ const trilhas: Trilha[] = [
         icone: "📊",
         tagline: "Software + acompanhamento contábil humano",
         preco: "R$ 199",
+        aPartirDe: true,
       },
     ],
   },
@@ -227,6 +241,7 @@ const trilhas: Trilha[] = [
         icone: "🏦",
         tagline: "Gestão financeira pessoal com IA e WhatsApp",
         preco: "R$ 49",
+        aPartirDe: true,
         badge: "app + WhatsApp",
       },
     ],
@@ -243,6 +258,7 @@ const trilhas: Trilha[] = [
         icone: "🧳",
         tagline: "Planejador de viagens com IA: roteiro, transporte, restaurantes",
         preco: "R$ 49",
+        aPartirDe: true,
       },
       {
         slug: "milhaspro",
@@ -250,6 +266,7 @@ const trilhas: Trilha[] = [
         icone: "🎫",
         tagline: "Buscador de passagens em milhas (Smiles, TudoAzul)",
         preco: "R$ 49",
+        aPartirDe: true,
       },
     ],
   },
@@ -408,6 +425,11 @@ export default function Home() {
                           {p.precoDe && (
                             <span className="block text-xs text-neutral-500 line-through">
                               {p.precoDe}/mês
+                            </span>
+                          )}
+                          {p.aPartirDe && (
+                            <span className="block text-[11px] text-neutral-500">
+                              a partir de
                             </span>
                           )}
                           <span className="text-xl font-black text-white">

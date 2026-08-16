@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function ViagemProPage() {
   return (
     <ProductLayout
+      tema="viagempro"
       icone="🧳"
       nome="ViagemPro"
       tagline="Planeje sua viagem do roteiro ao restaurante"

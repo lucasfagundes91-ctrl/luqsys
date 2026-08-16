@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function SolarProPage() {
   return (
     <ProductLayout
+      tema="solarpro"
       icone="☀️"
       nome="SolarPro"
       tagline="Gestão completa pro integrador solar"

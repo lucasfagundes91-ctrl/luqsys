@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function AgendaProPage() {
   return (
     <ProductLayout
+      tema="agendapro"
       icone="📅"
       nome="AgendaPro"
       tagline="Seu cliente reserva sozinho. Sem WhatsApp manual."

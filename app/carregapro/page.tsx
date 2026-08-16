@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function CarregaProPage() {
   return (
     <ProductLayout
+      tema="carregapro"
       icone="⚡"
       nome="CarregaPro"
       tagline="Seu eletroposto sem dar comissão pra ninguém"

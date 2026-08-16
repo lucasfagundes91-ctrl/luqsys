@@ -14,6 +14,7 @@ const ctaWhats = (msg: string) =>
 export default function AdsProPage() {
   return (
     <ProductLayout
+      tema="adspro"
       icone="📣"
       nome="AdsPro"
       tagline="Anúncios no Meta sem agência (ou com a gente fazendo tudo)"

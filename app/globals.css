@@ -45,12 +45,48 @@ body {
   --acc-fraco: #8b7320;
   --acc-fundo: rgba(245, 211, 66, 0.12);
 }
-.tema-pdvpro {
-  --acc: #3b82f6;
-  --acc-forte: #60a5fa;
-  --acc-fraco: #1e40af;
-  --acc-fundo: rgba(59, 130, 246, 0.16);
-}
+.tema-pdvpro { --acc: #3b82f6; --acc-forte: #60a5fa; --acc-fraco: #1e40af;
+  --acc-fundo: #3b82f629; }
+.tema-shoppro { --acc: #a855f7; --acc-forte: #c084fc; --acc-fraco: #6b21a8;
+  --acc-fundo: #a855f729; }
+.tema-farmpro { --acc: #22c55e; --acc-forte: #4ade80; --acc-fraco: #15803d;
+  --acc-fundo: #22c55e29; }
+.tema-silopro { --acc: #eab308; --acc-forte: #facc15; --acc-fraco: #a16207;
+  --acc-fundo: #eab30829; }
+.tema-obraspro { --acc: #f97316; --acc-forte: #fb923c; --acc-fraco: #9a3412;
+  --acc-fundo: #f9731629; }
+.tema-solarpro { --acc: #fb923c; --acc-forte: #fdba74; --acc-fraco: #c2410c;
+  --acc-fundo: #fb923c29; }
+.tema-carregapro { --acc: #4ade80; --acc-forte: #86efac; --acc-fraco: #15803d;
+  --acc-fundo: #4ade8029; }
+.tema-botapro { --acc: #e2bb3a; --acc-forte: #f0d264; --acc-fraco: #8a6d16;
+  --acc-fundo: #e2bb3a29; }
+.tema-aluguelpro { --acc: #818cf8; --acc-forte: #a5b4fc; --acc-fraco: #3730a3;
+  --acc-fundo: #818cf829; }
+.tema-frotapro { --acc: #0ea5e9; --acc-forte: #38bdf8; --acc-fraco: #075985;
+  --acc-fundo: #0ea5e929; }
+.tema-adspro { --acc: #6366f1; --acc-forte: #818cf8; --acc-fraco: #3730a3;
+  --acc-fundo: #6366f129; }
+.tema-agendapro { --acc: #06b6d4; --acc-forte: #22d3ee; --acc-fraco: #0e7490;
+  --acc-fundo: #06b6d429; }
+.tema-sorripro { --acc: #38bdf8; --acc-forte: #7dd3fc; --acc-fraco: #0369a1;
+  --acc-fundo: #38bdf829; }
+.tema-comandapro { --acc: #ef4444; --acc-forte: #f87171; --acc-fraco: #991b1b;
+  --acc-fundo: #ef444429; }
+.tema-rotinapro { --acc: #2dd4bf; --acc-forte: #5eead4; --acc-fraco: #0f766e;
+  --acc-fundo: #2dd4bf29; }
+.tema-horapro { --acc: #2563eb; --acc-forte: #3b82f6; --acc-fraco: #1e3a8a;
+  --acc-fundo: #2563eb29; }
+.tema-contabilidadepro { --acc: #7c3aed; --acc-forte: #a78bfa; --acc-fraco: #4c1d95;
+  --acc-fundo: #7c3aed29; }
+.tema-bankpro { --acc: #22c55e; --acc-forte: #4ade80; --acc-fraco: #166534;
+  --acc-fundo: #22c55e29; }
+.tema-viagempro { --acc: #14b8a6; --acc-forte: #2dd4bf; --acc-fraco: #115e59;
+  --acc-fundo: #14b8a629; }
+.tema-milhaspro { --acc: #f59e0b; --acc-forte: #fbbf24; --acc-fraco: #92400e;
+  --acc-fundo: #f59e0b29; }
+.tema-vigiapro { --acc: #f43f5e; --acc-forte: #fb7185; --acc-fraco: #9f1239;
+  --acc-fundo: #f43f5e29; }
 
 .acc-text { color: var(--acc); }
 .acc-bg { background-color: var(--acc); }

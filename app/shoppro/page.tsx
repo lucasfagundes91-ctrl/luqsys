@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function ShopProPage() {
   return (
     <ProductLayout
+      tema="shoppro"
       icone="🛍️"
       nome="ShopPro"
       tagline="Site de e-commerce próprio integrado ao PDV Pro"

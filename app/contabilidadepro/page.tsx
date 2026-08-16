@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function ContabilidadeProPage() {
   return (
     <ProductLayout
+      tema="contabilidadepro"
       icone="📊"
       nome="ContabilidadePro"
       tagline="Software + contador, no mesmo lugar"

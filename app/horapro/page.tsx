@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 export default function HoraProPage() {
   return (
     <ProductLayout
+      tema="horapro"
       icone="⏱️"
       nome="HoraPro"
       tagline="Ponto eletrônico REP-P em conformidade total"

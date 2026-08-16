@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 export default function ComandaProPage() {
   return (
     <ProductLayout
+      tema="comandapro"
       icone="🍽️"
       nome="ComandaPro"
       tagline="Sistema de gestão para restaurantes, bares e lanchonetes"

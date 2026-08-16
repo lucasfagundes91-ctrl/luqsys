@@ -19,6 +19,7 @@ const ZAP =
 export default function VigiaProPage() {
   return (
     <ProductLayout
+      tema="vigiapro"
       icone="📹"
       nome="VigiaPro"
       tagline="Suas câmeras param de gravar e passam a avisar"
