@@ -132,6 +132,36 @@ export default function ComparaBot() {
         </ul>
       </section>
 
+      {/* O ComparaBot não tem tela pra fotografar: ele vive dentro do
+          WhatsApp. Então a página mostra a conversa. O texto da resposta é
+          saída REAL do bot (a mesma função que atende no WhatsApp, rodada com
+          dois orçamentos de material de construção) — o que é ilustração é só
+          o enquadramento, e a legenda diz isso. */}
+      <section className="mx-auto max-w-6xl px-6 py-12">
+        <h2 className="text-center text-3xl font-bold sm:text-4xl">
+          Como é na prática
+        </h2>
+        <p className="mt-3 text-center text-sm text-neutral-500">
+          Exemplo de conversa — a resposta é a que o bot realmente devolve.
+        </p>
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
+          {[
+            {a: "/prints/comparabot-0.jpg", l: "Você manda os orçamentos e pede pra analisar"},
+            {a: "/prints/comparabot-1.jpg", l: "Ele devolve a melhor combinação e o veredito"},
+          ].map((im) => (
+            <figure
+              key={im.a}
+              className="overflow-hidden rounded-2xl border border-neutral-900 bg-bg-card"
+            >
+              <img src={im.a} alt={im.l} loading="lazy" className="w-full" />
+              <figcaption className="border-t border-neutral-900 px-4 py-3 text-sm font-medium text-gold">
+                {im.l}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </section>
+
       <section id="planos" className="mx-auto max-w-5xl px-6 py-20">
         <h2 className="text-center text-3xl font-bold sm:text-4xl">Planos</h2>
         <p className="mt-3 text-center text-neutral-400">

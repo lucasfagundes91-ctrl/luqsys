@@ -156,7 +156,11 @@ const trilhas: Trilha[] = [
         preco: "R$ 99",
         aPartirDe: true,
         badge: "com instalação",
+        // sem trial: a venda passa por mini PC no local e instalação. Mas a
+        // demo mora num deploy próprio — o endereço principal é a produção
+        // com as câmeras da fazenda, da empresa e da casa.
         semTrial: true,
+        demoUrl: "https://demo.vigiapro.luqsys.com.br/",
       },
       {
         slug: "adspro",
@@ -528,6 +532,28 @@ export default function Home() {
                             className="block rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
                           >
                             Testar 3 dias grátis →
+                          </a>
+                        </div>
+                      ) : p.semTrial && p.demoUrl ? (
+                        /* Tem demo mas não tem trial — caso do VigiaPro, que
+                           envolve mini PC no local e instalação de câmera, e
+                           por isso não é autoatendimento. Sem este ramo o card
+                           caía em "!p.semTrial" e voltava a oferecer os 3 dias
+                           grátis num sistema que não tem rota de cadastro. */
+                        <div className="mt-5 grid grid-cols-2 gap-2 border-t border-neutral-900 pt-4">
+                          <Link
+                            href={`/${p.slug}`}
+                            className="rounded-full border border-gold-dim/60 px-3 py-2 text-center text-xs font-semibold text-gold transition hover:border-gold"
+                          >
+                            Como funciona
+                          </Link>
+                          <a
+                            href={demoHref(p)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
+                          >
+                            Ver demo →
                           </a>
                         </div>
                       ) : !p.semTrial ? (

@@ -8,10 +8,15 @@ export const metadata: Metadata = {
 };
 
 /* Único sistema da casa que NÃO é autoatendimento: a venda envolve o mini PC
-   que fica no local e a instalação das câmeras. Por isso as CTAs levam pro
-   WhatsApp em vez de trial/demo — o app nem tem rota de cadastro, e oferecer
+   que fica no local e a instalação das câmeras. Por isso a CTA principal leva
+   pro WhatsApp e não existe trial — o app nem tem rota de cadastro, e oferecer
    "Testar 3 dias" aqui cairia num 404, que é justamente o que o ComandaPro
-   estava fazendo. */
+   estava fazendo.
+
+   Demo, porém, agora existe: `demo.vigiapro.luqsys.com.br` é um deploy à parte,
+   com banco próprio e imagens desenhadas por computador. O endereço principal
+   é a produção — as câmeras da fazenda, da empresa e da casa —, e nenhuma
+   imagem dali podia virar vitrine. */
 const ZAP =
   "https://wa.me/5545991077788?text=" +
   encodeURIComponent("Oi Lucas, quero saber do VigiaPro pras minhas câmeras");
@@ -34,7 +39,7 @@ export default function VigiaProPage() {
       }
       ctaPrimaria={{ label: "Falar com o Lucas", href: ZAP }}
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
-      semDemo
+      demoUrl="https://demo.vigiapro.luqsys.com.br/"
       passos={[
         {
           n: "1",
