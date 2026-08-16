@@ -28,8 +28,9 @@ const SISTEMAS: Sistema[] = [
   { slug: "horapro", nome: "HoraPro", icone: "⏱️", tagline: "Ponto eletrônico REP-P", preco: 99 },
   { slug: "contabilidadepro", nome: "ContabilidadePro", icone: "📊", tagline: "Software + contador", preco: 199, emBreve: true },
   { slug: "bankpro", nome: "BankPro", icone: "🏦", tagline: "Finanças pessoais", preco: 49 },
-  { slug: "viagempro", nome: "ViagemPro", icone: "🧳", tagline: "Planejador de viagens", preco: 49 },
-  { slug: "milhaspro", nome: "MilhasPro", icone: "🎫", tagline: "Passagens em milhas", preco: 49, emBreve: true },
+  // Um item só: o MilhasPro virou parte do ViagemPro, e no montador ele
+  // somava R$ 49 de um produto que já vem incluído.
+  { slug: "viagempro", nome: "ViagemPro", icone: "🧳", tagline: "Viagem e passagens em milhas", preco: 99 },
 ];
 
 const FAIXAS = [

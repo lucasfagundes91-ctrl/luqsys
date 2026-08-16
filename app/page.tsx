@@ -253,20 +253,32 @@ const trilhas: Trilha[] = [
     subtitulo: "Planejar com IA e voar mais barato com milhas",
     produtos: [
       {
+        // MilhasPro virou parte daqui na fusão: os dois domínios servem o mesmo
+        // app. Dois cards vendiam duas assinaturas do mesmo produto.
         slug: "viagempro",
         nome: "ViagemPro",
         icone: "🧳",
-        tagline: "Planejador de viagens com IA: roteiro, transporte, restaurantes",
-        preco: "R$ 49",
-        aPartirDe: true,
+        tagline:
+          "Viagem inteira num lugar: roteiro com IA, comparador de transporte e busca de passagem em milhas (Smiles, TudoAzul)",
+        preco: "R$ 99",
       },
+    ],
+  },
+  {
+    id: "carreira",
+    emoji: "🔄",
+    titulo: "Sua carreira",
+    subtitulo: "Pra quem já trabalha e está pensando em mudar de rumo",
+    produtos: [
       {
-        slug: "milhaspro",
-        nome: "MilhasPro",
-        icone: "🎫",
-        tagline: "Buscador de passagens em milhas (Smiles, TudoAzul)",
-        preco: "R$ 49",
-        aPartirDe: true,
+        slug: "virada",
+        nome: "Virada",
+        icone: "🔄",
+        tagline:
+          "Teste de transição de carreira: o questionário é grátis, e o relatório completo — escrito por IA em cima das suas respostas — é pago uma vez só",
+        preco: "R$ 47 / relatório",
+        badge: "teste grátis",
+        externo: "https://virada.luqsys.com.br",
       },
     ],
   },

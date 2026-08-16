@@ -26,6 +26,14 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // MilhasPro virou parte do ViagemPro: a página dele saiu (vendia
+        // assinatura própria de um produto que não existe mais sozinho), mas
+        // o link continua circulando por aí.
+        source: '/milhaspro',
+        destination: '/viagempro',
+        permanent: true,
+      },
+      {
         source: '/pontopro',
         destination: '/horapro',
         permanent: true,

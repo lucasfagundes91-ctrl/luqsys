@@ -13,7 +13,7 @@ export default function ViagemProPage() {
       tema="viagempro"
       icone="🧳"
       nome="ViagemPro"
-      tagline="Planeje sua viagem do roteiro ao restaurante"
+      tagline="Do roteiro à passagem em milhas, no mesmo lugar"
       descricao={
         <>
           IA monta o <strong className="text-white">roteiro dia a dia</strong>,
@@ -70,6 +70,7 @@ export default function ViagemProPage() {
             "Você diz pra onde e por quantos dias; ele devolve o dia a dia — e você edita o que quiser.",
           itens: [
             "Roteiro dia a dia gerado por IA",
+        "Busca de passagem em milhas (Smiles, TudoAzul)",
             "Edição manual de qualquer atividade",
             "Modo 'descubra um destino'",
             "Várias viagens salvas e compartilháveis",
@@ -94,13 +95,13 @@ export default function ViagemProPage() {
         {icone:"💼", titulo:"Viagem de trabalho com folga", texto:"Compromisso fixo no meio do dia e o resto montado em volta."},
       ]}
       naoServe={[
-        "Você quer comprar passagem e reservar hotel aqui dentro — ele planeja, não vende",
+        "Você quer emitir a passagem e reservar o hotel aqui dentro — ele planeja e busca, a compra é fora",
         "Você já tem o roteiro pronto e só quer guardar: um bloco de notas resolve",
       ]}
       faq={[
         {
           p: "Ele compra a passagem ou reserva o hotel?",
-          r: "Não. Ele planeja e compara — a compra você faz onde preferir. Pra passagem em milhas, quem ajuda é o MilhasPro, da mesma casa.",
+          r: "Hotel não. Passagem em milhas ele BUSCA: o antigo MilhasPro virou parte do ViagemPro, então o mesmo app monta o roteiro e procura o trecho na Smiles e na TudoAzul. A emissão você faz no programa de fidelidade.",
         },
         {
           p: "Dá pra usar em viagem de trabalho?",
@@ -109,6 +110,7 @@ export default function ViagemProPage() {
       ]}
       features={[
         "Roteiro dia a dia gerado por IA",
+        "Busca de passagem em milhas (Smiles, TudoAzul)",
         "Comparador carro × avião × ônibus",
         "Sugestões de restaurantes com favoritos",
         "Modo 'descubra um destino'",
@@ -119,55 +121,29 @@ export default function ViagemProPage() {
       ]}
       planos={[
         {
-          nome: "Básico",
-          publico: "Pra viajantes ocasionais",
-          precoLabel: "R$ 19",
+          nome: "ViagemPro",
+          publico: "Planejamento e passagem, no mesmo lugar",
+          precoLabel: "R$ 99",
           features: [
-            "Até 2 viagens ativas",
-            "Roteiro básico por IA",
-            "Comparador de transporte",
-            "Sem assistente IA durante viagem",
-            "Suporte por e-mail",
-          ],
-          ctaLabel: "Assinar Básico",
-          ctaHref: "https://www.asaas.com/c/hx5di6wrxu4z7cfl",
-        },
-        {
-          nome: "Pro",
-          publico: "Pra quem viaja sempre",
-          precoLabel: "R$ 49",
-          features: [
-            "Viagens ilimitadas",
-            "Roteiros completos por IA",
-            "Comparador de transporte",
-            "Sugestões de restaurantes",
+            "Viagens ilimitadas, roteiro completo por IA",
+            "Comparador carro × avião × ônibus",
+            "Busca de passagem em milhas (Smiles, TudoAzul)",
+            "Alerta quando o trecho que você quer aparece",
+            "Sugestões de restaurantes com favoritos",
             "Assistente IA durante a viagem",
             "Suporte por e-mail",
           ],
-          ctaLabel: "Assinar Pro",
-          ctaHref: "https://www.asaas.com/c/josachoczgkjobvf",
+          // Sem link do Asaas: os três planos antigos (19/49/89) tinham link
+          // próprio e nenhum vale R$ 99. Até existir a assinatura nova, o
+          // caminho é o teste — cobrar valor errado seria pior que esperar.
+          ctaLabel: "Testar 3 dias grátis",
+          ctaHref: "https://viagempro.luqsys.com.br/cadastro?trial=1",
           destaque: true,
-        },
-        {
-          nome: "Família",
-          publico: "Pra viajar em grupo",
-          precoLabel: "R$ 89",
-          features: [
-            "Tudo do Pro",
-            "Até 5 pessoas compartilhando",
-            "Lista de bagagem compartilhada",
-            "Divisão de despesas",
-            "Roteiro colaborativo",
-            "Suporte prioritário",
-          ],
-          ctaLabel: "Assinar Família",
-          ctaHref: "https://www.asaas.com/c/gbb4diiwxmg42cbx",
         },
       ]}
       ctaFinalTitulo="Sua próxima viagem planejada em minutos"
       ctaFinalTexto="Sem ficar 3 horas no Google Maps. A IA monta, você ajusta."
     appUrl="https://viagempro.luqsys.com.br"
-    assinarUrl="https://www.asaas.com/c/josachoczgkjobvf"
     />
   );
 }
