@@ -106,18 +106,23 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, ignored: event });
   }
 
+  // Daqui pra baixo, erro permanente responde 200. O Asaas entrega em
+  // sendType=SEQUENTIALLY: qualquer resposta fora de 2xx fica sendo retentada
+  // pra sempre e, depois de algumas falhas, ele marca o webhook como
+  // `interrupted` — e aí PARA A FILA INTEIRA, de todos os sistemas. Foi o que
+  // aconteceu até 16/08/2026. Cobrança que não dá pra atribuir não vai virar
+  // atribuível numa retentativa; melhor tirar da fila e registrar no log.
   const slug = detectSistema(body?.payment);
   if (!slug) {
     console.error("router: sistema não identificado", {
       desc: body?.payment?.description,
+      payment: body?.payment?.id,
     });
-    return NextResponse.json(
-      {
-        error: "sistema não identificado pela description",
-        description: body?.payment?.description,
-      },
-      { status: 422 }
-    );
+    return NextResponse.json({
+      ok: true,
+      ignored: "sistema não identificado pela description",
+      description: body?.payment?.description,
+    });
   }
 
   let tokens: Record<string, string> = {};
@@ -142,10 +147,15 @@ export async function POST(req: NextRequest) {
 
   const systemToken = tokens[slug];
   if (!systemToken) {
-    return NextResponse.json(
-      { error: `token do sistema ${slug} não configurado` },
-      { status: 500 }
-    );
+    // 200 pelo mesmo motivo de cima: 500 aqui paralisava a fila de todos os
+    // sistemas por causa de um só que faltou configurar.
+    console.error(`router: token do sistema ${slug} não configurado`, {
+      payment: body?.payment?.id,
+    });
+    return NextResponse.json({
+      ok: true,
+      ignored: `token do sistema ${slug} não configurado`,
+    });
   }
 
   const path = PATH_OVERRIDE[slug] || "/webhook/asaas";
