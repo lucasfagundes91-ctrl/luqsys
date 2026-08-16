@@ -109,6 +109,16 @@ const trilhas: Trilha[] = [
         appUrl: "https://botapro.luqsys.com.br",
       },
       {
+        slug: "comparabot",
+        nome: "ComparaBot",
+        icone: "🧾",
+        tagline:
+          "Manda foto de 2 a 5 orçamentos no WhatsApp e ele diz qual fornecedor é mais barato, item a item",
+        preco: "R$ 9",
+        badge: "3 grátis por mês",
+        semTrial: true,
+      },
+      {
         slug: "aluguelpro",
         nome: "AluguelPro",
         icone: "🏠",
@@ -122,6 +132,16 @@ const trilhas: Trilha[] = [
         tagline: "Gestão de frota PME com IPVA, seguro e manutenção",
         preco: "R$ 129",
         badge: "novo",
+      },
+      {
+        slug: "vigiapro",
+        nome: "VigiaPro",
+        icone: "📹",
+        tagline:
+          "Suas câmeras avisam no WhatsApp quando aparece gente, carro ou animal — com a foto do momento",
+        preco: "R$ 99",
+        badge: "com instalação",
+        semTrial: true,
       },
       {
         slug: "adspro",
