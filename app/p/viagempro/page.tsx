@@ -244,6 +244,7 @@ export default function ViagemProLanding() {
           arquivo: "/prints/viagempro-0.jpg",
           legenda: "Minhas viagens: destino, datas, pessoas e orçamento de cada uma",
         },
+        {arquivo: "/prints/viagempro-2.jpg", legenda: "Busca de passagem em milhas, com veredito"},
       ]}
       fechamento={{
         titulo: "Sua próxima viagem planejada em minutos",

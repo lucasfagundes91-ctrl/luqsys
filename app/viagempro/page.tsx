@@ -91,6 +91,7 @@ export default function ViagemProPage() {
       ]}
       prints={[
         {arquivo: "/prints/viagempro-0.jpg", legenda: "Suas viagens, com o roteiro pronto"},
+        {arquivo: "/prints/viagempro-2.jpg", legenda: "Busca de passagem em milhas, com veredito"},
       ]}
       praQuem={[
         {icone:"🧳", titulo:"Quem viaja e odeia planejar", texto:"O roteiro pronto pra editar, em vez da folha em branco."},

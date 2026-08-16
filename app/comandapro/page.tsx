@@ -91,6 +91,7 @@ export default function ComandaProPage() {
       ]}
       prints={[
         {arquivo: "/prints/comandapro-0.jpg", legenda: "Salão com as comandas abertas"},
+        {arquivo: "/prints/comandapro-2.jpg", legenda: "Cardápio por categoria, com preço e estação"},
       ]}
       praQuem={[
         {icone:"🍽️", titulo:"Restaurante e bar de salão", texto:"Onde a comanda de papel ainda decide a conta do cliente."},

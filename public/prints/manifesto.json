@@ -45,6 +45,10 @@
   {
    "arquivo": "/prints/comandapro-0.jpg",
    "legenda": "Salão com as comandas abertas"
+  },
+  {
+   "arquivo": "/prints/comandapro-2.jpg",
+   "legenda": "Cardápio por categoria, com preço e estação"
   }
  ],
  "contabilidadepro": [
@@ -173,6 +177,10 @@
   {
    "arquivo": "/prints/viagempro-0.jpg",
    "legenda": "Suas viagens, com o roteiro pronto"
+  },
+  {
+   "arquivo": "/prints/viagempro-2.jpg",
+   "legenda": "Busca de passagem em milhas, com veredito"
   }
  ],
  "vigiapro": [
@@ -183,6 +191,16 @@
   {
    "arquivo": "/prints/vigiapro-1.jpg",
    "legenda": "Alarmes por objeto, zona e horário"
+  }
+ ],
+ "comparabot": [
+  {
+   "arquivo": "/prints/comparabot-0.jpg",
+   "legenda": "Exemplo de conversa — você manda e pede pra analisar"
+  },
+  {
+   "arquivo": "/prints/comparabot-1.jpg",
+   "legenda": "Exemplo de conversa — a melhor combinação e o veredito"
   }
  ]
 }

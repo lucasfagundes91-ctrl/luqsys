@@ -25,7 +25,9 @@ export const metadata: Metadata = {
 
    Só existe um print (public/prints/comandapro-0.jpg, o salão com as
    comandas abertas). Ele fica pendurado no bloco da comanda, que é
-   exatamente o que a imagem mostra. `prints={[]}` porque a galeria "o
+   exatamente o que a imagem mostra. `prints={[
+        {arquivo: "/prints/comandapro-2.jpg", legenda: "Cardápio por categoria, com preço e estação"},
+      ]}` porque a galeria "o
    sistema por dentro" precisaria de várias telas — quando houver KDS e
    caixa capturados, é só pendurar nos blocos correspondentes. */
 
