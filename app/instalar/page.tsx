@@ -84,7 +84,7 @@ const grupos: Grupo[] = [
       { host: "botapro", nome: "BotaPro", emoji: "🥾", o_que: "Indústria de calçado" },
       { host: "adspro", nome: "AdsPro", emoji: "📣", o_que: "Anúncios no Meta" },
       { host: "agendapro", nome: "AgendaPro", emoji: "📅", o_que: "Agendamento online" },
-      { host: "sorripro", nome: "SorriPro", emoji: "🦷", o_que: "Clínica odontológica", semIcone: true },
+      { host: "sorripro", nome: "SorriPro", emoji: "🦷", o_que: "Clínica odontológica" },
       { host: "comandapro", nome: "ComandaPro", emoji: "🍽️", o_que: "Restaurante e bar" },
       { host: "rotinapro", nome: "RotinaPro", emoji: "📋", o_que: "Checklists e rotinas" },
       { host: "vigiapro", nome: "VigiaPro", emoji: "📹", o_que: "Câmeras e alertas" },
@@ -96,7 +96,7 @@ const grupos: Grupo[] = [
       { host: "horapro", nome: "HoraPro", emoji: "⏰", o_que: "Ponto eletrônico" },
       {
         host: "contabilidadepro", nome: "ContabilidadePro", emoji: "📊",
-        o_que: "Livro caixa e contabilidade", semIcone: true,
+        o_que: "Livro caixa e contabilidade",
       },
     ],
   },
@@ -154,7 +154,7 @@ const grupos: Grupo[] = [
       },
       {
         host: "euseivotar", nome: "EuSeiVotar?", emoji: "🗳️",
-        o_que: "Votações do Congresso", semIcone: true,
+        o_que: "Votações do Congresso",
         url: "https://euseivotar.com.br",
       },
     ],
