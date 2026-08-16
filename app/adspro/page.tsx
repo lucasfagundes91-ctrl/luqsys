@@ -35,6 +35,10 @@ export default function AdsProPage() {
         ),
       }}
       assinarUrl="https://www.asaas.com/c/25b3hf60gwxxa8b9"
+      /* Demo em deploy separado, com banco próprio e SEM token da Meta: o
+         AdsPro move verba de anúncio real, então a vitrine não podia sair da
+         instância de produção. */
+      demoUrl="https://demo.adspro.luqsys.com.br/"
       rodapeHero="✦ Sem fidelidade · cancele quando quiser · verba de mídia paga direto pra Meta"
       passos={[
         {

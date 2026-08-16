@@ -172,6 +172,7 @@ const trilhas: Trilha[] = [
         badge: "ou gestão R$ 499",
         appUrl: "https://adspro.luqsys.com.br",
         semTrial: true,
+        demoUrl: "https://demo.adspro.luqsys.com.br/",
       },
       {
         slug: "agendapro",
