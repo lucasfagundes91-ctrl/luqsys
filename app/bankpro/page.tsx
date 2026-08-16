@@ -48,6 +48,87 @@ export default function BankProPage() {
             "Dashboard com 30 dias móveis, fluxo de caixa, patrimônio total, gastos por categoria e cartão. Filtra por pessoa.",
         },
       ]}
+      problema={{
+        titulo: "Você sabe quanto ganha. Sabe pra onde foi?",
+        texto: (
+          <>
+            <p>
+              Extrato num app, fatura do cartão em outro, investimento num
+              terceiro, e o dinheiro que entrou pra casa misturado com o da
+              empresa. No fim do mês sobra a sensação de que sumiu dinheiro.
+            </p>
+            <p>
+              O BankPro junta tudo e separa por pessoa. Você fotografa o
+              comprovante no WhatsApp e ele entra sozinho — o controle acontece
+              no momento do gasto, não no domingo à noite.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "💬",
+          titulo: "Lança pelo WhatsApp",
+          texto:
+            "O jeito mais rápido de registrar um gasto é falar dele. Manda foto, texto ou áudio e o lançamento aparece.",
+          itens: [
+            "OCR do comprovante por foto",
+            "Áudio transcrito automaticamente",
+            "Assistente que responde sobre as suas finanças",
+            "Sem abrir o app pra registrar",
+          ],
+        },
+        {
+          icone: "🏦",
+          titulo: "Bancos e cartões",
+          texto:
+            "Importa o extrato de qualquer banco brasileiro e concilia com o que você já lançou, sem duplicar.",
+          itens: [
+            "Importação OFX de qualquer banco",
+            "Cartão de crédito com fatura e parcelamento",
+            "Conciliação do que já foi lançado",
+            "Transferência entre contas sem virar despesa",
+          ],
+        },
+        {
+          icone: "👨‍👩‍👧",
+          titulo: "Cada um com o seu",
+          texto:
+            "Casal, filhos, empresa e pessoa física no mesmo painel — separados quando precisa, somados quando interessa.",
+          itens: [
+            "Multi-pessoa com patrimônio separado",
+            "Visão consolidada da família",
+            "Metas e limites por categoria",
+            "Acesso por perfil",
+          ],
+        },
+        {
+          icone: "📈",
+          titulo: "Investimento também é saldo",
+          texto:
+            "Dinheiro aplicado não é dinheiro sumido. O rendimento entra na conta do patrimônio automaticamente.",
+          itens: [
+            "CDB, LCI, LCA, ações e tesouro",
+            "Reconciliação de aplicação pelo CDI",
+            "Evolução do patrimônio no tempo",
+            "Rendimento sem digitar planilha",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Preciso dar minha senha do banco?",
+          r: "Não. Nada de open banking nem senha: você baixa o OFX do seu banco (todo banco brasileiro exporta) e importa. O sistema nunca acessa a sua conta.",
+        },
+        {
+          p: "Serve pra empresa também?",
+          r: "Serve pra separar o que é seu do que é da empresa, que é o problema mais comum de quem tem CNPJ pequeno. Pra operação da empresa mesmo — nota, estoque, folha — o sistema certo é outro da casa.",
+        },
+        {
+          p: "Meus dados ficam onde?",
+          r: "No seu login, num banco isolado por conta. E o que entra pelo WhatsApp passa pelo número do sistema, não fica salvo em conversa de terceiro.",
+        },
+      ]}
       features={[
         "Multi-pessoa: separa patrimônio de cada um da família",
         "Importação OFX de qualquer banco brasileiro",

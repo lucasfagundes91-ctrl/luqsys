@@ -46,6 +46,87 @@ export default function SolarProPage() {
             "Contas a pagar/receber, comissão de vendedor, cobranças do cliente. Tudo num sistema só.",
         },
       ]}
+      problema={{
+        titulo: "Vender o kit é a parte fácil",
+        texto: (
+          <>
+            <p>
+              O difícil é o depois: a fatura que chega diferente do previsto, o
+              cliente perguntando quanto economizou, a obra que atrasou e a
+              cobrança que ninguém emitiu esse mês.
+            </p>
+            <p>
+              O SolarPro lê a fatura da distribuidora, calcula o que cada
+              cliente deve e emite a cobrança sozinho — com o PDF mostrando de
+              onde saiu cada número.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "🧾",
+          titulo: "A fatura vira número",
+          texto:
+            "OCR na conta de luz: consumo, energia injetada, tarifa e bandeira entram sem ninguém digitar.",
+          itens: [
+            "OCR de fatura da distribuidora",
+            "Leitura da energia compensada e do saldo de créditos",
+            "Tarifa e bandeira do mês aplicadas no cálculo",
+            "Sincronização automática das faturas novas",
+          ],
+        },
+        {
+          icone: "💸",
+          titulo: "Cobrança que se explica",
+          texto:
+            "O cliente recebe um PDF que mostra a conta sem solar, o desconto e o que ele paga. Sem discussão no fim do mês.",
+          itens: [
+            "Cobrança recorrente automática",
+            "PDF com a economia real do mês",
+            "Desconto sobre a energia injetada",
+            "Ajuste manual quando a fatura vem torta",
+          ],
+        },
+        {
+          icone: "🏗️",
+          titulo: "Do orçamento à obra",
+          texto:
+            "Payback calculado, proposta em PDF e o acompanhamento da instalação — o funil inteiro num lugar.",
+          itens: [
+            "Cálculo de payback",
+            "Orçamento profissional em PDF",
+            "Acompanhamento de obras por etapa",
+            "Comissão de vendedor",
+          ],
+        },
+        {
+          icone: "📊",
+          titulo: "Sua margem, não só a do cliente",
+          texto:
+            "Quanto entrou do cliente, quanto foi pra distribuidora e quanto sobrou pra você — por usina e por mês.",
+          itens: [
+            "Lucro por usina calculado sobre o custo real",
+            "Contas a pagar e a receber",
+            "Multi-usuário com permissão",
+            "Histórico por unidade consumidora",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Funciona com a minha distribuidora?",
+          r: "O OCR foi feito em cima das faturas da Copel e lê o padrão da fatura brasileira de energia. Distribuidora nova a gente ajusta junto com você nas primeiras faturas.",
+        },
+        {
+          p: "E quando o cliente usa crédito acumulado?",
+          r: "Entra na conta. O sistema sabe separar a energia que veio das placas da que veio direto da distribuidora — o desconto vale só sobre a sua energia, que é como tem que ser.",
+        },
+        {
+          p: "Eu emito a cobrança ou o sistema emite?",
+          r: "O sistema emite e cobra sozinho todo mês, com o PDF anexado. Você entra só quando quer ajustar alguma coisa.",
+        },
+      ]}
       features={[
         "OCR de fatura de energia (Copel, etc)",
         "Cálculo automático de payback",

@@ -46,6 +46,87 @@ export default function FarmProPage() {
             "LCDPR pronto pra entregar. Folha de pagamento dos empregados rurais. Relatórios por safra, por talhão, por cultura.",
         },
       ]}
+      problema={{
+        titulo: "Nota de insumo no porta-luvas, LCDPR na véspera do prazo",
+        texto: (
+          <>
+            <p>
+              A contabilidade rural não perdoa: LCDPR é entrega obrigatória, e
+              ela se monta com nota que ficou no bolso do gerente, pagamento
+              feito no WhatsApp e diária anotada num caderno que molhou.
+            </p>
+            <p>
+              O FarmPro tira a nota da foto e joga direto no livro caixa. O que
+              você lançou durante o ano vira o LCDPR do ano — sem virar noite
+              em janeiro remontando o que já aconteceu.
+            </p>
+          </>
+        ),
+      }}
+      blocos={[
+        {
+          icone: "📸",
+          titulo: "A nota entra pela foto",
+          texto:
+            "Fotografou, acabou. A IA lê a nota do insumo e devolve fornecedor, valor, itens e data — você só confere.",
+          itens: [
+            "OCR de nota fiscal por foto",
+            "Comprovante chega pelo WhatsApp e entra sozinho",
+            "Anexo guardado junto do lançamento",
+            "Centro de custo por talhão ou por atividade",
+          ],
+        },
+        {
+          icone: "📗",
+          titulo: "Livro caixa e LCDPR",
+          texto:
+            "O que você lança no dia a dia é exatamente o que sai na entrega. Sem segunda digitação em planilha.",
+          itens: [
+            "Livro caixa do produtor rural",
+            "LCDPR pronto pra entregar",
+            "Receita e despesa por safra e por cultura",
+            "Grupo familiar: várias fazendas, um lugar só",
+          ],
+        },
+        {
+          icone: "👷",
+          titulo: "Gente da fazenda",
+          texto:
+            "Empregado rural tem regra própria. Folha, ponto e as sedes onde cada um bate ficam no mesmo sistema.",
+          itens: [
+            "Folha de pagamento rural",
+            "Ponto eletrônico por sede",
+            "Integração com o HoraPro",
+            "Multi-usuário com permissão por perfil",
+          ],
+        },
+        {
+          icone: "🌱",
+          titulo: "Caderno de campo",
+          texto:
+            "Cada aplicação, cada máquina, cada talhão — o histórico que faz falta na hora de decidir a safra que vem.",
+          itens: [
+            "Atividade registrada por talhão",
+            "Controle de safra, cultura e máquinas",
+            "Relatórios por talhão, safra e cultura",
+            "Painel no celular pra ver de qualquer lugar",
+          ],
+        },
+      ]}
+      faq={[
+        {
+          p: "Preciso de internet boa na fazenda?",
+          r: "Pra usar no dia a dia, um sinal de celular resolve — o sistema é leve e o que pesa (a foto da nota) sobe quando o sinal volta. O painel funciona bem no 4G.",
+        },
+        {
+          p: "Meu contador aceita o LCDPR daqui?",
+          r: "É o LCDPR no formato da Receita. Você entrega o arquivo ou manda pro contador conferir antes — muitos preferem receber o ano inteiro pronto em vez de caixa de sapato em janeiro.",
+        },
+        {
+          p: "Tenho mais de uma fazenda no nome da família. Dá pra separar?",
+          r: "Dá. O grupo familiar mantém cada fazenda com seus lançamentos e seu LCDPR, e você transita entre elas sem sair do sistema.",
+        },
+      ]}
       features={[
         "OCR de nota fiscal por foto (IA Claude)",
         "Livro caixa + LCDPR (entrega obrigatória)",
