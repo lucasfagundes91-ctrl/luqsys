@@ -101,6 +101,10 @@ export default function ObrasProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/obraspro-0.jpg", legenda: "Obra com gasto por etapa"},
+        {arquivo: "/prints/obraspro-1.jpg", legenda: "Lançamentos da obra"},
+      ]}
       praQuem={[
         {icone:"🧱", titulo:"Construtor de poucas obras", texto:"Quem toca duas ou três ao mesmo tempo e mistura os caixas."},
         {icone:"🤝", titulo:"Obra com investidor", texto:"Cada sócio vendo a parte dele sem te ligar todo mês."},

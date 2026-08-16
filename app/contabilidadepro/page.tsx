@@ -101,6 +101,10 @@ export default function ContabilidadeProPage() {
           ],
         },
       ]}
+      prints={[
+        {arquivo: "/prints/contabilidadepro-0.jpg", legenda: "Painel contábil da empresa"},
+        {arquivo: "/prints/contabilidadepro-1.jpg", legenda: "Lançamentos do período"},
+      ]}
       praQuem={[
         {icone:"🧾", titulo:"MEI e Simples que só recebe guia", texto:"Quem nunca conseguiu falar com o contador sem ser no vencimento."},
         {icone:"🔗", titulo:"Quem já usa outro Luqsys", texto:"O dado da operação vira lançamento sem reenviar arquivo."},

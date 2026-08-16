@@ -47,6 +47,16 @@
    "legenda": "Salão com as comandas abertas"
   }
  ],
+ "contabilidadepro": [
+  {
+   "arquivo": "/prints/contabilidadepro-0.jpg",
+   "legenda": "Painel contábil da empresa"
+  },
+  {
+   "arquivo": "/prints/contabilidadepro-1.jpg",
+   "legenda": "Lançamentos do período"
+  }
+ ],
  "farmpro": [
   {
    "arquivo": "/prints/farmpro-0.jpg",
@@ -83,6 +93,16 @@
   {
    "arquivo": "/prints/horapro-2.jpg",
    "legenda": "Espelho de ponto do mês"
+  }
+ ],
+ "obraspro": [
+  {
+   "arquivo": "/prints/obraspro-0.jpg",
+   "legenda": "Obra com gasto por etapa"
+  },
+  {
+   "arquivo": "/prints/obraspro-1.jpg",
+   "legenda": "Lançamentos da obra"
   }
  ],
  "rotinapro": [
