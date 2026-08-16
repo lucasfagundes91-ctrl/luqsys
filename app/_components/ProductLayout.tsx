@@ -52,7 +52,9 @@ export type ProductPageProps = {
   rodapeHero?: string;
   passos?: Passo[];
   passosTitulo?: string;
-  features: string[];
+  /* Opcional: quem define `blocos` conta a mesma coisa agrupada por tema e
+     não repete a lista corrida. */
+  features?: string[];
   featuresTitulo?: string;
   /* Caixa logo abaixo do herói: a dor do cliente em duas frases, antes de
      falar de funcionalidade. */
@@ -90,7 +92,7 @@ export function ProductLayout({
   rodapeHero,
   passos,
   passosTitulo = "Como funciona",
-  features,
+  features = [],
   featuresTitulo = "O que ele faz",
   problema,
   blocos,
@@ -319,7 +321,7 @@ export function ProductLayout({
             ))}
           </div>
         </section>
-      ) : (
+      ) : features.length > 0 ? (
       <section className="mx-auto max-w-5xl px-6 py-16">
         <h2 className="text-center text-3xl font-bold sm:text-4xl">
           {featuresTitulo}
@@ -336,7 +338,7 @@ export function ProductLayout({
           ))}
         </ul>
       </section>
-      )}
+      ) : null}
 
       {prints && prints.length > 0 && (
         <section className="mx-auto max-w-6xl px-6 py-12">
