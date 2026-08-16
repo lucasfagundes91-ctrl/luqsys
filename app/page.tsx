@@ -12,6 +12,7 @@ type Produto = {
   badge?: string;
   appUrl?: string;
   semTrial?: boolean;
+  semDemo?: boolean; // sem sandbox publico: mostra so o trial, sem "Ver demo"
   emBreve?: boolean;
   externo?: string; // projeto aberto: card leva direto pro app, sem página interna
   gratis?: boolean; // some o "/mês" e troca trial/demo por "Acessar grátis"
@@ -158,6 +159,8 @@ const trilhas: Trilha[] = [
         preco: "R$ 99",
         badge: "novo",
         appUrl: "https://comandapro.luqsys.com.br",
+        // ainda nao tem sandbox de demonstracao: o /demo dele respondia 404
+        semDemo: true,
       },
       {
         slug: "rotinapro",
@@ -256,14 +259,17 @@ export default function Home() {
   const nSistemas = trilhas.flatMap((t) => t.produtos).length;
   return (
     <main className="radial-bg">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+      {/* flex-wrap + justify-center: em 390px os dois grupos nao cabem lado a
+          lado. Sem isso o "LUQSYS" ficava por cima de "Sistemas" e o "Contato"
+          passava da borda, criando rolagem lateral na home inteira. */}
+      <nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-6 gap-y-3 px-6 py-5 sm:justify-between sm:py-6">
         <div className="flex items-center gap-3">
           <img src="/luqsys-logo.png" alt="Luqsys" className="h-10 w-10 rounded-lg" />
           <span className="text-sm font-semibold tracking-[0.2em] text-gold">
             LUQSYS
           </span>
         </div>
-        <div className="flex items-center gap-6 text-sm">
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs sm:gap-6 sm:text-sm">
           <a href="#trilhas" className="text-neutral-400 transition hover:text-gold">
             Sistemas
           </a>
@@ -447,6 +453,17 @@ export default function Home() {
                             className="block rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
                           >
                             Acessar grátis →
+                          </a>
+                        </div>
+                      ) : p.semDemo ? (
+                        <div className="mt-5 border-t border-neutral-900 pt-4">
+                          <a
+                            href={trialHref(p)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
+                          >
+                            Testar 3 dias grátis →
                           </a>
                         </div>
                       ) : !p.semTrial ? (

@@ -79,6 +79,7 @@ export default function ComandaProPage() {
       ctaFinalTitulo="Seu restaurante no controle"
       ctaFinalTexto="Teste 3 dias grátis, sem cartão de crédito. Se gostar, são R$ 99/mês sem fidelidade."
       appUrl="https://comandapro.luqsys.com.br"
+      semDemo
       assinarUrl="https://comandapro.luqsys.com.br/cadastro"
     />
   );

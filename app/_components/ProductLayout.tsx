@@ -32,6 +32,10 @@ export type ProductPageProps = {
   ctaFinalTexto?: string;
   appUrl?: string;
   demoUrl?: string;
+  /* Sistema sem sandbox publico. Sem isto o layout monta o /demo a partir do
+     appUrl e oferece "Ver demo" mesmo onde a rota nao existe — o ComandaPro
+     mandava o visitante pra um 404 no meio da decisao de compra. */
+  semDemo?: boolean;
   trialUrl?: string;
   assinarUrl?: string;
 };
@@ -53,10 +57,11 @@ export function ProductLayout({
   ctaFinalTexto,
   appUrl,
   demoUrl,
+  semDemo,
   trialUrl,
   assinarUrl,
 }: ProductPageProps) {
-  const demoHref = demoUrl ?? (appUrl ? `${appUrl}/demo` : undefined);
+  const demoHref = semDemo ? undefined : (demoUrl ?? (appUrl ? `${appUrl}/demo` : undefined));
   const trialHref = trialUrl ?? (appUrl ? `${appUrl}/cadastro?trial=1` : undefined);
   return (
     <main className="radial-bg">
