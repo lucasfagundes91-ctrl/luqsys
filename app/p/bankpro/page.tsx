@@ -131,6 +131,10 @@ export default function BankProLanding() {
             "Transferência entre contas não vira despesa inventada",
             "Categorização automática do que veio no extrato",
           ],
+          print: {
+            arquivo: "/prints/bankpro-2.jpg",
+            legenda: "Fatura aberta do cartão, com parcelamento em andamento e faturas pagas ao lado",
+          },
         },
         {
           icone: "👨‍👩‍👧",
@@ -143,6 +147,10 @@ export default function BankProLanding() {
             "Metas e limites por categoria",
             "Acesso por perfil, cada um vendo o que é dele",
           ],
+          print: {
+            arquivo: "/prints/bankpro-1.jpg",
+            legenda: "Lançamentos do mês, com a conta e a pessoa em cada linha",
+          },
         },
         {
           icone: "📈",
@@ -156,6 +164,10 @@ export default function BankProLanding() {
             "Atualização sem digitar planilha",
             "O BankPro registra e mostra — não indica onde aplicar",
           ],
+          print: {
+            arquivo: "/prints/bankpro-3.jpg",
+            legenda: "Patrimônio aplicado, com rendimento e vencimento de cada aplicação",
+          },
         },
         {
           icone: "🔒",
@@ -274,7 +286,12 @@ export default function BankProLanding() {
           r: "Não, e nem deve. Ele registra o que você já tem — CDB, LCI, LCA, ações, tesouro — soma no seu patrimônio e mostra a evolução. Recomendação de investimento é trabalho de quem tem certificação pra isso; a nossa parte é te dar o número certo na frente antes de você decidir.",
         },
       ]}
-      prints={[]}
+      prints={[
+        {arquivo: "/prints/bankpro-0.jpg", legenda: "Painel das finanças da família"},
+        {arquivo: "/prints/bankpro-1.jpg", legenda: "Lançamentos do mês, categorizados"},
+        {arquivo: "/prints/bankpro-2.jpg", legenda: "Fatura do cartão com parcelamento"},
+        {arquivo: "/prints/bankpro-3.jpg", legenda: "Patrimônio aplicado com rendimento"},
+      ]}
       fechamento={{
         titulo: "Comece sabendo pra onde foi",
         texto:

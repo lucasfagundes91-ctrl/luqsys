@@ -117,6 +117,9 @@ export default function BankProPage() {
       ]}
       prints={[
         {arquivo: "/prints/bankpro-0.jpg", legenda: "Painel das finanças"},
+        {arquivo: "/prints/bankpro-1.jpg", legenda: "Lançamentos do mês, categorizados por conta e pessoa"},
+        {arquivo: "/prints/bankpro-2.jpg", legenda: "Fatura aberta do cartão, com parcelamento em andamento"},
+        {arquivo: "/prints/bankpro-3.jpg", legenda: "Patrimônio aplicado com rendimento por aplicação"},
       ]}
       praQuem={[
         {icone:"👤", titulo:"Quem mistura PF e PJ", texto:"O dinheiro da empresa e o da casa saindo da mesma conta — o clássico do pequeno empresário."},
