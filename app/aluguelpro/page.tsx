@@ -102,6 +102,9 @@ export default function AluguelProPage() {
       ]}
       prints={[
         {arquivo: "/prints/aluguelpro-1.jpg", legenda: "Contratos e reajustes"},
+        {arquivo: "/prints/aluguelpro-2.jpg", legenda: "Painel do mês: previsto, recebido, atrasos e ocupação"},
+        {arquivo: "/prints/aluguelpro-3.jpg", legenda: "Cobranças do mês — pago, a vencer e atrasado com multa"},
+        {arquivo: "/prints/aluguelpro-4.jpg", legenda: "Repasse ao proprietário com a taxa de administração descontada"},
       ]}
       praQuem={[
         {icone:"🏢", titulo:"Imobiliária pequena", texto:"Quem administra dezenas de imóveis sem equipe de cobrança."},

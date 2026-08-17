@@ -121,6 +121,11 @@ export default function AluguelProLanding() {
             "Antecipação com desconto pra quem paga adiantado",
             "Histórico financeiro imóvel por imóvel",
           ],
+          print: {
+            arquivo: "/prints/aluguelpro-3.jpg",
+            legenda:
+              "Cobranças do mês na mesma tela: pago, a vencer e atrasado com multa e juros já calculados",
+          },
         },
         {
           icone: "🤝",
@@ -134,6 +139,11 @@ export default function AluguelProLanding() {
             "Multi-proprietário e multi-imóvel na mesma carteira",
             "Prestação de contas com o histórico do que já foi repassado",
           ],
+          print: {
+            arquivo: "/prints/aluguelpro-4.jpg",
+            legenda:
+              "Repasse mês a mês: bruto, comissão descontada, líquido do proprietário e o que ainda está pendente",
+          },
         },
         {
           icone: "🔍",
@@ -161,9 +171,9 @@ export default function AluguelProLanding() {
             "Pipeline de propostas e cadastro de compradores",
           ],
           print: {
-            arquivo: "/prints/aluguelpro-1.jpg",
+            arquivo: "/prints/aluguelpro-2.jpg",
             legenda:
-              "No menu à esquerda: divulgação, pipeline de propostas, vistorias e apólices no mesmo sistema",
+              "O painel conta a vacância: 7 alugados, 1 vago — e quem vence nos próximos 7 dias",
           },
         },
         {
@@ -184,6 +194,18 @@ export default function AluguelProLanding() {
         {
           arquivo: "/prints/aluguelpro-1.jpg",
           legenda: "Contratos com período, aluguel e status — a tela onde o mês começa",
+        },
+        {
+          arquivo: "/prints/aluguelpro-2.jpg",
+          legenda: "Painel do mês: previsto, recebido, atrasos e taxa de ocupação",
+        },
+        {
+          arquivo: "/prints/aluguelpro-3.jpg",
+          legenda: "Cobranças do mês — pago, a vencer e atrasado, com multa e juros",
+        },
+        {
+          arquivo: "/prints/aluguelpro-4.jpg",
+          legenda: "Repasse ao proprietário com a taxa de administração descontada",
         },
       ]}
       paraQuem={[

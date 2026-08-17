@@ -13,6 +13,18 @@
   {
    "arquivo": "/prints/aluguelpro-1.jpg",
    "legenda": "Contratos e reajustes"
+  },
+  {
+   "arquivo": "/prints/aluguelpro-2.jpg",
+   "legenda": "Painel do mês: previsto, recebido, atrasos e ocupação"
+  },
+  {
+   "arquivo": "/prints/aluguelpro-3.jpg",
+   "legenda": "Cobranças do mês — pago, a vencer e atrasado com multa"
+  },
+  {
+   "arquivo": "/prints/aluguelpro-4.jpg",
+   "legenda": "Repasse ao proprietário com a taxa de administração descontada"
   }
  ],
  "bankpro": [
@@ -176,7 +188,19 @@
  "solarpro": [
   {
    "arquivo": "/prints/solarpro-0.jpg",
-   "legenda": "Painel do integrador"
+   "legenda": "Unidades consumidoras com desconto, tarifa e saldo de créditos"
+  },
+  {
+   "arquivo": "/prints/solarpro-1.jpg",
+   "legenda": "Painel do integrador: a cobrar, recebido, em atraso e lucro do mês"
+  },
+  {
+   "arquivo": "/prints/solarpro-3.jpg",
+   "legenda": "Cobranças do mês — kWh, fatura da Copel e total por unidade"
+  },
+  {
+   "arquivo": "/prints/solarpro-4.jpg",
+   "legenda": "Prestação de contas: comissão de administração e repasse ao titular"
   }
  ],
  "sorripro": [

@@ -114,7 +114,10 @@ export default function SolarProPage() {
         },
       ]}
       prints={[
-        {arquivo: "/prints/solarpro-0.jpg", legenda: "Painel do integrador"},
+        {arquivo: "/prints/solarpro-1.jpg", legenda: "Painel do integrador: a cobrar, recebido, em atraso e lucro do mês"},
+        {arquivo: "/prints/solarpro-3.jpg", legenda: "Cobranças do mês — kWh, fatura da Copel e total por unidade"},
+        {arquivo: "/prints/solarpro-0.jpg", legenda: "Unidades consumidoras com desconto, tarifa e saldo de créditos"},
+        {arquivo: "/prints/solarpro-4.jpg", legenda: "Prestação de contas: comissão de administração e repasse ao titular"},
       ]}
       praQuem={[
         {icone:"⚡", titulo:"Integrador que instala e some", texto:"Vender o kit é fácil; o difícil é o pós, e é aí que o cliente cancela."},

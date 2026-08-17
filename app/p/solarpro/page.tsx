@@ -134,6 +134,11 @@ export default function SolarProLanding() {
             "Sincronização automática das faturas novas",
             "Histórico por unidade consumidora",
           ],
+          print: {
+            arquivo: "/prints/solarpro-3.jpg",
+            legenda:
+              "A fatura já virou número: kWh do mês, tarifa, o que foi pra Copel e o total do cliente",
+          },
         },
         {
           icone: "💸",
@@ -147,6 +152,11 @@ export default function SolarProLanding() {
             "Ajuste manual pro mês em que a fatura vem torta",
             "Contas a receber do cliente no mesmo lugar",
           ],
+          print: {
+            arquivo: "/prints/solarpro-1.jpg",
+            legenda:
+              "Painel do mês: a cobrar, recebido, pendente e quem está em atraso",
+          },
         },
         {
           icone: "📊",
@@ -160,8 +170,9 @@ export default function SolarProLanding() {
             "Painel com os clientes e as usinas em uma tela",
           ],
           print: {
-            arquivo: "/prints/solarpro-0.jpg",
-            legenda: "Painel do integrador",
+            arquivo: "/prints/solarpro-4.jpg",
+            legenda:
+              "Lucro líquido do mês, a comissão de administração e o que sobra pra repassar a cada titular",
           },
         },
       ]}
@@ -269,7 +280,24 @@ export default function SolarProLanding() {
           r: "Não tem fidelidade nem multa: você cancela a assinatura no mesmo lugar em que assinou e o acesso vai até o fim do período pago. Se quiser levar o histórico dos seus clientes junto, chama no WhatsApp antes de cancelar que a gente separa os dados pra você.",
         },
       ]}
-      prints={[]}
+      prints={[
+        {
+          arquivo: "/prints/solarpro-1.jpg",
+          legenda: "Painel do integrador: a cobrar, recebido, em atraso e lucro do mês",
+        },
+        {
+          arquivo: "/prints/solarpro-3.jpg",
+          legenda: "Cobranças do mês — kWh, tarifa, fatura da Copel e total por unidade",
+        },
+        {
+          arquivo: "/prints/solarpro-0.jpg",
+          legenda: "Unidades consumidoras com desconto, tarifa e saldo de créditos",
+        },
+        {
+          arquivo: "/prints/solarpro-4.jpg",
+          legenda: "Prestação de contas: comissão de administração e repasse ao titular",
+        },
+      ]}
       fechamento={{
         titulo: "A instalação acaba. A conta chega todo mês.",
         texto:
