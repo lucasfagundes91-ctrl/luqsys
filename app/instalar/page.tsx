@@ -79,7 +79,15 @@ const grupos: Grupo[] = [
         ],
       },
       { host: "silopro", nome: "SiloPro", emoji: "🌾", o_que: "Pesagem de silo" },
-      { host: "solarpro", nome: "SolarPro", emoji: "☀️", o_que: "Energia solar" },
+      {
+        host: "solarpro", nome: "SolarPro", emoji: "☀️",
+        o_que: "Energia solar",
+        apps: [
+          { slug: "icon", nome: "SolarPro", caminho: "/", desc: "UCs, faturas da Copel, cobranças e repasses." },
+          { slug: "resumo", nome: "Resumo", caminho: "/resumo", desc: "Recebido no mês, atrasos e faturas a pagar." },
+          { slug: "conferir", nome: "Conferir", caminho: "/conferir", desc: "Baixa das cobranças em aberto." },
+        ],
+      },
       { host: "carregapro", nome: "CarregaPro", emoji: "⚡", o_que: "Eletroposto" },
       { host: "botapro", nome: "BotaPro", emoji: "🥾", o_que: "Indústria de calçado" },
       { host: "adspro", nome: "AdsPro", emoji: "📣", o_que: "Anúncios no Meta" },
