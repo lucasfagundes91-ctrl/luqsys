@@ -64,6 +64,9 @@ const SISTEMA_MAP: Array<[string, string]> = [
   // EuSeiVotar — produto B2C sazonal, acesso único (não assinatura)
   ["euseivotar", "euseivotar"],
   ["eu sei votar", "euseivotar"],
+  // LivroPro — livro em episódio de podcast, assinatura mensal
+  ["livropro", "livropro"],
+  ["livro pro", "livropro"],
   // Virada — teste de transição de carreira, compra única (relatório)
   // description: "Virada — Relatório completo de transição de carreira"
   ["virada", "virada"],
@@ -166,6 +169,9 @@ export async function POST(req: NextRequest) {
   }
   if (process.env.ASAAS_TOKEN_LUQUISHOP) {
     tokens.luquishop = process.env.ASAAS_TOKEN_LUQUISHOP;
+  }
+  if (process.env.ASAAS_TOKEN_LIVROPRO) {
+    tokens.livropro = process.env.ASAAS_TOKEN_LIVROPRO;
   }
 
   const systemToken = tokens[slug];
