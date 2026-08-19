@@ -282,6 +282,16 @@ const trilhas: Trilha[] = [
     subtitulo: "Pra quem já trabalha e está pensando em mudar de rumo",
     produtos: [
       {
+        slug: "livropro",
+        nome: "LivroPro",
+        icone: "🎧",
+        tagline:
+          "Seu livro vira episódio de podcast pra ouvir dirigindo — sobe o PDF, o episódio cai no seu app de podcast",
+        preco: "R$ 49",
+        badge: "novo",
+        appUrl: "https://livropro.luqsys.com.br",
+      },
+      {
         slug: "virada",
         nome: "Virada",
         icone: "🔄",

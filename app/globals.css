@@ -85,6 +85,8 @@ body {
   --acc-fundo: #14b8a629; }
 .tema-milhaspro { --acc: #f59e0b; --acc-forte: #fbbf24; --acc-fraco: #92400e;
   --acc-fundo: #f59e0b29; }
+.tema-livropro { --acc: #c026d3; --acc-forte: #e879f9; --acc-fraco: #86198f;
+  --acc-fundo: #c026d329; }
 .tema-vigiapro { --acc: #f43f5e; --acc-forte: #fb7185; --acc-fraco: #9f1239;
   --acc-fundo: #f43f5e29; }
 
