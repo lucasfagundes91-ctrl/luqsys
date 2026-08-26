@@ -13,7 +13,7 @@ export default function BankProPage() {
       tema="bankpro"
       icone="🏦"
       nome="BankPro"
-      tagline="Sua vida financeira no app e no WhatsApp"
+      tagline="Sua vida financeira — e o seu dia — no app e no WhatsApp"
       descricao={
         <>
           Controla contas, cartões e investimentos da família inteira.{" "}
@@ -103,6 +103,30 @@ export default function BankProPage() {
           ],
         },
         {
+          icone: "📋",
+          titulo: "A rotina junto do dinheiro",
+          texto:
+            "Tarefa, compra e reunião no mesmo lugar das contas — separadas por empresa, porque quem tem CNPJ pequeno vive trocando de chapéu.",
+          itens: [
+            "Pendências, lista de compras e reuniões por empresa",
+            "Agenda do dia com o que fazer e o que já está marcado",
+            "App 'Meu Dia' separado na tela de início do celular",
+            "Conclui a tarefa no celular sem abrir o sistema",
+          ],
+        },
+        {
+          icone: "🍎",
+          titulo: "Conversa com o seu iPhone",
+          texto:
+            "O que você já usa no iPhone continua valendo: a agenda aparece aqui e os lembretes andam nos dois sentidos.",
+          itens: [
+            "Calendário do iPhone dentro do sistema (só leitura)",
+            "Lembretes sincronizados nos dois sentidos pelo iCloud",
+            "Tarefa com data vira compromisso no seu calendário",
+            "Concluiu de um lado, fecha do outro",
+          ],
+        },
+        {
           icone: "📈",
           titulo: "Investimento também é saldo",
           texto:
@@ -140,6 +164,10 @@ export default function BankProPage() {
           r: "Serve pra separar o que é seu do que é da empresa, que é o problema mais comum de quem tem CNPJ pequeno. Pra operação da empresa mesmo — nota, estoque, folha — o sistema certo é outro da casa.",
         },
         {
+          p: "Como ele conversa com o iPhone?",
+          r: "De três jeitos, todos por conta da Apple mesmo: a sua agenda entra por um link de calendário publicado no iCloud (o sistema só lê, nunca escreve); os lembretes sincronizam nos dois sentidos com uma senha específica de app do iCloud, que você revoga quando quiser; e as notas, que a Apple não abre pra ninguém, entram por um atalho seu do app Atalhos.",
+        },
+        {
           p: "Meus dados ficam onde?",
           r: "No seu login, num banco isolado por conta. E o que entra pelo WhatsApp passa pelo número do sistema, não fica salvo em conversa de terceiro.",
         },
@@ -153,6 +181,9 @@ export default function BankProPage() {
         "Reconciliação de aplicação automática (CDI)",
         "Assistente IA pra responder perguntas das suas finanças",
         "Áudio no WhatsApp transcrito automaticamente",
+        "Tarefas, compras e reuniões separadas por empresa",
+        "Agenda do dia com o calendário do iPhone junto",
+        "Lembretes do iPhone sincronizados nos dois sentidos",
       ]}
       planos={[
         {
