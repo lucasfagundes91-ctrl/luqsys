@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 type App = {
-  slug: "icon" | "resumo" | "conferir" | "admin";
+  slug: "icon" | "resumo" | "conferir" | "admin" | "meudia";
   nome: string;
   desc: string;
   caminho: string;
@@ -118,6 +118,7 @@ const grupos: Grupo[] = [
           { slug: "icon", nome: "BankPro", caminho: "/", desc: "Contas, cartões, lançamentos e relatórios." },
           { slug: "resumo", nome: "Resumo", caminho: "/resumo", desc: "Saldo, alertas e últimos lançamentos." },
           { slug: "conferir", nome: "Conferir", caminho: "/conferir", desc: "Comprovantes que chegam pelo WhatsApp." },
+          { slug: "meudia", nome: "Meu Dia", caminho: "/meudia", desc: "O dia de hoje: compromissos do iPhone e pendências por empresa." },
         ],
       },
       {
