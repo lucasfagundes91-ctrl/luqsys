@@ -47,6 +47,8 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["comanda #", "comandapro"],
   // Recarga de saldo do motorista: a marca do eletroposto é Lume.
   ["recarga saldo lume", "carregapro"],
+  ["falapro", "falapro"],
+  ["fala pro", "falapro"],
   ["rotinapro", "rotinapro"],
   ["rotina pro", "rotinapro"],
   ["carregapro", "carregapro"],
@@ -172,6 +174,9 @@ export async function POST(req: NextRequest) {
   }
   if (process.env.ASAAS_TOKEN_LIVROPRO) {
     tokens.livropro = process.env.ASAAS_TOKEN_LIVROPRO;
+  }
+  if (process.env.ASAAS_TOKEN_FALAPRO) {
+    tokens.falapro = process.env.ASAAS_TOKEN_FALAPRO;
   }
 
   const systemToken = tokens[slug];
