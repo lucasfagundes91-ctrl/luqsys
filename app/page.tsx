@@ -282,6 +282,16 @@ const trilhas: Trilha[] = [
     subtitulo: "Pra quem já trabalha e está pensando em mudar de rumo",
     produtos: [
       {
+        slug: "falapro",
+        nome: "FalaPro",
+        icone: "🗣️",
+        tagline:
+          "Inglês do zero, falando desde a primeira aula — você fala e é corrigido palavra por palavra, com dica em português",
+        preco: "R$ 49",
+        badge: "novo",
+        appUrl: "https://falapro.luqsys.com.br",
+      },
+      {
         slug: "livropro",
         nome: "LivroPro",
         icone: "🎧",
