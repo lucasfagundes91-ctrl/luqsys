@@ -31,7 +31,12 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["viagempro", "viagempro"],
   ["horapro", "horapro"],
   ["hora pro", "horapro"],
-  ["pontopro", "pontopro"],
+  // "pontopro" é o nome ANTIGO do HoraPro e ainda aparece na descrição de
+  // links de assinatura criados antes do rebrand. Mandava pro slug legado,
+  // que responde 301 — e um 301 num POST perde o corpo: o pagamento da DW
+  // Filmes em 24/09/2026 entrou no Asaas e a conta nunca foi ativada.
+  ["pontopro", "horapro"],
+  ["ponto pro", "horapro"],
   ["solarpro", "solarpro"],
   ["aluguelpro", "aluguelpro"],
   ["obraspro", "obraspro"],
