@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       cliente real — mandar visitante pra lá é jogar gente dentro do salão
       de alguém em pleno serviço.
 
-   2) Preço e funcionalidades vêm da página curta: R$ 99/mês, plano único,
+   2) Preço e funcionalidades vêm da página curta: R$ 99/mês sem nota e R$ 179 com NFC-e (desde 29/09/2026),
       teste de 3 dias sem cartão. Nada aqui pode inventar recurso que o
       sistema não tem.
 
@@ -214,12 +214,10 @@ export default function ComandaProLanding() {
         {
           nome: "ComandaPro",
           preco: "R$ 99",
-          publico: "Restaurante, bar ou lanchonete",
-          destaque: true,
+          publico: "Restaurante, bar ou lanchonete sem nota fiscal",
           itens: [
             "Comandas, cardápio e tela de cozinha",
             "Caixa e formas de pagamento",
-            "NFC-e (cupom fiscal)",
             "Relatórios e histórico de vendas",
             "Usuários ilimitados",
             "Delivery e iFood",
@@ -228,8 +226,22 @@ export default function ComandaProLanding() {
           ctaLabel: "Começar teste grátis",
           ctaHref: CADASTRO,
         },
+        {
+          nome: "ComandaPro Fiscal",
+          preco: "R$ 179",
+          publico: "Quem precisa emitir cupom fiscal",
+          destaque: true,
+          itens: [
+            "Tudo do ComandaPro",
+            "NFC-e (cupom fiscal) emitida na hora",
+            "Configuração do certificado e do fiscal inclusa",
+            "Suporte por WhatsApp",
+          ],
+          ctaLabel: "Começar teste grátis",
+          ctaHref: CADASTRO,
+        },
       ]}
-      notaPlanos="Um preço só, com usuários ilimitados — contratar garçom pra temporada não deveria encarecer o software."
+      notaPlanos="Usuários ilimitados nos dois planos — contratar garçom pra temporada não deveria encarecer o software. O Fiscal custa mais porque cada cupom emitido tem custo de emissão."
       faq={[
         {
           p: "Preciso de maquininha específica?",
@@ -264,7 +276,7 @@ export default function ComandaProLanding() {
       fechamento={{
         titulo: "Seu restaurante no controle",
         texto:
-          "Testa 3 dias, sem cartão de crédito. Se gostar, são R$ 99 por mês, sem fidelidade — e se não servir pra sua casa, a gente fala isso na sua cara.",
+          "Testa 3 dias, sem cartão de crédito. Se gostar, são R$ 99 por mês (R$ 179 com cupom fiscal), sem fidelidade — e se não servir pra sua casa, a gente fala isso na sua cara.",
       }}
     />
   );

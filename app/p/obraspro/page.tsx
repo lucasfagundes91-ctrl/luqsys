@@ -224,7 +224,7 @@ export default function ObrasProLanding() {
           publico: "1-2 obras simultâneas",
           itens: [
             "Até 2 obras ativas",
-            "OCR de notas (até 100/mês)",
+            "Leitura de notas por IA: até 50/mês",
             "1 usuário",
             "Etapas e investidores",
             "Relatórios básicos",
@@ -241,7 +241,7 @@ export default function ObrasProLanding() {
           itens: [
             "Obras ilimitadas",
             "Etapas e investidores ilimitados",
-            "OCR de notas ilimitado",
+            "Leitura de notas por IA: até 150/mês",
             "Usuários ilimitados com permissões",
             "Relatórios e exportação",
             "Suporte por e-mail",
@@ -255,6 +255,7 @@ export default function ObrasProLanding() {
           publico: "Construtora com várias frentes",
           itens: [
             "Tudo do Pro",
+            "Leitura de notas por IA: até 500/mês",
             "Multi-empresa (CNPJs)",
             "API pra integrações",
             "Relatório por investidor (PDF personalizado)",

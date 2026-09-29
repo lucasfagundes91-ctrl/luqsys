@@ -126,15 +126,27 @@ export default function ComandaProPage() {
       planos={[
         {
           nome: "ComandaPro",
-          publico: "Restaurante, bar ou lanchonete",
+          publico: "Restaurante, bar ou lanchonete sem nota fiscal",
           precoLabel: "R$ 99",
           features: [
             "Comandas, cardápio e tela de cozinha",
             "Caixa e formas de pagamento",
-            "NFC-e (cupom fiscal)",
             "Relatórios e histórico de vendas",
             "Usuários ilimitados",
             "Delivery e iFood",
+            "Suporte por WhatsApp",
+          ],
+          ctaLabel: "Começar teste grátis",
+          ctaHref: "https://comandapro.luqsys.com.br/cadastro",
+        },
+        {
+          nome: "ComandaPro Fiscal",
+          publico: "Quem precisa emitir cupom fiscal",
+          precoLabel: "R$ 179",
+          features: [
+            "Tudo do ComandaPro",
+            "NFC-e (cupom fiscal) emitida na hora",
+            "Configuração do certificado e do fiscal inclusa",
             "Suporte por WhatsApp",
           ],
           ctaLabel: "Começar teste grátis",
@@ -143,7 +155,7 @@ export default function ComandaProPage() {
         },
       ]}
       ctaFinalTitulo="Seu restaurante no controle"
-      ctaFinalTexto="Teste 3 dias grátis, sem cartão de crédito. Se gostar, são R$ 99/mês sem fidelidade."
+      ctaFinalTexto="Teste 3 dias grátis, sem cartão de crédito. Se gostar, são R$ 99/mês — ou R$ 179 com cupom fiscal — sem fidelidade."
       appUrl="https://comandapro.luqsys.com.br"
       demoUrl="https://demo.comandapro.luqsys.com.br/"
       assinarUrl="https://comandapro.luqsys.com.br/cadastro"

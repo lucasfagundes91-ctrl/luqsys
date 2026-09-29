@@ -51,7 +51,7 @@ const trilhas: Trilha[] = [
         nome: "PDV Pro",
         icone: "🛒",
         tagline: "PDV + ERP completo pra loja física",
-        preco: "R$ 149",
+        preco: "R$ 249",
         aPartirDe: true,
         // a demo dele mora em outro deploy: o endereco principal e a producao
         // de uma loja real, e o sistema roda uma loja por instalacao
@@ -227,7 +227,7 @@ const trilhas: Trilha[] = [
         nome: "HoraPro",
         icone: "⏱️",
         tagline: "Ponto eletrônico REP-P (Portaria 671/2021)",
-        preco: "R$ 29",
+        preco: "R$ 39",
         aPartirDe: true,
       },
       {

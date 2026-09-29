@@ -212,9 +212,9 @@ export default function PDVProPage() {
         {
           nome: "Essencial",
           publico: "Loja pequena começando",
-          precoLabel: "R$ 149",
+          precoLabel: "R$ 249",
           features: [
-            "1 loja · até 500 NFC-e/mês",
+            "1 loja · 500 NFC-e/mês (acima disso, R$ 0,15 por cupom)",
             "PDV + NFC-e/NF-e",
             "Estoque e inventário",
             "Contas a pagar e a receber",
@@ -223,14 +223,14 @@ export default function PDVProPage() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Essencial",
-          ctaHref: ZAP("Quero assinar o PDV Pro Essencial (R$ 149/mês)"),
+          ctaHref: ZAP("Quero assinar o PDV Pro Essencial (R$ 249/mês)"),
         },
         {
           nome: "Profissional",
           publico: "A loja completa do dia a dia",
-          precoLabel: "R$ 299",
+          precoLabel: "R$ 349",
           features: [
-            "1 loja · 2.000 NFC-e/mês",
+            "1 loja · 2.000 NFC-e/mês (acima disso, R$ 0,15 por cupom)",
             "Tudo do Essencial",
             "Manifestação de NF-e recebida",
             "Conciliação bancária (OFX/CSV)",
@@ -239,7 +239,7 @@ export default function PDVProPage() {
             "Suporte no WhatsApp em horário comercial",
           ],
           ctaLabel: "Assinar Profissional",
-          ctaHref: ZAP("Quero assinar o PDV Pro Profissional (R$ 299/mês)"),
+          ctaHref: ZAP("Quero assinar o PDV Pro Profissional (R$ 349/mês)"),
           destaque: true,
         },
         {
@@ -247,8 +247,8 @@ export default function PDVProPage() {
           publico: "Multi-loja e atacado",
           precoLabel: "R$ 499",
           features: [
-            "Até 3 lojas",
-            "NFC-e ilimitada, sem excedente",
+            "1ª loja com 3.000 NFC-e/mês",
+            "+ R$ 199 por loja adicional (até 3 lojas)",
             "Tudo do Profissional",
             "Painel consolidado das lojas",
             "Suporte prioritário",

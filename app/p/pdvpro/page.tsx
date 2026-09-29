@@ -225,10 +225,10 @@ export default function PDVProLanding() {
       planos={[
         {
           nome: "Essencial",
-          preco: "R$ 149",
+          preco: "R$ 249",
           publico: "Loja pequena começando",
           itens: [
-            "1 loja · até 500 NFC-e/mês",
+            "1 loja · 500 NFC-e/mês (acima disso, R$ 0,15 por cupom)",
             "PDV + NFC-e/NF-e",
             "Estoque e inventário",
             "Contas a pagar e a receber",
@@ -237,15 +237,15 @@ export default function PDVProLanding() {
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Essencial",
-          ctaHref: ZAP("Quero assinar o PDV Pro Essencial (R$ 149/mês)"),
+          ctaHref: ZAP("Quero assinar o PDV Pro Essencial (R$ 249/mês)"),
         },
         {
           nome: "Profissional",
-          preco: "R$ 299",
+          preco: "R$ 349",
           publico: "A loja completa do dia a dia",
           destaque: true,
           itens: [
-            "1 loja · 2.000 NFC-e/mês",
+            "1 loja · 2.000 NFC-e/mês (acima disso, R$ 0,15 por cupom)",
             "Tudo do Essencial",
             "Manifestação de NF-e recebida",
             "Conciliação bancária (OFX/CSV)",
@@ -254,15 +254,15 @@ export default function PDVProLanding() {
             "Suporte no WhatsApp em horário comercial",
           ],
           ctaLabel: "Assinar Profissional",
-          ctaHref: ZAP("Quero assinar o PDV Pro Profissional (R$ 299/mês)"),
+          ctaHref: ZAP("Quero assinar o PDV Pro Profissional (R$ 349/mês)"),
         },
         {
           nome: "Empresarial",
           preco: "R$ 499",
           publico: "Multi-loja e atacado",
           itens: [
-            "Até 3 lojas",
-            "NFC-e ilimitada, sem excedente",
+            "1ª loja com 3.000 NFC-e/mês",
+            "+ R$ 199 por loja adicional (até 3 lojas)",
             "Tudo do Profissional",
             "Painel consolidado das lojas",
             "Suporte prioritário",
@@ -276,7 +276,7 @@ export default function PDVProLanding() {
       faq={[
         {
           p: "Quanto custa e tem taxa de implantação?",
-          r: "R$ 149, R$ 299 ou R$ 499 por mês, conforme o plano — sem fidelidade e sem taxa separada de implantação: subir o seu ambiente, configurar o fiscal e importar o cadastro faz parte. O que muda entre os planos é o volume de NFC-e, o número de lojas e os recursos de financeiro e WhatsApp.",
+          r: "R$ 249, R$ 349 ou R$ 499 por mês, conforme o plano (no Empresarial, + R$ 199 por loja adicional) — sem fidelidade e sem taxa separada de implantação: subir o seu ambiente, configurar o fiscal e importar o cadastro faz parte. O que muda entre os planos é o volume de NFC-e, o número de lojas e os recursos de financeiro e WhatsApp. Se passar do pacote de NFC-e do mês, a nota continua saindo normalmente e o excedente é cobrado a R$ 0,15 por cupom.",
         },
         {
           p: "Por que não tem teste grátis igual aos outros sistemas?",

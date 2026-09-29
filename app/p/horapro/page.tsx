@@ -217,7 +217,7 @@ export default function HoraProLanding() {
       planos={[
         {
           nome: "Básico",
-          preco: "R$ 29",
+          preco: "R$ 39",
           publico: "Equipe pequena (até 5 funcionários)",
           itens: [
             "Até 5 funcionários",

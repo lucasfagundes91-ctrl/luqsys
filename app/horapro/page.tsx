@@ -141,7 +141,7 @@ export default function HoraProPage() {
         {
           nome: "Básico",
           publico: "Equipe pequena (até 5 func)",
-          precoLabel: "R$ 29",
+          precoLabel: "R$ 39",
           features: [
             "Até 5 funcionários",
             "Ponto via QR/token",

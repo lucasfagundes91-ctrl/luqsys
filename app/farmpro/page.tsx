@@ -157,7 +157,7 @@ export default function FarmProPage() {
           precoLabel: "R$ 69",
           features: [
             "Caderno de campo",
-            "OCR de notas (até 50/mês)",
+            "Leitura de notas por IA: até 50/mês",
             "Livro caixa",
             "Até 5 talhões",
             "1 usuário",
@@ -172,7 +172,7 @@ export default function FarmProPage() {
           precoLabel: "R$ 119",
           features: [
             "Talhões e culturas ilimitados",
-            "OCR de notas ilimitado",
+            "Leitura de notas por IA: até 200/mês",
             "Livro caixa + LCDPR",
             "Folha rural completa",
             "Ponto eletrônico embutido",
@@ -189,6 +189,7 @@ export default function FarmProPage() {
           precoLabel: "R$ 249",
           features: [
             "Tudo do Pro",
+            "Leitura de notas por IA: até 600/mês",
             "Multi-fazenda (até 5)",
             "Relatórios consolidados",
             "Comparativo entre safras",

@@ -216,7 +216,7 @@ export default function FarmProLanding() {
           publico: "Sítio ou fazenda pequena",
           itens: [
             "Caderno de campo",
-            "OCR de notas (até 50/mês)",
+            "Leitura de notas por IA: até 50/mês",
             "Livro caixa",
             "Até 5 talhões",
             "1 usuário",
@@ -232,7 +232,7 @@ export default function FarmProLanding() {
           destaque: true,
           itens: [
             "Talhões e culturas ilimitados",
-            "OCR de notas ilimitado",
+            "Leitura de notas por IA: até 200/mês",
             "Livro caixa + LCDPR",
             "Folha rural completa",
             "Ponto eletrônico embutido",
@@ -248,6 +248,7 @@ export default function FarmProLanding() {
           publico: "Grupo com múltiplas fazendas",
           itens: [
             "Tudo do Pro",
+            "Leitura de notas por IA: até 600/mês",
             "Multi-fazenda (até 5)",
             "Relatórios consolidados",
             "Comparativo entre safras",

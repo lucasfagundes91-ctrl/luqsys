@@ -141,7 +141,7 @@ export default function ObrasProPage() {
           precoLabel: "R$ 69",
           features: [
             "Até 2 obras ativas",
-            "OCR de notas (até 100/mês)",
+            "Leitura de notas por IA: até 50/mês",
             "1 usuário",
             "Etapas e investidores",
             "Relatórios básicos",
@@ -158,7 +158,7 @@ export default function ObrasProPage() {
           features: [
             "Obras ilimitadas",
             "Etapas e investidores ilimitados",
-            "OCR de notas ilimitado",
+            "Leitura de notas por IA: até 150/mês",
             "Usuários ilimitados com permissões",
             "Relatórios e exportação",
             "Suporte por e-mail",
@@ -173,6 +173,7 @@ export default function ObrasProPage() {
           precoLabel: "R$ 249",
           features: [
             "Tudo do Pro",
+            "Leitura de notas por IA: até 500/mês",
             "Multi-empresa (CNPJs)",
             "API pra integrações",
             "Relatório por investidor (PDF custom)",
