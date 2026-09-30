@@ -193,6 +193,15 @@ const trilhas: Trilha[] = [
         appUrl: "https://sorripro.luqsys.com.br",
       },
       {
+        slug: "barbeariapro",
+        nome: "BarbeariaPro",
+        icone: "💈",
+        tagline: "Barbearia completa: agenda online, comanda, comissão, metas por barbeiro e clube",
+        preco: "R$ 49",
+        badge: "novo",
+        appUrl: "https://barbeariapro.luqsys.com.br",
+      },
+      {
         slug: "comandapro",
         nome: "ComandaPro",
         icone: "🍽️",

@@ -58,6 +58,8 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["rotina pro", "rotinapro"],
   ["carregapro", "carregapro"],
   ["carrega pro", "carregapro"],
+  ["barbeariapro", "barbeariapro"],
+  ["barbearia pro", "barbeariapro"],
   ["sorripro", "sorripro"],
   ["sorri pro", "sorripro"],
   // Nome antigo do SorriPro (trocado em 20/07/2026 por conflito de marca).

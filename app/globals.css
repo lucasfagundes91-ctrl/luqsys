@@ -71,6 +71,8 @@ body {
   --acc-fundo: #06b6d429; }
 .tema-sorripro { --acc: #38bdf8; --acc-forte: #7dd3fc; --acc-fraco: #0369a1;
   --acc-fundo: #38bdf829; }
+.tema-barbeariapro { --acc: #d4962c; --acc-forte: #f0b555; --acc-fraco: #8f5b1c;
+  --acc-fundo: #d4962c29; }
 .tema-comandapro { --acc: #ef4444; --acc-forte: #f87171; --acc-fraco: #991b1b;
   --acc-fundo: #ef444429; }
 .tema-rotinapro { --acc: #2dd4bf; --acc-forte: #5eead4; --acc-fraco: #0f766e;
