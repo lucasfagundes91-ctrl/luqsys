@@ -4,7 +4,7 @@ import { ProductLayout } from "../_components/ProductLayout";
 export const metadata: Metadata = {
   title: "BarbeariaPro — Gestão completa pra barbearia",
   description:
-    "Agenda por barbeiro com link de agendamento, comanda e caixa, comissão automática, metas por barbeiro, clube de assinatura, cartão fidelidade, mensagens pros clientes sumidos e NFC-e. R$ 49/mês, 3 dias grátis.",
+    "Agenda por barbeiro com link de agendamento, comanda e caixa, comissão automática, metas por barbeiro, clube de assinatura, cartão fidelidade, mensagens pros clientes sumidos e NFC-e. R$ 99,99/mês, 3 dias grátis.",
 };
 
 export default function BarbeariaProPage() {
@@ -127,7 +127,7 @@ export default function BarbeariaProPage() {
         {
           nome: "Pro",
           publico: "Barbearias de todos os tamanhos",
-          precoLabel: "R$ 49",
+          precoLabel: "R$ 99,99",
           features: [
             "Barbeiros, clientes e horários ilimitados",
             "Link de agendamento online",
@@ -138,14 +138,14 @@ export default function BarbeariaProPage() {
             "Suporte por WhatsApp",
           ],
           ctaLabel: "Assinar Pro",
-          ctaHref: "https://wa.me/5545991077788?text=Quero%20assinar%20o%20BarbeariaPro",
+          ctaHref: "https://www.asaas.com/c/1sc7zgpobygzd7vg",
           destaque: true,
         },
       ]}
       ctaFinalTitulo="Sua barbearia não devia depender do caderno"
       ctaFinalTexto="Teste 3 dias de graça, sem cartão. Se não fizer sentido pra sua barbearia, é só parar."
       appUrl="https://barbeariapro.luqsys.com.br"
-      assinarUrl="https://wa.me/5545991077788?text=Quero%20assinar%20o%20BarbeariaPro"
+      assinarUrl="https://www.asaas.com/c/1sc7zgpobygzd7vg"
     />
   );
 }

@@ -197,7 +197,7 @@ const trilhas: Trilha[] = [
         nome: "BarbeariaPro",
         icone: "💈",
         tagline: "Barbearia completa: agenda online, comanda, comissão, metas por barbeiro e clube",
-        preco: "R$ 49",
+        preco: "R$ 99,99",
         badge: "novo",
         appUrl: "https://barbeariapro.luqsys.com.br",
       },
