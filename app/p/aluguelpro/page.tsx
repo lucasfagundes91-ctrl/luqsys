@@ -292,7 +292,7 @@ export default function AluguelProLanding() {
         },
         {
           p: "Quem fez o AluguelPro usa ele de verdade?",
-          r: "Usa. O AluguelPro nasceu dentro da Luvan Negócios Imobiliários, em Cascavel (PR), e hoje roda mais de 100 imóveis e 80 contratos ativos de verdade — cobrança, repasse, reajuste e vistoria. O que está nesta página é o que a gente usa todo mês.",
+          r: "Usa. O AluguelPro nasceu dentro da Luvan Negócios Imobiliários, em Cascavel (PR), e hoje roda 38 imóveis e mais de 30 contratos ativos de verdade — cobrança, repasse, reajuste e vistoria. O que está nesta página é o que a gente usa todo mês.",
         },
         {
           p: "Ajudam a passar meus contratos da planilha ou do sistema antigo?",

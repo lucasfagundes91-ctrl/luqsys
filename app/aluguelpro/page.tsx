@@ -25,7 +25,7 @@ export default function AluguelProPage() {
         label: "Falar no WhatsApp",
         href: "https://wa.me/5545991077788?text=" + encodeURIComponent("Quero conhecer o AluguelPro"),
       }}
-      rodapeHero="Feito dentro de uma imobiliária de Cascavel: mais de 100 imóveis e 80 contratos ativos rodam nele."
+      rodapeHero="Feito dentro de uma imobiliária de Cascavel: 38 imóveis e mais de 30 contratos ativos rodam nele."
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
         {
@@ -123,7 +123,7 @@ export default function AluguelProPage() {
         },
         {
           p: "Quem fez o AluguelPro usa ele de verdade?",
-          r: "Usa. O AluguelPro nasceu dentro da Luvan Negócios Imobiliários, em Cascavel (PR), e hoje roda mais de 100 imóveis e 80 contratos ativos de verdade — cobrança, repasse, reajuste e vistoria. O que está nesta página é o que a gente usa todo mês.",
+          r: "Usa. O AluguelPro nasceu dentro da Luvan Negócios Imobiliários, em Cascavel (PR), e hoje roda 38 imóveis e mais de 30 contratos ativos de verdade — cobrança, repasse, reajuste e vistoria. O que está nesta página é o que a gente usa todo mês.",
         },
         {
           p: "Ajudam a passar meus contratos da planilha ou do sistema antigo?",
