@@ -2,18 +2,19 @@ import type { Metadata } from "next";
 import { ProductLayout } from "../_components/ProductLayout";
 
 export const metadata: Metadata = {
-  title: "BarbeariaPro — Gestão completa pra barbearia",
+  title: "BAP Flow — Software para barbearias",
   description:
     "Agenda por barbeiro com link de agendamento, comanda e caixa, comissão automática, metas por barbeiro, clube de assinatura, cartão fidelidade, mensagens pros clientes sumidos e NFC-e. R$ 99,99/mês, 3 dias grátis.",
 };
 
-export default function BarbeariaProPage() {
+export default function BapFlowPage() {
   return (
     <ProductLayout
-      tema="barbeariapro"
+      tema="bapflow"
       icone="💈"
-      nome="BarbeariaPro"
-      tagline="A barbearia inteira na palma da mão."
+      nome="BAP Flow"
+      logo="/apps/bapflow-logo.png"
+      tagline="Gestão que faz sua barbearia evoluir."
       descricao={
         <>
           Para <strong className="text-white">barbearias</strong>: agenda por barbeiro com link
@@ -52,7 +53,7 @@ export default function BarbeariaProPage() {
               de toda quinzena não vem há dois meses.
             </p>
             <p>
-              O BarbeariaPro junta agenda, caixa, comissão e clientes — e mostra
+              O BAP Flow junta agenda, caixa, comissão e clientes — e mostra
               se a casa está saudável e se o time vai bater a meta.
             </p>
           </>
@@ -144,7 +145,7 @@ export default function BarbeariaProPage() {
       ]}
       ctaFinalTitulo="Sua barbearia não devia depender do caderno"
       ctaFinalTexto="Teste 3 dias de graça, sem cartão. Se não fizer sentido pra sua barbearia, é só parar."
-      appUrl="https://barbeariapro.luqsys.com.br"
+      appUrl="https://bapflow.luqsys.com.br"
       assinarUrl="https://www.asaas.com/c/1sc7zgpobygzd7vg"
     />
   );

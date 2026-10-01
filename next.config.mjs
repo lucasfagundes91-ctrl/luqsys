@@ -34,6 +34,12 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // BarbeariaPro virou BAP Flow em 01/10/2026.
+        source: '/barbeariapro',
+        destination: '/bapflow',
+        permanent: true,
+      },
+      {
         source: '/pontopro',
         destination: '/horapro',
         permanent: true,

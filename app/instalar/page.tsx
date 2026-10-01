@@ -93,7 +93,7 @@ const grupos: Grupo[] = [
       { host: "adspro", nome: "AdsPro", emoji: "📣", o_que: "Anúncios no Meta" },
       { host: "agendapro", nome: "AgendaPro", emoji: "📅", o_que: "Agendamento online" },
       { host: "sorripro", nome: "SorriPro", emoji: "🦷", o_que: "Clínica odontológica" },
-      { host: "barbeariapro", nome: "BarbeariaPro", emoji: "💈", o_que: "Barbearia" },
+      { host: "bapflow", nome: "BAP Flow", emoji: "💈", o_que: "Barbearia" },
       { host: "comandapro", nome: "ComandaPro", emoji: "🍽️", o_que: "Restaurante e bar" },
       { host: "rotinapro", nome: "RotinaPro", emoji: "📋", o_que: "Checklists e rotinas" },
       { host: "vigiapro", nome: "VigiaPro", emoji: "📹", o_que: "Câmeras e alertas" },

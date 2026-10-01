@@ -45,6 +45,8 @@ export type Print = { arquivo: string; legenda: string };
 export type ProductPageProps = {
   icone: string;
   nome: string;
+  /** Logo da marca do produto: quando vem, aparece no lugar do emoji do herói. */
+  logo?: string;
   tagline: string;
   descricao: ReactNode;
   ctaPrimaria?: { label: string; href: string };
@@ -84,6 +86,7 @@ export type ProductPageProps = {
 
 export function ProductLayout({
   icone,
+  logo,
   nome,
   tagline,
   descricao,
@@ -176,7 +179,11 @@ export function ProductLayout({
         <span className="inline-block rounded-full border acc-borda bg-transparent px-3 py-1 text-xs font-medium tracking-wider acc-text">
           UM SISTEMA LUQSYS
         </span>
-        <div className="mt-6 text-5xl">{icone}</div>
+        {logo ? (
+          <img src={logo} alt={nome} className="mt-6 h-24 w-auto max-w-full rounded-xl" />
+        ) : (
+          <div className="mt-6 text-5xl">{icone}</div>
+        )}
         <h1 className="mt-4 text-4xl font-black tracking-tight sm:text-6xl">
           <span className="acc-gradient-text">{nome}</span>
         </h1>

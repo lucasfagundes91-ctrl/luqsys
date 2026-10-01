@@ -58,6 +58,9 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["rotina pro", "rotinapro"],
   ["carregapro", "carregapro"],
   ["carrega pro", "carregapro"],
+  // BAP Flow (nasceu "BarbeariaPro"; o slug interno e o subdomínio da API seguem barbeariapro)
+  ["bap flow", "barbeariapro"],
+  ["bapflow", "barbeariapro"],
   ["barbeariapro", "barbeariapro"],
   ["barbearia pro", "barbeariapro"],
   ["sorripro", "sorripro"],
