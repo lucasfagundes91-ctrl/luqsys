@@ -22,9 +22,10 @@ export default function AluguelProPage() {
         </>
       }
       ctaPrimaria={{
-        label: "Falar com vendas",
-        href: "mailto:contato@luqsys.com.br?subject=Quero%20o%20AluguelPro",
+        label: "Falar no WhatsApp",
+        href: "https://wa.me/5545991077788?text=" + encodeURIComponent("Quero conhecer o AluguelPro"),
       }}
+      rodapeHero="Feito dentro de uma imobiliária de Cascavel: mais de 100 imóveis e 80 contratos ativos rodam nele."
       ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
       passos={[
         {
@@ -117,6 +118,18 @@ export default function AluguelProPage() {
       ]}
       faq={[
         {
+          p: "Por que é tão mais barato que os sistemas grandes de locação?",
+          r: "Porque cobramos por empresa, não por imóvel. Nos sistemas grandes, quem administra 50 contratos paga por cada um, e ainda tem taxa de implantação e fidelidade de 12 meses. Aqui o Pro é R$ 99 por mês com imóveis e contratos ilimitados, sem taxa de implantação e sem fidelidade.",
+        },
+        {
+          p: "Quem fez o AluguelPro usa ele de verdade?",
+          r: "Usa. O AluguelPro nasceu dentro da Luvan Negócios Imobiliários, em Cascavel (PR), e hoje roda mais de 100 imóveis e 80 contratos ativos de verdade — cobrança, repasse, reajuste e vistoria. O que está nesta página é o que a gente usa todo mês.",
+        },
+        {
+          p: "Ajudam a passar meus contratos da planilha ou do sistema antigo?",
+          r: "Ajudamos, sem custo. Você manda a planilha ou o relatório do sistema atual e a gente cadastra os contratos como estão hoje — valor, vencimento, índice e próxima data-base — pra você já cobrar no mês seguinte.",
+        },
+        {
           p: "Administro imóvel dos outros e alguns meus. Dá pra separar?",
           r: "Dá. Cada imóvel tem o proprietário dele e a sua taxa; nos seus, a taxa é zero e o repasse é pra você mesmo. O demonstrativo sai certo nos dois casos.",
         },
@@ -147,6 +160,7 @@ export default function AluguelProPage() {
             "1 usuário",
             "Demonstrativo simples",
             "Suporte por e-mail",
+            "Uso de IA: até 30/mês (comprovantes, documentos, vistoria por foto)",
           ],
           ctaLabel: "Assinar Básico",
           ctaHref: "https://www.asaas.com/c/o10vzdh38yuwb2eo",
@@ -162,6 +176,7 @@ export default function AluguelProPage() {
             "Reajustes IGP-M/IPCA automáticos",
             "Demonstrativos PDF",
             "Suporte por e-mail",
+            "Uso de IA: até 150/mês",
           ],
           ctaLabel: "Assinar Pro",
           ctaHref: "https://www.asaas.com/c/mhw1a1fe2i14hit6",
@@ -178,13 +193,14 @@ export default function AluguelProPage() {
             "Portal do inquilino",
             "API + integrações",
             "Suporte prioritário",
+            "Uso de IA: até 400/mês",
           ],
           ctaLabel: "Assinar Empresa",
           ctaHref: "https://www.asaas.com/c/yvfvq42xetpq1i59",
         },
       ]}
       ctaFinalTitulo="Sua carteira de imóveis no controle"
-      ctaFinalTexto="Combine com ContabilidadePro pro imposto certinho."
+      ctaFinalTexto="Teste 3 dias grátis com dois ou três contratos seus. Sem cartão, sem fidelidade, sem taxa de implantação."
     appUrl="https://aluguelpro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/mhw1a1fe2i14hit6"
     />

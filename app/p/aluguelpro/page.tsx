@@ -245,6 +245,7 @@ export default function AluguelProLanding() {
             "1 usuário",
             "Demonstrativo simples",
             "Suporte por e-mail",
+            "Uso de IA: até 30/mês (comprovantes, documentos, vistoria por foto)",
           ],
           ctaLabel: "Assinar Básico",
           ctaHref: "https://www.asaas.com/c/o10vzdh38yuwb2eo",
@@ -261,6 +262,7 @@ export default function AluguelProLanding() {
             "Reajustes IGP-M/IPCA automáticos",
             "Demonstrativos em PDF",
             "Suporte por e-mail",
+            "Uso de IA: até 150/mês",
           ],
           ctaLabel: "Assinar Pro",
           ctaHref: "https://www.asaas.com/c/mhw1a1fe2i14hit6",
@@ -276,6 +278,7 @@ export default function AluguelProLanding() {
             "Portal do inquilino",
             "API + integrações",
             "Suporte prioritário",
+            "Uso de IA: até 400/mês",
           ],
           ctaLabel: "Assinar Empresa",
           ctaHref: "https://www.asaas.com/c/yvfvq42xetpq1i59",
@@ -283,6 +286,18 @@ export default function AluguelProLanding() {
       ]}
       notaPlanos="A diferença entre o Básico e o Pro é a cobrança rodando sozinha: no Básico você dispara, no Pro ela sai na data e dá baixa quando o inquilino paga."
       faq={[
+        {
+          p: "Por que é tão mais barato que os sistemas grandes de locação?",
+          r: "Porque cobramos por empresa, não por imóvel. Nos sistemas grandes, quem administra 50 contratos paga por cada um, e ainda tem taxa de implantação e fidelidade de 12 meses. Aqui o Pro é R$ 99 por mês com imóveis e contratos ilimitados, sem taxa de implantação e sem fidelidade.",
+        },
+        {
+          p: "Quem fez o AluguelPro usa ele de verdade?",
+          r: "Usa. O AluguelPro nasceu dentro da Luvan Negócios Imobiliários, em Cascavel (PR), e hoje roda mais de 100 imóveis e 80 contratos ativos de verdade — cobrança, repasse, reajuste e vistoria. O que está nesta página é o que a gente usa todo mês.",
+        },
+        {
+          p: "Ajudam a passar meus contratos da planilha ou do sistema antigo?",
+          r: "Ajudamos, sem custo. Você manda a planilha ou o relatório do sistema atual e a gente cadastra os contratos como estão hoje — valor, vencimento, índice e próxima data-base — pra você já cobrar no mês seguinte.",
+        },
         {
           p: "Administro imóvel dos outros e alguns meus. Dá pra separar?",
           r: "Dá. Cada imóvel tem o proprietário dele e a sua taxa; nos seus, a taxa é zero e o repasse é pra você mesmo. O demonstrativo sai certo nos dois casos, e a carteira continua sendo uma só.",
