@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s · Luqsys",
   },
   description:
-    "Soluções práticas de gestão para pequenas e médias empresas. Bots, automações e sistemas que economizam tempo e dinheiro.",
+    "Sistema sob medida pra sua empresa, com preço fechado e entrega por etapas — ou um dos nossos sistemas de gestão prontos pra usar.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

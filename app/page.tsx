@@ -20,16 +20,6 @@ type Produto = {
   aPartirDe?: boolean; // sistema com vários planos: o card mostra o de entrada
 };
 
-function trialHref(p: Produto) {
-  const base = p.appUrl ?? `https://${p.slug}.luqsys.com.br`;
-  return `${base}/cadastro?trial=1`;
-}
-
-function demoHref(p: Produto) {
-  if (p.demoUrl) return p.demoUrl;
-  const base = p.appUrl ?? `https://${p.slug}.luqsys.com.br`;
-  return `${base}/demo`;
-}
 
 type Trilha = {
   id: string;
@@ -345,6 +335,145 @@ const trilhas: Trilha[] = [
   },
 ];
 
+// Sistemas com landing própria em /p/<slug> — o "site do produto", sem menu
+// da Luqsys. O card da home leva pra lá; quem ainda não tem cai na página
+// curta em /<slug>.
+const LANDING_PROPRIA = new Set([
+  "agendapro", "aluguelpro", "bankpro", "botapro", "carregapro", "comandapro",
+  "comparabot", "contabilidadepro", "farmpro", "frotapro", "horapro",
+  "livropro", "obraspro", "pdvpro", "rotinapro", "shoppro", "silopro",
+  "solarpro", "sorripro", "viagempro", "vigiapro",
+]);
+
+function siteDoSistema(p: Produto) {
+  if (p.externo) return p.externo;
+  return LANDING_PROPRIA.has(p.slug) ? `/p/${p.slug}` : `/${p.slug}`;
+}
+
+const WHATS = "https://wa.me/5545991077788";
+const whatsSobMedida = `${WHATS}?text=${encodeURIComponent(
+  "Oi Lucas, quero um sistema pra minha empresa. Hoje eu preciso de:",
+)}`;
+
+// O que já roda de verdade — a prova de que sabemos fazer. Só fato conferido:
+// os números da Luvan são os da página do AluguelPro (contados por
+// proprietário do tenant real, sem dados de teste).
+const provas = [
+  {
+    icone: "🛒",
+    titulo: "Varejo",
+    texto: "Lojas físicas vendendo, emitindo NFC-e e passando cartão no caixa todo dia.",
+  },
+  {
+    icone: "🏠",
+    titulo: "Imobiliária",
+    texto: "38 imóveis e 31 contratos ativos — cobrança, repasse e recibo saindo sozinhos.",
+  },
+  {
+    icone: "🌾",
+    titulo: "Fazenda e silo",
+    texto: "Notas, livro caixa, folha e cada caminhão de grão pesado em tempo real.",
+  },
+  {
+    icone: "☀️",
+    titulo: "Energia solar",
+    texto: "A fatura da distribuidora vira cobrança com a economia de cada cliente.",
+  },
+];
+
+const passos = [
+  {
+    n: "1",
+    titulo: "Você conta como trabalha",
+    texto:
+      "Uma conversa no WhatsApp ou presencial. Planilha, caderno, foto do papel que circula hoje — tudo serve. Não custa nada.",
+  },
+  {
+    n: "2",
+    titulo: "Proposta com preço fechado",
+    texto:
+      "Em até 3 dias úteis você recebe o que o sistema vai fazer, o prazo e o valor. Sem hora técnica correndo.",
+  },
+  {
+    n: "3",
+    titulo: "Entrega por etapas",
+    texto:
+      "A cada 1 ou 2 semanas tem uma parte nova funcionando pra você usar e dizer o que mudar. Nada de sumir 3 meses.",
+  },
+  {
+    n: "4",
+    titulo: "No ar e com suporte",
+    texto:
+      "Hospedagem, backup, segurança e ajustes ficam com a gente. Funciona no computador e no celular, como app.",
+  },
+];
+
+const precos = [
+  {
+    nome: "Adaptação",
+    preco: "R$ 1.500",
+    prazo: "1 a 2 semanas",
+    texto:
+      "Um dos nossos sistemas prontos, ajustado ao seu jeito: campos, relatórios, regras e a sua marca.",
+    itens: [
+      "Parte de um sistema que já roda",
+      "Importação da sua planilha",
+      "Mais a mensalidade do sistema",
+    ],
+    destaque: false,
+  },
+  {
+    nome: "Sob medida",
+    preco: "R$ 6.000",
+    prazo: "3 a 6 semanas",
+    texto:
+      "Sistema feito do zero pro processo da sua empresa, com o que você precisa e nada do que não usa.",
+    itens: [
+      "Cadastros, telas e relatórios próprios",
+      "Login por usuário e permissões",
+      "Avisos e envio pelo WhatsApp",
+      "Funciona no celular como app",
+    ],
+    destaque: true,
+  },
+  {
+    nome: "Projeto completo",
+    preco: "R$ 15.000",
+    prazo: "a combinar",
+    texto:
+      "Vários setores conversando e integrações com o que você já usa.",
+    itens: [
+      "Nota fiscal (NF-e, NFC-e)",
+      "Banco, Pix e boleto",
+      "Balança, maquininha, câmeras",
+      "Leitura de documentos com IA",
+    ],
+    destaque: false,
+  },
+];
+
+const perguntas = [
+  {
+    p: "Por que é mais barato que uma software house?",
+    r: "Porque quase nada começa do zero. Login, permissões, nota fiscal, cobrança, WhatsApp e leitura de documento por IA já existem e rodam nos nossos sistemas. O seu projeto paga só o que é dele.",
+  },
+  {
+    p: "E depois de pronto, quanto custa por mês?",
+    r: "A partir de R$ 199/mês, com hospedagem, backup, suporte e pequenos ajustes. Funcionalidade nova entra com orçamento à parte, sempre antes de fazer.",
+  },
+  {
+    p: "Como é o pagamento?",
+    r: "Metade pra começar e metade na entrega. Na Adaptação, o valor pode ser dividido junto com as primeiras mensalidades.",
+  },
+  {
+    p: "O sistema fica meu?",
+    r: "O sob medida é seu. Se um dia quiser levar pra outro lugar, a gente entrega o código e o banco de dados.",
+  },
+  {
+    p: "Vocês usam o que fazem?",
+    r: "Sim. As nossas lojas, a imobiliária, a fazenda e as usinas solares da família rodam nos sistemas Luqsys. Quem fez usa todo dia.",
+  },
+];
 
 export default function Home() {
   const nSistemas = trilhas.flatMap((t) => t.produtos).length;
@@ -361,374 +490,296 @@ export default function Home() {
           </span>
         </div>
         <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs sm:gap-6 sm:text-sm">
+          <a href="#como-funciona" className="text-neutral-400 transition hover:text-gold">
+            Como funciona
+          </a>
+          <a href="#quanto-custa" className="text-neutral-400 transition hover:text-gold">
+            Quanto custa
+          </a>
           <a href="#trilhas" className="text-neutral-400 transition hover:text-gold">
-            Sistemas
-          </a>
-          <a href="#bundles" className="text-neutral-400 transition hover:text-gold">
-            Combos
-          </a>
-          <a href="#sob-medida" className="text-neutral-400 transition hover:text-gold">
-            Sob medida
+            Sistemas prontos
           </a>
           <a
-            href="mailto:contato@luqsys.com.br"
-            className="text-neutral-400 transition hover:text-gold"
+            href={whatsSobMedida}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-gold-dim px-4 py-1.5 font-semibold text-gold transition hover:border-gold"
           >
-            Contato
+            WhatsApp
           </a>
         </div>
       </nav>
 
-      <section className="mx-auto max-w-4xl px-6 pb-20 pt-16 text-center sm:pt-24">
-        <div className="mb-6 flex justify-center">
-          <img
-            src="/luqsys-logo.png"
-            alt="Luqsys — Sistemas de Gestão"
-            className="h-40 w-40 rounded-3xl drop-shadow-gold sm:h-52 sm:w-52"
-          />
-        </div>
-        <h1 className="gold-gradient-text text-5xl font-black tracking-tight sm:text-7xl">
-          LUQSYS
+      <section
+        id="sob-medida"
+        className="mx-auto max-w-4xl px-6 pb-20 pt-14 text-center sm:pt-20"
+      >
+        <span className="inline-block rounded-full border border-gold-dim/60 bg-gold-dark/30 px-3 py-1 text-xs font-bold tracking-wider text-gold">
+          ✦ SISTEMAS SOB MEDIDA
+        </span>
+        <h1 className="mt-6 text-4xl font-black leading-tight tracking-tight sm:text-6xl">
+          O sistema da sua empresa,{" "}
+          <span className="gold-gradient-text">do jeito que ela trabalha</span>
         </h1>
-        <p className="mt-4 text-xs tracking-[0.35em] text-gold-dim sm:text-sm">
-          SISTEMAS DE GESTÃO EMPRESARIAL
-        </p>
-        <p className="mx-auto mt-8 max-w-2xl text-lg text-neutral-300 sm:text-xl">
-          {nSistemas} sistemas práticos pra rodar seu negócio, organizar suas finanças e
-          planejar suas viagens. Feitos pra usar no dia a dia, não pra ficar em
-          apresentação.
+        <p className="mx-auto mt-6 max-w-2xl text-lg text-neutral-300 sm:text-xl">
+          A gente cria o sistema pra você — do zero ou partindo de um dos{" "}
+          {nSistemas} que já rodam todo dia em loja, fazenda, imobiliária e
+          obra. Preço fechado antes de começar e entrega por etapas.
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Link
-            href="#trilhas"
-            className="rounded-full bg-gold px-6 py-3 text-sm font-semibold text-bg transition hover:bg-gold-bright"
+          <a
+            href={whatsSobMedida}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-gold px-7 py-3.5 text-sm font-semibold text-bg transition hover:bg-gold-bright"
           >
-            Ver sistemas
-          </Link>
-          <Link
-            href="#bundles"
-            className="rounded-full border border-gold-dim px-6 py-3 text-sm font-semibold text-gold transition hover:border-gold"
+            Contar o que eu preciso
+          </a>
+          <a
+            href="#quanto-custa"
+            className="rounded-full border border-gold-dim px-7 py-3.5 text-sm font-semibold text-gold transition hover:border-gold"
           >
-            Ver combos
-          </Link>
+            Ver quanto custa
+          </a>
         </div>
 
         <p className="mt-6 text-xs text-neutral-500">
-          ✦ <span className="text-gold">3 dias grátis</span> em qualquer sistema
-          · sem cartão de crédito · sem pegadinha
+          ✦ Conversa e orçamento <span className="text-gold">sem custo</span> ·
+          resposta em até 24h
         </p>
       </section>
 
-      <section
-        id="trilhas"
-        className="mx-auto max-w-6xl border-t border-neutral-900 px-6 py-20"
-      >
-        <h2 className="text-center text-3xl font-bold sm:text-4xl">
-          Escolha sua trilha
-        </h2>
-        <p className="mt-3 text-center text-neutral-400">
-          Cada sistema resolve uma dor específica — e se conecta com os outros.
+      <section className="mx-auto max-w-6xl border-t border-neutral-900 px-6 py-16">
+        <p className="text-center text-xs font-bold tracking-[0.25em] text-gold-dim">
+          NÃO É PROMESSA — JÁ ESTÁ RODANDO
         </p>
-
-        <div className="mt-16 space-y-20">
-          {trilhas.map((trilha) => (
-            <div key={trilha.id}>
-              <div className="mb-8 flex items-baseline gap-3">
-                <span className="text-3xl">{trilha.emoji}</span>
-                <div>
-                  <h3 className="text-2xl font-bold sm:text-3xl">
-                    {trilha.titulo}
-                  </h3>
-                  <p className="mt-1 text-sm text-neutral-400">
-                    {trilha.subtitulo}
-                  </p>
-                </div>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {provas.map((c) => (
+            <div
+              key={c.titulo}
+              className="rounded-2xl border border-neutral-900 bg-bg-card p-5"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-xl">{c.icone}</span>
+                <h3 className="font-bold text-gold">{c.titulo}</h3>
               </div>
-
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {trilha.produtos.map((p) => {
-                  const cardInner = (
-                    <>
-                      <div className="flex items-start justify-between gap-2">
-                        <div className="flex items-center gap-3">
-                          <span className="text-2xl">{p.icone}</span>
-                          <h4 className="text-lg font-bold text-gold">
-                            {p.nome}
-                          </h4>
-                        </div>
-                        {(p.emBreve || p.badge) && (
-                          <span
-                            className={
-                              p.emBreve
-                                ? "rounded-full border border-neutral-700 bg-neutral-900 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-neutral-400"
-                                : "rounded-full border border-gold-dim/60 bg-gold-dark/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-gold"
-                            }
-                          >
-                            {p.emBreve ? "em breve" : p.badge}
-                          </span>
-                        )}
-                      </div>
-                      <p className="mt-4 flex-1 text-sm leading-relaxed text-neutral-300">
-                        {p.tagline}
-                      </p>
-                      <div className="mt-6 flex items-end justify-between">
-                        <div>
-                          {p.precoDe && (
-                            <span className="block text-xs text-neutral-500 line-through">
-                              {p.precoDe}/mês
-                            </span>
-                          )}
-                          {p.aPartirDe && (
-                            <span className="block text-[11px] text-neutral-500">
-                              a partir de
-                            </span>
-                          )}
-                          <span className="text-xl font-black text-white">
-                            {p.preco}
-                          </span>
-                          {!p.gratis && !p.preco.includes("/") && (
-                            <span className="text-sm font-medium text-neutral-500">
-                              /mês
-                            </span>
-                          )}
-                        </div>
-                        {!p.emBreve && (
-                          <span className="text-xs font-semibold text-neutral-500 transition group-hover:text-gold">
-                            {p.externo ? "abrir →" : "detalhes →"}
-                          </span>
-                        )}
-                      </div>
-                    </>
-                  );
-
-                  return (
-                    <div
-                      key={p.slug}
-                      className={
-                        p.emBreve
-                          ? "group flex flex-col rounded-2xl border border-neutral-900 bg-bg-card p-6 opacity-75"
-                          : "group flex flex-col rounded-2xl border border-neutral-900 bg-bg-card p-6 transition hover:border-gold-dim hover:shadow-gold"
-                      }
-                    >
-                      {p.emBreve ? (
-                        <div className="flex flex-1 flex-col">{cardInner}</div>
-                      ) : p.externo ? (
-                        <a
-                          href={p.externo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex flex-1 flex-col"
-                        >
-                          {cardInner}
-                        </a>
-                      ) : (
-                        <Link href={`/${p.slug}`} className="flex flex-1 flex-col">
-                          {cardInner}
-                        </Link>
-                      )}
-                      {p.emBreve ? (
-                        <div className="mt-5 border-t border-neutral-900 pt-4">
-                          <a
-                            href={`https://wa.me/5545991077788?text=${encodeURIComponent(
-                              `Oi Lucas, me avise quando o ${p.nome} lançar`,
-                            )}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block rounded-full border border-neutral-700 px-3 py-2 text-center text-xs font-semibold text-neutral-400 transition hover:border-gold-dim hover:text-gold"
-                          >
-                            Me avise quando lançar →
-                          </a>
-                        </div>
-                      ) : p.externo ? (
-                        <div className="mt-5 border-t border-neutral-900 pt-4">
-                          <a
-                            href={p.externo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
-                          >
-                            {/* "grátis" só onde o produto todo é grátis: na
-                                Virada o teste é grátis, o relatório é pago. */}
-                            {p.gratis ? "Acessar grátis →" : "Começar →"}
-                          </a>
-                        </div>
-                      ) : p.semDemo ? (
-                        <div className="mt-5 border-t border-neutral-900 pt-4">
-                          <a
-                            href={trialHref(p)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
-                          >
-                            Testar 3 dias grátis →
-                          </a>
-                        </div>
-                      ) : p.semTrial && p.demoUrl ? (
-                        /* Tem demo mas não tem trial — caso do VigiaPro, que
-                           envolve mini PC no local e instalação de câmera, e
-                           por isso não é autoatendimento. Sem este ramo o card
-                           caía em "!p.semTrial" e voltava a oferecer os 3 dias
-                           grátis num sistema que não tem rota de cadastro. */
-                        <div className="mt-5 grid grid-cols-2 gap-2 border-t border-neutral-900 pt-4">
-                          <Link
-                            href={`/${p.slug}`}
-                            className="rounded-full border border-gold-dim/60 px-3 py-2 text-center text-xs font-semibold text-gold transition hover:border-gold"
-                          >
-                            Como funciona
-                          </Link>
-                          <a
-                            href={demoHref(p)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
-                          >
-                            Ver demo →
-                          </a>
-                        </div>
-                      ) : !p.semTrial ? (
-                        <div className="mt-5 grid grid-cols-2 gap-2 border-t border-neutral-900 pt-4">
-                          <a
-                            href={demoHref(p)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="rounded-full border border-gold-dim/60 px-3 py-2 text-center text-xs font-semibold text-gold transition hover:border-gold"
-                          >
-                            Ver demo
-                          </a>
-                          <a
-                            href={trialHref(p)}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="rounded-full bg-gold px-3 py-2 text-center text-xs font-semibold text-bg transition hover:bg-gold-bright"
-                          >
-                            Testar 3 dias
-                          </a>
-                        </div>
-                      ) : (
-                        <div className="mt-5 border-t border-neutral-900 pt-4">
-                          <Link
-                            href={`/${p.slug}`}
-                            className="block rounded-full border border-gold-dim/60 px-3 py-2 text-center text-xs font-semibold text-gold transition hover:border-gold"
-                          >
-                            Como funciona →
-                          </Link>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-300">
+                {c.texto}
+              </p>
             </div>
           ))}
         </div>
       </section>
 
       <section
-        id="bundles"
+        id="como-funciona"
         className="mx-auto max-w-6xl border-t border-neutral-900 px-6 py-20"
       >
         <h2 className="text-center text-3xl font-bold sm:text-4xl">
-          Monte seu pacote
+          Como funciona
         </h2>
         <p className="mt-3 text-center text-neutral-400">
-          Escolha os sistemas que fazem sentido pra você — o desconto vai
-          crescendo conforme você adiciona.
+          Você não precisa saber nada de tecnologia. Precisa saber como a sua
+          empresa funciona — o resto é com a gente.
         </p>
-        <p className="mt-2 text-center text-xs text-gold-dim">
-          ✦ +5% off por sistema adicional · até{" "}
-          <strong className="text-gold">50% off</strong> pegando todos
-        </p>
-
-        <div className="mt-10">
-          <MontadorCombo />
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {passos.map((s) => (
+            <div
+              key={s.n}
+              className="rounded-2xl border border-neutral-900 bg-bg-card p-6"
+            >
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-gold text-sm font-black text-bg">
+                {s.n}
+              </span>
+              <h3 className="mt-4 text-lg font-bold">{s.titulo}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-neutral-400">
+                {s.texto}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
       <section
-        id="sob-medida"
+        id="quanto-custa"
         className="mx-auto max-w-6xl border-t border-neutral-900 px-6 py-20"
       >
-        <div className="rounded-3xl border border-gold-dim bg-gradient-to-br from-gold-dark/30 via-bg-card to-bg-card p-8 sm:p-12 shadow-gold">
-          <div className="grid items-center gap-8 lg:grid-cols-[1.2fr,1fr]">
-            <div>
-              <span className="inline-block rounded-full border border-gold-dim/60 bg-gold-dark/30 px-3 py-1 text-xs font-bold tracking-wider text-gold">
-                ✦ SOB MEDIDA
-              </span>
-              <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-                Não achou o sistema que você precisa?
-              </h2>
-              <p className="mt-4 text-base text-neutral-300 sm:text-lg">
-                Eu desenvolvo <strong className="text-white">sistema personalizado</strong>{" "}
-                pra sua operação — do zero ou adaptando um dos meus 14 que já
-                rodam. Mesmo padrão Luqsys: Flask + PostgreSQL, deploy próprio,
-                código seu.
+        <h2 className="text-center text-3xl font-bold sm:text-4xl">
+          Quanto custa
+        </h2>
+        <p className="mt-3 text-center text-neutral-400">
+          Valor fechado na proposta. Estes são os pontos de partida.
+        </p>
+
+        <div className="mt-12 grid gap-4 lg:grid-cols-3">
+          {precos.map((pl) => (
+            <div
+              key={pl.nome}
+              className={
+                pl.destaque
+                  ? "flex flex-col rounded-2xl border border-gold-dim bg-gradient-to-br from-gold-dark/30 via-bg-card to-bg-card p-7 shadow-gold"
+                  : "flex flex-col rounded-2xl border border-neutral-900 bg-bg-card p-7"
+              }
+            >
+              <div className="flex items-center justify-between gap-2">
+                <h3 className="text-xl font-bold text-gold">{pl.nome}</h3>
+                {pl.destaque && (
+                  <span className="rounded-full border border-gold-dim/60 bg-gold-dark/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-gold">
+                    mais pedido
+                  </span>
+                )}
+              </div>
+              <p className="mt-4">
+                <span className="block text-[11px] text-neutral-500">a partir de</span>
+                <span className="text-3xl font-black text-white">{pl.preco}</span>
               </p>
-
-              <ul className="mt-6 grid gap-2 text-sm text-neutral-300 sm:grid-cols-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-gold">✓</span> Levantamento gratuito por
-                  WhatsApp
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gold">✓</span> Escopo + orçamento fechado
-                  antes de começar
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gold">✓</span> Entrega em sprints (2 a 4
-                  semanas)
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-gold">✓</span> Hospedagem + suporte
-                  mensal opcional
-                </li>
+              <p className="mt-1 text-xs text-neutral-500">Prazo: {pl.prazo}</p>
+              <p className="mt-4 text-sm leading-relaxed text-neutral-300">{pl.texto}</p>
+              <ul className="mt-5 flex-1 space-y-2 text-sm text-neutral-300">
+                {pl.itens.map((i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <span className="text-gold">✓</span> {i}
+                  </li>
+                ))}
               </ul>
-            </div>
-
-            <div className="flex flex-col gap-3">
               <a
-                href="https://wa.me/5545991077788?text=Oi%20Lucas%2C%20quero%20um%20sistema%20personalizado"
+                href={`${WHATS}?text=${encodeURIComponent(
+                  `Oi Lucas, quero um orçamento (${pl.nome}). Hoje eu preciso de:`,
+                )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-gold px-7 py-4 text-center text-sm font-semibold text-bg transition hover:bg-gold-bright"
+                className={
+                  pl.destaque
+                    ? "mt-6 rounded-full bg-gold px-5 py-3 text-center text-sm font-semibold text-bg transition hover:bg-gold-bright"
+                    : "mt-6 rounded-full border border-gold-dim px-5 py-3 text-center text-sm font-semibold text-gold transition hover:border-gold"
+                }
               >
-                Falar no WhatsApp
+                Pedir orçamento
               </a>
-              <a
-                href="mailto:contato@luqsys.com.br?subject=Quero%20um%20sistema%20personalizado&body=Oi%20Lucas%2C%20preciso%20de%20um%20sistema%20pra%3A%20%5Bdescreva%20o%20que%20voc%C3%AA%20precisa%5D"
-                className="rounded-full border border-gold-dim px-7 py-4 text-center text-sm font-semibold text-gold transition hover:border-gold"
-              >
-                Enviar e-mail
-              </a>
-              <p className="mt-1 text-center text-xs text-neutral-500">
-                Conta o que você precisa — respondo em até 24h com
-                proposta inicial.
-              </p>
             </div>
-          </div>
+          ))}
         </div>
+
+        <p className="mt-6 text-center text-sm text-neutral-400">
+          Depois de pronto: <strong className="text-white">a partir de R$ 199/mês</strong>{" "}
+          com hospedagem, backup, suporte e pequenos ajustes.
+        </p>
+
+        <div className="mx-auto mt-14 max-w-3xl space-y-3">
+          {perguntas.map((q) => (
+            <details
+              key={q.p}
+              className="group rounded-xl border border-neutral-900 bg-bg-card px-5 py-4"
+            >
+              <summary className="cursor-pointer list-none font-semibold text-neutral-200 marker:hidden">
+                <span className="mr-2 text-gold transition group-open:rotate-90 inline-block">›</span>
+                {q.p}
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-400">{q.r}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section
+        id="trilhas"
+        className="mx-auto max-w-6xl border-t border-neutral-900 px-6 py-20"
+      >
+        <h2 className="text-center text-2xl font-bold sm:text-3xl">
+          Ou comece por um sistema pronto
+        </h2>
+        <p className="mt-3 text-center text-sm text-neutral-400">
+          {nSistemas} sistemas prontos pra usar hoje. Cada um
+          tem o seu próprio site, com planos e como funciona.
+        </p>
+
+        <div className="mt-12 space-y-10">
+          {trilhas.map((trilha) => (
+            <div key={trilha.id}>
+              <h3 className="mb-4 text-sm font-bold uppercase tracking-wider text-neutral-500">
+                {trilha.emoji} {trilha.titulo}
+              </h3>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {trilha.produtos.map((p) => {
+                  const href = siteDoSistema(p);
+                  const fora = href.startsWith("http");
+                  const inner = (
+                    <>
+                      <span className="text-xl">{p.icone}</span>
+                      <span className="min-w-0 flex-1">
+                        <span className="flex items-baseline justify-between gap-2">
+                          <span className="font-bold text-gold">{p.nome}</span>
+                          <span className="shrink-0 text-xs text-neutral-500">
+                            {p.gratis
+                              ? "grátis"
+                              : `${p.aPartirDe ? "desde " : ""}${p.preco}${
+                                  p.preco.includes("/") ? "" : "/mês"
+                                }`}
+                          </span>
+                        </span>
+                        <span className="mt-1 block text-xs leading-relaxed text-neutral-400 line-clamp-2">
+                          {p.tagline}
+                        </span>
+                      </span>
+                    </>
+                  );
+                  const cls =
+                    "flex items-start gap-3 rounded-xl border border-neutral-900 bg-bg-card p-4 transition hover:border-gold-dim";
+                  return fora ? (
+                    <a
+                      key={p.slug}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cls}
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    <Link key={p.slug} href={href} className={cls}>
+                      {inner}
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <details className="mt-14 rounded-2xl border border-neutral-900 bg-bg-card p-6">
+          <summary className="cursor-pointer list-none text-center font-semibold text-gold marker:hidden">
+            Vai usar mais de um? Monte seu pacote com até 50% off →
+          </summary>
+          <div className="mt-8">
+            <MontadorCombo />
+          </div>
+        </details>
       </section>
 
       <section className="mx-auto max-w-3xl border-t border-neutral-900 px-6 py-20 text-center">
         <h2 className="text-3xl font-bold sm:text-4xl">
-          Sistemas feitos pra <span className="gold-gradient-text">rodar</span>
+          Conta pra gente o que <span className="gold-gradient-text">trava</span> a sua empresa
         </h2>
         <p className="mt-4 text-neutral-400">
-          Não somos consultoria, não somos enterprise. Somos software direto que
-          resolve a dor da pequena e média empresa brasileira.
+          Planilha que ninguém atualiza, papel que se perde, conta feita na mão.
+          Em uma conversa a gente diz se dá pra resolver, em quanto tempo e por
+          quanto.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Link
-            href="#trilhas"
+          <a
+            href={whatsSobMedida}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-gold px-7 py-3 text-sm font-semibold text-bg transition hover:bg-gold-bright"
           >
-            Explorar sistemas
-          </Link>
+            Falar no WhatsApp
+          </a>
           <a
-            href="mailto:contato@luqsys.com.br"
+            href="mailto:contato@luqsys.com.br?subject=Quero%20um%20sistema%20sob%20medida&body=Oi%20Lucas%2C%20preciso%20de%20um%20sistema%20pra%3A%20"
             className="rounded-full border border-gold-dim px-7 py-3 text-sm font-semibold text-gold transition hover:border-gold"
           >
-            Falar com a gente
+            Enviar e-mail
           </a>
         </div>
       </section>
