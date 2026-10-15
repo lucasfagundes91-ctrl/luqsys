@@ -355,6 +355,20 @@ const whatsSobMedida = `${WHATS}?text=${encodeURIComponent(
   "Oi Lucas, quero um sistema pra minha empresa. Hoje eu preciso de:",
 )}`;
 
+// Dois jeitos de pagar o sob medida (decisão do Lucas, 15/10/2026): o preço
+// cheio entrega o código pro cliente; com o código ficando na Luqsys sai pela
+// metade, porque a base pode ser reaproveitada pra outros clientes. A
+// Adaptação não entra nisso: ela já parte de um sistema que é da Luqsys.
+type Faixa = {
+  nome: string;
+  preco: string;
+  precoLuqsys?: string;
+  prazo: string;
+  texto: string;
+  itens: string[];
+  destaque: boolean;
+};
+
 // O que já roda de verdade — a prova de que sabemos fazer. Só fato conferido:
 // os números da Luvan são os da página do AluguelPro (contados por
 // proprietário do tenant real, sem dados de teste).
@@ -408,7 +422,7 @@ const passos = [
   },
 ];
 
-const precos = [
+const precos: Faixa[] = [
   {
     nome: "Adaptação",
     preco: "R$ 1.500",
@@ -425,6 +439,7 @@ const precos = [
   {
     nome: "Sob medida",
     preco: "R$ 6.000",
+    precoLuqsys: "R$ 3.000",
     prazo: "3 a 6 semanas",
     texto:
       "Sistema feito do zero pro processo da sua empresa, com o que você precisa e nada do que não usa.",
@@ -439,6 +454,7 @@ const precos = [
   {
     nome: "Projeto completo",
     preco: "R$ 15.000",
+    precoLuqsys: "R$ 7.500",
     prazo: "a combinar",
     texto:
       "Vários setores conversando e integrações com o que você já usa.",
@@ -467,7 +483,7 @@ const perguntas = [
   },
   {
     p: "O sistema fica meu?",
-    r: "O sob medida é seu. Se um dia quiser levar pra outro lugar, a gente entrega o código e o banco de dados.",
+    r: "Você escolhe. No preço cheio o código é seu: se um dia quiser levar pra outro lugar, a gente entrega o código e o banco de dados. Se o código ficar com a Luqsys, o projeto sai pela metade, e os seus dados continuam sendo só seus — o que a gente reaproveita é o programa, nunca a informação da sua empresa.",
   },
   {
     p: "Vocês usam o que fazem?",
@@ -633,7 +649,16 @@ export default function Home() {
               <p className="mt-4">
                 <span className="block text-[11px] text-neutral-500">a partir de</span>
                 <span className="text-3xl font-black text-white">{pl.preco}</span>
+                {pl.precoLuqsys && (
+                  <span className="ml-2 text-xs text-neutral-500">código seu</span>
+                )}
               </p>
+              {pl.precoLuqsys && (
+                <p className="mt-1 text-sm text-neutral-300">
+                  ou <strong className="text-gold">{pl.precoLuqsys}</strong> com o
+                  código na Luqsys
+                </p>
+              )}
               <p className="mt-1 text-xs text-neutral-500">Prazo: {pl.prazo}</p>
               <p className="mt-4 text-sm leading-relaxed text-neutral-300">{pl.texto}</p>
               <ul className="mt-5 flex-1 space-y-2 text-sm text-neutral-300">
@@ -664,6 +689,13 @@ export default function Home() {
         <p className="mt-6 text-center text-sm text-neutral-400">
           Depois de pronto: <strong className="text-white">a partir de R$ 199/mês</strong>{" "}
           com hospedagem, backup, suporte e pequenos ajustes.
+        </p>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-xs leading-relaxed text-neutral-500">
+          <span className="text-neutral-300">Código seu:</span> o sistema é
+          seu e pode ir pra onde quiser.{" "}
+          <span className="text-neutral-300">Código na Luqsys:</span> você usa
+          do mesmo jeito, mas a gente pode reaproveitar a base em outros
+          projetos — por isso custa a metade.
         </p>
 
         <div className="mx-auto mt-14 max-w-3xl space-y-3">
