@@ -1,0 +1,151 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Guia FarmPro</title>
+<style>
+@page { size:A4; margin:16mm 15mm 16mm 15mm }
+* { box-sizing:border-box }
+body { font-family:'DejaVu Sans',Arial,sans-serif; color:#1f2937; font-size:10.5pt; line-height:1.5; margin:0 }
+.capa { height:262mm; background:#123d26; color:#fff; border-radius:6mm; padding:22mm 18mm; display:flex; flex-direction:column; justify-content:space-between; page-break-after:always }
+.capa img { width:100mm }
+.capa h1 { font-size:30pt; line-height:1.15; margin:0 0 6mm; color:#a3e635 }
+.capa p { font-size:13pt; color:#d1e7d8; margin:0 }
+.capa .rod { font-size:10pt; color:#a7c4b2 }
+h2 { color:#1A5C38; font-size:16pt; margin:0 0 3mm; border-bottom:2px solid #7cb342; padding-bottom:2mm }
+h3 { font-size:11.5pt; margin:5mm 0 1.5mm }
+.sec { page-break-before:always }
+.n { display:inline-block; width:7mm; height:7mm; border-radius:50%; background:#2E7D52; color:#fff; text-align:center; font-weight:700; line-height:7mm; margin-right:2mm; font-size:10pt }
+.passo { margin:0 0 3.5mm; padding:3mm 4mm; border:1px solid #e5e7eb; border-radius:3mm; page-break-inside:avoid }
+.passo b.t { font-size:11pt }
+.passo p { margin:1mm 0 0 9mm; color:#4b5563 }
+img.tela { width:66%; display:block; margin-left:auto; margin-right:auto; border:1px solid #e5e7eb; border-radius:2mm; margin-top:2mm; margin-bottom:1mm }
+.leg { font-size:8.5pt; color:#6b7280; text-align:center; margin-bottom:4mm }
+.box { background:#eef7e9; border-left:4px solid #2E7D52; padding:3mm 4mm; border-radius:2mm; margin:3mm 0; page-break-inside:avoid }
+.duas { display:flex; gap:6mm; align-items:flex-start }
+.duas > div { flex:1 }
+.cel { width:50mm; border:1px solid #e5e7eb; border-radius:4mm }
+table { width:100%; border-collapse:collapse; margin:2mm 0 }
+td { border-bottom:1px solid #eee; padding:2mm 2mm; vertical-align:top }
+td:first-child { width:42mm; font-weight:700 }
+tr { page-break-inside:avoid }
+.faq { page-break-inside:avoid; margin-bottom:3.5mm }
+.faq > b:first-child { display:block }
+ul,ol { margin:1mm 0 2mm; padding-left:6mm }
+.bloco { page-break-inside:avoid }
+</style></head><body>
+
+<div class="capa">
+  <img src="logo.png">
+  <div><h1>Guia de primeiros passos</h1>
+  <p>Do primeiro acesso até a fazenda rodando: notas, lançamentos, centros de custo, folha, ponto e o caderno de campo da equipe.</p></div>
+  <div class="rod">farmpro.luqsys.com.br · Suporte no WhatsApp (45) 99107-7788<br>Desenvolvido por Lucas Fagundes · Luqsys</div>
+</div>
+
+<h2>1. Como acessar</h2>
+<div class="passo"><span class="n">1</span><b class="t">Abra o sistema</b><p>No navegador do celular ou do computador: <b>farmpro.luqsys.com.br</b></p></div>
+<div class="passo"><span class="n">2</span><b class="t">Entre com usuário e senha</b><p>Se você criou a conta pelo teste grátis, o usuário é o seu e-mail.</p></div>
+<div class="passo"><span class="n">3</span><b class="t">Esqueceu a senha?</b><p>Chame o suporte no WhatsApp (45) 99107-7788 e a gente libera uma nova. Pra trocar depois: ⚙️ Ferramentas → 👥 Usuários → Editar no seu nome.</p></div>
+<div class="passo"><span class="n">4</span><b class="t">Instale no celular</b><p>Abra <b>farmpro.luqsys.com.br/instalar</b> no celular e siga o passo a passo do iPhone ou do Android. São 3 ícones: <b>FarmPro</b> (sistema completo), <b>Resumo</b> (painel do dia) e <b>Conferir</b> (fila do BankPro).</p></div>
+<div class="passo"><span class="n">5</span><b class="t">Face ID</b><p>Já logado no celular, toque em ⚙️ Ferramentas → 🔐 Ativar Face ID. Da próxima vez, entre sem digitar a senha.</p></div>
+<img class="tela" src="d_login.png"><div class="leg">Tela de entrada</div>
+
+<div class="sec"><h2>2. Primeiro acesso: a tela de boas-vindas</h2>
+<div class="duas"><div>
+<p>No primeiro acesso o sistema abre a tela de <b>boas-vindas</b>, com 6 passos. Os 4 primeiros colocam o financeiro pra rodar:</p>
+<div class="passo"><span class="n">1</span><b class="t">Centros de custo</b><p>Já vêm 4 criados: 1 Geral, 2 Lavoura, 3 Pecuária e 4 Maquinário. Mude em ⚙️ Ferramentas → 🏢 Centros.</p></div>
+<div class="passo"><span class="n">2</span><b class="t">Talhões e culturas</b><p>Nome, área em hectares, cultura e safra. O custo por hectare sai daí.</p></div>
+<div class="passo"><span class="n">3</span><b class="t">Primeira nota</b><p>Foto, PDF ou XML da NF-e na tela inicial.</p></div>
+<div class="passo"><span class="n">4</span><b class="t">O que não tem nota</b><p>➕ Lançamento, e 🔄 Recorrentes pro que se repete todo mês.</p></div>
+<div class="passo"><span class="n">5</span><b class="t">Funcionários</b><p>Na 💰 Folha: CLT e diaristas.</p></div>
+<div class="passo"><span class="n">6</span><b class="t">Logins e celular</b><p>Um login de funcionário pra cada um (👥 Usuários) e o app instalado.</p></div>
+<p>Depois toque em <b>Tudo certo, ir pro sistema →</b>. Dá pra rever esses passos pela Ajuda.</p>
+</div><div style="flex:0 0 54mm"><img class="cel" src="m_bemvindo_top.png"><div class="leg">Boas-vindas no celular</div></div></div></div>
+
+<div class="sec"><h2>3. O dia a dia: notas e lançamentos</h2>
+<p>A tela inicial tem os totais (receitas, despesas e saldo), o envio de notas à esquerda e a lista de lançamentos à direita. Os botões acima dos totais filtram por centro de custo.</p>
+<img class="tela" src="d_inicio.png"><div class="leg">Tela inicial</div>
+<h3>📸 Mandar uma nota</h3>
+<ol>
+<li>Em <b>📸 Enviar Nota Fiscal</b>, escolha Despesa ou Receita e o centro de custo.</li>
+<li>Mande <b>fotos</b> (várias de uma vez), <b>PDFs</b> com várias notas ou o <b>XML da NF-e</b> (o mais preciso).</li>
+<li>Toque em <b>🚀 Processar Notas</b>. A IA lê fornecedor, valor, data e itens e cria o lançamento.</li>
+<li>Confira na lista e corrija no ✏️ se precisar. Errou o lote? <b>↩️ Desfazer</b> apaga o último lote que você processou.</li>
+</ol>
+<div class="bloco"><h3>✍️ Sem nota</h3>
+<p><b>➕ Lançamento</b>: empresa, descrição e valor (obrigatórios), forma de pagamento, centro, talhão, cultura e categoria. Pra diarista, frete, conta de luz.</p>
+<table>
+<tr><td>Botões da linha</td><td>✏️ editar · 🗑️ apagar · 💳 marcar pago (vira ✅) · 📋 duplicar · 📎 anexos</td></tr>
+<tr><td>Status fiscal</td><td>🧾 Com NF (entra na contabilidade), 🎫 Sem NF (ticket, recibo) ou ❓ Indefinido.</td></tr>
+<tr><td>Subcategoria</td><td>Opcional. Use o nome do maquinário pra ver quanto cada trator gastou.</td></tr>
+<tr><td>Recorrentes</td><td>⚙️ Ferramentas → 🔄 Recorrentes. Avisa quando um gasto de todo mês ficou em branco.</td></tr>
+<tr><td>Alertas</td><td>⚙️ Ferramentas → 🔔 Alertas: limite em R$ por categoria e centro, no mês.</td></tr>
+</table></div></div>
+
+<div class="sec"><h2>4. Talhões, livro caixa e banco</h2>
+<h3>🌾 Talhões e custo por hectare</h3>
+<p>Em ⚙️ Ferramentas → 🌾 Talhões: nome, área, cultura, safra e centro. Ao lançar, escolha o talhão. A tela mostra o gasto total, o custo por hectare e quantas notas cada talhão tem.</p>
+<img class="tela" src="d_talhoes.png" style="width:56%"><div class="leg">Gestão de talhões</div>
+<div class="bloco"><h3>📒 Livro Caixa e LCDPR</h3>
+<p>Receitas, despesas e resultado do ano ou do mês, com a conta contábil de cada lançamento. A IA classifica sozinha depois de cada nota; você reclassifica ou lança à mão em ➕ Manual. <b>📥 Exportar LCDPR</b> pede CPF, nome, propriedade e NIRF e baixa o TXT do ano. Confira com o contador antes de entregar.</p>
+<img class="tela" src="d_livrocaixa.png" style="width:56%"><div class="leg">Livro Caixa Digital</div></div>
+<div class="bloco"><h3>🏦 Extrato do banco</h3>
+<ol>
+<li>Baixe o extrato em <b>OFX</b> no app do banco.</li>
+<li>⚙️ Ferramentas → 🏦 Extrato do banco → <b>Importar OFX</b>. Subir de novo não duplica.</li>
+<li>Escolha o mês e toque em <b>Conciliar automaticamente</b> (casa por nome e valor).</li>
+<li>O que sobrar: criar lançamento, vincular, saque pro caixa, não é da fazenda ou ignorar.</li>
+</ol></div>
+</div>
+
+<div class="sec"><h2>5. Equipe: folha, ponto e caderno</h2>
+<h3>💰 Folha de pagamento</h3>
+<p><b>➕ Funcionário</b> (CLT ou diarista fixo), depois <b>⚡ Gerar Folha do Mês</b>. O sistema calcula INSS, IRRF, FGTS, 13º e férias proporcionais e o custo total. <b>🔒 Fechar Folha</b> lança o mês como despesa. É uma ajuda: confira com o contador.</p>
+<img class="tela" src="d_folha.png"><div class="leg">Folha de pagamento</div>
+<div class="bloco"><h3>⏱️ Ponto</h3>
+<p>No <b>🔗 Link</b> de cada funcionário você copia o link do ponto e manda pelo WhatsApp. Ele abre no celular, sem app e sem senha, e bate entrada, almoço, volta e saída com selfie e localização. A tela mostra horas do dia, saldo do mês e banco de horas.</p>
+<img class="tela" src="d_ponto.png"><div class="leg">Ponto eletrônico do dia</div></div></div>
+
+<div class="sec"><h2>6. Caderno de campo e painel do dia</h2>
+<div class="duas"><div>
+<p>Em ⚙️ Ferramentas → 👥 Usuários, crie um login com perfil <b>Funcionário</b>. Ele entra direto no <b>Caderno de Campo</b> e não vê o financeiro.</p>
+<table>
+<tr><td>📝 Diário</td><td>O que foi feito hoje e a programação de amanhã, por texto, áudio (vira texto), foto ou vídeo.</td></tr>
+<tr><td>📋 Pendências · 🛒 Compras</td><td>O que precisa fazer ou comprar.</td></tr>
+<tr><td>🚗 Saídas</td><td>Retirada e devolução de veículo ou máquina, com km e fotos.</td></tr>
+<tr><td>🔧 Manutenção</td><td>Serviço na máquina, medidor, litros, valor e fotos.</td></tr>
+<tr><td>📦 Estoque · 🚜 Operações</td><td>Saldo dos insumos; aplicação, plantio e colheita.</td></tr>
+</table>
+<div class="box">Pro diário sair com o nome do funcionário, o login dele precisa estar ligado ao cadastro na Folha. Isso a gente faz pelo suporte.</div>
+</div><div style="flex:0 0 50mm"><img class="cel" src="m_caderno.png"><div class="leg">Caderno de campo</div></div></div>
+<div class="duas" style="margin-top:4mm"><div style="flex:0 0 42mm"><img class="cel" src="m_resumo.png" style="width:42mm"><div class="leg">App Resumo</div></div><div>
+<h3 style="margin-top:0">📱 Resumo: o painel do dono no celular</h3>
+<p>O diário de cada funcionário, quem não mandou nada hoje, pendências, compras, estoque, manutenção, ponto e saídas. Você também escreve no diário de um funcionário (texto ou áudio) e ele vê no caderno com o seu nome.</p>
+<p>No computador, o mesmo fica em <b>👷 Equipe ▾ → 📋 Pendências, Compras, Diário &amp; Caderno</b> e <b>💬 Chat com funcionários</b>.</p>
+</div></div></div>
+
+<div class="sec"><h2>7. Lavoura, estoque e rebanho</h2>
+<table>
+<tr><td>📦 Estoque</td><td>Produto, entrada, saída e ajuste de inventário. Mostra saldo, valor em estoque e o que está abaixo do mínimo.</td></tr>
+<tr><td>🧪 Aplicações</td><td>Custo por talhão e por alqueire e sobra de produto, a partir das aplicações do caderno. O custo operacional é uma estimativa e não vira despesa.</td></tr>
+<tr><td>🌱 Manejo</td><td>Assistente que lê o caderno da fazenda e responde perguntas, mais avaliações de campo, anotações e ensaios.</td></tr>
+<tr><td>🐑 Rebanho</td><td>Contagem inicial, nascimento, compra, venda, abate e morte, por espécie.</td></tr>
+<tr><td>📄 Documentos</td><td>ART, NR, licenças e certificados, com vencimento. Filtra os que vencem em 30 dias.</td></tr>
+<tr><td>🚜 FieldView</td><td>Importa a exportação do FieldView (CSV) como aplicação, plantio ou colheita.</td></tr>
+<tr><td>🧾 NF de devolução</td><td>Precisa de conta na Focus NFe com o certificado do produtor, configurada pelo suporte.</td></tr>
+<tr><td>👨‍👩 Grupo familiar</td><td>Família que divide a fazenda mas declara separado: cada um com seu livro caixa, e "Ver fazenda inteira" soma tudo no Dashboard.</td></tr>
+</table>
+<div class="bloco"><h3>📊 Relatórios, Dashboard e contador</h3>
+<table>
+<tr><td>📊 Relatórios</td><td>Filtros por período, tipo, categoria, centro, forma de pagamento. Imprimir ou Exportar Excel.</td></tr>
+<tr><td>📊 Dashboard</td><td>Despesas por categoria e por centro, evolução mês a mês e os 10 maiores fornecedores.</td></tr>
+<tr><td>📤 Contador</td><td>Escolha o período e digite o e-mail do contador: ele recebe PDF e planilha Excel.</td></tr>
+</table></div>
+
+<div class="sec"><h2>8. Dúvidas mais comuns</h2>
+<div class="faq"><b>O funcionário vê o financeiro?</b>Não. Com o perfil Funcionário ele entra direto no caderno de campo. No estoque vê o saldo, sem o custo.</div>
+<div class="faq"><b>Funciona no celular e no computador ao mesmo tempo?</b>Sim. O que você lança num aparelho aparece no outro.</div>
+<div class="faq"><b>Posso separar custos por talhão e cultura?</b>Sim. Todo lançamento aceita centro de custo, talhão e cultura. A tela de Talhões mostra o custo por hectare.</div>
+<div class="faq"><b>Dá pra mandar comprovante pelo WhatsApp?</b>Com o BankPro, sim: o comprovante aprovado lá com destino FarmPro cai no botão 📥 BankPro e no app Conferir. Sem o BankPro, mande a foto pela tela inicial. Pra ligar a integração, fale com o suporte.</div>
+<div class="faq"><b>Processei uma nota errada.</b>↩️ Desfazer apaga o último lote. Pra uma só, use ✏️ ou 🗑️. Nota repetida: ⚙️ Ferramentas → 🗂️ Agrupar Notas.</div>
+<div class="faq"><b>O que é o LCDPR?</b>O Livro Caixa Digital do Produtor Rural, entregue à Receita. Quem é obrigado depende da receita bruta: confirme com o seu contador. O FarmPro gera o TXT a partir do Livro Caixa.</div>
+<div class="faq"><b>Quanto dura o teste grátis?</b>3 dias. Depois aparece a tela pra assinar. Sem fidelidade.</div>
+<div class="faq"><b>Onde acho ajuda dentro do sistema?</b>Em ⚙️ Ferramentas → <b>❓ Ajuda</b>, com busca (ex.: "talhão", "ponto", "extrato"). O botão 🌾 da Fazendinha, no canto da tela, responde dúvidas na hora.</div>
+<div class="box" style="margin-top:6mm">💬 <b>Suporte:</b> WhatsApp (45) 99107-7788, ou pelo botão <b>Falar no WhatsApp</b> no fim da Ajuda.</div></div>
+</body></html>
