@@ -44,7 +44,7 @@ ul,ol { margin:1mm 0 2mm; padding-left:6mm }
 <div class="duas"><div>
 <div class="passo"><span class="n">1</span><b class="t">Abra o sistema</b><p>No navegador do celular ou do computador: <b>carregapro.luqsys.com.br</b></p></div>
 <div class="passo"><span class="n">2</span><b class="t">Entre com e-mail e senha</b><p>O login é o e-mail do cadastro. Quem ainda não tem conta toca em <b>Testar 3 dias grátis</b>.</p></div>
-<div class="passo"><span class="n">3</span><b class="t">Esqueceu a senha?</b><p>Ainda não tem "esqueci minha senha" nem troca de senha dentro do sistema. Chame o suporte no WhatsApp e a gente gera uma nova.</p></div>
+<div class="passo"><span class="n">3</span><b class="t">Esqueceu a senha?</b><p>Na tela de login, toque em <b>Esqueci minha senha</b> e digite o e-mail: chega um link pra criar uma senha nova (vale 1 hora, uso único). Pra trocar a senha, use <b>⚙️ Configurações</b>.</p></div>
 <div class="passo"><span class="n">4</span><b class="t">Face ID</b><p>Já dentro do sistema, toque em <b>🔐 Ativar Face ID</b> no menu. Depois é só tocar em <b>Entrar com Face ID</b> no login. Ative em cada aparelho.</p></div>
 <div class="passo"><span class="n">5</span><b class="t">Instale no celular</b><p>Abra <b>carregapro.luqsys.com.br/instalar</b> e siga o passo a passo do iPhone ou do Android. Fica com ícone na tela, igual um aplicativo.</p></div>
 </div><div style="flex:0 0 68mm"><img src="d_login.png" style="width:68mm;border:1px solid #e5e7eb;border-radius:2mm"><div class="leg">Tela de entrada</div></div></div>
@@ -108,9 +108,9 @@ ul,ol { margin:1mm 0 2mm; padding-left:6mm }
 <div class="duas"><div style="flex:0 0 70mm">
 <img src="d_tarifa_nova.png" style="width:70mm;border:1px solid #e5e7eb;border-radius:2mm"><div class="leg">Nova tarifa</div>
 </div><div>
-<div class="box" style="margin-top:0"><b>Qual tarifa vale?</b><br>A que está ativa quando a carga <b>começa</b>. Tarifa de uma estação ganha da tarifa de "todas". O preço fica gravado na recarga.</div>
+<div class="box" style="margin-top:0"><b>Qual tarifa vale?</b><br>A ativa quando a carga <b>começa</b>; a de janela mais curta ganha (noturna ganha da "Padrão"). O preço fica gravado na recarga.</div>
 <div class="box alerta"><b>Sem tarifa no horário, a recarga sai com valor zero.</b> Cadastre pelo menos uma "Padrão", das 00:00 às 23:59, todos os dias.</div>
-<div class="box">Horário que vira a noite (22h às 6h)? Cadastre duas: 22:00–23:59 e 00:00–06:00.</div>
+<div class="box">Noturna (22h às 6h)? Uma tarifa só: 22:00 a 06:00.</div>
 </div></div>
 <p style="margin:1mm 0">Pela tela ainda não dá pra editar nem apagar tarifa. Precisa mudar? Fale com o suporte.</p>
 
@@ -119,7 +119,7 @@ ul,ol { margin:1mm 0 2mm; padding-left:6mm }
 <p>O link de cada estação está em <b>Ver app motorista ↗</b>, no cartão dela. Transforme num QR e cole no carregador.</p>
 <ol>
 <li><b>Primeira vez:</b> CPF, nome, e-mail, endereço pelo CEP e um <b>PIN de 6 dígitos</b>. Depois, entra com CPF e PIN.</li>
-<li><b>Adicionar crédito:</b> R$ 20, 50, 100, 200 ou outro valor (mínimo R$ 5), por <b>Pix</b> ou <b>cartão</b>. O saldo entra quando o pagamento confirma.</li>
+<li><b>Adicionar crédito:</b> R$ 20, 50, 100, 200 ou outro valor (mínimo R$ 5), por <b>Pix</b> ou <b>cartão</b>. O saldo entra quando o pagamento confirma. Com o walletId do seu Asaas em <b>⚙️ Configurações</b>, o Pix cai na sua conta.</li>
 <li><b>⚡ Liberar carga (30 min):</b> precisa de pelo menos R$ 5,00 de saldo.</li>
 <li>No carregador, digita o <b>CPF</b> e conecta o cabo.</li>
 <li>No fim, o sistema desconta do saldo os kWh × o preço da tarifa.</li>
@@ -130,12 +130,12 @@ ul,ol { margin:1mm 0 2mm; padding-left:6mm }
 
 <div class="sec"><h2>5. Recargas e relatórios</h2>
 <h3>Dashboard</h3>
-<p>Estações e quantas estão online, cargas, kWh e faturamento dos últimos 30 dias, e as 10 últimas transações com "em andamento" ou "finalizada".</p>
-<img class="tela" src="d_dashboard.png" style="width:54%"><div class="leg">Dashboard</div>
+<p>Estações e quantas estão online; cargas finalizadas, kWh e faturamento dos últimos 30 dias; e as 10 últimas cargas com "em andamento" ou "finalizada". <b>Faturamento</b> é o consumo das cargas (o que saiu do saldo dos motoristas); o Pix de recarga aparece à parte, sem somar de novo.</p>
+<img class="tela" src="d_dashboard.png" style="width:46%"><div class="leg">Dashboard</div>
 <h3>Transações</h3>
 <p>As últimas 200 recargas, da mais nova pra mais antiga: início, fim, estação, plug, idTag (o CPF ou o cartão), kWh, preço por kWh, total e o motivo do fim enviado pelo carregador.</p>
-<img class="tela" src="d_transacoes.png" style="width:54%"><div class="leg">Transações</div>
-<div class="box">Linha com <b>plug 0</b> e <b>0,00 kWh</b> é uma recarga de saldo que o motorista fez pelo app. O total é o valor do crédito. No Dashboard ela aparece como "em andamento".</div>
+<img class="tela" src="d_transacoes.png" style="width:50%"><div class="leg">Transações</div>
+<div class="box">Linha com <b>plug 0</b> e <b>0,00 kWh</b> é uma recarga de saldo que o motorista fez pelo app. O total é o valor do crédito e a última coluna diz se foi paga. Ela não entra no faturamento do Dashboard.</div>
 <div style="page-break-inside:avoid"><h3>RFID</h3>
 <p>Cada motorista que se cadastra pelo app aparece em <b>RFID</b>, com o CPF como idTag. Dá pra cadastrar cartões em <b>+ Nova tag</b>. O tipo (cliente, interno, vip…) é só uma etiqueta: o preço é sempre o da tarifa, e a regra pra liberar é a mesma do motorista (saldo e liberação no app).</p>
 </div></div>
