@@ -1,0 +1,165 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Guia HoraPro</title>
+<style>
+@page { size:A4; margin:16mm 15mm 16mm 15mm }
+* { box-sizing:border-box }
+body { font-family:'DejaVu Sans',Arial,sans-serif; color:#1f2937; font-size:10.5pt; line-height:1.5; margin:0 }
+.capa { height:262mm; background:linear-gradient(160deg,#0D47A1,#1565C0); color:#fff; border-radius:6mm; padding:22mm 18mm; display:flex; flex-direction:column; justify-content:space-between; page-break-after:always }
+.marca { display:flex; align-items:center; gap:6mm }
+.marca img { width:30mm; border-radius:7mm }
+.marca span { font-size:34pt; font-weight:800; letter-spacing:-.5pt }
+.capa h1 { font-size:30pt; line-height:1.15; margin:0 0 6mm; color:#fff }
+.capa p { font-size:13pt; color:#dbeafe; margin:0 }
+.capa .rod { font-size:10pt; color:#bfdbfe }
+h2 { color:#0D47A1; font-size:16pt; margin:0 0 3mm; border-bottom:2px solid #90caf9; padding-bottom:2mm }
+h3 { font-size:11.5pt; margin:5mm 0 1.5mm; color:#0D47A1 }
+.sec { page-break-before:always }
+.n { display:inline-block; width:7mm; height:7mm; border-radius:50%; background:#1565C0; color:#fff; text-align:center; font-weight:700; line-height:7mm; margin-right:2mm; font-size:10pt }
+.passo { margin:0 0 3.5mm; padding:3mm 4mm; border:1px solid #e5e7eb; border-radius:3mm; page-break-inside:avoid }
+.passo b.t { font-size:11pt }
+.passo p { margin:1mm 0 0 9mm; color:#4b5563 }
+img.tela { width:86%; display:block; margin:2mm auto 1mm; border:1px solid #e5e7eb; border-radius:2mm }
+img.tela.m { width:70% }
+.leg { font-size:8.5pt; color:#6b7280; text-align:center; margin-bottom:4mm }
+.box { background:#e3f2fd; border-left:4px solid #1565C0; padding:3mm 4mm; border-radius:2mm; margin:3mm 0; page-break-inside:avoid }
+.box.amarelo { background:#fff8e1; border-left-color:#f59e0b }
+.duas { display:flex; gap:6mm; align-items:flex-start }
+.duas > div { flex:1 }
+.cel { width:50mm; border:1px solid #e5e7eb; border-radius:4mm; display:block }
+.cels { display:flex; gap:6mm; justify-content:center; margin:2mm 0 }
+.cels > div { text-align:center }
+table { width:100%; border-collapse:collapse; margin:2mm 0 }
+td { border-bottom:1px solid #eee; padding:2mm 2mm; vertical-align:top }
+td:first-child { width:42mm; font-weight:700 }
+.faq { page-break-inside:avoid; margin-bottom:3.5mm }
+.faq > b:first-child { display:block; color:#0D47A1 }
+ul,ol { margin:1mm 0 2mm; padding-left:6mm }
+.junto { page-break-inside:avoid }
+</style></head><body>
+
+<div class="capa">
+  <div class="marca"><img src="logo.png"><span>HoraPro</span></div>
+  <div><h1>Guia de primeiros passos</h1>
+  <p>Ponto eletrônico pelo celular. Do primeiro acesso ao fechamento do mês: como configurar, como o funcionário bate o ponto e como corrigir o que faltar.</p></div>
+  <div class="rod">horapro.luqsys.com.br · Suporte no WhatsApp (45) 99107-7788<br>Desenvolvido por Lucas Fagundes · Luqsys</div>
+</div>
+
+<h2>1. Como acessar</h2>
+<p>Este guia é pra quem administra o ponto da empresa (o empregador, o RH ou o contador). O funcionário não usa o painel: ele bate o ponto por um link próprio, explicado na seção 4.</p>
+<div class="duas"><div>
+<div class="passo"><span class="n">1</span><b class="t">Abra o sistema</b><p>No navegador do computador ou do celular: <b>horapro.luqsys.com.br</b></p></div>
+<div class="passo"><span class="n">2</span><b class="t">Entre com usuário e senha</b><p>O usuário é o e-mail do cadastro.</p></div>
+<div class="passo"><span class="n">3</span><b class="t">Esqueceu a senha?</b><p>Toque em <b>Esqueci minha senha</b> e digite o e-mail. Chega um link pra criar uma senha nova, válido por 1 hora. Pra trocar a senha depois: clique no seu nome no menu → 🔒 Alterar senha.</p></div>
+<div class="passo"><span class="n">4</span><b class="t">Face ID ou digital</b><p>Depois de entrar, toque em <b>🔐 Ativar Face ID</b> no menu do Painel. Nas próximas vezes, naquele aparelho, é só tocar em <b>Entrar com Face ID</b>.</p></div>
+<div class="passo"><span class="n">5</span><b class="t">Instale no celular</b><p>No endereço <b>horapro.luqsys.com.br/instalar</b> tem o passo a passo do iPhone e do Android. Fica com ícone na tela inicial, igual aplicativo.</p></div>
+</div><div style="flex:0 0 62mm"><img class="cel" style="width:62mm" src="d_login.png"><div class="leg">Tela de entrada</div></div></div>
+<div class="box">💡 Quer ver antes de configurar a sua? Na tela de entrada, toque em <b>veja a demo</b>: abre uma empresa de exemplo, com funcionários e batidas fictícias.</div>
+
+<div class="sec"><h2>2. Primeiro acesso: a tela de boas-vindas</h2>
+<div class="duas"><div>
+<p>Na primeira vez que você entra, o sistema abre a tela de <b>boas-vindas</b> com 7 passos. Os 4 primeiros deixam a equipe batendo o ponto:</p>
+<div class="passo"><span class="n">1</span><b class="t">Dados da empresa</b><p>Em <b>Empresa</b>: razão social, CNPJ, endereço e fuso horário. Ali também ficam as regras do ponto (selfie, GPS e locais).</p></div>
+<div class="passo"><span class="n">2</span><b class="t">Jornadas</b><p>A conta já vem com a <b>Comercial 8h (seg-sex)</b>, das 08:00 às 17:00 com 1h de almoço. Ajuste ou crie outras.</p></div>
+<div class="passo"><span class="n">3</span><b class="t">Funcionários</b><p>Nome, CPF e a jornada de cada um.</p></div>
+<div class="passo"><span class="n">4</span><b class="t">Link de ponto</b><p>Mande pelo WhatsApp o link de cada funcionário.</p></div>
+<div class="passo"><span class="n">5–7</span><b class="t">Acompanhar, fechar o mês e instalar</b><p>Painel, Relatórios e o app no celular.</p></div>
+<p style="margin:0">Depois toque em <b>Tudo certo, ir pro painel →</b>. Dá pra rever esses passos em <b>Ajuda</b>, no menu.</p>
+</div><div style="flex:0 0 52mm"><img class="cel" style="width:52mm" src="m_bemvindo.png"><div class="leg">Boas-vindas no celular</div></div></div>
+<h3>🏠 O Painel</h3>
+<div class="duas"><div>
+<p style="margin-top:0">É a primeira tela do dia a dia: funcionários ativos, quantos marcaram hoje, total de marcações e ausentes, e a lista das últimas batidas, que se atualiza sozinha.</p>
+<p>Batida longe dos locais cadastrados aparece com <b>Fora do perímetro</b>.</p>
+</div><div style="flex:0 0 88mm"><img class="tela" style="width:88mm;margin:0" src="d_painel.png"><div class="leg">Painel (empresa de demonstração)</div></div></div></div>
+
+<div class="sec"><h2>3. Cadastrar jornadas e funcionários</h2>
+<h3>📅 Jornadas</h3>
+<div class="duas"><div>
+<ol>
+<li>Em <b>Jornadas</b> → <b>➕ Nova jornada</b>.</li>
+<li>Dê um nome (ex.: "Loja 44h") e escolha o tipo: Fixa, Escala, Flexível ou Horista.</li>
+<li>Em cada dia, preencha entrada, saída e minutos de almoço. Dia em branco é folga.</li>
+<li>Defina a tolerância (vem 10 minutos) e salve.</li>
+</ol>
+<div class="box"><b>Como a tolerância funciona:</b> ela só serve pra não descontar pequenas diferenças. Com 10 minutos, cada marcação (entrada, saída e o tamanho do almoço) pode variar até 5 minutos, somando até 10 no dia. Se couber, o dia não fica com falta. Se passar, a diferença conta inteira. Minuto a mais trabalhado <b>sempre conta como extra</b>.</div>
+<p><b>Horista:</b> sem horário fixo, só a carga diária em minutos (480 = 8h). Só o que passar dela vira extra, e dia sem batida não vira falta.</p>
+</div><div style="flex:0 0 74mm"><img class="tela" style="width:74mm" src="d_jornada.png"><div class="leg">Nova jornada</div></div></div>
+
+<h3>👥 Funcionários</h3>
+<div class="duas"><div>
+<p>Em <b>Funcionários</b> → <b>➕ Novo funcionário</b>. Obrigatórios: <b>nome completo e CPF</b>. Também dá pra pôr PIS, cargo, departamento, matrícula, CTPS, admissão, e-mail, telefone e a jornada.</p>
+<p>Muita gente? <b>📥 Importar CSV</b>: baixe o modelo, preencha e envie. CPF que já existe é pulado.</p>
+<p><b>Banco de horas:</b> marque <b>Tem acordo de banco de horas</b> só pra quem tem o acordo assinado. Sem a marca, as extras não entram no banco e ficam pro acerto do mês.</p>
+<p><b>Mandar o link:</b> na linha do funcionário, toque em <b>🔗 Link</b>. Aparece o endereço, o QR Code e os botões <b>📋 Copiar link</b> e <b>📱 WhatsApp</b>. Com o telefone no cadastro, o WhatsApp abre direto na conversa dele.</p>
+<p>Celular perdido ou link vazado: <b>🔄 Gerar novo link</b>. O antigo para de funcionar na hora.</p>
+</div><div style="flex:0 0 66mm"><img class="tela" style="width:66mm" src="d_link.png"><div class="leg">Link de ponto do funcionário</div></div></div></div>
+
+<div class="sec"><h2>4. Como o funcionário bate o ponto</h2>
+<p>O funcionário <b>não precisa de login nem de senha</b>, e não precisa instalar nada: ele abre o link dele no navegador do celular.</p>
+<div class="cels">
+  <div><img class="cel" src="m_ponto.png"><div class="leg">Tela de ponto</div></div>
+  <div><img class="cel" src="m_almoco.png"><div class="leg">Quando não bateu o almoço</div></div>
+</div>
+<ol>
+<li>Abre o link. Se a empresa exige selfie, toca em <b>📸 Tirar Selfie</b>.</li>
+<li>Toca no botão grande, que já diz qual é a batida: <b>entrada</b>, <b>saída para almoço</b>, <b>volta do almoço</b> ou <b>saída</b>.</li>
+<li>Aparece o comprovante na tela, com NSR, data e hora, e o link <b>Baixar comprovante em PDF</b>.</li>
+</ol>
+<table>
+<tr><td>Não bateu o almoço</td><td>Se a jornada do dia tem almoço e a pessoa vai bater só a 2ª marcação, a tela pergunta <b>"Quanto você parou pra almoçar?"</b> (30 min, 1 hora, 1h30, <b>Não parei pra almoçar</b> ou outro tempo). Esse tempo sai das horas do dia.</td></tr>
+<tr><td>Voltou cedo do almoço</td><td>Aparece <b>"Faltam X min de almoço"</b> com <b>Vou esperar</b> ou <b>Registrar mesmo assim</b>. É só aviso, não impede a batida.</td></tr>
+<tr><td>Bateu duas vezes</td><td>Batida repetida em menos de 1 minuto não é gravada: a tela avisa que já registrou.</td></tr>
+<tr><td>Sem internet</td><td>A tela confere se o ponto entrou antes de pedir pra repetir, e diz se registrou, se não registrou ou se não deu pra confirmar (aí é recarregar quando o sinal voltar e olhar o histórico).</td></tr>
+</table></div>
+
+<div class="sec"><h3 style="margin-top:0">Regras que você escolhe (menu Empresa)</h3>
+<table>
+<tr><td>Selfie</td><td><b>Exigir selfie a cada marcação:</b> só registra com a foto. As fotos ficam em Relatórios → 📷 Fotos.</td></tr>
+<tr><td>GPS</td><td><b>Exigir GPS:</b> a tela pede a localização. Sem sinal ou sem permissão, a pessoa <b>consegue bater assim mesmo</b>, e a batida fica sem coordenada.</td></tr>
+<tr><td>Locais de marcação</td><td>Cadastre cada lugar com latitude, longitude e raio (o botão 📍 usa a posição do aparelho, então faça isso no local). Batida longe <b>não é bloqueada</b>: entra e aparece como <b>Fora do perímetro</b> pra você conferir.</td></tr>
+<tr><td>Abas extras</td><td><b>📓 Caderno</b> (o funcionário anota o que fez no dia) e <b>✏️ Correções</b> (ele pede correção do ponto). Cada uma liga e desliga em Empresa.</td></tr>
+<tr><td>Adicionais e feriados</td><td>% da hora extra em dia útil e em domingo/feriado, adicional noturno, calendário de feriados nacionais (os municipais você adiciona) e dias de horário especial.</td></tr>
+</table>
+
+<div class="box amarelo junto"><b>📣 O que passar pros funcionários</b>
+<ul>
+<li>Cada um tem o seu link. <b>Não compartilhe</b>: quem abre o link bate o ponto daquela pessoa.</li>
+<li>Salve o link na tela inicial do celular. No Android a tela mostra <b>INSTALAR APP AGORA</b>; no iPhone, abra no Safari → Compartilhar → <b>Adicionar à Tela de Início</b>.</li>
+<li>Bata as 4 marcações do dia: <b>entrada, saída para almoço, volta do almoço e saída</b>. O botão sempre diz qual é a próxima.</li>
+<li>Se não bater o almoço, responda com sinceridade quanto parou, inclusive "Não parei pra almoçar".</li>
+<li>Sem internet: espere a tela dizer se registrou. Na dúvida, recarregue quando o sinal voltar e olhe o histórico antes de bater de novo.</li>
+<li>Esqueceu de bater ou bateu errado? Peça a correção na aba <b>✏️ Correções</b> (se estiver ligada) ou avise o responsável.</li>
+</ul></div></div>
+
+<div class="sec"><h2>5. Correções, relatórios e fechamento do mês</h2>
+<div class="duas"><div>
+<h3 style="margin-top:0">✏️ O funcionário pede a correção</h3>
+<p>Na aba <b>✏️ Correções</b> do celular ele escolhe o dia, o que aconteceu (ex.: "Esqueci ou não consegui bater o ponto", "Bati, mas a hora ficou errada", atestado médico), a hora certa e explica. Dá pra anexar foto.</p>
+<p>O pedido chega em <b>Ajustes</b>, na aba <b>👤 Pedidos do colaborador</b>; o número no menu mostra quantos estão pendentes. Aprove ✅ ou rejeite ❌ com o motivo, que volta pro funcionário.</p>
+<div class="box"><b>Nada entra no cálculo antes de você aprovar.</b> Pra receber cada pedido no WhatsApp, preencha em Empresa → <b>WhatsApp de quem aprova as correções</b>. Em branco, o aviso vai por e-mail pra quem tem acesso ao sistema.</div>
+</div><div style="flex:0 0 50mm"><img class="cel" src="m_correcoes.png"><div class="leg">Pedido de correção no celular</div></div></div>
+<h3>📋 Você corrige direto: Edição de ponto</h3>
+<p>Escolha o funcionário e o mês. Pra incluir uma batida esquecida, digite a hora no dia e toque em <b>💾 Salvar dias alterados</b>. Pra hora errada ou batida repetida, clique no ✏️ da marcação: <b>Corrigir marcação original</b> ou <b>🚫 Desconsiderar (duplicada)</b>. <b>A batida original nunca é apagada</b>: fica guardada, e as cores mostram o que é original, corrigido, desconsiderado ou incluído.</p>
+<img class="tela" style="width:74%" src="d_edicao.png"><div class="leg">Edição de ponto</div>
+<p><b>Atestado, férias, folga, falta justificada ou a descontar:</b> em <b>Ajustes</b> → <b>➕ Lançar ajuste</b>, com o funcionário, o tipo, a data (ou de/até) e o motivo.</p></div>
+
+<div class="sec"><h3 style="margin-top:0">📑 Relatórios e espelho de ponto</h3>
+<p>Em <b>Relatórios</b>, escolha o mês: aparece cada funcionário com dias com marcação, horas trabalhadas, previstas, extras e faltas. <b>📄 Espelho</b> gera o PDF de um funcionário; <b>📚 Espelho consolidado (todos)</b>, da equipe inteira. Fechamento fora do mês cheio (ex.: 26 a 25)? Use <b>📄 Baixar espelho do intervalo</b>.</p>
+<img class="tela" src="d_relatorios.png"><div class="leg">Relatórios mensais</div>
+<img class="tela" src="espelho.png" style="width:78%"><div class="leg">Espelho de ponto em PDF (dados de exemplo)</div>
+<p>Na mesma tela: <b>📥 Baixar AFD</b>, <b>📥 Baixar AEJ</b> e <b>📥 Baixar ATTR assinado</b>, os arquivos da Portaria 671/2021 pra entregar quando pedirem, e <b>📷 Fotos</b> com as selfies do mês.</p>
+<h3>⚖️ Banco de horas</h3>
+<p>No fim do mês, em <b>Banco de horas</b>, escolha o mês e toque em <b>⚖️ Consolidar todos do mês</b>: o sistema soma extras menos faltas e lança no saldo de quem tem o acordo marcado. Rodar de novo não duplica, e falta com ajuste aprovado não vira débito. Lançamento manual e histórico ficam na linha de cada funcionário.</p></div>
+
+<div class="sec"><h2>6. Dúvidas mais comuns</h2>
+<div class="faq"><b>O funcionário precisa instalar aplicativo?</b>Não. Ele abre o link no navegador do celular. Instalar o ícone é opcional.</div>
+<div class="faq"><b>Dá pra um funcionário bater o ponto do outro?</b>Quem abre o link do João bate o ponto do João. Por isso cada um tem o seu e não deve compartilhar. Com selfie ligada, cada batida fica com a foto de quem bateu.</div>
+<div class="faq"><b>O funcionário esqueceu de bater. E agora?</b>Ele pede na aba Correções e você aprova em Ajustes, ou você inclui a hora em Edição de ponto.</div>
+<div class="faq"><b>Batida sem sinal de GPS vale?</b>Vale. Falta de sinal nunca impede a batida. Ela entra sem coordenada.</div>
+<div class="faq"><b>Batida fora do local é recusada?</b>Não. Ela entra e aparece como "Fora do perímetro" no Painel e nas fotos, pra você conferir.</div>
+<div class="faq"><b>Dá pra apagar uma batida errada?</b>A batida original nunca é apagada. Em Edição de ponto você corrige a hora ou desconsidera a repetida, e tudo fica registrado.</div>
+<div class="faq"><b>O HoraPro segue a Portaria 671?</b>Funciona como REP-P (registro de ponto por programa): cada batida recebe NSR e comprovante, a original não é alterada, e o sistema gera espelho, AFD, AEJ e ATTR.</div>
+<div class="faq"><b>Funcionário saiu da empresa.</b>Desmarque <b>Ativo</b> no cadastro. O link dele para de funcionar, e as batidas antigas continuam nos relatórios.</div>
+<div class="faq"><b>Outra pessoa (RH, contador) pode acessar?</b>Sim. Em <b>Usuários</b> → <b>📨 Convidar novo gestor</b>, com nome e e-mail. Todo gestor tem acesso completo.</div>
+<div class="faq"><b>Quanto custa?</b>Básico: R$ 39/mês, até 5 funcionários. Pro: R$ 49/mês, 20 funcionários inclusos + R$ 5 por extra. Empresa: R$ 149/mês, 50 funcionários inclusos + R$ 4 por extra. O teste grátis dura 3 dias, com até 5 funcionários. Plano e pagamento ficam em <b>Assinatura</b>.</div>
+<div class="faq"><b>Onde acho ajuda dentro do sistema?</b>No menu, <b>Ajuda</b>: tem busca (ex.: "esqueceu", "selfie", "espelho") e o botão de falar com o suporte.</div>
+<div class="box" style="margin-top:6mm">💬 <b>Suporte:</b> WhatsApp (45) 99107-7788, ou pelo botão <b>Falar com o suporte</b> na Ajuda.<br><span style="font-size:9pt;color:#4b5563">HoraPro · Desenvolvido por Lucas Fagundes · Luqsys</span></div></div>
+</body></html>
