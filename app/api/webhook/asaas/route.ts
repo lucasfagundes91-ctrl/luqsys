@@ -235,6 +235,39 @@ export async function POST(req: NextRequest) {
     upstreamBody
   );
 
+  // Kit de boas-vindas: o AssinaturasPro decide se é o 1º pagamento do
+  // cliente nesse sistema e manda o guia por e-mail + WhatsApp. Nunca derruba
+  // o router — falhar aqui só deixa de mandar o kit (dá pra mandar na mão).
+  if (
+    (event === "PAYMENT_CONFIRMED" || event === "PAYMENT_RECEIVED") &&
+    upstreamStatus >= 200 && upstreamStatus < 300 &&
+    process.env.KIT_TOKEN
+  ) {
+    try {
+      const k = await fetch(
+        process.env.KIT_URL ||
+          "https://assinatura.luqsys.com.br/assinatura/api/kit-boas-vindas",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-kit-token": process.env.KIT_TOKEN,
+          },
+          body: JSON.stringify({
+            sistema: slug,
+            event,
+            payment: body?.payment,
+            email_conta: upstreamBody?.email_conta || null,
+          }),
+          signal: AbortSignal.timeout(20000),
+        }
+      );
+      console.log(`router: kit ${slug} (HTTP ${k.status})`, await k.json().catch(() => null));
+    } catch (e) {
+      console.error(`router: kit ${slug} falhou`, String(e));
+    }
+  }
+
   return NextResponse.json({
     ok: upstreamStatus >= 200 && upstreamStatus < 300,
     routed_to: slug,
