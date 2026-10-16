@@ -219,7 +219,7 @@ export default function CarregaProLanding() {
       planos={[
         {
           nome: "Operador",
-          preco: "R$ 49",
+          preco: "R$ 99",
           publico: "1-3 carregadores",
           itens: [
             "Até 3 estações",
@@ -301,7 +301,7 @@ export default function CarregaProLanding() {
       fechamento={{
         titulo: "Quanto você está pagando de comissão por kWh?",
         texto:
-          "Pega o seu último relatório, multiplica os kWh do mês por R$ 0,30 e compara com uma mensalidade fixa a partir de R$ 49. Se a conta não fechar a seu favor, a gente mesmo te diz pra não assinar.",
+          "Pega o seu último relatório, multiplica os kWh do mês por R$ 0,30 e compara com uma mensalidade fixa a partir de R$ 99. Se a conta não fechar a seu favor, a gente mesmo te diz pra não assinar.",
       }}
     />
   );

@@ -126,7 +126,7 @@ export default function CarregaProPage() {
         {
           nome: "Operador",
           publico: "1-3 carregadores",
-          precoLabel: "R$ 49",
+          precoLabel: "R$ 99",
           features: [
             "Até 3 estações",
             "Transações ilimitadas",
@@ -174,7 +174,7 @@ export default function CarregaProPage() {
         },
       ]}
       ctaFinalTitulo="Quanto você está pagando de comissão por kWh?"
-      ctaFinalTexto="Em 5 anos, R$ 0,30/kWh em comissão vira R$ 18-60k por carregador. Aqui é R$ 49/mês fixo."
+      ctaFinalTexto="Em 5 anos, R$ 0,30/kWh em comissão vira R$ 18-60k por carregador. Aqui é R$ 99/mês fixo."
       appUrl="https://carregapro.luqsys.com.br"
       assinarUrl="https://wa.me/5545991077788?text=Quero%20o%20CarregaPro"
     />
