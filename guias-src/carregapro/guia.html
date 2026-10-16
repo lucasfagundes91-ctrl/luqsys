@@ -1,0 +1,160 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>Guia CarregaPro</title>
+<style>
+@page { size:A4; margin:16mm 15mm 16mm 15mm }
+* { box-sizing:border-box }
+body { font-family:'DejaVu Sans',Arial,sans-serif; color:#1f2937; font-size:10.5pt; line-height:1.5; margin:0 }
+.capa { height:262mm; background:#0a0a0a; color:#fff; border-radius:6mm; padding:22mm 18mm; display:flex; flex-direction:column; justify-content:space-between; page-break-after:always }
+.capa .marca { display:flex; align-items:center; gap:6mm }
+.capa .marca img { width:30mm; border-radius:6mm }
+.capa .marca span { font-size:30pt; font-weight:800; color:#a3e635 }
+.capa h1 { font-size:30pt; line-height:1.15; margin:0 0 6mm; color:#4ade80 }
+.capa p { font-size:13pt; color:#d1d5db; margin:0 }
+.capa .rod { font-size:10pt; color:#9ca3af }
+h2 { color:#15803d; font-size:16pt; margin:0 0 3mm; border-bottom:2px solid #4ade80; padding-bottom:2mm }
+h3 { font-size:11.5pt; margin:5mm 0 1.5mm }
+.sec { page-break-before:always }
+.n { display:inline-block; width:7mm; height:7mm; border-radius:50%; background:#16a34a; color:#fff; text-align:center; font-weight:700; line-height:7mm; margin-right:2mm; font-size:10pt }
+.passo { margin:0 0 3.5mm; padding:3mm 4mm; border:1px solid #e5e7eb; border-radius:3mm; page-break-inside:avoid }
+.passo b.t { font-size:11pt }
+.passo p { margin:1mm 0 0 9mm; color:#4b5563 }
+img.tela { width:86%; display:block; margin-left:auto; margin-right:auto; border:1px solid #e5e7eb; border-radius:2mm; margin:2mm auto 1mm }
+.leg { font-size:8.5pt; color:#6b7280; text-align:center; margin-bottom:4mm }
+.box { background:#f0fdf4; border-left:4px solid #16a34a; padding:3mm 4mm; border-radius:2mm; margin:3mm 0; page-break-inside:avoid }
+.alerta { background:#fffbeb; border-left:4px solid #d97706 }
+.duas { display:flex; gap:6mm; align-items:flex-start }
+.duas > div { flex:1 }
+.cel { width:58mm; border:1px solid #e5e7eb; border-radius:4mm; display:block }
+code { font-family:'DejaVu Sans Mono',monospace; font-size:9pt; background:#f1f5f9; padding:0.3mm 1.2mm; border-radius:1mm; word-break:break-all }
+table { width:100%; border-collapse:collapse; margin:2mm 0 }
+td { border-bottom:1px solid #eee; padding:2mm 2mm; vertical-align:top }
+td:first-child { width:46mm; font-weight:700 }
+.faq { page-break-inside:avoid; margin-bottom:3.5mm }
+.faq > b:first-child { display:block }
+ul,ol { margin:1mm 0 2mm; padding-left:6mm }
+</style></head><body>
+
+<div class="capa">
+  <div class="marca"><img src="logo.png"><span>CarregaPro</span></div>
+  <div><h1>Guia de primeiros passos</h1>
+  <p>Do primeiro acesso até a primeira recarga: cadastrar a estação, ligar o carregador, definir o preço do kWh e acompanhar as recargas.</p></div>
+  <div class="rod">carregapro.luqsys.com.br · Suporte no WhatsApp (45) 99107-7788<br>Desenvolvido por Lucas Fagundes · Luqsys</div>
+</div>
+
+<h2>1. Como acessar</h2>
+<div class="duas"><div>
+<div class="passo"><span class="n">1</span><b class="t">Abra o sistema</b><p>No navegador do celular ou do computador: <b>carregapro.luqsys.com.br</b></p></div>
+<div class="passo"><span class="n">2</span><b class="t">Entre com e-mail e senha</b><p>O login é o e-mail do cadastro. Quem ainda não tem conta toca em <b>Testar 3 dias grátis</b>.</p></div>
+<div class="passo"><span class="n">3</span><b class="t">Esqueceu a senha?</b><p>Ainda não tem "esqueci minha senha" nem troca de senha dentro do sistema. Chame o suporte no WhatsApp e a gente gera uma nova.</p></div>
+<div class="passo"><span class="n">4</span><b class="t">Face ID</b><p>Já dentro do sistema, toque em <b>🔐 Ativar Face ID</b> no menu. Depois é só tocar em <b>Entrar com Face ID</b> no login. Ative em cada aparelho.</p></div>
+<div class="passo"><span class="n">5</span><b class="t">Instale no celular</b><p>Abra <b>carregapro.luqsys.com.br/instalar</b> e siga o passo a passo do iPhone ou do Android. Fica com ícone na tela, igual um aplicativo.</p></div>
+</div><div style="flex:0 0 68mm"><img src="d_login.png" style="width:68mm;border:1px solid #e5e7eb;border-radius:2mm"><div class="leg">Tela de entrada</div></div></div>
+
+<h3>O menu</h3>
+<table>
+<tr><td>Dashboard</td><td>Resumo dos últimos 30 dias e as últimas recargas.</td></tr>
+<tr><td>⚡ Estações</td><td>Seus carregadores, o endereço OCPP e o login de cada um.</td></tr>
+<tr><td>📊 Transações</td><td>O histórico das recargas.</td></tr>
+<tr><td>💰 Tarifas</td><td>O preço do kWh, por horário e dia da semana.</td></tr>
+<tr><td>🪪 RFID</td><td>Cartões e motoristas cadastrados.</td></tr>
+<tr><td>❓ Ajuda</td><td>Perguntas e respostas com busca, e o botão do suporte.</td></tr>
+</table>
+
+<div class="sec"><h2>2. Primeiro acesso: a tela de boas-vindas</h2>
+<div class="duas"><div>
+<p>No primeiro acesso o sistema abre a tela de <b>boas-vindas</b>, com 5 passos:</p>
+<div class="passo"><span class="n">1</span><b class="t">Cadastre a estação</b><p>Em Estações → <b>+ Nova estação</b>.</p></div>
+<div class="passo"><span class="n">2</span><b class="t">Cadastre a tarifa</b><p>O preço em R$ por kWh. Comece com uma tarifa "Padrão".</p></div>
+<div class="passo"><span class="n">3</span><b class="t">Ligue o carregador no CarregaPro</b><p>Endereço OCPP, usuário e senha no painel do carregador.</p></div>
+<div class="passo"><span class="n">4</span><b class="t">Coloque o QR do motorista</b><p>O link do app do motorista, impresso como QR no carregador.</p></div>
+<div class="passo"><span class="n">5</span><b class="t">Instale no celular</b><p>Pra acompanhar as recargas de qualquer lugar.</p></div>
+<p>Depois toque em <b>Tudo certo, ir pro painel →</b>. Dá pra rever esses passos pela Ajuda.</p>
+</div><div style="flex:0 0 60mm"><img class="cel" src="m_bemvindo.png"><div class="leg">Boas-vindas no celular</div></div></div></div>
+
+<div class="sec"><h2>3. Cadastrar a estação e ligar o carregador</h2>
+<h3>Cadastrar a estação</h3>
+<ol>
+<li>Em <b>Estações</b>, toque em <b>+ Nova estação</b>.</li>
+<li><b>Charge Point ID</b> (obrigatório): o nome único do carregador, sem espaço. Ex.: <code>POSTO-CENTRO-01</code>. Se ele já estiver em uso, mesmo em outra conta, a estação não é criada: escolha outro.</li>
+<li>Apelido, marca, modelo, potência (kW) e endereço são opcionais. Apelido e endereço aparecem pro motorista.</li>
+</ol>
+
+<h3>O que vai no carregador</h3>
+<p>No painel de configuração do carregador (app ou site do fabricante, ou com o instalador), preencha com o que aparece no cartão da estação:</p>
+<table>
+<tr><td>Endereço do servidor OCPP</td><td><code>wss://carregapro.luqsys.com.br/ocpp/&lt;Charge Point ID&gt;</code></td></tr>
+<tr><td>Charge Point ID</td><td>Igual ao cadastrado, letra por letra (maiúsculas e minúsculas contam).</td></tr>
+<tr><td>Autenticação básica</td><td>Usuário = o Charge Point ID. Senha = a do cartão da estação (toque em <b>mostrar</b>).</td></tr>
+<tr><td>Versão</td><td>OCPP 1.6 J ou OCPP 2.0.1. O mesmo endereço serve pras duas.</td></tr>
+</table>
+<img class="tela" src="d_estacoes.png" style="width:52%"><div class="leg">Cartão da estação: bolinha verde = conectado. Embaixo, o endereço OCPP e o login do carregador.</div>
+<div class="duas"><div>
+<div class="box alerta" style="margin-top:0"><b>Sem a senha certa o sistema recusa a conexão.</b> Isso impede que alguém se passe pelo seu carregador. Se a estação mostrar "ainda não tem senha do carregador", fale com o suporte.</div>
+</div><div>
+<div><b>Editar, desativar e apagar</b>
+<ul>
+<li><b>✏️ Editar</b> muda apelido, marca, modelo, potência e endereço. O Charge Point ID não muda.</li>
+<li>Desmarcar <b>Estação ativa</b> tira a estação do app do motorista e o carregador deixa de conectar.</li>
+<li><b>🗑 Apagar</b> leva junto os conectores, as tarifas e as transações daquela estação. Não tem volta.</li>
+<li><b>🚪 Portão</b> (opcional): abre a cancela por QR com um módulo Shelly.</li>
+</ul></div></div></div></div>
+
+<div class="sec"><h2>4. Tarifa e pagamento do motorista</h2>
+<h3>Cadastrar a tarifa</h3>
+<ol>
+<li>Em <b>Tarifas</b> → <b>+ Nova tarifa</b>: nome e preço em <b>R$ por kWh</b>.</li>
+<li>Estação: uma específica ou <b>Todas as estações</b>.</li>
+<li>Hora início e fim, e os dias em números: 1 = segunda … 7 = domingo. <code>1234567</code> = todos os dias.</li>
+</ol>
+<div class="duas"><div style="flex:0 0 70mm">
+<img src="d_tarifa_nova.png" style="width:70mm;border:1px solid #e5e7eb;border-radius:2mm"><div class="leg">Nova tarifa</div>
+</div><div>
+<div class="box" style="margin-top:0"><b>Qual tarifa vale?</b><br>A que está ativa quando a carga <b>começa</b>. Tarifa de uma estação ganha da tarifa de "todas". O preço fica gravado na recarga.</div>
+<div class="box alerta"><b>Sem tarifa no horário, a recarga sai com valor zero.</b> Cadastre pelo menos uma "Padrão", das 00:00 às 23:59, todos os dias.</div>
+<div class="box">Horário que vira a noite (22h às 6h)? Cadastre duas: 22:00–23:59 e 00:00–06:00.</div>
+</div></div>
+<p style="margin:1mm 0">Pela tela ainda não dá pra editar nem apagar tarifa. Precisa mudar? Fale com o suporte.</p>
+
+<div style="page-break-inside:avoid"><h3>Como o motorista paga e carrega</h3>
+<div class="duas"><div>
+<p>O link de cada estação está em <b>Ver app motorista ↗</b>, no cartão dela. Transforme num QR e cole no carregador.</p>
+<ol>
+<li><b>Primeira vez:</b> CPF, nome, e-mail, endereço pelo CEP e um <b>PIN de 6 dígitos</b>. Depois, entra com CPF e PIN.</li>
+<li><b>Adicionar crédito:</b> R$ 20, 50, 100, 200 ou outro valor (mínimo R$ 5), por <b>Pix</b> ou <b>cartão</b>. O saldo entra quando o pagamento confirma.</li>
+<li><b>⚡ Liberar carga (30 min):</b> precisa de pelo menos R$ 5,00 de saldo.</li>
+<li>No carregador, digita o <b>CPF</b> e conecta o cabo.</li>
+<li>No fim, o sistema desconta do saldo os kWh × o preço da tarifa.</li>
+</ol>
+</div><div style="flex:0 0 44mm"><img class="cel" src="m_mot_saldo.png" style="width:44mm"><div class="leg">App do motorista: saldo, liberar e crédito</div></div></div></div>
+<div class="box"><b>O carregador recusou?</b> Saldo abaixo de R$ 5,00; não tocou em Liberar carga ou passaram os 30 minutos (cada liberação vale uma recarga); CPF digitado diferente do cadastro; ou cadastro feito em outro eletroposto.</div>
+</div>
+
+<div class="sec"><h2>5. Recargas e relatórios</h2>
+<h3>Dashboard</h3>
+<p>Estações e quantas estão online, cargas, kWh e faturamento dos últimos 30 dias, e as 10 últimas transações com "em andamento" ou "finalizada".</p>
+<img class="tela" src="d_dashboard.png" style="width:54%"><div class="leg">Dashboard</div>
+<h3>Transações</h3>
+<p>As últimas 200 recargas, da mais nova pra mais antiga: início, fim, estação, plug, idTag (o CPF ou o cartão), kWh, preço por kWh, total e o motivo do fim enviado pelo carregador.</p>
+<img class="tela" src="d_transacoes.png" style="width:54%"><div class="leg">Transações</div>
+<div class="box">Linha com <b>plug 0</b> e <b>0,00 kWh</b> é uma recarga de saldo que o motorista fez pelo app. O total é o valor do crédito. No Dashboard ela aparece como "em andamento".</div>
+<div style="page-break-inside:avoid"><h3>RFID</h3>
+<p>Cada motorista que se cadastra pelo app aparece em <b>RFID</b>, com o CPF como idTag. Dá pra cadastrar cartões em <b>+ Nova tag</b>. O tipo (cliente, interno, vip…) é só uma etiqueta: o preço é sempre o da tarifa, e a regra pra liberar é a mesma do motorista (saldo e liberação no app).</p>
+</div></div>
+
+<div class="sec"><h2>6. Dúvidas mais comuns</h2>
+<div class="faq"><b>O carregador não aparece online. O que confiro?</b>
+<ul>
+<li>O endereço começa com <code>wss://</code> e termina com o Charge Point ID certo.</li>
+<li>O Charge Point ID no carregador é igual ao cadastrado, letra por letra.</li>
+<li>Usuário e senha da autenticação básica estão corretos.</li>
+<li>A estação está ativa (✏️ Editar) e o carregador tem internet.</li>
+</ul>
+Ainda não? Mande o Charge Point ID pro suporte: a gente vê do nosso lado o que chegou.</div>
+<div class="faq"><b>Funciona com qual carregador?</b>Com carregador que fale OCPP 1.6 J ou 2.0.1 e deixe configurar o endereço do servidor, com usuário e senha. Na dúvida, mande o modelo pro suporte antes de comprar.</div>
+<div class="faq"><b>Dá pra ligar ou desligar o carregador pelo sistema?</b>Não. A carga começa e termina no carregador. O sistema recebe as informações e calcula o valor.</div>
+<div class="faq"><b>Esqueci de cadastrar a tarifa.</b>A recarga sai com valor zero. Cadastre uma "Padrão" das 00:00 às 23:59, todos os dias.</div>
+<div class="faq"><b>O motorista esqueceu o PIN.</b>Ainda não tem troca de PIN pelo app. Fale com o suporte.</div>
+<div class="faq"><b>Funciona no celular e no computador?</b>Sim, é o mesmo sistema no navegador. No celular, instale pelo carregapro.luqsys.com.br/instalar.</div>
+<div class="faq"><b>O teste acabou. Perco os dados?</b>Não. O teste vale 3 dias; depois o sistema mostra a tela pra assinar, e está tudo lá.</div>
+<div class="faq"><b>Onde acho ajuda dentro do sistema?</b>No menu, <b>❓ Ajuda</b>: tem busca (ex.: "online", "tarifa", "PIN") e o botão de falar com o suporte.</div>
+<div class="box" style="margin-top:5mm">💬 <b>Suporte:</b> WhatsApp <b>(45) 99107-7788</b>, ou pelo botão <b>Falar com o suporte</b> na Ajuda.<br><br>Desenvolvido por Lucas Fagundes · Luqsys</div></div>
+</body></html>
