@@ -162,11 +162,6 @@ const grupos: Grupo[] = [
         host: "virada", nome: "Virada", emoji: "🔄",
         o_que: "Teste de transição de carreira",
       },
-      {
-        host: "euseivotar", nome: "EuSeiVotar?", emoji: "🗳️",
-        o_que: "Votações do Congresso",
-        url: "https://euseivotar.com.br",
-      },
     ],
   },
 ];

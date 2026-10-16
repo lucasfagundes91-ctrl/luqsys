@@ -312,27 +312,6 @@ const trilhas: Trilha[] = [
       },
     ],
   },
-  {
-    id: "cidadania",
-    emoji: "🗳️",
-    titulo: "Projeto aberto",
-    subtitulo: "Ferramenta de utilidade pública — grátis, sem cadastro pra começar",
-    produtos: [
-      {
-        slug: "euseivotar",
-        nome: "EuSeiVotar?",
-        icone: "🗳️",
-        tagline:
-          "Responda votações reais do Congresso e descubra quem votou como você. Voto, patrimônio e ficha no TSE de cada político — com link pra fonte oficial.",
-        preco: "Grátis",
-        gratis: true,
-        badge: "eleição 2026",
-        // dominio proprio do projeto, nao a URL crua da Railway: aquela
-        // muda se o servico for recriado e nao tem cara de produto
-        externo: "https://euseivotar.com.br",
-      },
-    ],
-  },
 ];
 
 // Sistemas com landing própria em /p/<slug> — o "site do produto", sem menu
