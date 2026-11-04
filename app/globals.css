@@ -59,6 +59,8 @@ body {
   --acc-fundo: #fb923c29; }
 .tema-carregapro { --acc: #4ade80; --acc-forte: #86efac; --acc-fraco: #15803d;
   --acc-fundo: #4ade8029; }
+.tema-pedrapro { --acc: #14b8a6; --acc-forte: #5eead4; --acc-fraco: #0f766e;
+  --acc-fundo: #14b8a629; }
 .tema-botapro { --acc: #e2bb3a; --acc-forte: #f0d264; --acc-fraco: #8a6d16;
   --acc-fundo: #e2bb3a29; }
 .tema-aluguelpro { --acc: #818cf8; --acc-forte: #a5b4fc; --acc-fraco: #3730a3;

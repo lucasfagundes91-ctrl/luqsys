@@ -90,6 +90,7 @@ const grupos: Grupo[] = [
       },
       { host: "carregapro", nome: "CarregaPro", emoji: "⚡", o_que: "Eletroposto" },
       { host: "botapro", nome: "BotaPro", emoji: "🥾", o_que: "Indústria de calçado" },
+      { host: "pedrapro", nome: "PedraPro", emoji: "🪨", o_que: "Marmoraria" },
       { host: "adspro", nome: "AdsPro", emoji: "📣", o_que: "Anúncios no Meta" },
       { host: "agendapro", nome: "AgendaPro", emoji: "📅", o_que: "Agendamento online" },
       { host: "sorripro", nome: "SorriPro", emoji: "🦷", o_que: "Clínica odontológica" },

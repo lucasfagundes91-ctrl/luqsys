@@ -58,6 +58,8 @@ const SISTEMA_MAP: Array<[string, string]> = [
   ["rotina pro", "rotinapro"],
   ["carregapro", "carregapro"],
   ["carrega pro", "carregapro"],
+  ["pedrapro", "pedrapro"],
+  ["pedra pro", "pedrapro"],
   // BAP Flow (nasceu "BarbeariaPro"; o slug interno e o subdomínio da API seguem barbeariapro)
   ["bap flow", "barbeariapro"],
   ["bapflow", "barbeariapro"],
@@ -187,6 +189,9 @@ export async function POST(req: NextRequest) {
   }
   if (process.env.ASAAS_TOKEN_FALAPRO) {
     tokens.falapro = process.env.ASAAS_TOKEN_FALAPRO;
+  }
+  if (process.env.ASAAS_TOKEN_PEDRAPRO) {
+    tokens.pedrapro = process.env.ASAAS_TOKEN_PEDRAPRO;
   }
 
   const systemToken = tokens[slug];

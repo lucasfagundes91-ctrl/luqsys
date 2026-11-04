@@ -101,6 +101,15 @@ const trilhas: Trilha[] = [
         badge: "novo",
       },
       {
+        slug: "pedrapro",
+        nome: "PedraPro",
+        icone: "🪨",
+        tagline: "Gestão de marmoraria: caixa PJ/PF, vendas com margem, equipe e chapas",
+        preco: "R$ 199",
+        badge: "novo",
+        appUrl: "https://pedrapro.luqsys.com.br",
+      },
+      {
         slug: "botapro",
         nome: "BotaPro",
         icone: "🥾",
