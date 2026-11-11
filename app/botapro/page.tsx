@@ -4,7 +4,7 @@ import { ProductLayout } from "../_components/ProductLayout";
 export const metadata: Metadata = {
   title: "BotaPro — ERP para indústria de calçados",
   description:
-    "ERP pra fábrica de botinas e calçados de couro: grade de numeração, ficha técnica com custo real do par, ordem de produção, estoque de matéria-prima e produto acabado, NF-e modelo 55 e loja própria integrada ao estoque.",
+    "ERP pra fábrica de botinas e calçados de couro: grade de numeração, ficha técnica com custo real do par, ordem de produção, corte e pesponto terceirizados, vendas por representante com comissão, NF-e modelo 55 e loja própria integrada ao estoque.",
 };
 
 export default function BotaProPage() {
@@ -44,7 +44,7 @@ export default function BotaProPage() {
           n: "3",
           titulo: "Produz, vende e fatura",
           texto:
-            "Ordem de produção baixa matéria-prima e dá entrada em produto acabado. A venda baixa o par, emite NF-e e manda o boleto pro lojista por e-mail e WhatsApp.",
+            "Ordem de produção baixa matéria-prima, acompanha o que foi pro corte e pesponto terceirizados e dá entrada no acabado. O representante tira o pedido pelo celular; a fábrica confirma, emite a NF-e e manda o boleto pro lojista.",
         },
       ]}
       problema={{
@@ -89,6 +89,30 @@ export default function BotaProPage() {
             "Atacado e varejo no mesmo estoque",
           ],
         },
+        {
+          icone: "✂️",
+          titulo: "Corte e pesponto terceirizados",
+          texto:
+            "Quantos pares estão com cada ateliê, o que voltou, o que veio com defeito e qual remessa atrasou — e o pagamento por par sai sozinho.",
+          itens: [
+            "Remessa por ordem de produção e etapa",
+            "Retorno parcial com pares bons e com defeito",
+            "Aviso de remessa atrasada",
+            "NF-e de remessa para industrialização",
+          ],
+        },
+        {
+          icone: "🤝",
+          titulo: "Venda por representante",
+          texto:
+            "Cada representante com a carteira dele e um acesso próprio: tira o pedido em grade pelo celular e acompanha a comissão.",
+          itens: [
+            "Pedido lançado em grade, modelo por modelo",
+            "Comissão liberada quando o lojista paga",
+            "Fechamento da comissão direto no contas a pagar",
+            "NF-e com duplicatas e transportadora do pedido",
+          ],
+        },
       ]}
       prints={[
         {arquivo: "/prints/botapro-0.jpg", legenda: "Painel da fábrica"},
@@ -110,7 +134,7 @@ export default function BotaProPage() {
         },
         {
           p: "Emite nota?",
-          r: "O boleto de venda sai pelo Asaas e vai por e-mail e WhatsApp. Pra emissão fiscal completa, o BotaPro conversa com o resto da casa.",
+          r: "Sim. A NF-e modelo 55 sai do próprio pedido, com CFOP de venda de produção, duplicatas, transportadora e volumes, pela Focus NFe com o certificado da sua empresa. Funciona no Simples Nacional e no Regime Normal. A remessa pro terceirizado também tem nota.",
         },
       ]}
       features={[
@@ -121,7 +145,8 @@ export default function BotaProPage() {
         "Atacado pra lojista e varejo pela loja própria, no mesmo estoque",
         "Boleto de venda no Asaas, enviado por e-mail e WhatsApp",
         "NF-e modelo 55 de saída industrial com DANFE própria",
-        "Boleto de compra capturado do e-mail e lançado em contas a pagar",
+        "Corte e pesponto terceirizados: pares na rua, retorno e pagamento por par",
+        "Representantes com acesso próprio, pedido em grade e comissão",
         "Contas a pagar e receber, fluxo de caixa e gastos por categoria",
         "Frete, transportadora e rastreio no pedido",
       ]}
@@ -133,7 +158,8 @@ export default function BotaProPage() {
           features: [
             "Modelos, grade e insumos ilimitados",
             "Ficha técnica e custo automático",
-            "Ordem de produção",
+            "Ordem de produção e terceirizados",
+            "Representantes e comissão",
             "Estoque nos dois níveis",
             "Contas a pagar e receber",
             "Suporte por WhatsApp",
@@ -149,7 +175,6 @@ export default function BotaProPage() {
             "Tudo do plano Fábrica",
             "NF-e modelo 55 com DANFE própria",
             "Boleto de venda via Asaas",
-            "Captura de boleto por e-mail",
             "Frete, transportadora e rastreio",
             "Onboarding dedicado",
           ],
