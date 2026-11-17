@@ -48,13 +48,14 @@ export default function HoraProPage() {
         },
       ]}
       problema={{
-        titulo: "Ponto errado não é detalhe — é processo trabalhista",
+        titulo: "Ponto errado não é detalhe — é o que sobra pra discutir depois",
         texto: (
           <>
             <p>
               Caderninho na portaria e planilha no fim do mês não valem como
               prova. A Portaria 671 pede registro sequencial, íntegro e
-              exportável — e é isso que o juiz vai pedir pra ver.
+              exportável — é esse conjunto que a fiscalização do trabalho
+              pede pra ver.
             </p>
             <p>
               O HoraPro é REP-P: cada batida ganha número sequencial, hash de
@@ -108,7 +109,7 @@ export default function HoraProPage() {
         {arquivo: "/prints/horapro-2.jpg", legenda: "Espelho de ponto do mês"},
       ]}
       praQuem={[
-        {icone:"🏭", titulo:"Empresa que quer dormir tranquila", texto:"Registro que se sustenta se virar processo trabalhista."},
+        {icone:"🏭", titulo:"Empresa que quer o registro de pé", texto:"Registro sequencial e íntegro, com AFD, AEJ e espelho do mês — em vez de folha assinada em bloco."},
         {icone:"📍", titulo:"Equipe que trabalha fora", texto:"Obra, fazenda, atendimento externo — bate de onde está."},
         {icone:"💸", titulo:"Quem não quer relógio de parede", texto:"REP-P é software; o funcionário bate pelo próprio celular."},
       ]}
@@ -188,7 +189,7 @@ export default function HoraProPage() {
       ]}
       rodapeHero="3 planos. Pro a partir de R$ 49 (até 20 func). Sem fidelidade."
       ctaFinalTitulo="Ponto eletrônico sem dor de cabeça"
-      ctaFinalTexto="Fiscalização do trabalho não vai te pegar de surpresa."
+      ctaFinalTexto="Quando a fiscalização pedir, o AFD, o AEJ e o espelho de ponto saem prontos."
     appUrl="https://horapro.luqsys.com.br"
     assinarUrl="https://www.asaas.com/c/a77msa0ndv1smwxn"
     />
