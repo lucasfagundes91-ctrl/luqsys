@@ -258,7 +258,7 @@ export default function HoraProLanding() {
             "Até 50 funcionários inclusos",
             "Extras: R$ 4/mês cada",
             "Multi-empresa (matriz + filiais)",
-            "API pra folha (eSocial)",
+            "API de integração pra folha (registros, dias e apuração)",
             "Suporte prioritário",
           ],
           ctaLabel: "Assinar Empresa",
