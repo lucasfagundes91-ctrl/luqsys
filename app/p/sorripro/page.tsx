@@ -4,7 +4,7 @@ import { LandingLayout } from "../../_components/LandingLayout";
 export const metadata: Metadata = {
   title: "SorriPro — a clínica odontológica inteira num sistema só",
   description:
-    "Agenda por dentista e por cadeira, prontuário com odontograma clicável, plano de tratamento que vira parcela no financeiro e site da clínica com marcação online. Software de gestão pra consultório e clínica odontológica.",
+    "Agenda por dentista, prontuário com odontograma clicável, plano de tratamento que vira parcela no financeiro e site da clínica com marcação online. Software de gestão pra consultório e clínica odontológica.",
 };
 
 /* Landing independente do SorriPro (/p/sorripro), no padrão do /p/silopro.
@@ -64,7 +64,7 @@ export default function SorriProLanding() {
         },
         {
           antes: "Agenda em caderno, com rasura e paciente em cima de paciente",
-          depois: "Agenda por dentista e por cadeira, sem sobreposição",
+          depois: "Agenda por dentista, sem sobreposição",
         },
         {
           antes: "Alergia lembrada por quem atendeu daquela vez",
@@ -123,7 +123,7 @@ export default function SorriProLanding() {
           texto:
             "Cadeira parada é custo fixo rodando sem faturamento. A agenda acompanha o ciclo real do atendimento, então dá pra saber quem chegou, quem está na sala e quem não apareceu — e medir isso no fim do mês.",
           itens: [
-            "Agenda visual por dentista e por cadeira, no dia e na semana",
+            "Agenda visual por dentista, no dia e na semana",
             "Ciclo completo: pendente, confirmado, sala de espera, em atendimento, atendido",
             "Encaixe e remarcação sem perder o histórico do paciente",
             "Confirmação e lembrete automáticos por WhatsApp e e-mail",
@@ -165,12 +165,11 @@ export default function SorriProLanding() {
           icone: "👥",
           titulo: "Cada um vê o que é da sua função",
           texto:
-            "Prontuário é dado sensível e não pode circular pela clínica inteira só porque todo mundo usa o mesmo computador. Os perfis existem pra isso — e a agenda separada por profissional é o que faz a comissão fechar sem discussão.",
+            "Prontuário é dado sensível e não pode circular pela clínica inteira só porque todo mundo usa o mesmo computador. Os perfis existem pra isso — e cada profissional fica com a agenda e o histórico de atendimento dele.",
           itens: [
             "Três perfis: administrador, dentista e recepção",
             "Recepção marca e cobra, mas não abre o prontuário",
             "Agenda própria de cada dentista, com o horário dele",
-            "Comissão separada por profissional",
             "Painel com faturamento, consultas do dia e aniversariantes",
           ],
         },
@@ -190,10 +189,10 @@ export default function SorriProLanding() {
             "Onde o prontuário ainda é papel e a agenda ainda é caderno de recepção.",
         },
         {
-          icone: "🪑",
-          titulo: "Quem divide cadeira",
+          icone: "📲",
+          titulo: "Quem sofre com falta",
           texto:
-            "Agenda por cadeira, e não só por profissional, pra dois não caírem na mesma sala.",
+            "Confirmação e lembrete da consulta por WhatsApp e e-mail, sem a recepção ligar um por um.",
         },
         {
           icone: "🌐",
@@ -230,8 +229,8 @@ export default function SorriProLanding() {
       notaPlanos="Preço da assinatura do sistema, por clínica — não cobramos por dentista nem por paciente cadastrado."
       faq={[
         {
-          p: "Tenho vários dentistas. Dá pra separar agenda e comissão de cada um?",
-          r: "Dá. Cada dentista tem CRO, especialidade e horário próprios, e a agenda dele é dele — o que aparece no site pra marcação é o horário real daquele profissional. A comissão é separada por profissional, e o que cada um atendeu fica registrado na evolução da sessão, então o fechamento sai do próprio histórico em vez de sair de uma planilha paralela.",
+          p: "Tenho vários dentistas. Dá pra separar a agenda de cada um?",
+          r: "Dá. Cada dentista tem CRO, especialidade e horário próprios, e a agenda dele é dele — o que aparece no site pra marcação é o horário real daquele profissional. E o que cada um atendeu fica registrado na evolução da sessão, com dente, valor e profissional. Comissão calculada pelo sistema ainda não existe: hoje o fechamento sai desse histórico.",
         },
         {
           p: "A recepção vai enxergar o prontuário dos pacientes?",

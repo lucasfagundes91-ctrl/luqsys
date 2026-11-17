@@ -75,9 +75,9 @@ export default function SorriProPage() {
           icone: "🗓️",
           titulo: "A cadeira não fica vazia",
           texto:
-            "Agenda por dentista e por cadeira, com o ciclo real do atendimento — dá pra ver quem chegou e quem está na sala.",
+            "Agenda com uma coluna por dentista e o ciclo real do atendimento — dá pra ver quem chegou e quem está na sala.",
           itens: [
-            "Agenda visual por dentista, cadeira, dia e semana",
+            "Agenda visual por dentista, no dia e na semana",
             "Pendente → confirmado → sala de espera → atendido",
             "Encaixe e remarcação sem perder histórico",
             "Site público da clínica dentro das regras do CFO",
@@ -89,7 +89,7 @@ export default function SorriProPage() {
       ]}
       praQuem={[
         {icone:"🦷", titulo:"Clínica de um a cinco dentistas", texto:"Onde o prontuário ainda é papel e a agenda é caderno."},
-        {icone:"🪑", titulo:"Quem divide cadeira", texto:"Agenda por cadeira, não só por profissional."},
+        {icone:"📲", titulo:"Quem sofre com falta", texto:"Confirmação e lembrete da consulta por WhatsApp e e-mail, sem a recepção ligar um por um."},
         {icone:"🌐", titulo:"Clínica sem site", texto:"Site público dentro das regras de publicidade do CFO."},
       ]}
       naoServe={[
@@ -99,7 +99,7 @@ export default function SorriProPage() {
       faq={[
         {
           p: "Tenho mais de um dentista na clínica. Cada um vê tudo?",
-          r: "Você decide. Dá pra separar agenda e comissão por profissional e limitar quem enxerga o prontuário de quem.",
+          r: "Depende do perfil. Cada dentista tem a agenda dele, e o acesso ao prontuário segue a função: a recepção marca e cobra, mas não abre a ficha clínica.",
         },
         {
           p: "O site da clínica pode divulgar preço e antes/depois?",
@@ -107,7 +107,7 @@ export default function SorriProPage() {
         },
       ]}
       features={[
-        "Agenda visual por dentista/cadeira, dia e semana",
+        "Agenda visual por dentista, dia e semana",
         "Ciclo real do atendimento: pendente → confirmado → sala de espera → em atendimento → atendido",
         "Odontograma clicável em notação FDI (11–48), por dente e por face",
         "Anamnese com alerta de alergia antes de anestesiar",
