@@ -266,7 +266,7 @@ export default function ObrasProLanding() {
           ctaHref: "https://www.asaas.com/c/qf8m56k3w21dhmha",
         },
       ]}
-      notaPlanos="O que separa o Básico do Pro é volume: duas obras ativas e 100 notas por mês dão conta de quem constrói devagar. Passou disso, o Pro sai mais barato que a hora perdida."
+      notaPlanos="O que separa o Básico do Pro é volume: duas obras ativas e 50 leituras de nota por IA no mês dão conta de quem constrói devagar. Passou disso, o Pro sai mais barato que a hora perdida."
       faq={[
         {
           p: "Serve pra reforma ou só pra construção do zero?",
