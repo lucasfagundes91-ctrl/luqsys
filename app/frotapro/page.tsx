@@ -16,7 +16,7 @@ export default function FrotaProPage() {
       tagline="Sua frota inteira no controle"
       descricao={
         <>
-          Pra empresas com <strong className="text-white">5 a 50 veículos</strong>:
+          Pra empresas com <strong className="text-white">2 a 50 veículos</strong>:
           IPVA, seguro, manutenção, abastecimento, multas — tudo organizado por
           veículo com lembretes automáticos.
         </>
