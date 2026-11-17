@@ -23,10 +23,11 @@ export const metadata: Metadata = {
       comprovante e espelho. A página diz isso em voz alta no bloco da
       fiscalização e no FAQ, porque descobrir depois de assinar seria pior.
 
-   3) Não existe demo pública funcionando: horapro.luqsys.com.br/demo cai no
-      login. Por isso a CTA principal é o trial de 3 dias (/cadastro?trial=1,
-      que redireciona pro /signup) e não tem botão de demonstração. Quando a
-      demo for semeada de novo, dá pra pendurar como ctaSecundaria.
+   3) A demonstração voltou (17/11/2026): horapro.luqsys.com.br/demo entra
+      na "Empresa Demo Luquisys", com 8 funcionários fictícios, duas sedes e
+      30 dias de batidas (seed em pontopro/app.py, reset por cron). A CTA
+      principal segue sendo o trial de 3 dias (/cadastro?trial=1) e a
+      demonstração é a ctaSecundaria, igual à curta (que monta appUrl/demo).
 
    Prints reais em public/prints/horapro-{0,1,2}.jpg, pendurados nos blocos
    do painel, do banco de horas e do espelho. */
@@ -35,6 +36,7 @@ const ZAP = (texto: string) =>
   "https://wa.me/5545991077788?text=" + encodeURIComponent(texto);
 
 const TRIAL_URL = "https://horapro.luqsys.com.br/cadastro?trial=1";
+const DEMO_URL = "https://horapro.luqsys.com.br/demo";
 
 export default function HoraProLanding() {
   return (
@@ -52,8 +54,8 @@ export default function HoraProLanding() {
         </>
       }
       ctaPrincipal={{ label: "Testar 3 dias grátis", href: TRIAL_URL }}
-      ctaSecundaria={{ label: "Ver planos", href: "#planos" }}
-      notaCta="✦ Sem cartão de crédito · sem fidelidade · a empresa fica pronta em uma tarde"
+      ctaSecundaria={{ label: "Ver a demonstração", href: DEMO_URL }}
+      notaCta="✦ Sem cartão de crédito · sem fidelidade · demonstração com empresa e funcionários fictícios"
       problema={{
         titulo: "Ponto errado não é detalhe — é o que sobra pra discutir depois",
         paragrafos: [
@@ -298,7 +300,7 @@ export default function HoraProLanding() {
       fechamento={{
         titulo: "Comece pelo registro que se sustenta",
         texto:
-          "Testa 3 dias com a sua equipe de verdade, exporta um AFD e vê como fica. Se o HoraPro não servir pro seu caso, a gente diz isso antes de você assinar.",
+          "Abre a demonstração pra ver uma empresa fictícia com o mês já batido, ou testa 3 dias com a sua equipe de verdade, exporta um AFD e vê como fica. Se o HoraPro não servir pro seu caso, a gente diz isso antes de você assinar.",
       }}
     />
   );
