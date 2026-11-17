@@ -93,9 +93,9 @@ export default function PDVProLanding() {
         },
         {
           n: "2",
-          titulo: "A gente sobe o seu ambiente",
+          titulo: "A gente conversa e sobe o seu ambiente",
           texto:
-            "O PDV Pro roda uma loja por instalação: o banco é só seu. A gente configura os seus dados fiscais e o seu certificado A1 junto com você.",
+            "Uma conversa no WhatsApp pra liberar a sua loja. O PDV Pro roda uma loja por instalação: o banco é só seu. A gente configura os seus dados fiscais e o seu certificado A1 junto com você.",
         },
         {
           n: "3",

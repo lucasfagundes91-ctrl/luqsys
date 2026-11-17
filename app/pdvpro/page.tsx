@@ -78,15 +78,15 @@ export default function PDVProPage() {
       passos={[
         {
           n: "1",
-          titulo: "A gente conversa",
+          titulo: "Você abre a demonstração",
           texto:
-            "15 a 20 minutos no WhatsApp ou numa chamada, com o sistema rodando na tela. Você vê a venda sair, a nota emitir e o relatório fechar — não é vídeo gravado.",
+            "Loja de exemplo com produto, venda e relatório de verdade. Sem cadastro e sem cartão — mexa à vontade antes de falar com alguém.",
         },
         {
           n: "2",
-          titulo: "Seu ambiente sobe",
+          titulo: "A gente conversa e sobe o seu ambiente",
           texto:
-            "O PDV Pro roda uma loja por instalação — o seu banco é só seu. A gente sobe o ambiente com os seus dados fiscais e o seu certificado A1.",
+            "Uma conversa no WhatsApp pra liberar a sua loja. O PDV Pro roda uma loja por instalação — o seu banco é só seu — e a gente sobe o ambiente com os seus dados fiscais e o seu certificado A1.",
         },
         {
           n: "3",
