@@ -154,7 +154,6 @@ export default function ObrasProPage() {
           nome: "Pro",
           publico: "Construtora ativa",
           precoLabel: "R$ 119",
-          precoDe: "R$ 149",
           features: [
             "Obras ilimitadas",
             "Etapas e investidores ilimitados",
