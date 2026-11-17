@@ -113,7 +113,7 @@ export default function AluguelProPage() {
         {icone:"📑", titulo:"Quem esquece o reajuste", texto:"IGP-M e IPCA aplicados na data, sem depender de memória."},
       ]}
       naoServe={[
-        "Você quer portal de anúncios pra captar inquilino — aqui começa depois do contrato assinado",
+        "Você quer sindicalizar anúncio em portal (ZAP, Viva Real, OLX): o sistema cria a página pública do seu imóvel, mas não publica nos portais por você",
         "Você administra temporada por diária: o ciclo do sistema é mensal",
       ]}
       faq={[
@@ -147,6 +147,7 @@ export default function AluguelProPage() {
         "Reajuste IGP-M/IPCA automático",
         "Multi-proprietário e multi-imóvel",
         "Histórico financeiro por imóvel",
+        "Anúncio público do imóvel vago, com texto gerado por IA",
       ]}
       planos={[
         {
