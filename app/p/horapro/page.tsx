@@ -227,6 +227,7 @@ export default function HoraProLanding() {
             "Selfie e GPS opcionais",
             "Comprovante em PDF por batida",
             "Espelho de ponto mensal",
+            "Banco de horas + ajustes",
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Básico",
@@ -242,8 +243,8 @@ export default function HoraProLanding() {
             "Funcionários extras: R$ 5/mês cada",
             "AFD + AEJ (Anexo II e VI)",
             "ATTR com PAdES ICP-Brasil",
-            "Banco de horas + ajustes",
             "Justificativas e abonos",
+            "API de integração pra folha (registros, dias e apuração)",
             "Suporte por e-mail",
           ],
           ctaLabel: "Assinar Pro",
@@ -257,15 +258,14 @@ export default function HoraProLanding() {
             "Tudo do Pro",
             "Até 50 funcionários inclusos",
             "Extras: R$ 4/mês cada",
-            "Multi-empresa (matriz + filiais)",
-            "API de integração pra folha (registros, dias e apuração)",
+            "Multi-empresa (matriz + filiais), cada CNPJ com seu AFD",
             "Suporte prioritário",
           ],
           ctaLabel: "Assinar Empresa",
           ctaHref: "https://www.asaas.com/c/gtru0vknwtodd96y",
         },
       ]}
-      notaPlanos="O trial de 3 dias abre com tudo ligado, pra você ver o AFD sair antes de escolher o plano. Sem fidelidade em nenhum deles."
+      notaPlanos="O trial de 3 dias abre com tudo ligado (até 5 funcionários), pra você ver o AFD sair antes de escolher o plano. Sem fidelidade em nenhum deles."
       faq={[
         {
           p: "Preciso comprar relógio de ponto?",
@@ -289,7 +289,7 @@ export default function HoraProLanding() {
         },
         {
           p: "Tenho gente em mais de um endereço. Funciona?",
-          r: "Funciona. Dá pra cadastrar várias sedes na mesma empresa, cada uma com seu perímetro de latitude, longitude e raio. No plano Empresa dá pra ir além e separar matriz e filiais como empresas distintas, com API pra folha.",
+          r: "Funciona. Dá pra cadastrar várias sedes na mesma empresa, cada uma com seu perímetro de latitude, longitude e raio. No plano Empresa dá pra ir além e separar matriz e filiais como empresas distintas, cada uma com seu CNPJ e seu AFD.",
         },
         {
           p: "E se eu cancelar? Perco os registros?",
